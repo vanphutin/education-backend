@@ -41,6 +41,7 @@ const submitAnswerBtn = document.getElementById('submit-answer-btn');
 // Actions
 const saveBtn = document.getElementById('save-btn');
 const toastEl = document.getElementById('toast');
+const aiReviewWeekBtn = document.getElementById('ai-review-week-btn');
 
 // FETCH DATA ON LOAD
 async function init() {
@@ -156,7 +157,7 @@ function renderDays(week) {
       <div class="day-check-wrapper">
         <input type="checkbox" class="custom-checkbox" ${day.status === 'DONE' ? 'checked' : ''}>
       </div>
-      <div class="day-content">
+      <div class="day-content" style="cursor: pointer; flex-grow: 1;">
         <div class="day-name">${day.day}</div>
         <div class="day-topic">${day.topic}</div>
       </div>
@@ -173,6 +174,12 @@ function renderDays(week) {
       recalculateProgress();
       updateOverallProgressUI();
       renderDays(week); // Rerender to update counts
+    });
+
+    // Open detail Drawer
+    const dayContent = dayCard.querySelector('.day-content');
+    dayContent.addEventListener('click', () => {
+      openDayDrawer(day.day);
     });
     
     daysContainerEl.appendChild(dayCard);
@@ -589,6 +596,377 @@ submitAnswerBtn.addEventListener('click', async () => {
 
 // EVENT LISTENERS
 saveBtn.addEventListener('click', saveDatabase);
+
+aiReviewWeekBtn.addEventListener('click', async () => {
+  const weekNum = db.weeks[activeWeekIndex].week_number;
+  
+  const originalText = aiReviewWeekBtn.innerHTML;
+  aiReviewWeekBtn.disabled = true;
+  aiReviewWeekBtn.innerHTML = `<i data-lucide="loader" class="animate-spin" style="width: 14px; height: 14px;"></i> Đang đánh giá...`;
+  lucide.createIcons();
+  
+  try {
+    const response = await fetch('/api/mentor/review-week', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ week: weekNum })
+    });
+    
+    const result = await response.json();
+    if (response.ok) {
+      db = result.data; // Update local database state
+      
+      // Rerender UI
+      renderSidebar();
+      renderActiveWeek();
+      updateOverallProgressUI();
+      updateDbStatus();
+      
+      showToast(`Mentor AI đã đánh giá xong Tuần ${weekNum}!`);
+    } else {
+      showToast(result.error || 'Có lỗi xảy ra khi gọi AI Mentor!', 'error');
+    }
+  } catch (error) {
+    console.error('AI Review error:', error);
+    showToast('Lỗi kết nối hoặc API keys!', 'error');
+  } finally {
+    aiReviewWeekBtn.disabled = false;
+    aiReviewWeekBtn.innerHTML = originalText;
+    lucide.createIcons();
+  }
+});
+
+// ==========================================
+// UPGRADES: DRAWER & MODALS STATE & LOGIC
+// ==========================================
+
+let activeDrawerDay = null;
+let chatHistory = [];
+
+// DOM References for Drawer
+const sideDrawerEl = document.getElementById('side-drawer');
+const drawerOverlayEl = document.getElementById('drawer-overlay');
+const closeDrawerBtn = document.getElementById('close-drawer-btn');
+const drawerDayTitleEl = document.getElementById('drawer-day-title');
+const drawerDaySubtitleEl = document.getElementById('drawer-day-subtitle');
+const studyLogMarkdownEl = document.getElementById('study-log-markdown');
+const studyLogEditorEl = document.getElementById('study-log-editor');
+const saveLogBtn = document.getElementById('save-log-btn');
+const chatMessagesContainerEl = document.getElementById('chat-messages-container');
+const chatInputEl = document.getElementById('chat-input');
+const sendChatBtn = document.getElementById('send-chat-btn');
+const drawerTabs = document.querySelectorAll('.drawer-tab');
+const drawerTabContents = document.querySelectorAll('.drawer-tab-content');
+
+// DOM References for Traceability Modal
+const openTraceabilityBtn = document.getElementById('open-traceability-btn');
+const traceabilityModalEl = document.getElementById('traceability-modal');
+const traceabilityOverlayEl = document.getElementById('traceability-overlay');
+const closeTraceabilityBtnModal = document.getElementById('close-traceability-btn-modal');
+const traceabilityMarkdownEl = document.getElementById('traceability-matrix-markdown');
+
+// DOM References for Terminal Modal
+const openTerminalBtn = document.getElementById('open-terminal-btn');
+const terminalModalEl = document.getElementById('terminal-modal');
+const terminalOverlayEl = document.getElementById('terminal-overlay');
+const closeTerminalBtnModal = document.getElementById('close-terminal-btn-modal');
+const terminalCommandSelect = document.getElementById('terminal-command-select');
+const runTerminalCmdBtn = document.getElementById('run-terminal-cmd-btn');
+const terminalStatusEl = document.getElementById('terminal-status');
+const terminalOutputPre = document.getElementById('terminal-output-pre');
+
+// --- DRAWER FUNCTIONS ---
+
+async function openDayDrawer(dayName) {
+  const weekNum = db.weeks[activeWeekIndex].week_number;
+  activeDrawerDay = dayName;
+  chatHistory = [];
+  
+  // Set titles
+  drawerDayTitleEl.textContent = dayName;
+  drawerDaySubtitleEl.textContent = `Tuần ${weekNum} - ${db.weeks[activeWeekIndex].days.find(d => d.day === dayName).topic}`;
+  
+  // Load default tab (Read log)
+  switchTab('view-log');
+  
+  // Open Drawer UI
+  sideDrawerEl.classList.add('show');
+  
+  // Load content
+  studyLogMarkdownEl.innerHTML = '<p class="text-muted">Đang tải nhật ký...</p>';
+  studyLogEditorEl.value = '';
+  
+  // Reset chat messages
+  chatMessagesContainerEl.innerHTML = `
+    <div class="chat-message mentor" style="background-color: var(--bg-tertiary); border: 1px solid var(--border-color); padding: 12px 16px; border-radius: 16px 16px 16px 0; max-width: 85%; font-size: 13px; line-height: 1.5; align-self: flex-start;">
+      Chào bạn! Tôi là Mentor AI. Tôi có thể hỗ trợ gì cho bạn trong nội dung bài học <strong>${dayName}</strong> hôm nay?
+    </div>
+  `;
+  
+  try {
+    const response = await fetch(`/api/study-log?week=${weekNum}&day=${dayName}`);
+    const result = await response.json();
+    
+    if (result.content) {
+      studyLogMarkdownEl.innerHTML = marked.parse(result.content);
+      studyLogEditorEl.value = result.content;
+    } else {
+      studyLogMarkdownEl.innerHTML = '<p class="text-muted">Chưa có nội dung ghi chép cho ngày này. Hãy chuyển qua tab "Sửa Nhật Ký" để viết bài làm đầu tiên!</p>';
+      studyLogEditorEl.value = '';
+    }
+  } catch (error) {
+    console.error('Error loading study log:', error);
+    studyLogMarkdownEl.innerHTML = '<p class="text-danger">Lỗi kết nối khi tải nhật ký!</p>';
+  }
+}
+
+function closeDayDrawer() {
+  sideDrawerEl.classList.remove('show');
+  activeDrawerDay = null;
+}
+
+function switchTab(tabId) {
+  drawerTabs.forEach(tab => {
+    if (tab.getAttribute('data-tab') === tabId) {
+      tab.classList.add('active');
+      tab.style.borderBottom = '2px solid var(--accent-purple)';
+      tab.style.color = 'var(--text-primary)';
+      tab.style.fontWeight = '600';
+    } else {
+      tab.classList.remove('active');
+      tab.style.borderBottom = 'none';
+      tab.style.color = 'var(--text-muted)';
+      tab.style.fontWeight = '400';
+    }
+  });
+  
+  drawerTabContents.forEach(content => {
+    if (content.id === `tab-${tabId}`) {
+      content.style.display = 'block';
+    } else {
+      content.style.display = 'none';
+    }
+  });
+}
+
+// Save log handler
+saveLogBtn.addEventListener('click', async () => {
+  if (!activeDrawerDay) return;
+  const weekNum = db.weeks[activeWeekIndex].week_number;
+  const content = studyLogEditorEl.value;
+  
+  saveLogBtn.disabled = true;
+  const originalText = saveLogBtn.innerHTML;
+  saveLogBtn.innerHTML = '<i data-lucide="loader" class="animate-spin"></i> Đang lưu...';
+  lucide.createIcons();
+  
+  try {
+    const response = await fetch('/api/study-log', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ week: weekNum, day: activeDrawerDay, content })
+    });
+    
+    if (response.ok) {
+      showToast('Đã lưu nhật ký học tập thành công!');
+      studyLogMarkdownEl.innerHTML = marked.parse(content || '<p class="text-muted">Chưa có nội dung ghi chép cho ngày này.</p>');
+      switchTab('view-log');
+    } else {
+      showToast('Lỗi khi lưu nhật ký!', 'error');
+    }
+  } catch (error) {
+    console.error('Error saving study log:', error);
+    showToast('Lỗi kết nối server!', 'error');
+  } finally {
+    saveLogBtn.disabled = false;
+    saveLogBtn.innerHTML = originalText;
+    lucide.createIcons();
+  }
+});
+
+// AI Chatbot handler
+async function sendChatMessage() {
+  const message = chatInputEl.value.trim();
+  if (!message || !activeDrawerDay) return;
+  
+  const weekNum = db.weeks[activeWeekIndex].week_number;
+  
+  // Append User message
+  const userMsgEl = document.createElement('div');
+  userMsgEl.className = 'chat-message user';
+  userMsgEl.textContent = message;
+  chatMessagesContainerEl.appendChild(userMsgEl);
+  
+  chatInputEl.value = '';
+  chatMessagesContainerEl.scrollTop = chatMessagesContainerEl.scrollHeight;
+  
+  // Append Mentor AI typing indicator
+  const typingEl = document.createElement('div');
+  typingEl.className = 'chat-message mentor';
+  typingEl.style.color = 'var(--text-muted)';
+  typingEl.innerHTML = 'AI Mentor đang gõ...';
+  chatMessagesContainerEl.appendChild(typingEl);
+  chatMessagesContainerEl.scrollTop = chatMessagesContainerEl.scrollHeight;
+  
+  try {
+    const response = await fetch('/api/mentor/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        week: weekNum,
+        day: activeDrawerDay,
+        message,
+        history: chatHistory
+      })
+    });
+    
+    const result = await response.json();
+    typingEl.remove();
+    
+    if (response.ok && result.reply) {
+      const replyEl = document.createElement('div');
+      replyEl.className = 'chat-message mentor';
+      replyEl.style.backgroundColor = 'var(--bg-tertiary)';
+      replyEl.style.border = '1px solid var(--border-color)';
+      replyEl.style.padding = '12px 16px';
+      replyEl.style.borderRadius = '16px 16px 16px 0';
+      replyEl.style.maxWidth = '85%';
+      replyEl.style.fontSize = '13px';
+      replyEl.style.lineHeight = '1.5';
+      replyEl.style.alignSelf = 'flex-start';
+      replyEl.innerHTML = marked.parse(result.reply);
+      chatMessagesContainerEl.appendChild(replyEl);
+      
+      // Update history
+      chatHistory.push({ role: 'user', content: message });
+      chatHistory.push({ role: 'model', content: result.reply });
+    } else {
+      const errEl = document.createElement('div');
+      errEl.className = 'chat-message mentor';
+      errEl.style.color = 'var(--accent-red)';
+      errEl.innerHTML = result.error || 'Có lỗi xảy ra khi trò chuyện với AI Mentor!';
+      chatMessagesContainerEl.appendChild(errEl);
+    }
+  } catch (error) {
+    console.error('Chat error:', error);
+    typingEl.remove();
+    const errEl = document.createElement('div');
+    errEl.className = 'chat-message mentor';
+    errEl.style.color = 'var(--accent-red)';
+    errEl.innerHTML = 'Lỗi kết nối với AI Mentor!';
+    chatMessagesContainerEl.appendChild(errEl);
+  } finally {
+    chatMessagesContainerEl.scrollTop = chatMessagesContainerEl.scrollHeight;
+  }
+}
+
+sendChatBtn.addEventListener('click', sendChatMessage);
+chatInputEl.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') sendChatMessage();
+});
+
+// Close drawer listeners
+closeDrawerBtn.addEventListener('click', closeDayDrawer);
+drawerOverlayEl.addEventListener('click', closeDayDrawer);
+
+// Tab switching listeners
+drawerTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    switchTab(tab.getAttribute('data-tab'));
+  });
+});
+
+// --- TRACEABILITY MATRIX MODAL FUNCTIONS ---
+
+async function openTraceabilityModal() {
+  traceabilityModalEl.classList.add('show');
+  traceabilityMarkdownEl.innerHTML = '<p class="text-muted">Đang tải ma trận truy xuất nguồn gốc...</p>';
+  
+  try {
+    const response = await fetch('/api/traceability');
+    const result = await response.json();
+    if (result.content) {
+      traceabilityMarkdownEl.innerHTML = marked.parse(result.content);
+    } else {
+      traceabilityMarkdownEl.innerHTML = '<p class="text-muted">Không tìm thấy file ma trận truy xuất nguồn gốc.</p>';
+    }
+  } catch (error) {
+    console.error('Error loading traceability:', error);
+    traceabilityMarkdownEl.innerHTML = '<p class="text-danger">Lỗi kết nối khi tải ma trận truy xuất nguồn gốc!</p>';
+  }
+}
+
+function closeTraceabilityModal() {
+  traceabilityModalEl.classList.remove('show');
+}
+
+openTraceabilityBtn.addEventListener('click', openTraceabilityModal);
+closeTraceabilityBtnModal.addEventListener('click', closeTraceabilityModal);
+traceabilityOverlayEl.addEventListener('click', closeTraceabilityModal);
+
+// --- TERMINAL MODAL FUNCTIONS ---
+
+function openTerminalModal() {
+  terminalModalEl.classList.add('show');
+}
+
+function closeTerminalModal() {
+  terminalModalEl.classList.remove('show');
+}
+
+async function runTerminalCommand() {
+  const command = terminalCommandSelect.value;
+  
+  terminalStatusEl.textContent = 'RUNNING';
+  terminalStatusEl.style.backgroundColor = 'rgba(245, 158, 11, 0.1)';
+  terminalStatusEl.style.color = 'var(--accent-yellow)';
+  
+  terminalOutputPre.textContent = `Đang chạy lệnh: ${command}...\n`;
+  runTerminalCmdBtn.disabled = true;
+  
+  try {
+    const response = await fetch('/api/terminal/run', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ command })
+    });
+    
+    const result = await response.json();
+    
+    if (response.ok) {
+      terminalOutputPre.textContent = result.stdout || result.stderr || 'Lệnh thực thi thành công không có output.';
+      if (result.exitCode === 0) {
+        terminalStatusEl.textContent = 'SUCCESS';
+        terminalStatusEl.style.backgroundColor = 'rgba(16, 185, 129, 0.1)';
+        terminalStatusEl.style.color = 'var(--accent-green)';
+      } else {
+        terminalStatusEl.textContent = `FAILED (${result.exitCode})`;
+        terminalStatusEl.style.backgroundColor = 'rgba(239, 68, 68, 0.1)';
+        terminalStatusEl.style.color = 'var(--accent-red)';
+      }
+    } else {
+      terminalOutputPre.textContent = result.error || 'Lỗi khi thực thi lệnh!';
+      terminalStatusEl.textContent = 'ERROR';
+      terminalStatusEl.style.backgroundColor = 'rgba(239, 68, 68, 0.1)';
+      terminalStatusEl.style.color = 'var(--accent-red)';
+    }
+  } catch (error) {
+    console.error('Terminal run error:', error);
+    terminalOutputPre.textContent = 'Lỗi kết nối server!';
+    terminalStatusEl.textContent = 'ERROR';
+    terminalStatusEl.style.backgroundColor = 'rgba(239, 68, 68, 0.1)';
+    terminalStatusEl.style.color = 'var(--accent-red)';
+  } finally {
+    runTerminalCmdBtn.disabled = false;
+  }
+}
+
+openTerminalBtn.addEventListener('click', openTerminalModal);
+closeTerminalBtnModal.addEventListener('click', closeTerminalModal);
+terminalOverlayEl.addEventListener('click', closeTerminalModal);
+runTerminalCmdBtn.addEventListener('click', runTerminalCommand);
 
 // INITIALIZE
 init();

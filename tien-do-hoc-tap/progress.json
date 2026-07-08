@@ -15,8 +15,8 @@
       "week_number": 1,
       "title": "Foundation, OOP, NestJS basics and public catalog API",
       "status": "IN_PROGRESS",
-      "score": null,
-      "mentor_feedback": "",
+      "score": 2,
+      "mentor_feedback": "Tuần này, người học chưa hoàn thành các mục tiêu đề ra. Các ngày từ Thứ 2 đến Thứ 4 chỉ có nội dung lý thuyết cơ bản nhưng chưa đi sâu vào việc áp dụng vào dự án. Các phần **Core Concepts**, **Common Mistakes**, **Mini Lab**, **Project Bridge**, và **Interview Drill** trong các ngày này đều thiếu nội dung cụ thể hoặc chỉ có dấu ba chấm, cho thấy người học chưa thực sự tham gia vào quá trình học tập. Đối với Thứ 5 đến Thứ 7, người học được yêu cầu triển khai và kiểm thử các backlog nhưng lại không có bằng chứng cụ thể về việc thực hiện, cũng như không có code, logs, hoặc kết quả kiểm thử. Điều này cho thấy người học chưa thực sự hiểu và áp dụng kiến thức vào dự án. Người học cần phải nghiêm túc hơn trong việc học tập và áp dụng kiến thức vào dự án để đạt được mục tiêu đề ra.",
       "days": [
         {
           "day": "Monday",
@@ -775,9 +775,9 @@
   "_meta": {
     "schema_version": 1,
     "created_at": "2026-07-08T03:58:30.406Z",
-    "version": 6,
-    "updated_at": "2026-07-08T07:31:31.719Z",
-    "updated_by": "codex-mentor"
+    "version": 9,
+    "updated_at": "2026-07-08T09:11:21.896Z",
+    "updated_by": "mentor-ai"
   },
   "audit_log": [
     {
@@ -829,6 +829,36 @@
       "base_version": 5,
       "new_version": 6,
       "summary": "3 JSON patch operation(s)"
+    },
+    {
+      "id": "ab77b294-a6b0-41a0-a9e2-36bc4420af6e",
+      "timestamp": "2026-07-08T09:02:37.968Z",
+      "actor": "mentor-ai",
+      "action": "mentor_patch",
+      "reason": "AI Mentor Review for Week 1",
+      "base_version": 6,
+      "new_version": 7,
+      "summary": "16 JSON patch operation(s)"
+    },
+    {
+      "id": "9fc2e2a1-ce10-4fee-b19f-9acc07ed8972",
+      "timestamp": "2026-07-08T09:03:35.069Z",
+      "actor": "mentor-ai",
+      "action": "mentor_patch",
+      "reason": "AI Mentor Review for Week 1",
+      "base_version": 7,
+      "new_version": 8,
+      "summary": "16 JSON patch operation(s)"
+    },
+    {
+      "id": "c2a20d60-afcf-428f-891d-16475fbce2ff",
+      "timestamp": "2026-07-08T09:11:21.896Z",
+      "actor": "mentor-ai",
+      "action": "mentor_patch",
+      "reason": "AI Mentor Review for Week 1",
+      "base_version": 8,
+      "new_version": 9,
+      "summary": "16 JSON patch operation(s)"
     }
   ],
   "program": {

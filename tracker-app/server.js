@@ -2,6 +2,28 @@ const http = require('http');
 const fs = require('fs/promises');
 const path = require('path');
 const { createJsonDb, ValidationError } = require('./json-db');
+const { reviewWeek, callLLM } = require('./ai-mentor-service');
+
+// Load environment variables from local .env file synchronously if it exists
+try {
+  const fsSync = require('fs');
+  const envPath = path.join(__dirname, '.env');
+  if (fsSync.existsSync(envPath)) {
+    const envContent = fsSync.readFileSync(envPath, 'utf8');
+    envContent.split('\n').forEach(line => {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#')) return;
+      const index = trimmed.indexOf('=');
+      if (index > 0) {
+        const key = trimmed.substring(0, index).trim();
+        const val = trimmed.substring(index + 1).trim();
+        process.env[key] = val;
+      }
+    });
+  }
+} catch (err) {
+  // Ignore
+}
 
 const PORT = Number(process.env.PORT) || 3900;
 const PUBLIC_DIR = __dirname;
@@ -216,6 +238,240 @@ async function handleApi(req, res, url) {
       data: result.data,
       audit: result.audit
     });
+    return true;
+  }
+
+  if (url.pathname === '/api/mentor/review-week' && req.method === 'POST') {
+    const payload = await readJsonBody(req);
+    const weekNumber = Number(payload.week);
+    if (isNaN(weekNumber) || weekNumber < 1 || weekNumber > 8) {
+      sendJson(res, 400, { error: 'Invalid week number' });
+      return true;
+    }
+
+    const db = await jsonDb.get();
+    
+    try {
+      const reviewResult = await reviewWeek(weekNumber, db);
+      
+      const operations = [];
+      const weekIndex = db.weeks.findIndex(w => w.week_number === weekNumber);
+      if (weekIndex === -1) {
+        throw new Error('Week not found');
+      }
+
+      operations.push({
+        op: 'replace',
+        path: `/weeks/${weekIndex}/score`,
+        value: reviewResult.score
+      });
+
+      operations.push({
+        op: 'replace',
+        path: `/weeks/${weekIndex}/mentor_feedback`,
+        value: reviewResult.mentor_feedback
+      });
+
+      if (reviewResult.days_status) {
+        db.weeks[weekIndex].days.forEach((dayObj, dayIdx) => {
+          const status = reviewResult.days_status[dayObj.day];
+          if (status === 'DONE' || status === 'TODO') {
+            operations.push({
+              op: 'replace',
+              path: `/weeks/${weekIndex}/days/${dayIdx}/status`,
+              value: status
+            });
+            operations.push({
+              op: 'replace',
+              path: `/weeks/${weekIndex}/days/${dayIdx}/updated_at`,
+              value: status === 'DONE' ? new Date().toISOString() : null
+            });
+          }
+        });
+      }
+
+      if (reviewResult.deliverables_status) {
+        db.weeks[weekIndex].deliverables.forEach((delObj, delIdx) => {
+          const status = reviewResult.deliverables_status[delObj.id];
+          if (status === 'COMPLETED' || status === 'PENDING') {
+            operations.push({
+              op: 'replace',
+              path: `/weeks/${weekIndex}/deliverables/${delIdx}/status`,
+              value: status
+            });
+          }
+        });
+      }
+
+      const result = await jsonDb.applyPatch({
+        baseVersion: db._meta.version,
+        operations,
+        actor: 'mentor-ai',
+        reason: `AI Mentor Review for Week ${weekNumber}`,
+        action: 'mentor_patch'
+      });
+
+      sendJson(res, 200, {
+        message: 'Review completed successfully',
+        data: result.data,
+        review: reviewResult
+      });
+    } catch (err) {
+      console.error('Error during AI review:', err);
+      sendJson(res, 500, { error: 'Failed during AI Review: ' + err.message });
+    }
+    return true;
+  }
+
+  if (url.pathname === '/api/study-log' && req.method === 'GET') {
+    const week = url.searchParams.get('week');
+    const day = url.searchParams.get('day');
+    const dayFiles = {
+      'Monday': 'thu-2.md',
+      'Tuesday': 'thu-3.md',
+      'Wednesday': 'thu-4.md',
+      'Thursday': 'thu-5.md',
+      'Friday-Saturday': 'thu-6-7.md'
+    };
+    const fileName = dayFiles[day];
+    if (!week || !fileName) {
+      sendJson(res, 400, { error: 'Missing week or day query parameters' });
+      return true;
+    }
+
+    const filePath = path.join(__dirname, '..', 'study', `tuan-${week}`, fileName);
+    try {
+      const content = await fs.readFile(filePath, 'utf8');
+      sendJson(res, 200, { content });
+    } catch (err) {
+      sendJson(res, 200, { content: '' });
+    }
+    return true;
+  }
+
+  if (url.pathname === '/api/study-log' && req.method === 'POST') {
+    const payload = await readJsonBody(req);
+    const { week, day, content } = payload;
+    const dayFiles = {
+      'Monday': 'thu-2.md',
+      'Tuesday': 'thu-3.md',
+      'Wednesday': 'thu-4.md',
+      'Thursday': 'thu-5.md',
+      'Friday-Saturday': 'thu-6-7.md'
+    };
+    const fileName = dayFiles[day];
+    if (!week || !fileName || typeof content !== 'string') {
+      sendJson(res, 400, { error: 'Invalid payload parameters' });
+      return true;
+    }
+
+    const filePath = path.join(__dirname, '..', 'study', `tuan-${week}`, fileName);
+    try {
+      await fs.writeFile(filePath, content, 'utf8');
+      sendJson(res, 200, { success: true });
+    } catch (err) {
+      sendJson(res, 500, { error: 'Failed to save file: ' + err.message });
+    }
+    return true;
+  }
+
+  if (url.pathname === '/api/mentor/chat' && req.method === 'POST') {
+    const payload = await readJsonBody(req);
+    const { week, day, message, history } = payload;
+    if (!week || !day || !message) {
+      sendJson(res, 400, { error: 'Missing required parameters' });
+      return true;
+    }
+
+    const dayFiles = {
+      'Monday': 'thu-2.md',
+      'Tuesday': 'thu-3.md',
+      'Wednesday': 'thu-4.md',
+      'Thursday': 'thu-5.md',
+      'Friday-Saturday': 'thu-6-7.md'
+    };
+    const fileName = dayFiles[day];
+    const filePath = path.join(__dirname, '..', 'study', `tuan-${week}`, fileName);
+    let logContent = '(Không có file ghi chép)';
+    try {
+      logContent = await fs.readFile(filePath, 'utf8');
+    } catch (err) {}
+
+    const mentorPromptPath = path.join(__dirname, '..', 'chuong-trinh-dao-tao', 'huong-dan', 'mentor-prompt.md');
+    let mentorPrompt = 'Bạn là Mentor AI 1-1 cho chương trình NestJS. Hãy trả lời câu hỏi của học viên một cách ngắn gọn, súc tích và tập trung vào kỹ thuật backend.';
+    try {
+      mentorPrompt = await fs.readFile(mentorPromptPath, 'utf8');
+    } catch (err) {}
+
+    const systemInstruction = `${mentorPrompt}\n\n` +
+      `BỐI CẢNH HIỆN TẠI:\n` +
+      `- Học viên đang ở Tuần ${week}, ngày ${day}.\n` +
+      `- Nội dung file ghi chép hiện tại của học viên:\n` +
+      `-----------\n` +
+      `${logContent}\n` +
+      `-----------\n` +
+      `HƯỚNG DẪN TRẢ LỜI:\n` +
+      `1. Trả lời trực tiếp câu hỏi của học viên liên quan đến bài học ngày này.\n` +
+      `2. Sử dụng tiếng Việt. Giọng điệu chuyên nghiệp, xây dựng, chuẩn mực như một Tech Lead.\n` +
+      `3. Trả về kết quả hoàn toàn bằng định dạng JSON khớp với cấu trúc sau:\n` +
+      `{\n` +
+      `  "reply": "Nội dung câu trả lời của Mentor AI ở định dạng Markdown"\n` +
+      `}`;
+
+    let prompt = `LỊCH SỬ HỘI THOẠI:\n`;
+    if (Array.isArray(history)) {
+      history.forEach(h => {
+        prompt += `${h.role === 'user' ? 'Học viên' : 'Mentor AI'}: ${h.content}\n`;
+      });
+    }
+    prompt += `Học viên: ${message}\n`;
+
+    try {
+      const responseJson = await callLLM(prompt, systemInstruction);
+      sendJson(res, 200, { reply: responseJson.reply });
+    } catch (err) {
+      console.error('Error during AI chat:', err);
+      sendJson(res, 500, { error: 'Failed during AI Chat: ' + err.message });
+    }
+    return true;
+  }
+
+  if (url.pathname === '/api/terminal/run' && req.method === 'POST') {
+    const payload = await readJsonBody(req);
+    const { command } = payload;
+    if (!command) {
+      sendJson(res, 400, { error: 'Missing command parameter' });
+      return true;
+    }
+
+    const allowedCommands = ['npm run test', 'npm run lint', 'npm test', 'npm run dev', 'npm run build'];
+    const isAllowed = allowedCommands.some(cmd => command.startsWith(cmd));
+    if (!isAllowed) {
+      sendJson(res, 400, { error: 'Command not allowed for security reasons' });
+      return true;
+    }
+
+    const { exec } = require('child_process');
+    const projectRoot = path.join(__dirname, '..');
+    
+    exec(command, { cwd: projectRoot }, (error, stdout, stderr) => {
+      sendJson(res, 200, {
+        stdout: stdout || '',
+        stderr: stderr || '',
+        exitCode: error ? error.code : 0
+      });
+    });
+    return true;
+  }
+
+  if (url.pathname === '/api/traceability' && req.method === 'GET') {
+    const filePath = path.join(__dirname, '..', 'docs', 'traceability-matrix.md');
+    try {
+      const content = await fs.readFile(filePath, 'utf8');
+      sendJson(res, 200, { content });
+    } catch (err) {
+      sendJson(res, 404, { error: 'Traceability matrix file not found' });
+    }
     return true;
   }
 
