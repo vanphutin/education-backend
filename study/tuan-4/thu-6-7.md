@@ -1,55 +1,55 @@
-# Ticket: Implement auth, RBAC, transactional seat hold, race evidence
+# Project Delivery Ticket: Implement API skeleton, public catalog, Swagger, validation/error/logging evidence
 
 - **Tuần**: 4
 - **Ngày**: Thứ 6-7
-- **Issue**: [#20](https://github.com/vanphutin/education-backend/issues/20)
-- **Backlog Items**: BL-012, BL-013, BL-014, BL-015, BL-016, BL-017, BL-018
+- **Issue**: #20
+- **Giai đoạn**: Project Delivery
+
+## Required Reading
+
+- **Cơ bản/Trung bình:** [NestJS Docs - Logger](https://docs.nestjs.com/techniques/logger)
+- **Nâng cao:** [NestJS Docs - Interceptors](https://docs.nestjs.com/interceptors)
+
 
 ## 1. Business Scenario
-- **Actor**: Guest / Customer / Staff / Admin
-- **User story**: Chi tiết trong tài liệu backlog tương ứng (BL-012, BL-013, BL-014, BL-015, BL-016, BL-017, BL-018).
-- **Why it matters**: Giải quyết nhu cầu nghiệp vụ thực tế của hệ thống đặt vé.
+- Actor:
+- User story:
+- Why it matters:
 
 ## 2. System Analysis
-- **Input**: ...
-- **Output**: ...
-- **State involved**: ...
-- **Edge cases**: ...
-- **Failure cases**: ...
-- **Security/data consistency risk**: ...
+- Input:
+- Output:
+- State involved:
+- Edge cases:
+- Failure cases:
+- Security/data consistency/performance risk:
 
 ## 3. Design Before Code
-- **API contract**: ...
-- **DB impact**: ...
-- **Module/service boundary**: ...
-- **Validation/error behavior**: ...
-- **Logging/audit/integration logs**: ...
-- **Transaction/permission concern**: ...
+- API contract:
+- DB impact:
+- Module/service boundary:
+- Validation/error behavior:
+- Logging/audit/integration logs:
+- Transaction/permission concern:
 
 ## 4. Implementation Checklist
-- [ ] Triển khai và kiểm thử backlog BL-012
-- [ ] Triển khai và kiểm thử backlog BL-013
-- [ ] Triển khai và kiểm thử backlog BL-014
-- [ ] Triển khai và kiểm thử backlog BL-015
-- [ ] Triển khai và kiểm thử backlog BL-016
-- [ ] Triển khai và kiểm thử backlog BL-017
-- [ ] Triển khai và kiểm thử backlog BL-018
-- [ ] Viết unit tests và integration tests liên quan.
+- [ ] ...
 
 ## 5. Verification
-- **Unit test**: ...
-- **E2E/manual curl**: ...
-- **Swagger**: ...
-- **Migration/seed**: ...
-- **Build/lint**: ...
+- Unit test:
+- E2E/manual curl:
+- Swagger/API docs:
+- Migration/seed:
+- Build/lint:
 
 ## 6. Evidence
-- **Issue**: [#20](https://github.com/vanphutin/education-backend/issues/20)
-- **PR**: ...
-- **Logs/screenshots**: ...
-- **Docs/ADR**: ...
+- Issue:
+- PR/commit:
+- Logs/screenshots:
+- Docs/ADR:
 
 ## 7. Interview Drill
-- **Question**: Giải thích thiết kế kỹ thuật, luồng đi của dữ liệu và tradeoff khi giải quyết ticket này.
-- **My answer**:
+- Question: Vì sao request id quan trọng?
+- My answer:
   - ...
+

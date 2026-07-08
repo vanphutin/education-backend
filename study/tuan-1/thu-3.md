@@ -1,38 +1,38 @@
-# Theory Sprint: TypeScript và OOP trọng tâm trước NestJS
+# Theory Deep Dive: Internet fundamentals: DNS, TCP/IP, TLS, latency, timeout, request lifecycle
 
 - **Tuần**: 1
 - **Ngày**: Thứ 3
-- **Issue**: [#2](https://github.com/vanphutin/education-backend/issues/2)
+- **Issue**: #2
+- **Giai đoạn**: Core Theory + Mini Labs
+
+## Required Reading
+
+- **Cơ bản/Trung bình:** [Cloudflare Learning - What is DNS?](https://www.cloudflare.com/learning/dns/what-is-dns/)
+- **Nâng cao:** [High Performance Browser Networking - Building Blocks of TCP](https://hpbn.co/building-blocks-of-tcp/)
+
 
 ## 1. Learning Objectives
-- Hiểu rõ lý thuyết cốt lõi về TypeScript và OOP trọng tâm trước NestJS.
-- Nắm vững các khái niệm cơ bản liên quan.
+- Hiểu sâu: Internet fundamentals: DNS, TCP/IP, TLS, latency, timeout, request lifecycle.
+- Giải thích được concept này giải quyết vấn đề backend nào.
+- Chuẩn bị kiến thức để Thứ 5-7 làm mini lab.
 
 ## 2. Core Concepts
-| Concept | Giải thích bằng lời của tôi | Dùng ở đâu trong backend |
+| Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| Khái niệm 1 | ... | ... |
-| Khái niệm 2 | ... | ... |
+| ... | ... | ... |
 
 ## 3. Common Mistakes
-- Sai lầm 1: ...
-- Sai lầm 2: ...
+- ...
 
-## 4. Mini Lab
-- **Goal**: Kiểm chứng thực tế về TypeScript và OOP trọng tâm trước NestJS.
-- **Code/log**:
-```typescript
-// Viết code thử nghiệm ở đây
-```
-- **Result**:
-```text
-// Ghi nhận kết quả hoặc logs
-```
+## 4. Notes
+- ...
 
-## 5. Project Bridge
-- Kiến thức này sẽ được áp dụng vào dự án Movie Ticket Booking tại các phần thiết kế logic, validation và tích hợp hệ thống.
+## 5. Mini Lab Preparation
+- Thứ 5-7 sẽ kiểm chứng concept này bằng lab nào?
+- Input/output mong đợi là gì?
 
 ## 6. Interview Drill
-- **Question**: Trình bày hiểu biết và tradeoff liên quan đến TypeScript và OOP trọng tâm trước NestJS.
-- **My answer**:
+- Question: Idempotency là gì và API nào cần idempotent?
+- My answer:
   - ...
+

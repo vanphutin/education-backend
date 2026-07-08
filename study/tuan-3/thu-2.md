@@ -1,38 +1,38 @@
-# Theory Sprint: SQL tables, constraints, keys, normalization
+# Theory Deep Dive: SQL and data modeling: table, relation, normalization, constraints, migration mindset
 
 - **Tuần**: 3
 - **Ngày**: Thứ 2
-- **Issue**: [#11](https://github.com/vanphutin/education-backend/issues/11)
+- **Issue**: #11
+- **Giai đoạn**: Deep Foundation + Mini Labs
+
+## Required Reading
+
+- **Cơ bản/Trung bình:** [PostgreSQL Docs - Data Definition](https://www.postgresql.org/docs/current/ddl.html)
+- **Nâng cao:** [PostgreSQL Docs - Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html)
+
 
 ## 1. Learning Objectives
-- Hiểu rõ lý thuyết cốt lõi về SQL tables, constraints, keys, normalization.
-- Nắm vững các khái niệm cơ bản liên quan.
+- Hiểu sâu: SQL and data modeling: table, relation, normalization, constraints, migration mindset.
+- Giải thích được concept này giải quyết vấn đề backend nào.
+- Chuẩn bị kiến thức để Thứ 5-7 làm mini lab.
 
 ## 2. Core Concepts
-| Concept | Giải thích bằng lời của tôi | Dùng ở đâu trong backend |
+| Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| Khái niệm 1 | ... | ... |
-| Khái niệm 2 | ... | ... |
+| ... | ... | ... |
 
 ## 3. Common Mistakes
-- Sai lầm 1: ...
-- Sai lầm 2: ...
+- ...
 
-## 4. Mini Lab
-- **Goal**: Kiểm chứng thực tế về SQL tables, constraints, keys, normalization.
-- **Code/log**:
-```typescript
-// Viết code thử nghiệm ở đây
-```
-- **Result**:
-```text
-// Ghi nhận kết quả hoặc logs
-```
+## 4. Notes
+- ...
 
-## 5. Project Bridge
-- Kiến thức này sẽ được áp dụng vào dự án Movie Ticket Booking tại các phần thiết kế logic, validation và tích hợp hệ thống.
+## 5. Mini Lab Preparation
+- Thứ 5-7 sẽ kiểm chứng concept này bằng lab nào?
+- Input/output mong đợi là gì?
 
 ## 6. Interview Drill
-- **Question**: Trình bày hiểu biết và tradeoff liên quan đến SQL tables, constraints, keys, normalization.
-- **My answer**:
+- Question: Vì sao DB constraint quan trọng hơn app validation trong critical data?
+- My answer:
   - ...
+

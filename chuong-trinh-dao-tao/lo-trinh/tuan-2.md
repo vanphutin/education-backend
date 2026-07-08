@@ -1,59 +1,49 @@
-# Tuần 2 - Production API behavior và request pipeline
+# Tuần 2 - TypeScript/OOP, NestJS mental model và backend code organization
 
-Tuần 2 biến API mock thành API có hành vi giống service thật: validation, error format, request id, logging, pagination/filter/sort và response contract nhất quán.
+**Giai đoạn:** Core Theory + Mini Labs  
+**Chế độ học:** Thứ 2-4 học chuyên sâu. Thứ 5-7 làm mini labs từ kiến thức Thứ 2-4. Chưa bắt đầu dự án thật.
 
----
 
 ## 1. Mục tiêu tuần
 
 | Hạng mục | Nội dung |
 |---|---|
-| Business goal | Guest lọc phim/suất chiếu theo nhu cầu thật: ngày, rạp, phim, trạng thái publish. |
-| Engineering goal | Chuẩn hóa request pipeline: middleware, pipe, interceptor, exception filter, DTO validation. |
-| System thinking | Thiết kế API predictable, debug được bằng request id, lỗi trả về nhất quán. |
-| Deliverables | PR request pipeline, docs API behavior, filter/pagination APIs, validation/error tests. |
-| Interview focus | Pipe/guard/interceptor/filter, error contract, pagination, logging, async Node.js. |
-
----
+| Goal | Hiểu cách tổ chức code backend để dễ test, dễ thay đổi và không phụ thuộc mù quáng vào framework. |
+| Focus | TypeScript type system, OOP, composition, dependency injection, module boundary, controller/service/repository responsibility. |
+| Project rule | Không code, không scaffold, không implement Movie Ticket Booking trong tuần này. Chỉ học sâu và làm mini lab độc lập. |
 
 ## 2. Kế hoạch học tập theo ngày
 
-Thứ 2-4 là theory sprint. Thứ 5-7 mới mapping vào project.
+| Ngày | Loại buổi | Trọng tâm |
+|---|---|---|
+| Thứ 2 | Theory Deep Dive | TypeScript foundation: type, interface, class, generic, error typing, runtime vs compile time |
+| Thứ 3 | Theory Deep Dive | OOP for backend: encapsulation, composition over inheritance, polymorphism, value object mindset |
+| Thứ 4 | Theory Deep Dive | Dependency Injection and modular design: why DI exists, dependency direction, testability |
+| Thứ 5 | Mini Lab | TypeScript/OOP lab: viết domain mini models, validation rules và error handling không dùng framework |
+| Thứ 6-7 | Mini Lab | NestJS mental model lab: module/controller/service/provider mini app, chỉ để hiểu framework như công cụ |
 
-| Ngày | Loại buổi | Trọng tâm | Output bắt buộc |
-|---|---|---|---|
-| Thứ 2 | Theory sprint | Node.js event loop, async I/O, microtask/macrotask, error propagation | Event loop notes, async examples, interview answers |
-| Thứ 3 | Theory sprint | Stream, buffer, backpressure, large response/export mindset | Mini lab stream/buffer, notes khi nào không load all vào memory |
-| Thứ 4 | Theory sprint | NestJS request pipeline: middleware, pipe, interceptor, exception filter, lifecycle | Pipeline diagram, comparison table, mini examples |
-| Thứ 5 | Project mapping | Map pipeline vào Movie APIs: validation, error contract, request id, logging, pagination/filter/sort | API behavior spec, DTO plan, error response design |
-| Thứ 6-7 | Project sprint | Implement pipeline, movie/showtime filters, tests/evidence | PR `feat/common-request-pipeline`, curl invalid/valid cases, log evidence |
+## 3. Output bắt buộc
 
----
+- TypeScript notes
+- OOP mini lab
+- DI notes
+- NestJS lifecycle mini lab
+- Interview answers
 
-## 3. API scope tuần 2
+## 4. Interview drill
 
-```text
-GET /movies?keyword=&genre=&status=&page=&limit=&sort=
-GET /showtimes?movieId=&cinemaId=&date=&page=&limit=
-GET /showtimes/:id/seats
-```
 
----
+- Controller, service, repository khác trách nhiệm thế nào?
+- DI giúp test và thay implementation ra sao?
+- Composition tốt hơn inheritance khi nào?
 
-## 4. Acceptance criteria
 
-- [ ] API lỗi có format thống nhất.
-- [ ] Query DTO có validation.
-- [ ] Pagination metadata rõ: `page`, `limit`, `total`, `totalPages`.
-- [ ] Có request id trong response/log.
-- [ ] Logging đủ debug nhưng không lộ secret.
-- [ ] Docs request pipeline giải thích middleware/pipe/interceptor/filter.
+## Required Reading By Day
 
----
-
-## 5. Interview drill
-
-- Pipe, interceptor, middleware, exception filter khác nhau thế nào?
-- Vì sao API cần request id?
-- Pagination offset có nhược điểm gì khi dữ liệu lớn?
-- Nếu client gửi `limit=100000`, backend nên xử lý thế nào?
+| Ngày | Cơ bản/Trung bình | Nâng cao |
+|---|---|---|
+| Mon | [TypeScript Handbook - The Basics](https://www.typescriptlang.org/docs/handbook/2/basic-types.html) | [TypeScript Handbook - Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) |
+| Tue | [TypeScript Handbook - Classes](https://www.typescriptlang.org/docs/handbook/2/classes.html) | [Martin Fowler - Value Object](https://martinfowler.com/bliki/ValueObject.html) |
+| Wed | [NestJS Docs - Custom Providers](https://docs.nestjs.com/fundamentals/custom-providers) | [NestJS Docs - Dynamic Modules](https://docs.nestjs.com/fundamentals/dynamic-modules) |
+| Thu | [TypeScript Handbook - Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) | [TypeScript Handbook - Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) |
+| Fri-Sat | [NestJS Docs - Controllers](https://docs.nestjs.com/controllers) | [NestJS Docs - Execution Context](https://docs.nestjs.com/fundamentals/execution-context) |

@@ -1,38 +1,38 @@
-# Theory Sprint: Node event loop, async IO, error propagation
+# Theory Deep Dive: TypeScript foundation: type, interface, class, generic, error typing, runtime vs compile time
 
 - **Tuần**: 2
 - **Ngày**: Thứ 2
-- **Issue**: [#6](https://github.com/vanphutin/education-backend/issues/6)
+- **Issue**: #6
+- **Giai đoạn**: Core Theory + Mini Labs
+
+## Required Reading
+
+- **Cơ bản/Trung bình:** [TypeScript Handbook - The Basics](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)
+- **Nâng cao:** [TypeScript Handbook - Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)
+
 
 ## 1. Learning Objectives
-- Hiểu rõ lý thuyết cốt lõi về Node event loop, async IO, error propagation.
-- Nắm vững các khái niệm cơ bản liên quan.
+- Hiểu sâu: TypeScript foundation: type, interface, class, generic, error typing, runtime vs compile time.
+- Giải thích được concept này giải quyết vấn đề backend nào.
+- Chuẩn bị kiến thức để Thứ 5-7 làm mini lab.
 
 ## 2. Core Concepts
-| Concept | Giải thích bằng lời của tôi | Dùng ở đâu trong backend |
+| Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| Khái niệm 1 | ... | ... |
-| Khái niệm 2 | ... | ... |
+| ... | ... | ... |
 
 ## 3. Common Mistakes
-- Sai lầm 1: ...
-- Sai lầm 2: ...
+- ...
 
-## 4. Mini Lab
-- **Goal**: Kiểm chứng thực tế về Node event loop, async IO, error propagation.
-- **Code/log**:
-```typescript
-// Viết code thử nghiệm ở đây
-```
-- **Result**:
-```text
-// Ghi nhận kết quả hoặc logs
-```
+## 4. Notes
+- ...
 
-## 5. Project Bridge
-- Kiến thức này sẽ được áp dụng vào dự án Movie Ticket Booking tại các phần thiết kế logic, validation và tích hợp hệ thống.
+## 5. Mini Lab Preparation
+- Thứ 5-7 sẽ kiểm chứng concept này bằng lab nào?
+- Input/output mong đợi là gì?
 
 ## 6. Interview Drill
-- **Question**: Trình bày hiểu biết và tradeoff liên quan đến Node event loop, async IO, error propagation.
-- **My answer**:
+- Question: Controller, service, repository khác trách nhiệm thế nào?
+- My answer:
   - ...
+

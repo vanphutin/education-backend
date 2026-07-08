@@ -1,56 +1,42 @@
-# Ticket: Movie/cinema/screen/seat/showtime schema design
+# Mini Lab Ticket: Database lab: schema nhỏ, constraints, indexes, EXPLAIN, transaction rollback và lock behavior
 
 - **Tuần**: 3
 - **Ngày**: Thứ 5
-- **Issue**: [#14](https://github.com/vanphutin/education-backend/issues/14)
-- **Backlog Items**: BL-006, BL-007, BL-008, BL-009, BL-010, BL-011, BL-051, BL-052
+- **Issue**: #14
+- **Giai đoạn**: Deep Foundation + Mini Labs
 
-## 1. Business Scenario
-- **Actor**: Guest / Customer / Staff / Admin
-- **User story**: Chi tiết trong tài liệu backlog tương ứng (BL-006, BL-007, BL-008, BL-009, BL-010, BL-011, BL-051, BL-052).
-- **Why it matters**: Giải quyết nhu cầu nghiệp vụ thực tế của hệ thống đặt vé.
+## Required Reading
 
-## 2. System Analysis
-- **Input**: ...
-- **Output**: ...
-- **State involved**: ...
-- **Edge cases**: ...
-- **Failure cases**: ...
-- **Security/data consistency risk**: ...
+- **Cơ bản/Trung bình:** [PostgreSQL Docs - Transactions Tutorial](https://www.postgresql.org/docs/current/tutorial-transactions.html)
+- **Nâng cao:** [PostgreSQL Docs - Transaction Isolation](https://www.postgresql.org/docs/current/transaction-iso.html)
 
-## 3. Design Before Code
-- **API contract**: ...
-- **DB impact**: ...
-- **Module/service boundary**: ...
-- **Validation/error behavior**: ...
-- **Logging/audit/integration logs**: ...
-- **Transaction/permission concern**: ...
 
-## 4. Implementation Checklist
-- [ ] Triển khai và kiểm thử backlog BL-006
-- [ ] Triển khai và kiểm thử backlog BL-007
-- [ ] Triển khai và kiểm thử backlog BL-008
-- [ ] Triển khai và kiểm thử backlog BL-009
-- [ ] Triển khai và kiểm thử backlog BL-010
-- [ ] Triển khai và kiểm thử backlog BL-011
-- [ ] Triển khai và kiểm thử backlog BL-051
-- [ ] Triển khai và kiểm thử backlog BL-052
-- [ ] Viết unit tests và integration tests liên quan.
+## 1. Lab Goal
+- Mini lab này kiểm chứng kiến thức đã học trong Thứ 2-4.
+- Không code dự án Movie Ticket Booking.
 
-## 5. Verification
-- **Unit test**: ...
-- **E2E/manual curl**: ...
-- **Swagger**: ...
-- **Migration/seed**: ...
-- **Build/lint**: ...
+## 2. Concepts Covered
+| Concept từ Thứ 2-4 | Lab sẽ kiểm chứng bằng gì | Kết quả mong đợi |
+|---|---|---|
+| ... | ... | ... |
 
-## 6. Evidence
-- **Issue**: [#14](https://github.com/vanphutin/education-backend/issues/14)
-- **PR**: ...
-- **Logs/screenshots**: ...
-- **Docs/ADR**: ...
+## 3. Lab Steps
+1. ...
+2. ...
+3. ...
 
-## 7. Interview Drill
-- **Question**: Giải thích thiết kế kỹ thuật, luồng đi của dữ liệu và tradeoff khi giải quyết ticket này.
-- **My answer**:
+## 4. Evidence
+- Command/curl/log:
+- Code snippet:
+- Screenshot nếu cần:
+- Kết quả:
+
+## 5. Reflection
+- Concept nào đã rõ hơn sau lab?
+- Nếu áp dụng vào project từ tuần 4, cần cẩn thận điều gì?
+
+## 6. Interview Drill
+- Question: Vì sao DB constraint quan trọng hơn app validation trong critical data?
+- My answer:
   - ...
+

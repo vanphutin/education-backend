@@ -1,325 +1,493 @@
 {
   "student": {
     "name": "Learner",
-    "target": "Backend NestJS Intern/Fresher/Junior"
+    "target": "Backend NestJS Intern/Fresher/Junior - high-intensity foundation first"
   },
   "overall_progress": {
     "completed_weeks": 0,
-    "total_weeks": 8,
-    "completed_tasks": 3,
-    "total_tasks": 40,
-    "average_score": 0
+    "total_weeks": 10,
+    "completed_tasks": 0,
+    "total_tasks": 50,
+    "average_score": 0,
+    "percent_complete": 0
   },
   "weeks": [
     {
       "week_number": 1,
-      "title": "Foundation, OOP, NestJS basics and public catalog API",
-      "status": "IN_PROGRESS",
-      "score": 2,
-      "mentor_feedback": "Tuần này, người học chưa hoàn thành các mục tiêu đề ra. Các ngày từ Thứ 2 đến Thứ 4 đều thiếu nội dung cụ thể trong phần lý thuyết và mini lab. Các phần thiết kế và triển khai trong Thứ 5 và Thứ 6-7 cũng chưa được thực hiện đầy đủ. Người học cần tập trung hơn vào việc hoàn thành các deliverables và cung cấp evidence cụ thể cho từng phần của dự án.",
+      "title": "Backend mindset, Internet, HTTP và API fundamentals",
+      "phase": "Core Theory + Mini Labs",
+      "status": "NOT_STARTED",
+      "score": null,
+      "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "Theory Sprint: HTTP, REST, status code, headers",
+          "topic": "Theory Deep Dive: Backend mindset: framework là công cụ, backend là protocol + data + failure handling",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/1"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/1",
+          "resources": {
+            "basic": {
+              "title": "MDN - Overview of HTTP",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview"
+            },
+            "advanced": {
+              "title": "RFC 9110 - HTTP Semantics",
+              "url": "https://www.rfc-editor.org/rfc/rfc9110"
+            }
+          }
         },
         {
           "day": "Tuesday",
-          "topic": "Theory Sprint: TypeScript OOP before NestJS",
+          "topic": "Theory Deep Dive: Internet fundamentals: DNS, TCP/IP, TLS, latency, timeout, request lifecycle",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/2"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/2",
+          "resources": {
+            "basic": {
+              "title": "Cloudflare Learning - What is DNS?",
+              "url": "https://www.cloudflare.com/learning/dns/what-is-dns/"
+            },
+            "advanced": {
+              "title": "High Performance Browser Networking - Building Blocks of TCP",
+              "url": "https://hpbn.co/building-blocks-of-tcp/"
+            }
+          }
         },
         {
           "day": "Wednesday",
-          "topic": "Theory Sprint: NestJS module, controller, provider, DI",
+          "topic": "Theory Deep Dive: HTTP/API fundamentals: method, status code, headers, body, cookie, cache, CORS, REST constraints",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/3"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/3",
+          "resources": {
+            "basic": {
+              "title": "MDN - HTTP Messages",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages"
+            },
+            "advanced": {
+              "title": "High Performance Browser Networking - Transport Layer Security (TLS)",
+              "url": "https://hpbn.co/transport-layer-security-tls/"
+            }
+          }
         },
         {
           "day": "Thursday",
-          "topic": "Project Mapping: Movie public catalog API contract and module boundary",
+          "topic": "Mini Lab: HTTP lab: dùng curl/Postman mô phỏng request lifecycle, headers, status code, timeout và CORS",
           "status": "TODO",
           "updated_at": null,
-          "backlog_items": [
-            "BL-001",
-            "BL-002",
-            "BL-003",
-            "BL-050"
-          ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/4"
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/4",
+          "resources": {
+            "basic": {
+              "title": "MDN - HTTP Request Methods",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
+            },
+            "advanced": {
+              "title": "MDN - Cross-Origin Resource Sharing (CORS)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS"
+            }
+          }
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Project Sprint: Implement public catalog API, Swagger, README, evidence",
+          "topic": "Mini Lab: API design lab: thiết kế API contract nhỏ, idempotency, pagination, filtering và error response",
           "status": "TODO",
           "updated_at": null,
-          "backlog_items": [
-            "BL-001",
-            "BL-002",
-            "BL-003",
-            "BL-050"
-          ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/5"
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/5",
+          "resources": {
+            "basic": {
+              "title": "MDN - HTTP Response Status Codes",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
+            },
+            "advanced": {
+              "title": "RFC 9110 Section 9.2.2 - Idempotent Methods",
+              "url": "https://www.rfc-editor.org/rfc/rfc9110#section-9.2.2"
+            }
+          }
         }
       ],
       "deliverables": [
         {
-          "id": "w1_pr",
-          "name": "PR chore/setup-movie-ticket-api",
+          "id": "w1_lab_output_1",
+          "name": "Protocol notes",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/pull/<PR_NUMBER>",
-          "evidence": "Link to the merged Pull Request on GitHub"
+          "link": "study/tuan-1/README.md",
+          "evidence": "study/tuan-1/"
         },
         {
-          "id": "w1_oop_lab",
-          "name": "OOP mini lab Movie/Cinema/Showtime",
+          "id": "w1_lab_output_2",
+          "name": "HTTP/status-code decision table",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/2",
-          "evidence": "study/tuan-1/thu-3.md#mini-lab (Verify in Issue #2)"
+          "link": "study/tuan-1/README.md",
+          "evidence": "study/tuan-1/"
         },
         {
-          "id": "w1_api_contract",
-          "name": "Public catalog APIs + Swagger evidence",
+          "id": "w1_lab_output_3",
+          "name": "curl/Postman HTTP lab evidence",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/4",
-          "evidence": "study/tuan-1/thu-5.md (Verify in Issue #4)"
+          "link": "study/tuan-1/README.md",
+          "evidence": "study/tuan-1/"
         },
         {
-          "id": "w1_docs",
-          "name": "README local setup + ADR project scope",
+          "id": "w1_lab_output_4",
+          "name": "API contract mini lab",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/5",
-          "evidence": "study/tuan-1/thu-6-7.md (Verify in Issue #5)"
+          "link": "study/tuan-1/README.md",
+          "evidence": "study/tuan-1/"
+        },
+        {
+          "id": "w1_lab_output_5",
+          "name": "Interview answers",
+          "status": "PENDING",
+          "link": "study/tuan-1/README.md",
+          "evidence": "study/tuan-1/"
         }
       ]
     },
     {
       "week_number": 2,
-      "title": "Node runtime, request pipeline and production API behavior",
+      "title": "TypeScript/OOP, NestJS mental model và backend code organization",
+      "phase": "Core Theory + Mini Labs",
       "status": "NOT_STARTED",
       "score": null,
       "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "Theory Sprint: Node event loop, async IO, error propagation",
+          "topic": "Theory Deep Dive: TypeScript foundation: type, interface, class, generic, error typing, runtime vs compile time",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/6"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/6",
+          "resources": {
+            "basic": {
+              "title": "TypeScript Handbook - The Basics",
+              "url": "https://www.typescriptlang.org/docs/handbook/2/basic-types.html"
+            },
+            "advanced": {
+              "title": "TypeScript Handbook - Generics",
+              "url": "https://www.typescriptlang.org/docs/handbook/2/generics.html"
+            }
+          }
         },
         {
           "day": "Tuesday",
-          "topic": "Theory Sprint: Stream, buffer, backpressure",
+          "topic": "Theory Deep Dive: OOP for backend: encapsulation, composition over inheritance, polymorphism, value object mindset",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/7"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/7",
+          "resources": {
+            "basic": {
+              "title": "TypeScript Handbook - Classes",
+              "url": "https://www.typescriptlang.org/docs/handbook/2/classes.html"
+            },
+            "advanced": {
+              "title": "Martin Fowler - Value Object",
+              "url": "https://martinfowler.com/bliki/ValueObject.html"
+            }
+          }
         },
         {
           "day": "Wednesday",
-          "topic": "Theory Sprint: NestJS middleware, pipe, interceptor, filter",
+          "topic": "Theory Deep Dive: Dependency Injection and modular design: why DI exists, dependency direction, testability",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/8"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/8",
+          "resources": {
+            "basic": {
+              "title": "NestJS Docs - Custom Providers",
+              "url": "https://docs.nestjs.com/fundamentals/custom-providers"
+            },
+            "advanced": {
+              "title": "NestJS Docs - Dynamic Modules",
+              "url": "https://docs.nestjs.com/fundamentals/dynamic-modules"
+            }
+          }
         },
         {
           "day": "Thursday",
-          "topic": "Project Mapping: API validation, error contract, request id, pagination",
+          "topic": "Mini Lab: TypeScript/OOP lab: viết domain mini models, validation rules và error handling không dùng framework",
           "status": "TODO",
           "updated_at": null,
-          "backlog_items": [
-            "BL-004",
-            "BL-005",
-            "BL-045",
-            "BL-046"
-          ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/9"
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/9",
+          "resources": {
+            "basic": {
+              "title": "TypeScript Handbook - Everyday Types",
+              "url": "https://www.typescriptlang.org/docs/handbook/2/everyday-types.html"
+            },
+            "advanced": {
+              "title": "TypeScript Handbook - Narrowing",
+              "url": "https://www.typescriptlang.org/docs/handbook/2/narrowing.html"
+            }
+          }
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Project Sprint: Implement pipeline, filters, logs, tests, evidence",
+          "topic": "Mini Lab: NestJS mental model lab: module/controller/service/provider mini app, chỉ để hiểu framework như công cụ",
           "status": "TODO",
           "updated_at": null,
-          "backlog_items": [
-            "BL-004",
-            "BL-005",
-            "BL-045",
-            "BL-046"
-          ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/10"
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/10",
+          "resources": {
+            "basic": {
+              "title": "NestJS Docs - Controllers",
+              "url": "https://docs.nestjs.com/controllers"
+            },
+            "advanced": {
+              "title": "NestJS Docs - Execution Context",
+              "url": "https://docs.nestjs.com/fundamentals/execution-context"
+            }
+          }
         }
       ],
       "deliverables": [
         {
-          "id": "w2_pr",
-          "name": "PR feat/common-request-pipeline",
+          "id": "w2_lab_output_1",
+          "name": "TypeScript notes",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/pull/<PR_NUMBER>",
-          "evidence": "Link to the merged Pull Request on GitHub"
+          "link": "study/tuan-2/README.md",
+          "evidence": "study/tuan-2/"
         },
         {
-          "id": "w2_api_behavior",
-          "name": "API behavior docs: validation, error, pagination",
+          "id": "w2_lab_output_2",
+          "name": "OOP mini lab",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/10",
-          "evidence": "study/tuan-2/thu-6-7.md (Verify in Issue #10)"
+          "link": "study/tuan-2/README.md",
+          "evidence": "study/tuan-2/"
         },
         {
-          "id": "w2_logging",
-          "name": "Request id/logging evidence",
+          "id": "w2_lab_output_3",
+          "name": "DI notes",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/10",
-          "evidence": "study/tuan-2/thu-6-7.md (Verify in Issue #10)"
+          "link": "study/tuan-2/README.md",
+          "evidence": "study/tuan-2/"
         },
         {
-          "id": "w2_tests",
-          "name": "Validation/error tests or curl evidence",
+          "id": "w2_lab_output_4",
+          "name": "NestJS lifecycle mini lab",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/10",
-          "evidence": "study/tuan-2/thu-6-7.md (Verify in Issue #10)"
+          "link": "study/tuan-2/README.md",
+          "evidence": "study/tuan-2/"
+        },
+        {
+          "id": "w2_lab_output_5",
+          "name": "Interview answers",
+          "status": "PENDING",
+          "link": "study/tuan-2/README.md",
+          "evidence": "study/tuan-2/"
         }
       ]
     },
     {
       "week_number": 3,
-      "title": "Database theory, schema design and showtime seat snapshot",
+      "title": "Database, security, transaction và production thinking foundation",
+      "phase": "Deep Foundation + Mini Labs",
       "status": "NOT_STARTED",
       "score": null,
       "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "Theory Sprint: SQL tables, constraints, keys, normalization",
+          "topic": "Theory Deep Dive: SQL and data modeling: table, relation, normalization, constraints, migration mindset",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/11"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/11",
+          "resources": {
+            "basic": {
+              "title": "PostgreSQL Docs - Data Definition",
+              "url": "https://www.postgresql.org/docs/current/ddl.html"
+            },
+            "advanced": {
+              "title": "PostgreSQL Docs - Constraints",
+              "url": "https://www.postgresql.org/docs/current/ddl-constraints.html"
+            }
+          }
         },
         {
           "day": "Tuesday",
-          "topic": "Theory Sprint: Relations, ERD, snapshot vs live seat layout",
+          "topic": "Theory Deep Dive: Database performance and consistency: index, query plan, transaction, isolation, locking, N+1",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/12"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/12",
+          "resources": {
+            "basic": {
+              "title": "PostgreSQL Docs - Indexes",
+              "url": "https://www.postgresql.org/docs/current/indexes.html"
+            },
+            "advanced": {
+              "title": "PostgreSQL Docs - Using EXPLAIN",
+              "url": "https://www.postgresql.org/docs/current/using-explain.html"
+            }
+          }
         },
         {
           "day": "Wednesday",
-          "topic": "Theory Sprint: TypeORM entity, migration, seed, index, query builder",
+          "topic": "Theory Deep Dive: Security and production primitives: auth/authz, password hashing, token, cache, queue, logging, monitoring, deployment",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/13"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/13",
+          "resources": {
+            "basic": {
+              "title": "OWASP - Authentication Cheat Sheet",
+              "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"
+            },
+            "advanced": {
+              "title": "OWASP - Password Storage Cheat Sheet",
+              "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"
+            }
+          }
         },
         {
           "day": "Thursday",
-          "topic": "Project Mapping: Movie/cinema/screen/seat/showtime schema design",
+          "topic": "Mini Lab: Database lab: schema nhỏ, constraints, indexes, EXPLAIN, transaction rollback và lock behavior",
           "status": "TODO",
           "updated_at": null,
-          "backlog_items": [
-            "BL-006",
-            "BL-007",
-            "BL-008",
-            "BL-009",
-            "BL-010",
-            "BL-011",
-            "BL-051",
-            "BL-052"
-          ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/14"
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/14",
+          "resources": {
+            "basic": {
+              "title": "PostgreSQL Docs - Transactions Tutorial",
+              "url": "https://www.postgresql.org/docs/current/tutorial-transactions.html"
+            },
+            "advanced": {
+              "title": "PostgreSQL Docs - Transaction Isolation",
+              "url": "https://www.postgresql.org/docs/current/transaction-iso.html"
+            }
+          }
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Project Sprint: Implement migrations, seeds, showtime_seats, query evidence",
+          "topic": "Mini Lab: Security/production lab: password hashing, JWT mock, rate limit idea, queue/cache/logging simulation",
           "status": "TODO",
           "updated_at": null,
-          "backlog_items": [
-            "BL-006",
-            "BL-007",
-            "BL-008",
-            "BL-009",
-            "BL-010",
-            "BL-011",
-            "BL-051",
-            "BL-052"
-          ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/15"
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/15",
+          "resources": {
+            "basic": {
+              "title": "OpenTelemetry - Observability Primer",
+              "url": "https://opentelemetry.io/docs/concepts/observability-primer/"
+            },
+            "advanced": {
+              "title": "Google SRE Book - Monitoring Distributed Systems",
+              "url": "https://sre.google/sre-book/monitoring-distributed-systems/"
+            }
+          }
         }
       ],
       "deliverables": [
         {
-          "id": "w3_pr",
-          "name": "PR feat/movie-cinema-showtime-schema",
+          "id": "w3_lab_output_1",
+          "name": "SQL/DB notes",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/pull/<PR_NUMBER>",
-          "evidence": "Link to the merged Pull Request on GitHub"
+          "link": "study/tuan-3/README.md",
+          "evidence": "study/tuan-3/"
         },
         {
-          "id": "w3_erd",
-          "name": "ERD + snapshot seat ADR",
+          "id": "w3_lab_output_2",
+          "name": "Schema and constraint mini lab",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/15",
-          "evidence": "study/tuan-3/thu-6-7.md (Verify in Issue #15)"
+          "link": "study/tuan-3/README.md",
+          "evidence": "study/tuan-3/"
         },
         {
-          "id": "w3_migrations",
-          "name": "Migration/seed run evidence",
+          "id": "w3_lab_output_3",
+          "name": "Transaction/lock lab",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/15",
-          "evidence": "study/tuan-3/thu-6-7.md (Verify in Issue #15)"
+          "link": "study/tuan-3/README.md",
+          "evidence": "study/tuan-3/"
         },
         {
-          "id": "w3_query_review",
-          "name": "Index/query review evidence",
+          "id": "w3_lab_output_4",
+          "name": "Security mini lab",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/15",
-          "evidence": "study/tuan-3/thu-6-7.md (Verify in Issue #15)"
+          "link": "study/tuan-3/README.md",
+          "evidence": "study/tuan-3/"
+        },
+        {
+          "id": "w3_lab_output_5",
+          "name": "Production primitives lab notes",
+          "status": "PENDING",
+          "link": "study/tuan-3/README.md",
+          "evidence": "study/tuan-3/"
         }
       ]
     },
     {
       "week_number": 4,
-      "title": "Auth theory, RBAC and seat hold concurrency",
+      "title": "Project kickoff: API skeleton, public catalog và request pipeline",
+      "phase": "Project Delivery",
       "status": "NOT_STARTED",
       "score": null,
       "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "Theory Sprint: Auth, password hashing, JWT, refresh/logout",
+          "topic": "Project Delivery: Review foundation: API contract, request lifecycle, validation and error principles",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/16"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/16",
+          "resources": {
+            "basic": {
+              "title": "NestJS Docs - First Steps",
+              "url": "https://docs.nestjs.com/first-steps"
+            },
+            "advanced": {
+              "title": "NestJS Docs - Modules",
+              "url": "https://docs.nestjs.com/modules"
+            }
+          }
         },
         {
           "day": "Tuesday",
-          "topic": "Theory Sprint: RBAC, guards, decorators, permission matrix",
+          "topic": "Project Delivery: NestJS implementation patterns: module/controller/service/DTO, common module",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/17"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/17",
+          "resources": {
+            "basic": {
+              "title": "NestJS Docs - Providers",
+              "url": "https://docs.nestjs.com/providers"
+            },
+            "advanced": {
+              "title": "NestJS Docs - Lifecycle Events",
+              "url": "https://docs.nestjs.com/fundamentals/lifecycle-events"
+            }
+          }
         },
         {
           "day": "Wednesday",
-          "topic": "Theory Sprint: Transaction, isolation, row lock, race condition",
+          "topic": "Project Delivery: Request pipeline implementation plan: validation, exception filter, interceptor, logging",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/18"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/18",
+          "resources": {
+            "basic": {
+              "title": "NestJS Docs - Validation",
+              "url": "https://docs.nestjs.com/techniques/validation"
+            },
+            "advanced": {
+              "title": "NestJS Docs - Exception Filters",
+              "url": "https://docs.nestjs.com/exception-filters"
+            }
+          }
         },
         {
           "day": "Thursday",
-          "topic": "Project Mapping: Actors, protected APIs, seat hold state and transaction design",
+          "topic": "Project Delivery: Map public catalog into project: movies, cinemas, showtimes, seats API contract",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -331,11 +499,21 @@
             "BL-017",
             "BL-018"
           ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/19"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/19",
+          "resources": {
+            "basic": {
+              "title": "NestJS Docs - OpenAPI Introduction",
+              "url": "https://docs.nestjs.com/openapi/introduction"
+            },
+            "advanced": {
+              "title": "Microsoft REST API Guidelines",
+              "url": "https://github.com/microsoft/api-guidelines/blob/vNext/Guidelines.md"
+            }
+          }
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Project Sprint: Implement auth, RBAC, transactional seat hold, race evidence",
+          "topic": "Project Delivery: Implement API skeleton, public catalog, Swagger, validation/error/logging evidence",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -347,74 +525,122 @@
             "BL-017",
             "BL-018"
           ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/20"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/20",
+          "resources": {
+            "basic": {
+              "title": "NestJS Docs - Logger",
+              "url": "https://docs.nestjs.com/techniques/logger"
+            },
+            "advanced": {
+              "title": "NestJS Docs - Interceptors",
+              "url": "https://docs.nestjs.com/interceptors"
+            }
+          }
         }
       ],
       "deliverables": [
         {
-          "id": "w4_pr",
-          "name": "PR feat/auth-rbac-seat-hold",
+          "id": "w4_output_1",
+          "name": "Running NestJS app",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/pull/<PR_NUMBER>",
-          "evidence": "Link to the merged Pull Request on GitHub"
+          "link": "study/tuan-4/README.md",
+          "evidence": "study/tuan-4/"
         },
         {
-          "id": "w4_rbac",
-          "name": "RBAC matrix + guard tests",
+          "id": "w4_output_2",
+          "name": "Public catalog API",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/20",
-          "evidence": "study/tuan-4/thu-6-7.md (Verify in Issue #20)"
+          "link": "study/tuan-4/README.md",
+          "evidence": "study/tuan-4/"
         },
         {
-          "id": "w4_state",
-          "name": "Seat hold state machine/ADR",
+          "id": "w4_output_3",
+          "name": "Swagger",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/19",
-          "evidence": "study/tuan-4/thu-5.md (Verify in Issue #19)"
+          "link": "study/tuan-4/README.md",
+          "evidence": "study/tuan-4/"
         },
         {
-          "id": "w4_race",
-          "name": "Double-hold race-condition evidence",
+          "id": "w4_output_4",
+          "name": "Error contract",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/20",
-          "evidence": "study/tuan-4/thu-6-7.md (Verify in Issue #20)"
+          "link": "study/tuan-4/README.md",
+          "evidence": "study/tuan-4/"
+        },
+        {
+          "id": "w4_output_5",
+          "name": "curl/log evidence",
+          "status": "PENDING",
+          "link": "study/tuan-4/README.md",
+          "evidence": "study/tuan-4/"
         }
       ]
     },
     {
       "week_number": 5,
-      "title": "Booking state machine, testing, CI and Docker",
+      "title": "PostgreSQL implementation, migrations, indexes và query review",
+      "phase": "Project Delivery",
       "status": "NOT_STARTED",
       "score": null,
       "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "Theory Sprint: Booking/payment/ticket state machine",
+          "topic": "Project Delivery: Schema refinement: movie/cinema/screen/seat/showtime relations and constraints",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/21"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/21",
+          "resources": {
+            "basic": {
+              "title": "TypeORM Docs - Entities",
+              "url": "https://typeorm.io/entities"
+            },
+            "advanced": {
+              "title": "PostgreSQL Docs - Constraints",
+              "url": "https://www.postgresql.org/docs/current/ddl-constraints.html"
+            }
+          }
         },
         {
           "day": "Tuesday",
-          "topic": "Theory Sprint: Test pyramid, unit/e2e, mocking boundaries, Supertest",
+          "topic": "Project Delivery: Migration and seed strategy: clean DB, idempotent seed, production safety",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/22"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/22",
+          "resources": {
+            "basic": {
+              "title": "TypeORM Docs - Migrations",
+              "url": "https://typeorm.io/migrations"
+            },
+            "advanced": {
+              "title": "Martin Fowler - Evolutionary Database Design",
+              "url": "https://martinfowler.com/articles/evodb.html"
+            }
+          }
         },
         {
           "day": "Wednesday",
-          "topic": "Theory Sprint: CI, Docker, Compose, env and reproducible setup",
+          "topic": "Project Delivery: Index/query review: EXPLAIN, composite index, N+1, query builder tradeoff",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/23"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/23",
+          "resources": {
+            "basic": {
+              "title": "PostgreSQL Docs - Indexes",
+              "url": "https://www.postgresql.org/docs/current/indexes.html"
+            },
+            "advanced": {
+              "title": "PostgreSQL Docs - Using EXPLAIN",
+              "url": "https://www.postgresql.org/docs/current/using-explain.html"
+            }
+          }
         },
         {
           "day": "Thursday",
-          "topic": "Project Mapping: Booking/ticket/check-in design and test plan",
+          "topic": "Project Delivery: Map DB into project APIs and admin workflows",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -431,11 +657,21 @@
             "BL-048",
             "BL-049"
           ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/24"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/24",
+          "resources": {
+            "basic": {
+              "title": "TypeORM Docs - Select Query Builder",
+              "url": "https://typeorm.io/select-query-builder"
+            },
+            "advanced": {
+              "title": "PostgreSQL Docs - Indexes and ORDER BY",
+              "url": "https://www.postgresql.org/docs/current/indexes-ordering.html"
+            }
+          }
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Project Sprint: Implement booking, ticket, e2e, CI, Docker evidence",
+          "topic": "Project Delivery: Implement migrations/entities/seeds, public queries and query-plan evidence",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -452,74 +688,122 @@
             "BL-048",
             "BL-049"
           ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/25"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/25",
+          "resources": {
+            "basic": {
+              "title": "TypeORM Docs - Relations",
+              "url": "https://typeorm.io/relations"
+            },
+            "advanced": {
+              "title": "PostgreSQL Docs - Performance Tips",
+              "url": "https://www.postgresql.org/docs/current/performance-tips.html"
+            }
+          }
         }
       ],
       "deliverables": [
         {
-          "id": "w5_pr",
-          "name": "PR feat/booking-ticket-testing-ci-docker",
+          "id": "w5_output_1",
+          "name": "ERD",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/pull/<PR_NUMBER>",
-          "evidence": "Link to the merged Pull Request on GitHub"
+          "link": "study/tuan-5/README.md",
+          "evidence": "study/tuan-5/"
         },
         {
-          "id": "w5_state",
-          "name": "Booking/ticket state machine docs",
+          "id": "w5_output_2",
+          "name": "Migrations",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/24",
-          "evidence": "study/tuan-5/thu-5.md (Verify in Issue #24)"
+          "link": "study/tuan-5/README.md",
+          "evidence": "study/tuan-5/"
         },
         {
-          "id": "w5_e2e",
-          "name": "E2E booking -> ticket -> check-in evidence",
+          "id": "w5_output_3",
+          "name": "Seed data",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/25",
-          "evidence": "study/tuan-5/thu-6-7.md (Verify in Issue #25)"
+          "link": "study/tuan-5/README.md",
+          "evidence": "study/tuan-5/"
         },
         {
-          "id": "w5_ci_docker",
-          "name": "CI + Docker Compose evidence",
+          "id": "w5_output_4",
+          "name": "Index notes",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/25",
-          "evidence": "study/tuan-5/thu-6-7.md (Verify in Issue #25)"
+          "link": "study/tuan-5/README.md",
+          "evidence": "study/tuan-5/"
+        },
+        {
+          "id": "w5_output_5",
+          "name": "EXPLAIN evidence",
+          "status": "PENDING",
+          "link": "study/tuan-5/README.md",
+          "evidence": "study/tuan-5/"
         }
       ]
     },
     {
       "week_number": 6,
-      "title": "Payment/webhook, async jobs and AI search theory to implementation",
+      "title": "Authentication, authorization, RBAC và security hardening",
+      "phase": "Project Delivery",
       "status": "NOT_STARTED",
       "score": null,
       "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "Theory Sprint: Payment provider, payOS link, webhook, idempotency",
+          "topic": "Project Delivery: Auth deep dive: password hashing, token lifecycle, session/logout strategy",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/26"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/26",
+          "resources": {
+            "basic": {
+              "title": "OWASP - Authentication Cheat Sheet",
+              "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"
+            },
+            "advanced": {
+              "title": "RFC 7519 - JSON Web Token (JWT)",
+              "url": "https://www.rfc-editor.org/rfc/rfc7519"
+            }
+          }
         },
         {
           "day": "Tuesday",
-          "topic": "Theory Sprint: Redis, BullMQ, retry, timeout, job idempotency",
+          "topic": "Project Delivery: Authorization design: RBAC, permission matrix, least privilege, guard/decorator",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/27"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/27",
+          "resources": {
+            "basic": {
+              "title": "OWASP - Authorization Cheat Sheet",
+              "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
+            },
+            "advanced": {
+              "title": "NIST SP 800-63B - Digital Identity Guidelines",
+              "url": "https://pages.nist.gov/800-63-3/sp800-63b.html"
+            }
+          }
         },
         {
           "day": "Wednesday",
-          "topic": "Theory Sprint: Embeddings, vector similarity, pgvector, mock provider",
+          "topic": "Project Delivery: Security hardening: validation, secrets, CORS, rate limit, sensitive logging",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/28"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/28",
+          "resources": {
+            "basic": {
+              "title": "OWASP - REST Security Cheat Sheet",
+              "url": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html"
+            },
+            "advanced": {
+              "title": "OWASP API Security Top 10 2023",
+              "url": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+            }
+          }
         },
         {
           "day": "Thursday",
-          "topic": "Project Mapping: payOS, expiry jobs, semantic search boundary and schema",
+          "topic": "Project Delivery: Map auth/RBAC into Movie Ticket Booking actors and protected APIs",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -533,11 +817,21 @@
             "BL-035",
             "BL-036"
           ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/29"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/29",
+          "resources": {
+            "basic": {
+              "title": "NestJS Docs - Authentication",
+              "url": "https://docs.nestjs.com/security/authentication"
+            },
+            "advanced": {
+              "title": "NestJS Docs - Authorization",
+              "url": "https://docs.nestjs.com/security/authorization"
+            }
+          }
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Project Sprint: Implement payOS, webhook replay safety, jobs, semantic search",
+          "topic": "Project Delivery: Implement auth, RBAC, protected APIs and security evidence",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -551,74 +845,122 @@
             "BL-035",
             "BL-036"
           ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/30"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/30",
+          "resources": {
+            "basic": {
+              "title": "OWASP - Password Storage Cheat Sheet",
+              "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"
+            },
+            "advanced": {
+              "title": "RFC 9106 - Argon2 Memory-Hard Function",
+              "url": "https://www.rfc-editor.org/rfc/rfc9106"
+            }
+          }
         }
       ],
       "deliverables": [
         {
-          "id": "w6_pr",
-          "name": "PR feat/payos-jobs-ai-semantic-search",
+          "id": "w6_output_1",
+          "name": "Auth flow",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/pull/<PR_NUMBER>",
-          "evidence": "Link to the merged Pull Request on GitHub"
+          "link": "study/tuan-6/README.md",
+          "evidence": "study/tuan-6/"
         },
         {
-          "id": "w6_payos",
-          "name": "payOS flow + webhook replay evidence",
+          "id": "w6_output_2",
+          "name": "RBAC matrix",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/30",
-          "evidence": "study/tuan-6/thu-6-7.md (Verify in Issue #30)"
+          "link": "study/tuan-6/README.md",
+          "evidence": "study/tuan-6/"
         },
         {
-          "id": "w6_jobs",
-          "name": "BullMQ expiry job evidence",
+          "id": "w6_output_3",
+          "name": "Security checklist",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/30",
-          "evidence": "study/tuan-6/thu-6-7.md (Verify in Issue #30)"
+          "link": "study/tuan-6/README.md",
+          "evidence": "study/tuan-6/"
         },
         {
-          "id": "w6_ai",
-          "name": "Semantic search + mock provider tests",
+          "id": "w6_output_4",
+          "name": "Deny tests",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/30",
-          "evidence": "study/tuan-6/thu-6-7.md (Verify in Issue #30)"
+          "link": "study/tuan-6/README.md",
+          "evidence": "study/tuan-6/"
+        },
+        {
+          "id": "w6_output_5",
+          "name": "curl evidence",
+          "status": "PENDING",
+          "link": "study/tuan-6/README.md",
+          "evidence": "study/tuan-6/"
         }
       ]
     },
     {
       "week_number": 7,
-      "title": "AI admin workflow, operations and hardening",
+      "title": "Critical consistency: seat hold, booking, ticket và idempotency",
+      "phase": "Project Delivery",
       "status": "NOT_STARTED",
       "score": null,
       "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "Theory Sprint: Backlog triage, scope cut, PR slicing, reviewability",
+          "topic": "Project Delivery: State machine: seat hold, booking, payment, ticket, check-in transitions",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/31"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/31",
+          "resources": {
+            "basic": {
+              "title": "Martin Fowler - State Machine",
+              "url": "https://martinfowler.com/bliki/StateMachine.html"
+            },
+            "advanced": {
+              "title": "PostgreSQL Docs - Transaction Isolation",
+              "url": "https://www.postgresql.org/docs/current/transaction-iso.html"
+            }
+          }
         },
         {
           "day": "Tuesday",
-          "topic": "Theory Sprint: AI schema validation, human approval, prompt/output boundary",
+          "topic": "Project Delivery: Concurrency deep dive: race condition, row lock, isolation, deadlock, retry",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/32"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/32",
+          "resources": {
+            "basic": {
+              "title": "PostgreSQL Docs - Explicit Locking",
+              "url": "https://www.postgresql.org/docs/current/explicit-locking.html"
+            },
+            "advanced": {
+              "title": "PostgreSQL Docs - MVCC",
+              "url": "https://www.postgresql.org/docs/current/mvcc.html"
+            }
+          }
         },
         {
           "day": "Wednesday",
-          "topic": "Theory Sprint: Observability, integration logs, failure simulation",
+          "topic": "Project Delivery: Idempotency: duplicate request, client retry, webhook replay, unique key strategy",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/33"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/33",
+          "resources": {
+            "basic": {
+              "title": "Stripe Docs - Idempotent Requests",
+              "url": "https://docs.stripe.com/api/idempotent_requests"
+            },
+            "advanced": {
+              "title": "RFC 9110 Section 9.2.2 - Idempotent Methods",
+              "url": "https://www.rfc-editor.org/rfc/rfc9110#section-9.2.2"
+            }
+          }
         },
         {
           "day": "Thursday",
-          "topic": "Project Mapping: Admin AI workflow and hardening gaps",
+          "topic": "Project Delivery: Map critical flow into DB/API/service transaction boundary",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -631,11 +973,21 @@
             "BL-043",
             "BL-044"
           ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/34"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/34",
+          "resources": {
+            "basic": {
+              "title": "TypeORM Docs - Transactions",
+              "url": "https://typeorm.io/transactions"
+            },
+            "advanced": {
+              "title": "Martin Fowler - Unit of Work",
+              "url": "https://martinfowler.com/eaaCatalog/unitOfWork.html"
+            }
+          }
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Project Sprint: Implement admin AI draft/apply, failure handling, demo slice",
+          "topic": "Project Delivery: Implement seat hold, booking, ticket, check-in and race/idempotency evidence",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -648,74 +1000,122 @@
             "BL-043",
             "BL-044"
           ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/35"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/35",
+          "resources": {
+            "basic": {
+              "title": "NestJS Docs - Testing",
+              "url": "https://docs.nestjs.com/fundamentals/testing"
+            },
+            "advanced": {
+              "title": "Stripe Engineering Blog - Designing Robust API Idempotency",
+              "url": "https://stripe.com/blog/idempotency"
+            }
+          }
         }
       ],
       "deliverables": [
         {
-          "id": "w7_prs",
-          "name": "3-5 small PRs with reviewable scope",
+          "id": "w7_output_1",
+          "name": "State diagrams",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/pull/<PR_NUMBER>",
-          "evidence": "Link to the merged Pull Request on GitHub"
+          "link": "study/tuan-7/README.md",
+          "evidence": "study/tuan-7/"
         },
         {
-          "id": "w7_admin_ai",
-          "name": "Admin AI draft/apply workflow evidence",
+          "id": "w7_output_2",
+          "name": "Transaction design",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/35",
-          "evidence": "study/tuan-7/thu-6-7.md (Verify in Issue #35)"
+          "link": "study/tuan-7/README.md",
+          "evidence": "study/tuan-7/"
         },
         {
-          "id": "w7_hardening",
-          "name": "Payment/AI failure simulation logs",
+          "id": "w7_output_3",
+          "name": "Race test/logs",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/35",
-          "evidence": "study/tuan-7/thu-6-7.md (Verify in Issue #35)"
+          "link": "study/tuan-7/README.md",
+          "evidence": "study/tuan-7/"
         },
         {
-          "id": "w7_demo",
-          "name": "End-to-end demo script and evidence",
+          "id": "w7_output_4",
+          "name": "E2E flow",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/35",
-          "evidence": "study/tuan-7/thu-6-7.md (Verify in Issue #35)"
+          "link": "study/tuan-7/README.md",
+          "evidence": "study/tuan-7/"
+        },
+        {
+          "id": "w7_output_5",
+          "name": "Audit logs",
+          "status": "PENDING",
+          "link": "study/tuan-7/README.md",
+          "evidence": "study/tuan-7/"
         }
       ]
     },
     {
       "week_number": 8,
-      "title": "Release theory, final demo and interview readiness",
+      "title": "Cache, queue, payment/webhook integration và semantic search",
+      "phase": "Project Delivery",
       "status": "NOT_STARTED",
       "score": null,
       "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "Theory Sprint: Release engineering, regression, scope cut, known limitations",
+          "topic": "Project Delivery: Cache deep dive: TTL, invalidation, cache-aside, stale data, when not to cache",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/36"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/36",
+          "resources": {
+            "basic": {
+              "title": "Redis Docs - Client-side Caching",
+              "url": "https://redis.io/docs/latest/develop/reference/client-side-caching/"
+            },
+            "advanced": {
+              "title": "Redis Docs - Distributed Locks with Redis",
+              "url": "https://redis.io/docs/latest/develop/use/patterns/distributed-locks/"
+            }
+          }
         },
         {
           "day": "Tuesday",
-          "topic": "Theory Sprint: System design storytelling and project pitch",
+          "topic": "Project Delivery: Queue/job deep dive: BullMQ, retry, timeout, delayed jobs, idempotent handlers",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/37"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/37",
+          "resources": {
+            "basic": {
+              "title": "BullMQ Docs - Introduction",
+              "url": "https://docs.bullmq.io/guide/introduction"
+            },
+            "advanced": {
+              "title": "BullMQ Docs - Retrying Failing Jobs",
+              "url": "https://docs.bullmq.io/guide/retrying-failing-jobs"
+            }
+          }
         },
         {
           "day": "Wednesday",
-          "topic": "Theory Sprint: Deep dive interview prep: transaction, webhook, AI, testing",
+          "topic": "Project Delivery: Integration/AI: payment webhook, provider abstraction, embeddings, pgvector, mock provider",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/38"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/38",
+          "resources": {
+            "basic": {
+              "title": "Stripe Docs - Webhooks",
+              "url": "https://docs.stripe.com/webhooks"
+            },
+            "advanced": {
+              "title": "OpenAI Docs - Embeddings",
+              "url": "https://platform.openai.com/docs/guides/embeddings"
+            }
+          }
         },
         {
           "day": "Thursday",
-          "topic": "Project Mapping: Final docs/evidence gaps and release plan",
+          "topic": "Project Delivery: Map cache/jobs/payment/semantic search into Movie Ticket Booking safely",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -723,11 +1123,21 @@
             "BL-054",
             "BL-055"
           ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/39"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/39",
+          "resources": {
+            "basic": {
+              "title": "Redis Docs - Caching Tutorial",
+              "url": "https://redis.io/docs/latest/develop/use/caching/"
+            },
+            "advanced": {
+              "title": "PostgreSQL pgvector README",
+              "url": "https://github.com/pgvector/pgvector"
+            }
+          }
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Project Sprint: Final regression, Docker demo, release notes, mock interview",
+          "topic": "Project Delivery: Implement expiry jobs, webhook replay safety, cache/search slice and integration logs",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -735,37 +1145,328 @@
             "BL-054",
             "BL-055"
           ],
-          "issue_url": "https://github.com/vanphutin/education-backend/issues/40"
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/40",
+          "resources": {
+            "basic": {
+              "title": "BullMQ Docs - Delayed Jobs",
+              "url": "https://docs.bullmq.io/guide/jobs/delayed"
+            },
+            "advanced": {
+              "title": "BullMQ Docs - Parent-Child Relations (Flows)",
+              "url": "https://docs.bullmq.io/guide/flows"
+            }
+          }
         }
       ],
       "deliverables": [
         {
-          "id": "w8_readme",
-          "name": "Final README portfolio + Swagger + ERD",
+          "id": "w8_output_1",
+          "name": "Cache strategy",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/40",
-          "evidence": "study/tuan-8/thu-6-7.md (Verify in Issue #40)"
+          "link": "study/tuan-8/README.md",
+          "evidence": "study/tuan-8/"
         },
         {
-          "id": "w8_tests",
-          "name": "Regression/race/webhook replay test output",
+          "id": "w8_output_2",
+          "name": "Job design",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/40",
-          "evidence": "study/tuan-8/thu-6-7.md (Verify in Issue #40)"
+          "link": "study/tuan-8/README.md",
+          "evidence": "study/tuan-8/"
         },
         {
-          "id": "w8_release",
-          "name": "Docker demo + release notes",
+          "id": "w8_output_3",
+          "name": "Webhook replay evidence",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/40",
-          "evidence": "study/tuan-8/thu-6-7.md (Verify in Issue #40)"
+          "link": "study/tuan-8/README.md",
+          "evidence": "study/tuan-8/"
         },
         {
-          "id": "w8_interview",
-          "name": "Final demo script + interview notes",
+          "id": "w8_output_4",
+          "name": "Semantic search docs",
           "status": "PENDING",
-          "link": "https://github.com/vanphutin/education-backend/issues/40",
-          "evidence": "study/tuan-8/thu-6-7.md (Verify in Issue #40)"
+          "link": "study/tuan-8/README.md",
+          "evidence": "study/tuan-8/"
+        },
+        {
+          "id": "w8_output_5",
+          "name": "Integration logs",
+          "status": "PENDING",
+          "link": "study/tuan-8/README.md",
+          "evidence": "study/tuan-8/"
+        }
+      ]
+    },
+    {
+      "week_number": 9,
+      "title": "Observability, monitoring mindset, resilience và deployment",
+      "phase": "Project Delivery",
+      "status": "NOT_STARTED",
+      "score": null,
+      "mentor_feedback": "",
+      "days": [
+        {
+          "day": "Monday",
+          "topic": "Project Delivery: Observability: structured logs, request id, user id, latency, metrics/tracing mindset",
+          "status": "TODO",
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/41",
+          "resources": {
+            "basic": {
+              "title": "OpenTelemetry - Observability Primer",
+              "url": "https://opentelemetry.io/docs/concepts/observability-primer/"
+            },
+            "advanced": {
+              "title": "OpenTelemetry - Logs",
+              "url": "https://opentelemetry.io/docs/concepts/signals/logs/"
+            }
+          }
+        },
+        {
+          "day": "Tuesday",
+          "topic": "Project Delivery: Resilience: timeout, retry policy, rate limit, graceful shutdown, failure simulation",
+          "status": "TODO",
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/42",
+          "resources": {
+            "basic": {
+              "title": "Microsoft Azure Architecture - Retry Pattern",
+              "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/retry"
+            },
+            "advanced": {
+              "title": "Microsoft Azure Architecture - Circuit Breaker Pattern",
+              "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker"
+            }
+          }
+        },
+        {
+          "day": "Wednesday",
+          "topic": "Project Delivery: Deployment: Docker, env config, secrets, migrations, health/readiness, rollback",
+          "status": "TODO",
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/43",
+          "resources": {
+            "basic": {
+              "title": "Docker Docs - Docker Overview",
+              "url": "https://docs.docker.com/get-started/docker-overview/"
+            },
+            "advanced": {
+              "title": "The Twelve-Factor App - Config",
+              "url": "https://12factor.net/config"
+            }
+          }
+        },
+        {
+          "day": "Thursday",
+          "topic": "Project Delivery: Map operational concerns into Movie Ticket Booking release",
+          "status": "TODO",
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/44",
+          "resources": {
+            "basic": {
+              "title": "Kubernetes Docs - Probes",
+              "url": "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/"
+            },
+            "advanced": {
+              "title": "Google SRE Book - Handling Overload",
+              "url": "https://sre.google/sre-book/handling-overload/"
+            }
+          }
+        },
+        {
+          "day": "Friday-Saturday",
+          "topic": "Project Delivery: Implement hardening, health checks, deploy docs, smoke tests and runbook",
+          "status": "TODO",
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/45",
+          "resources": {
+            "basic": {
+              "title": "Docker Docs - Compose",
+              "url": "https://docs.docker.com/compose/"
+            },
+            "advanced": {
+              "title": "GitHub Actions Docs",
+              "url": "https://docs.github.com/en/actions"
+            }
+          }
+        }
+      ],
+      "deliverables": [
+        {
+          "id": "w9_output_1",
+          "name": "Log schema",
+          "status": "PENDING",
+          "link": "study/tuan-9/README.md",
+          "evidence": "study/tuan-9/"
+        },
+        {
+          "id": "w9_output_2",
+          "name": "Health checks",
+          "status": "PENDING",
+          "link": "study/tuan-9/README.md",
+          "evidence": "study/tuan-9/"
+        },
+        {
+          "id": "w9_output_3",
+          "name": "Rate limit/timeout policy",
+          "status": "PENDING",
+          "link": "study/tuan-9/README.md",
+          "evidence": "study/tuan-9/"
+        },
+        {
+          "id": "w9_output_4",
+          "name": "Deploy guide",
+          "status": "PENDING",
+          "link": "study/tuan-9/README.md",
+          "evidence": "study/tuan-9/"
+        },
+        {
+          "id": "w9_output_5",
+          "name": "Runbook evidence",
+          "status": "PENDING",
+          "link": "study/tuan-9/README.md",
+          "evidence": "study/tuan-9/"
+        }
+      ]
+    },
+    {
+      "week_number": 10,
+      "title": "System design capstone, final evidence và mock interview",
+      "phase": "Capstone",
+      "status": "NOT_STARTED",
+      "score": null,
+      "mentor_feedback": "",
+      "days": [
+        {
+          "day": "Monday",
+          "topic": "Capstone: System design review: requirement, API, DB, state, scale, failure modes",
+          "status": "TODO",
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/46",
+          "resources": {
+            "basic": {
+              "title": "AWS Well-Architected Framework",
+              "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html"
+            },
+            "advanced": {
+              "title": "Google SRE Book - Table of Contents",
+              "url": "https://sre.google/sre-book/table-of-contents/"
+            }
+          }
+        },
+        {
+          "day": "Tuesday",
+          "topic": "Capstone: Performance/load sanity: query review, basic load test, bottleneck analysis",
+          "status": "TODO",
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/47",
+          "resources": {
+            "basic": {
+              "title": "Grafana k6 Docs - Get Started",
+              "url": "https://grafana.com/docs/k6/latest/get-started/"
+            },
+            "advanced": {
+              "title": "Grafana k6 Docs - Load Test Types",
+              "url": "https://grafana.com/docs/k6/latest/using-k6/test-types/"
+            }
+          }
+        },
+        {
+          "day": "Wednesday",
+          "topic": "Capstone: Interview deep dive: HTTP, DB, transaction, auth, cache, queue, deploy, system design",
+          "status": "TODO",
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/48",
+          "resources": {
+            "basic": {
+              "title": "OWASP API Security Top 10 2023",
+              "url": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+            },
+            "advanced": {
+              "title": "Google SRE Book - Addressing Cascading Failures",
+              "url": "https://sre.google/sre-book/addressing-cascading-failures/"
+            }
+          }
+        },
+        {
+          "day": "Thursday",
+          "topic": "Capstone: Final evidence gap closure, release note and demo route",
+          "status": "TODO",
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/49",
+          "resources": {
+            "basic": {
+              "title": "Keep a Changelog",
+              "url": "https://keepachangelog.com/en/1.1.0/"
+            },
+            "advanced": {
+              "title": "GitHub Docs - About Releases",
+              "url": "https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases"
+            }
+          }
+        },
+        {
+          "day": "Friday-Saturday",
+          "topic": "Capstone: Final regression, demo, mock interview and mentor review",
+          "status": "TODO",
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/50",
+          "resources": {
+            "basic": {
+              "title": "AWS Well-Architected Reliability Pillar",
+              "url": "https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html"
+            },
+            "advanced": {
+              "title": "Google SRE Book - Postmortem Culture",
+              "url": "https://sre.google/sre-book/postmortem-culture/"
+            }
+          }
+        }
+      ],
+      "deliverables": [
+        {
+          "id": "w10_output_1",
+          "name": "System design doc",
+          "status": "PENDING",
+          "link": "study/tuan-10/README.md",
+          "evidence": "study/tuan-10/"
+        },
+        {
+          "id": "w10_output_2",
+          "name": "Final README",
+          "status": "PENDING",
+          "link": "study/tuan-10/README.md",
+          "evidence": "study/tuan-10/"
+        },
+        {
+          "id": "w10_output_3",
+          "name": "Evidence pack",
+          "status": "PENDING",
+          "link": "study/tuan-10/README.md",
+          "evidence": "study/tuan-10/"
+        },
+        {
+          "id": "w10_output_4",
+          "name": "Release notes",
+          "status": "PENDING",
+          "link": "study/tuan-10/README.md",
+          "evidence": "study/tuan-10/"
+        },
+        {
+          "id": "w10_output_5",
+          "name": "Mock interview answers",
+          "status": "PENDING",
+          "link": "study/tuan-10/README.md",
+          "evidence": "study/tuan-10/"
         }
       ]
     }
@@ -775,8 +1476,8 @@
   "_meta": {
     "schema_version": 1,
     "created_at": "2026-07-08T03:58:30.406Z",
-    "version": 61,
-    "updated_at": "2026-07-08T10:02:02.749Z",
+    "version": 68,
+    "updated_at": "2026-07-08T10:11:56.601Z",
     "updated_by": "mentor-ai"
   },
   "audit_log": [
@@ -1379,15 +2080,86 @@
       "base_version": 60,
       "new_version": 61,
       "summary": "16 JSON patch operation(s)"
+    },
+    {
+      "id": "65eb1b83-cbbf-4c51-af7a-04e5f8788bcf",
+      "timestamp": "2026-07-08T10:08:14.104Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to DONE",
+      "base_version": 61,
+      "new_version": 62,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "2b30ac6b-7796-4450-9800-f1fe021e51f8",
+      "timestamp": "2026-07-08T10:08:14.918Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to TODO",
+      "base_version": 62,
+      "new_version": 63,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "e5c428af-8f0d-4b36-84aa-9d69bb66dc22",
+      "timestamp": "2026-07-08T10:08:15.615Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to DONE",
+      "base_version": 63,
+      "new_version": 64,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "0e83f657-8977-43bd-b471-1914be8c27bf",
+      "timestamp": "2026-07-08T10:08:16.160Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to TODO",
+      "base_version": 64,
+      "new_version": 65,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "cf073d1f-648a-424f-8563-22cb7ffaad2e",
+      "timestamp": "2026-07-08T10:08:16.598Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to DONE",
+      "base_version": 65,
+      "new_version": 66,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "1dbc04e8-a697-4e56-9912-7ce9fb589900",
+      "timestamp": "2026-07-08T10:08:17.179Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to TODO",
+      "base_version": 66,
+      "new_version": 67,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "f3168c02-7a6e-44f2-8bdf-80d5039177e8",
+      "timestamp": "2026-07-08T10:11:56.601Z",
+      "actor": "mentor-ai",
+      "action": "mentor_patch",
+      "reason": "AI Mentor Review for Week 1",
+      "base_version": 67,
+      "new_version": 68,
+      "summary": "16 JSON patch operation(s)"
     }
   ],
   "program": {
-    "name": "Backend NestJS  - Theory-first Movie Ticket Booking training",
+    "name": "Backend NestJS - 10-week high-intensity foundation-first Movie Ticket Booking training",
     "synced_at": "2026-07-08T04:08:19.4014115Z",
-    "notes": " rhythm: Monday-Wednesday are intensive theory sprints; Thursday-Saturday map theory into Movie Ticket Booking implementation, tests, and evidence. Sunday review is optional and does not count towards the progress tracking (total_tasks = 40).",
+    "notes": "Weeks 1-3 do not start the real project. Monday-Wednesday are deep theory days; Thursday-Saturday are mini labs based on that week theory. Week 4 starts the real Movie Ticket Booking project.",
     "training_start_date": "2026-07-13",
-    "duration_weeks": 8,
+    "duration_weeks": 10,
     "timezone": "Asia/Saigon",
-    "synced_by": "codex-mentor"
+    "synced_by": "codex-mentor",
+    "learning_principle": "Đừng học backend bằng cách học framework trước. Framework chỉ là công cụ. Backend thật sự nằm ở HTTP, API design, database, authentication, authorization, transaction, cache, queue, logging, monitoring, security, scalability và deployment. Framework có thể đổi; tư duy backend thì đi theo bạn cả sự nghiệp."
   }
 }

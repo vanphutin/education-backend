@@ -1,51 +1,55 @@
-# Ticket: Final docs/evidence gaps and release plan
+# Project Delivery Ticket: Map cache/jobs/payment/semantic search into Movie Ticket Booking safely
 
 - **Tuần**: 8
 - **Ngày**: Thứ 5
-- **Issue**: [#39](https://github.com/vanphutin/education-backend/issues/39)
-- **Backlog Items**: BL-053, BL-054, BL-055
+- **Issue**: #39
+- **Giai đoạn**: Project Delivery
+
+## Required Reading
+
+- **Cơ bản/Trung bình:** [Redis Docs - Caching Tutorial](https://redis.io/docs/latest/develop/use/caching/)
+- **Nâng cao:** [PostgreSQL pgvector README](https://github.com/pgvector/pgvector)
+
 
 ## 1. Business Scenario
-- **Actor**: Guest / Customer / Staff / Admin
-- **User story**: Chi tiết trong tài liệu backlog tương ứng (BL-053, BL-054, BL-055).
-- **Why it matters**: Giải quyết nhu cầu nghiệp vụ thực tế của hệ thống đặt vé.
+- Actor:
+- User story:
+- Why it matters:
 
 ## 2. System Analysis
-- **Input**: ...
-- **Output**: ...
-- **State involved**: ...
-- **Edge cases**: ...
-- **Failure cases**: ...
-- **Security/data consistency risk**: ...
+- Input:
+- Output:
+- State involved:
+- Edge cases:
+- Failure cases:
+- Security/data consistency/performance risk:
 
 ## 3. Design Before Code
-- **API contract**: ...
-- **DB impact**: ...
-- **Module/service boundary**: ...
-- **Validation/error behavior**: ...
-- **Logging/audit/integration logs**: ...
-- **Transaction/permission concern**: ...
+- API contract:
+- DB impact:
+- Module/service boundary:
+- Validation/error behavior:
+- Logging/audit/integration logs:
+- Transaction/permission concern:
 
 ## 4. Implementation Checklist
-- [ ] Triển khai và kiểm thử backlog BL-053
-- [ ] Triển khai và kiểm thử backlog BL-054
-- [ ] Triển khai và kiểm thử backlog BL-055
-- [ ] Viết unit tests và integration tests liên quan.
+- [ ] ...
 
 ## 5. Verification
-- **Unit test**: ...
-- **E2E/manual curl**: ...
-- **Swagger**: ...
-- **Migration/seed**: ...
-- **Build/lint**: ...
+- Unit test:
+- E2E/manual curl:
+- Swagger/API docs:
+- Migration/seed:
+- Build/lint:
 
 ## 6. Evidence
-- **Issue**: [#39](https://github.com/vanphutin/education-backend/issues/39)
-- **PR**: ...
-- **Logs/screenshots**: ...
-- **Docs/ADR**: ...
+- Issue:
+- PR/commit:
+- Logs/screenshots:
+- Docs/ADR:
 
 ## 7. Interview Drill
-- **Question**: Giải thích thiết kế kỹ thuật, luồng đi của dữ liệu và tradeoff khi giải quyết ticket này.
-- **My answer**:
+- Question: Cache invalidation khó ở đâu?
+- My answer:
   - ...
+

@@ -1,38 +1,38 @@
-# Theory Sprint: Stream, buffer, backpressure
+# Theory Deep Dive: OOP for backend: encapsulation, composition over inheritance, polymorphism, value object mindset
 
 - **Tuần**: 2
 - **Ngày**: Thứ 3
-- **Issue**: [#7](https://github.com/vanphutin/education-backend/issues/7)
+- **Issue**: #7
+- **Giai đoạn**: Core Theory + Mini Labs
+
+## Required Reading
+
+- **Cơ bản/Trung bình:** [TypeScript Handbook - Classes](https://www.typescriptlang.org/docs/handbook/2/classes.html)
+- **Nâng cao:** [Martin Fowler - Value Object](https://martinfowler.com/bliki/ValueObject.html)
+
 
 ## 1. Learning Objectives
-- Hiểu rõ lý thuyết cốt lõi về Stream, buffer, backpressure.
-- Nắm vững các khái niệm cơ bản liên quan.
+- Hiểu sâu: OOP for backend: encapsulation, composition over inheritance, polymorphism, value object mindset.
+- Giải thích được concept này giải quyết vấn đề backend nào.
+- Chuẩn bị kiến thức để Thứ 5-7 làm mini lab.
 
 ## 2. Core Concepts
-| Concept | Giải thích bằng lời của tôi | Dùng ở đâu trong backend |
+| Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| Khái niệm 1 | ... | ... |
-| Khái niệm 2 | ... | ... |
+| ... | ... | ... |
 
 ## 3. Common Mistakes
-- Sai lầm 1: ...
-- Sai lầm 2: ...
+- ...
 
-## 4. Mini Lab
-- **Goal**: Kiểm chứng thực tế về Stream, buffer, backpressure.
-- **Code/log**:
-```typescript
-// Viết code thử nghiệm ở đây
-```
-- **Result**:
-```text
-// Ghi nhận kết quả hoặc logs
-```
+## 4. Notes
+- ...
 
-## 5. Project Bridge
-- Kiến thức này sẽ được áp dụng vào dự án Movie Ticket Booking tại các phần thiết kế logic, validation và tích hợp hệ thống.
+## 5. Mini Lab Preparation
+- Thứ 5-7 sẽ kiểm chứng concept này bằng lab nào?
+- Input/output mong đợi là gì?
 
 ## 6. Interview Drill
-- **Question**: Trình bày hiểu biết và tradeoff liên quan đến Stream, buffer, backpressure.
-- **My answer**:
+- Question: DI giúp test và thay implementation ra sao?
+- My answer:
   - ...
+

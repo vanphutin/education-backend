@@ -1,56 +1,55 @@
-# Ticket: Implement admin AI draft/apply, failure handling, demo slice
+# Project Delivery Ticket: Implement seat hold, booking, ticket, check-in and race/idempotency evidence
 
 - **Tuần**: 7
 - **Ngày**: Thứ 6-7
-- **Issue**: [#35](https://github.com/vanphutin/education-backend/issues/35)
-- **Backlog Items**: BL-037, BL-038, BL-039, BL-040, BL-041, BL-042, BL-043, BL-044
+- **Issue**: #35
+- **Giai đoạn**: Project Delivery
+
+## Required Reading
+
+- **Cơ bản/Trung bình:** [NestJS Docs - Testing](https://docs.nestjs.com/fundamentals/testing)
+- **Nâng cao:** [Stripe Engineering Blog - Designing Robust API Idempotency](https://stripe.com/blog/idempotency)
+
 
 ## 1. Business Scenario
-- **Actor**: Guest / Customer / Staff / Admin
-- **User story**: Chi tiết trong tài liệu backlog tương ứng (BL-037, BL-038, BL-039, BL-040, BL-041, BL-042, BL-043, BL-044).
-- **Why it matters**: Giải quyết nhu cầu nghiệp vụ thực tế của hệ thống đặt vé.
+- Actor:
+- User story:
+- Why it matters:
 
 ## 2. System Analysis
-- **Input**: ...
-- **Output**: ...
-- **State involved**: ...
-- **Edge cases**: ...
-- **Failure cases**: ...
-- **Security/data consistency risk**: ...
+- Input:
+- Output:
+- State involved:
+- Edge cases:
+- Failure cases:
+- Security/data consistency/performance risk:
 
 ## 3. Design Before Code
-- **API contract**: ...
-- **DB impact**: ...
-- **Module/service boundary**: ...
-- **Validation/error behavior**: ...
-- **Logging/audit/integration logs**: ...
-- **Transaction/permission concern**: ...
+- API contract:
+- DB impact:
+- Module/service boundary:
+- Validation/error behavior:
+- Logging/audit/integration logs:
+- Transaction/permission concern:
 
 ## 4. Implementation Checklist
-- [ ] Triển khai và kiểm thử backlog BL-037
-- [ ] Triển khai và kiểm thử backlog BL-038
-- [ ] Triển khai và kiểm thử backlog BL-039
-- [ ] Triển khai và kiểm thử backlog BL-040
-- [ ] Triển khai và kiểm thử backlog BL-041
-- [ ] Triển khai và kiểm thử backlog BL-042
-- [ ] Triển khai và kiểm thử backlog BL-043
-- [ ] Triển khai và kiểm thử backlog BL-044
-- [ ] Viết unit tests và integration tests liên quan.
+- [ ] ...
 
 ## 5. Verification
-- **Unit test**: ...
-- **E2E/manual curl**: ...
-- **Swagger**: ...
-- **Migration/seed**: ...
-- **Build/lint**: ...
+- Unit test:
+- E2E/manual curl:
+- Swagger/API docs:
+- Migration/seed:
+- Build/lint:
 
 ## 6. Evidence
-- **Issue**: [#35](https://github.com/vanphutin/education-backend/issues/35)
-- **PR**: ...
-- **Logs/screenshots**: ...
-- **Docs/ADR**: ...
+- Issue:
+- PR/commit:
+- Logs/screenshots:
+- Docs/ADR:
 
 ## 7. Interview Drill
-- **Question**: Giải thích thiết kế kỹ thuật, luồng đi của dữ liệu và tradeoff khi giải quyết ticket này.
-- **My answer**:
+- Question: SELECT FOR UPDATE bảo vệ gì?
+- My answer:
   - ...
+

@@ -1,65 +1,48 @@
-# Tuần 8 - Hardening, release, demo và interview
+# Tuần 8 - Cache, queue, payment/webhook integration và semantic search
 
-Tuần 8 đưa project vào trạng thái portfolio: chạy được, test được, demo được, giải thích được và có evidence đủ tin cậy.
+**Giai đoạn:** Project Delivery  
+**Chế độ học:** Async/integration theory + implement selected production features.
 
----
 
 ## 1. Mục tiêu tuần
 
 | Hạng mục | Nội dung |
 |---|---|
-| Business goal | Project có thể demo cho nhà tuyển dụng như một backend sản phẩm thật. |
-| Engineering goal | Regression, race-condition evidence, docs hoàn chỉnh, release note, interview prep. |
-| System thinking | Biết tradeoff, giới hạn scope, rủi ro còn lại và cách vận hành/debug hệ thống. |
-| Deliverables | Final README, Swagger, ERD, test output, Docker evidence, payOS/AI docs, mock interview notes. |
-| Interview focus | 3-minute project pitch, deep dive transaction/payment/AI/test/system design. |
-
----
+| Goal | Hệ thống xử lý async/integration an toàn, không làm hỏng core booking khi provider lỗi. |
+| Focus | Redis cache, BullMQ jobs, retry/timeout, payment provider abstraction, webhook idempotency, semantic search. |
+| Project rule | Async/integration layer. |
 
 ## 2. Kế hoạch học tập theo ngày
 
-Thứ 2-4 là theory sprint. Thứ 5-7 mới mapping vào project.
+| Ngày | Trọng tâm |
+|---|---|
+| Thứ 2 | Cache deep dive: TTL, invalidation, cache-aside, stale data, when not to cache |
+| Thứ 3 | Queue/job deep dive: BullMQ, retry, timeout, delayed jobs, idempotent handlers |
+| Thứ 4 | Integration/AI: payment webhook, provider abstraction, embeddings, pgvector, mock provider |
+| Thứ 5 | Map cache/jobs/payment/semantic search into Movie Ticket Booking safely |
+| Thứ 6-7 | Implement expiry jobs, webhook replay safety, cache/search slice and integration logs |
 
-| Ngày | Loại buổi | Trọng tâm | Output bắt buộc |
-|---|---|---|---|
-| Thứ 2 | Theory sprint | Release engineering: regression, scope cut, known limitations, versioning | Release checklist, risk register |
-| Thứ 3 | Theory sprint | System design storytelling: architecture, state machines, data consistency, tradeoffs | 3-minute pitch draft, deep-dive notes |
-| Thứ 4 | Theory sprint | Interview deep dive: transaction, webhook, AI search, testing, Docker, operations | Mock Q&A notes, weak-point list |
-| Thứ 5 | Project mapping | Map final docs/evidence gaps vào release plan | Final evidence checklist, docs links, demo route |
-| Thứ 6-7 | Project sprint | Final regression, Docker demo, release note, mock interview, mentor final review | Final README, release notes, demo script, interview evidence |
+## 3. Output bắt buộc
 
----
+- Cache strategy
+- Job design
+- Webhook replay evidence
+- Semantic search docs
+- Integration logs
 
-## 3. Optional stretch APIs
+## 4. Interview drill
 
-Chỉ làm nếu core đã ổn định:
+- Cache invalidation khó ở đâu?
+- Job retry gây bug gì?
+- Vì sao webhook phải idempotent?
 
-```text
-POST /movies/:id/reviews
-GET /movies/:id/reviews
-POST /admin/movies/:id/reviews/ai-summary
-GET /movies/:id/review-summary
-```
 
----
+## Required Reading By Day
 
-## 4. Acceptance criteria
-
-- [ ] Fresh clone/setup chạy theo README.
-- [ ] Swagger đủ các API chính.
-- [ ] ERD và state machines có trong docs.
-- [ ] Full test/build pass.
-- [ ] Docker Compose demo pass.
-- [ ] Có evidence race condition và webhook replay.
-- [ ] Có demo script và project pitch.
-- [ ] Người học giải thích được tradeoff chính.
-
----
-
-## 5. Interview drill
-
-- Trình bày project trong 3 phút.
-- Giải thích seat hold transaction từ request đến DB lock.
-- Giải thích payment webhook idempotency.
-- Giải thích semantic search và vì sao cần mock provider trong test.
-- Nếu được làm production thật, bạn sẽ cải thiện gì đầu tiên?
+| Ngày | Cơ bản/Trung bình | Nâng cao |
+|---|---|---|
+| Mon | [Redis Docs - Client-side Caching](https://redis.io/docs/latest/develop/reference/client-side-caching/) | [Redis Docs - Distributed Locks with Redis](https://redis.io/docs/latest/develop/use/patterns/distributed-locks/) |
+| Tue | [BullMQ Docs - Introduction](https://docs.bullmq.io/guide/introduction) | [BullMQ Docs - Retrying Failing Jobs](https://docs.bullmq.io/guide/retrying-failing-jobs) |
+| Wed | [Stripe Docs - Webhooks](https://docs.stripe.com/webhooks) | [OpenAI Docs - Embeddings](https://platform.openai.com/docs/guides/embeddings) |
+| Thu | [Redis Docs - Caching Tutorial](https://redis.io/docs/latest/develop/use/caching/) | [PostgreSQL pgvector README](https://github.com/pgvector/pgvector) |
+| Fri-Sat | [BullMQ Docs - Delayed Jobs](https://docs.bullmq.io/guide/jobs/delayed) | [BullMQ Docs - Parent-Child Relations (Flows)](https://docs.bullmq.io/guide/flows) |

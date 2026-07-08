@@ -1,52 +1,42 @@
-# Ticket: Movie public catalog API contract and module boundary
+# Mini Lab Ticket: HTTP lab: dùng curl/Postman mô phỏng request lifecycle, headers, status code, timeout và CORS
 
 - **Tuần**: 1
 - **Ngày**: Thứ 5
-- **Issue**: [#4](https://github.com/vanphutin/education-backend/issues/4)
-- **Backlog Items**: BL-001, BL-002, BL-003, BL-050
+- **Issue**: #4
+- **Giai đoạn**: Core Theory + Mini Labs
 
-## 1. Business Scenario
-- **Actor**: Guest / Customer / Staff / Admin
-- **User story**: Chi tiết trong tài liệu backlog tương ứng (BL-001, BL-002, BL-003, BL-050).
-- **Why it matters**: Giải quyết nhu cầu nghiệp vụ thực tế của hệ thống đặt vé.
+## Required Reading
 
-## 2. System Analysis
-- **Input**: ...
-- **Output**: ...
-- **State involved**: ...
-- **Edge cases**: ...
-- **Failure cases**: ...
-- **Security/data consistency risk**: ...
+- **Cơ bản/Trung bình:** [MDN - HTTP Request Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+- **Nâng cao:** [MDN - Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 
-## 3. Design Before Code
-- **API contract**: ...
-- **DB impact**: ...
-- **Module/service boundary**: ...
-- **Validation/error behavior**: ...
-- **Logging/audit/integration logs**: ...
-- **Transaction/permission concern**: ...
 
-## 4. Implementation Checklist
-- [ ] Triển khai và kiểm thử backlog BL-001
-- [ ] Triển khai và kiểm thử backlog BL-002
-- [ ] Triển khai và kiểm thử backlog BL-003
-- [ ] Triển khai và kiểm thử backlog BL-050
-- [ ] Viết unit tests và integration tests liên quan.
+## 1. Lab Goal
+- Mini lab này kiểm chứng kiến thức đã học trong Thứ 2-4.
+- Không code dự án Movie Ticket Booking.
 
-## 5. Verification
-- **Unit test**: ...
-- **E2E/manual curl**: ...
-- **Swagger**: ...
-- **Migration/seed**: ...
-- **Build/lint**: ...
+## 2. Concepts Covered
+| Concept từ Thứ 2-4 | Lab sẽ kiểm chứng bằng gì | Kết quả mong đợi |
+|---|---|---|
+| ... | ... | ... |
 
-## 6. Evidence
-- **Issue**: [#4](https://github.com/vanphutin/education-backend/issues/4)
-- **PR**: ...
-- **Logs/screenshots**: ...
-- **Docs/ADR**: ...
+## 3. Lab Steps
+1. ...
+2. ...
+3. ...
 
-## 7. Interview Drill
-- **Question**: Giải thích thiết kế kỹ thuật, luồng đi của dữ liệu và tradeoff khi giải quyết ticket này.
-- **My answer**:
+## 4. Evidence
+- Command/curl/log:
+- Code snippet:
+- Screenshot nếu cần:
+- Kết quả:
+
+## 5. Reflection
+- Concept nào đã rõ hơn sau lab?
+- Nếu áp dụng vào project từ tuần 4, cần cẩn thận điều gì?
+
+## 6. Interview Drill
+- Question: Vì sao framework không phải là backend?
+- My answer:
   - ...
+

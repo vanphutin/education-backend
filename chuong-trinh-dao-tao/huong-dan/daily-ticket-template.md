@@ -1,38 +1,40 @@
-# Daily Template 
+# Daily Template - High-intensity Backend
 
-## Theory Sprint Template (Thứ 2-4)
+## Core Theory Template (Tuần 1-3)
 
 ```md
-# Theory Sprint: <Chủ đề>
+# Core Study Ticket: <Chủ đề>
 
 ## 1. Learning Objectives
 - ...
 
 ## 2. Core Concepts
-| Concept | Giải thích bằng lời của tôi | Dùng ở đâu trong backend |
+| Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
 | ... | ... | ... |
 
 ## 3. Common Mistakes
 - ...
 
-## 4. Mini Lab
+## 4. Lab / Design Exercise
 - Goal:
-- Code/log:
-- Result:
+- Steps:
+- Result/evidence:
 
-## 5. Project Bridge
-- Kiến thức này sẽ dùng ở đâu trong Movie Ticket Booking?
+## 5. Future Project Note
+- Sau tuần 4, kiến thức này có thể dùng ở đâu trong project thật?
+- Nếu hiểu sai, bug production nào dễ xảy ra?
+- Không code/scaffold project trong tuần 1-3.
 
 ## 6. Interview Drill
 - Question:
 - My answer:
 ```
 
-## Project Mapping Sprint Template (Thứ 5-7)
+## Project Delivery Template (Tuần 4-10)
 
 ```md
-# Ticket: <Tên ticket theo business outcome>
+# Project Delivery Ticket: <Tên ticket theo business outcome>
 
 ## 1. Business Scenario
 - Actor:
@@ -45,7 +47,7 @@
 - State involved:
 - Edge cases:
 - Failure cases:
-- Security/data consistency risk:
+- Security/data consistency/performance risk:
 
 ## 3. Design Before Code
 - API contract:
@@ -57,19 +59,17 @@
 
 ## 4. Implementation Checklist
 - [ ] ...
-- [ ] ...
-- [ ] ...
 
 ## 5. Verification
 - Unit test:
 - E2E/manual curl:
-- Swagger:
+- Swagger/API docs:
 - Migration/seed:
 - Build/lint:
 
 ## 6. Evidence
 - Issue:
-- PR:
+- PR/commit:
 - Logs/screenshots:
 - Docs/ADR:
 

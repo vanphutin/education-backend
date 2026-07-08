@@ -1,57 +1,55 @@
-# Ticket: Implement payOS, webhook replay safety, jobs, semantic search
+# Project Delivery Ticket: Implement auth, RBAC, protected APIs and security evidence
 
 - **Tuần**: 6
 - **Ngày**: Thứ 6-7
-- **Issue**: [#30](https://github.com/vanphutin/education-backend/issues/30)
-- **Backlog Items**: BL-027, BL-028, BL-029, BL-030, BL-031, BL-033, BL-034, BL-035, BL-036
+- **Issue**: #30
+- **Giai đoạn**: Project Delivery
+
+## Required Reading
+
+- **Cơ bản/Trung bình:** [OWASP - Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+- **Nâng cao:** [RFC 9106 - Argon2 Memory-Hard Function](https://www.rfc-editor.org/rfc/rfc9106)
+
 
 ## 1. Business Scenario
-- **Actor**: Guest / Customer / Staff / Admin
-- **User story**: Chi tiết trong tài liệu backlog tương ứng (BL-027, BL-028, BL-029, BL-030, BL-031, BL-033, BL-034, BL-035, BL-036).
-- **Why it matters**: Giải quyết nhu cầu nghiệp vụ thực tế của hệ thống đặt vé.
+- Actor:
+- User story:
+- Why it matters:
 
 ## 2. System Analysis
-- **Input**: ...
-- **Output**: ...
-- **State involved**: ...
-- **Edge cases**: ...
-- **Failure cases**: ...
-- **Security/data consistency risk**: ...
+- Input:
+- Output:
+- State involved:
+- Edge cases:
+- Failure cases:
+- Security/data consistency/performance risk:
 
 ## 3. Design Before Code
-- **API contract**: ...
-- **DB impact**: ...
-- **Module/service boundary**: ...
-- **Validation/error behavior**: ...
-- **Logging/audit/integration logs**: ...
-- **Transaction/permission concern**: ...
+- API contract:
+- DB impact:
+- Module/service boundary:
+- Validation/error behavior:
+- Logging/audit/integration logs:
+- Transaction/permission concern:
 
 ## 4. Implementation Checklist
-- [ ] Triển khai và kiểm thử backlog BL-027
-- [ ] Triển khai và kiểm thử backlog BL-028
-- [ ] Triển khai và kiểm thử backlog BL-029
-- [ ] Triển khai và kiểm thử backlog BL-030
-- [ ] Triển khai và kiểm thử backlog BL-031
-- [ ] Triển khai và kiểm thử backlog BL-033
-- [ ] Triển khai và kiểm thử backlog BL-034
-- [ ] Triển khai và kiểm thử backlog BL-035
-- [ ] Triển khai và kiểm thử backlog BL-036
-- [ ] Viết unit tests và integration tests liên quan.
+- [ ] ...
 
 ## 5. Verification
-- **Unit test**: ...
-- **E2E/manual curl**: ...
-- **Swagger**: ...
-- **Migration/seed**: ...
-- **Build/lint**: ...
+- Unit test:
+- E2E/manual curl:
+- Swagger/API docs:
+- Migration/seed:
+- Build/lint:
 
 ## 6. Evidence
-- **Issue**: [#30](https://github.com/vanphutin/education-backend/issues/30)
-- **PR**: ...
-- **Logs/screenshots**: ...
-- **Docs/ADR**: ...
+- Issue:
+- PR/commit:
+- Logs/screenshots:
+- Docs/ADR:
 
 ## 7. Interview Drill
-- **Question**: Giải thích thiết kế kỹ thuật, luồng đi của dữ liệu và tradeoff khi giải quyết ticket này.
-- **My answer**:
+- Question: Refresh token rotation giải quyết gì?
+- My answer:
   - ...
+

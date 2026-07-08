@@ -1,38 +1,38 @@
-# Theory Sprint: HTTP, REST, status code, headers
+# Theory Deep Dive: Backend mindset: framework là công cụ, backend là protocol + data + failure handling
 
 - **Tuần**: 1
 - **Ngày**: Thứ 2
-- **Issue**: [#1](https://github.com/vanphutin/education-backend/issues/1)
+- **Issue**: #1
+- **Giai đoạn**: Core Theory + Mini Labs
+
+## Required Reading
+
+- **Cơ bản/Trung bình:** [MDN - Overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview)
+- **Nâng cao:** [RFC 9110 - HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110)
+
 
 ## 1. Learning Objectives
-- Hiểu rõ lý thuyết cốt lõi về HTTP, REST, status code, headers.
-- Nắm vững các khái niệm cơ bản liên quan.
+- Hiểu sâu: Backend mindset: framework là công cụ, backend là protocol + data + failure handling.
+- Giải thích được concept này giải quyết vấn đề backend nào.
+- Chuẩn bị kiến thức để Thứ 5-7 làm mini lab.
 
 ## 2. Core Concepts
-| Concept | Giải thích bằng lời của tôi | Dùng ở đâu trong backend |
+| Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| Khái niệm 1 | ... | ... |
-| Khái niệm 2 | ... | ... |
+| ... | ... | ... |
 
 ## 3. Common Mistakes
-- Sai lầm 1: ...
-- Sai lầm 2: ...
+- ...
 
-## 4. Mini Lab
-- **Goal**: Kiểm chứng thực tế về HTTP, REST, status code, headers.
-- **Code/log**:
-```typescript
-// Viết code thử nghiệm ở đây
-```
-- **Result**:
-```text
-// Ghi nhận kết quả hoặc logs
-```
+## 4. Notes
+- ...
 
-## 5. Project Bridge
-- Kiến thức này sẽ được áp dụng vào dự án Movie Ticket Booking tại các phần thiết kế logic, validation và tích hợp hệ thống.
+## 5. Mini Lab Preparation
+- Thứ 5-7 sẽ kiểm chứng concept này bằng lab nào?
+- Input/output mong đợi là gì?
 
 ## 6. Interview Drill
-- **Question**: Trình bày hiểu biết và tradeoff liên quan đến HTTP, REST, status code, headers.
-- **My answer**:
+- Question: Vì sao framework không phải là backend?
+- My answer:
   - ...
+

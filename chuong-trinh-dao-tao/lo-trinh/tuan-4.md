@@ -1,89 +1,48 @@
-# Tuần 4 - Auth, RBAC và seat hold concurrency
+# Tuần 4 - Project kickoff: API skeleton, public catalog và request pipeline
 
-Tuần 4 là tuần bảo vệ invariant quan trọng nhất: một ghế trong một suất chiếu không thể bị giữ bởi hai khách cùng lúc.
+**Giai đoạn:** Project Delivery  
+**Chế độ học:** Học mới buổi đầu tuần, áp dụng ngay vào project cuối tuần.
 
----
 
 ## 1. Mục tiêu tuần
 
 | Hạng mục | Nội dung |
 |---|---|
-| Business goal | Customer đăng nhập và giữ ghế an toàn; Admin/Staff/Customer có quyền khác nhau. |
-| Engineering goal | JWT auth, RBAC, guard/decorator, seat hold transaction, row lock, audit log. |
-| System thinking | Phân tích state, race condition, isolation, lock, expired hold và security boundary. |
-| Deliverables | Auth flow, RBAC matrix, seat hold API, double-hold test/evidence, audit log. |
-| Interview focus | JWT, password hashing, RBAC, transaction, row lock, race condition. |
-
----
+| Goal | Movie Ticket Booking có API skeleton chạy được, behavior nhất quán và evidence rõ. |
+| Focus | NestJS project setup, public APIs, validation, error contract, pagination, request id, Swagger. |
+| Project rule | Bắt đầu project chính. |
 
 ## 2. Kế hoạch học tập theo ngày
 
-Thứ 2-4 là theory sprint. Thứ 5-7 mới mapping vào project.
+| Ngày | Trọng tâm |
+|---|---|
+| Thứ 2 | Review foundation: API contract, request lifecycle, validation and error principles |
+| Thứ 3 | NestJS implementation patterns: module/controller/service/DTO, common module |
+| Thứ 4 | Request pipeline implementation plan: validation, exception filter, interceptor, logging |
+| Thứ 5 | Map public catalog into project: movies, cinemas, showtimes, seats API contract |
+| Thứ 6-7 | Implement API skeleton, public catalog, Swagger, validation/error/logging evidence |
 
-| Ngày | Loại buổi | Trọng tâm | Output bắt buộc |
-|---|---|---|---|
-| Thứ 2 | Theory sprint | Auth fundamentals: password hashing, JWT, refresh token, session/logout, OWASP auth risks | Auth flow notes, token lifecycle diagram |
-| Thứ 3 | Theory sprint | Authorization: RBAC, guards, decorators, permission matrix, least privilege | RBAC matrix draft, guard/decorator notes |
-| Thứ 4 | Theory sprint | Transactions, isolation, row locks, race condition, state machines for seat hold | Seat hold invariant, lock strategy notes, race scenario explanation |
-| Thứ 5 | Project mapping | Map auth/RBAC/transaction vào Movie Booking: actors, protected APIs, seat hold state | Final RBAC matrix, seat hold state diagram, transaction design |
-| Thứ 6-7 | Project sprint | Implement auth, RBAC guards, transactional seat hold, race/security tests | PR `feat/auth-rbac-seat-hold`, auth curl, race evidence |
+## 3. Output bắt buộc
 
----
+- Running NestJS app
+- Public catalog API
+- Swagger
+- Error contract
+- curl/log evidence
 
-## 3. API scope tuần 4
+## 4. Interview drill
 
-```text
-POST /auth/register
-POST /auth/login
-POST /auth/refresh
-POST /auth/logout
-GET /me
-PATCH /me/preferences
-POST /showtimes/:id/seat-holds
-DELETE /seat-holds/:id
-```
+- Error contract tốt cần những field nào?
+- Vì sao request id quan trọng?
+- Pagination cần giới hạn gì để bảo vệ server?
 
----
 
-## 4. Seat hold invariant
+## Required Reading By Day
 
-```text
-For a showtime seat:
-- AVAILABLE -> HELD when a valid customer holds it.
-- HELD -> AVAILABLE when hold expires/cancels.
-- HELD -> SOLD when booking/payment is confirmed.
-- SOLD cannot go back to HELD.
-```
-
-Transaction sketch:
-
-```text
-BEGIN
-SELECT showtime_seats ... FOR UPDATE
-validate AVAILABLE or expired HELD
-insert seat_hold
-update showtime_seats = HELD
-insert audit_log
-COMMIT
-```
-
----
-
-## 5. Acceptance criteria
-
-- [ ] Password được hash.
-- [ ] Admin APIs có guard.
-- [ ] RBAC matrix có trong docs.
-- [ ] Seat hold chạy trong transaction.
-- [ ] Có xử lý hold hết hạn.
-- [ ] Có test/evidence chống double hold.
-- [ ] Có audit log cho hành động quan trọng.
-
----
-
-## 6. Interview drill
-
-- Race condition trong giữ ghế xảy ra thế nào?
-- `SELECT ... FOR UPDATE` khác SELECT thường ra sao?
-- Nếu webhook payment đến sau khi hold hết hạn thì xử lý thế nào?
-- RBAC khác permission-based access control ra sao?
+| Ngày | Cơ bản/Trung bình | Nâng cao |
+|---|---|---|
+| Mon | [NestJS Docs - First Steps](https://docs.nestjs.com/first-steps) | [NestJS Docs - Modules](https://docs.nestjs.com/modules) |
+| Tue | [NestJS Docs - Providers](https://docs.nestjs.com/providers) | [NestJS Docs - Lifecycle Events](https://docs.nestjs.com/fundamentals/lifecycle-events) |
+| Wed | [NestJS Docs - Validation](https://docs.nestjs.com/techniques/validation) | [NestJS Docs - Exception Filters](https://docs.nestjs.com/exception-filters) |
+| Thu | [NestJS Docs - OpenAPI Introduction](https://docs.nestjs.com/openapi/introduction) | [Microsoft REST API Guidelines](https://github.com/microsoft/api-guidelines/blob/vNext/Guidelines.md) |
+| Fri-Sat | [NestJS Docs - Logger](https://docs.nestjs.com/techniques/logger) | [NestJS Docs - Interceptors](https://docs.nestjs.com/interceptors) |

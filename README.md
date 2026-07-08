@@ -1,65 +1,39 @@
-# Education Backend - NestJS V2 Movie Ticket Booking Program
+# Education Backend - 10-week High-intensity Backend Program
 
-Dự án này là không gian làm việc và ghi chép tiến độ đào tạo Backend NestJS trong 8 tuần thông qua dự án **Movie Ticket Booking Backend API**.
+Đừng học backend bằng cách học framework trước. Framework chỉ là công cụ. Backend thật sự nằm ở HTTP, API design, database, authentication, authorization, transaction, cache, queue, logging, monitoring, security, scalability và deployment. Framework có thể đổi; tư duy backend thì đi theo bạn cả sự nghiệp.
 
-V2 chuyển trọng tâm từ "học để biết" sang "deliver như backend engineer trong team sản phẩm":
+Dự án này là workspace cho chương trình **Backend NestJS 10 tuần cường độ cao** thông qua project xuyên suốt **Movie Ticket Booking Backend API**.
+
+Triết lý học:
 
 ```text
-business scenario
--> system analysis
--> API/DB/service design
--> implementation
--> verification
+Foundation first
+-> framework second
+-> project delivery
 -> evidence
--> interview explanation
+-> system design explanation
 ```
 
----
+## Nhịp 10 tuần
 
-## 🗺️ Bản đồ thư mục dự án (Workspace Directory Structure)
+- Tuần 1-3: chưa bắt đầu dự án thật. Thứ 2-4 học chuyên sâu, Thứ 5-7 làm mini labs tương ứng với kiến thức vừa học.
+- Tuần 4: bắt đầu kickoff Movie Ticket Booking thật.
+- Tuần 4-10: 7 tuần liên tiếp vừa học topic mới vừa áp dụng vào project, tuần nào cũng có evidence.
+
+## Bản đồ thư mục
 
 ```text
-├── chuong-trinh-dao-tao/     # Khung chương trình chi tiết, đặc tả API, database và business rules
-├── study/                    # Nhật ký học tập hàng ngày và mã nguồn các bài thực hành nhỏ (mini labs)
-├── tien-do-hoc-tap/          # Cơ sở dữ liệu JSON lưu trữ tiến độ cá nhân (progress.json)
-├── tracker-app/              # Ứng dụng web cục bộ dùng để theo dõi tiến độ và tạo daily check-in
-└── mentor/                   # Cấu hình chỉ thị cho Mentor AI hỗ trợ học tập
+├── chuong-trinh-dao-tao/     # Khung chương trình 10 tuần, roadmap, design notes và hướng dẫn học
+├── study/                    # Nhật ký học tập theo tuần/ngày, daily tickets và mini labs
+├── docs/                     # Product backlog, database docs, traceability matrix và evidence
+├── tien-do-hoc-tap/          # JSON DB lưu tiến độ cá nhân cho tracker app
+├── tracker-app/              # Web app local để theo dõi tiến độ và daily check-in
+└── mentor/                   # Chỉ thị cho Mentor AI khi review quá trình học
 ```
 
----
+## Chạy progress tracker
 
-## 🚀 Hướng dẫn khởi chạy ứng dụng Theo dõi Tiến độ (Local Progress Tracker)
-
-Để xem tiến độ trực quan, tạo các daily check-in copy gửi Mentor AI, và làm các bài ôn tập phỏng vấn hàng ngày:
-
-1.  Khởi động server cục bộ:
-    ```bash
-    node tracker-app/server.js
-    ```
-2.  Mở trình duyệt truy cập:
-    ```text
-    http://localhost:3900
-    ```
-
----
-
-## 🐙 Cấu hình gợi ý khi đẩy lên GitHub (GitHub Metadata Recommendations)
-
-Khi bạn khởi tạo repository này trên GitHub cá nhân, bạn có thể tham khảo các thông tin cấu hình sau:
-
-### 1. Tên Repository (Repository Name)
-*   `education-backend` (Hoặc nếu muốn đặt tên chuyên nghiệp theo dự án: `movie-ticket-booking-api`)
-
-### 2. Mô tả ngắn (Description)
-Chọn một trong các mô tả dưới đây (đã được tối ưu dưới 350 ký tự để hiển thị đẹp trên GitHub):
-
-*   **Option 1 (Chuyên nghiệp - Khuyên dùng):**
-    > A NestJS backend for movie ticket booking featuring secure seat holding transactions, payOS payment links with webhook idempotency, AI-powered semantic search via PostgreSQL pgvector, BullMQ background jobs, RBAC, and automated Jest tests.
-*   **Option 2 (Ngắn gọn, công nghệ trọng tâm):**
-    > Production-ready NestJS movie ticket booking backend: Transaction-safe seat holding, payOS payment integration, AI semantic search (pgvector), Redis/BullMQ background jobs, and Dockerized dev environment.
-*   **Option 3 (Tiếng Việt):**
-    > Backend API đặt vé xem phim thực chiến bằng NestJS & PostgreSQL: Giữ ghế bằng transaction, thanh toán payOS qua webhook, tìm kiếm ngữ nghĩa AI (pgvector), hàng đợi BullMQ và môi trường Docker.
-
-### 3. Chủ đề gợi ý (Topics / Tags)
-Thêm các tags này vào mục Settings của repository để tăng khả năng tiếp cận và làm đẹp Portfolio:
-`nestjs`, `postgresql`, `typescript`, `payos`, `pgvector`, `bullmq`, `redis`, `docker`, `backend-training`, `semantic-search`, `jest`, `rest-api`
+```bash
+cd tracker-app
+npm run dev
+```

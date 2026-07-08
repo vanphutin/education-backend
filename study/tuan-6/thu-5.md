@@ -1,57 +1,55 @@
-# Ticket: payOS, expiry jobs, semantic search boundary and schema
+# Project Delivery Ticket: Map auth/RBAC into Movie Ticket Booking actors and protected APIs
 
 - **Tuần**: 6
 - **Ngày**: Thứ 5
-- **Issue**: [#29](https://github.com/vanphutin/education-backend/issues/29)
-- **Backlog Items**: BL-027, BL-028, BL-029, BL-030, BL-031, BL-033, BL-034, BL-035, BL-036
+- **Issue**: #29
+- **Giai đoạn**: Project Delivery
+
+## Required Reading
+
+- **Cơ bản/Trung bình:** [NestJS Docs - Authentication](https://docs.nestjs.com/security/authentication)
+- **Nâng cao:** [NestJS Docs - Authorization](https://docs.nestjs.com/security/authorization)
+
 
 ## 1. Business Scenario
-- **Actor**: Guest / Customer / Staff / Admin
-- **User story**: Chi tiết trong tài liệu backlog tương ứng (BL-027, BL-028, BL-029, BL-030, BL-031, BL-033, BL-034, BL-035, BL-036).
-- **Why it matters**: Giải quyết nhu cầu nghiệp vụ thực tế của hệ thống đặt vé.
+- Actor:
+- User story:
+- Why it matters:
 
 ## 2. System Analysis
-- **Input**: ...
-- **Output**: ...
-- **State involved**: ...
-- **Edge cases**: ...
-- **Failure cases**: ...
-- **Security/data consistency risk**: ...
+- Input:
+- Output:
+- State involved:
+- Edge cases:
+- Failure cases:
+- Security/data consistency/performance risk:
 
 ## 3. Design Before Code
-- **API contract**: ...
-- **DB impact**: ...
-- **Module/service boundary**: ...
-- **Validation/error behavior**: ...
-- **Logging/audit/integration logs**: ...
-- **Transaction/permission concern**: ...
+- API contract:
+- DB impact:
+- Module/service boundary:
+- Validation/error behavior:
+- Logging/audit/integration logs:
+- Transaction/permission concern:
 
 ## 4. Implementation Checklist
-- [ ] Triển khai và kiểm thử backlog BL-027
-- [ ] Triển khai và kiểm thử backlog BL-028
-- [ ] Triển khai và kiểm thử backlog BL-029
-- [ ] Triển khai và kiểm thử backlog BL-030
-- [ ] Triển khai và kiểm thử backlog BL-031
-- [ ] Triển khai và kiểm thử backlog BL-033
-- [ ] Triển khai và kiểm thử backlog BL-034
-- [ ] Triển khai và kiểm thử backlog BL-035
-- [ ] Triển khai và kiểm thử backlog BL-036
-- [ ] Viết unit tests và integration tests liên quan.
+- [ ] ...
 
 ## 5. Verification
-- **Unit test**: ...
-- **E2E/manual curl**: ...
-- **Swagger**: ...
-- **Migration/seed**: ...
-- **Build/lint**: ...
+- Unit test:
+- E2E/manual curl:
+- Swagger/API docs:
+- Migration/seed:
+- Build/lint:
 
 ## 6. Evidence
-- **Issue**: [#29](https://github.com/vanphutin/education-backend/issues/29)
-- **PR**: ...
-- **Logs/screenshots**: ...
-- **Docs/ADR**: ...
+- Issue:
+- PR/commit:
+- Logs/screenshots:
+- Docs/ADR:
 
 ## 7. Interview Drill
-- **Question**: Giải thích thiết kế kỹ thuật, luồng đi của dữ liệu và tradeoff khi giải quyết ticket này.
-- **My answer**:
+- Question: Authentication khác authorization thế nào?
+- My answer:
   - ...
+

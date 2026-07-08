@@ -1,69 +1,48 @@
-# Tuần 6 - payOS, webhook idempotency, jobs và semantic search
+# Tuần 6 - Authentication, authorization, RBAC và security hardening
 
-Tuần 6 đưa hệ thống ra khỏi vùng "core CRUD": tích hợp external payment, xử lý webhook, job nền và AI search nhưng vẫn bảo vệ core booking.
+**Giai đoạn:** Project Delivery  
+**Chế độ học:** Security theory + implement auth boundary.
 
----
 
 ## 1. Mục tiêu tuần
 
 | Hạng mục | Nội dung |
 |---|---|
-| Business goal | Customer thanh toán bằng payOS; hệ thống tự expire hold/booking; guest tìm phim bằng ngôn ngữ tự nhiên. |
-| Engineering goal | Payment provider abstraction, webhook verification, idempotency, BullMQ jobs, pgvector semantic search. |
-| System thinking | Integration boundary, retry/timeout, provider failure, idempotency key, async consistency. |
-| Deliverables | payOS flow docs, webhook tests, BullMQ jobs, integration logs, semantic search mock provider. |
-| Interview focus | Webhook safety, idempotency, background jobs, embeddings, pgvector, fallback. |
-
----
+| Goal | Actors có quyền rõ ràng; API admin/staff/customer được bảo vệ. |
+| Focus | Register/login, password hashing, JWT/refresh token, RBAC, guards, decorators, security baseline. |
+| Project rule | Auth/RBAC implementation. |
 
 ## 2. Kế hoạch học tập theo ngày
 
-Thứ 2-4 là theory sprint. Thứ 5-7 mới mapping vào project.
+| Ngày | Trọng tâm |
+|---|---|
+| Thứ 2 | Auth deep dive: password hashing, token lifecycle, session/logout strategy |
+| Thứ 3 | Authorization design: RBAC, permission matrix, least privilege, guard/decorator |
+| Thứ 4 | Security hardening: validation, secrets, CORS, rate limit, sensitive logging |
+| Thứ 5 | Map auth/RBAC into Movie Ticket Booking actors and protected APIs |
+| Thứ 6-7 | Implement auth, RBAC, protected APIs and security evidence |
 
-| Ngày | Loại buổi | Trọng tâm | Output bắt buộc |
-|---|---|---|---|
-| Thứ 2 | Theory sprint | Payment integration theory: provider abstraction, payment link, webhook, signature, idempotency | Payment flow diagram, idempotency notes, failure cases |
-| Thứ 3 | Theory sprint | Async systems: Redis, BullMQ, retry, timeout, job idempotency, integration logs | Queue/job notes, retry risk analysis |
-| Thứ 4 | Theory sprint | AI search theory: embeddings, vector similarity, pgvector, content hash, mock provider | Semantic vs keyword notes, embedding document design |
-| Thứ 5 | Project mapping | Map payment/jobs/AI vào Movie Booking without breaking core booking | payOS design, job design, AI boundary, migration plan |
-| Thứ 6-7 | Project sprint | Implement payOS, webhook replay safety, BullMQ expiry, semantic movie search | PR, webhook replay evidence, job logs, AI search tests |
+## 3. Output bắt buộc
 
----
+- Auth flow
+- RBAC matrix
+- Security checklist
+- Deny tests
+- curl evidence
 
-## 3. API scope tuần 6
+## 4. Interview drill
 
-```text
-POST /bookings/:id/payments/payos
-POST /webhooks/payos
-GET /payments/:id
-POST /admin/payments/:id/sync
-POST /ai/movie-search
-POST /ai/recommendations
-POST /ai/recommendations/feedback
-POST /admin/movies/:id/embeddings/rebuild
-POST /admin/ai/embeddings/rebuild
-GET /admin/ai/logs
-GET /admin/integration-logs
-```
+- Authentication khác authorization thế nào?
+- Refresh token rotation giải quyết gì?
+- Vì sao không log token/password?
 
----
 
-## 4. Acceptance criteria
+## Required Reading By Day
 
-- [ ] Payment provider có abstraction để mock/test.
-- [ ] Webhook verify signature.
-- [ ] Webhook idempotent, replay không tạo ticket trùng.
-- [ ] Amount/orderCode/paymentLinkId được đối soát.
-- [ ] Job expire hold/booking chạy được.
-- [ ] AI provider có mock trong test.
-- [ ] Semantic search không được can thiệp booking/payment core.
-- [ ] Có integration logs cho payOS/AI.
-
----
-
-## 5. Interview drill
-
-- Webhook idempotency là gì?
-- Vì sao không tin `returnUrl` làm nguồn xác nhận thanh toán?
-- Job retry có thể gây bug gì nếu handler không idempotent?
-- Embedding search khác keyword search thế nào?
+| Ngày | Cơ bản/Trung bình | Nâng cao |
+|---|---|---|
+| Mon | [OWASP - Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html) | [RFC 7519 - JSON Web Token (JWT)](https://www.rfc-editor.org/rfc/rfc7519) |
+| Tue | [OWASP - Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) | [NIST SP 800-63B - Digital Identity Guidelines](https://pages.nist.gov/800-63-3/sp800-63b.html) |
+| Wed | [OWASP - REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html) | [OWASP API Security Top 10 2023](https://owasp.org/API-Security/editions/2023/en/0x00-header/) |
+| Thu | [NestJS Docs - Authentication](https://docs.nestjs.com/security/authentication) | [NestJS Docs - Authorization](https://docs.nestjs.com/security/authorization) |
+| Fri-Sat | [OWASP - Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) | [RFC 9106 - Argon2 Memory-Hard Function](https://www.rfc-editor.org/rfc/rfc9106) |

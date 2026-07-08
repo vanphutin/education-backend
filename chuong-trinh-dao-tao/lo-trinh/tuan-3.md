@@ -1,65 +1,48 @@
-# Tuần 3 - Database design, migrations và showtime seat snapshot
+# Tuần 3 - Database, security, transaction và production thinking foundation
 
-Tuần 3 chuyển từ mock data sang database thật. Trọng tâm không phải chỉ biết TypeORM, mà là thiết kế schema bảo vệ dữ liệu và phục vụ flow đặt vé.
+**Giai đoạn:** Deep Foundation + Mini Labs  
+**Chế độ học:** Thứ 2-4 học chuyên sâu. Thứ 5-7 làm mini labs từ kiến thức Thứ 2-4. Chưa bắt đầu dự án thật.
 
----
 
 ## 1. Mục tiêu tuần
 
 | Hạng mục | Nội dung |
 |---|---|
-| Business goal | Admin có thể quản lý phim/rạp/phòng/ghế/suất chiếu; guest xem seat map của suất chiếu thật. |
-| Engineering goal | Tạo migrations/entities/seeds, relations, constraints, indexes, query APIs. |
-| System thinking | Biết vì sao cần snapshot `showtime_seats`, constraint nào bảo vệ dữ liệu, index nào phục vụ query. |
-| Deliverables | ERD, migrations, seed data, CRUD admin cơ bản, showtime seat snapshot, query review. |
-| Interview focus | Normalization, constraints, index, migration, snapshot data, TypeORM tradeoffs. |
-
----
+| Goal | Xây nền chuyên sâu về dữ liệu, tính đúng đắn, bảo mật, lỗi và vận hành trước khi bắt đầu project ở tuần 4. |
+| Focus | SQL modeling, constraints, indexes, transaction, auth/authz, cache/queue/logging/security/deploy overview. |
+| Project rule | Không code, không scaffold, không implement Movie Ticket Booking trong tuần này. Chỉ học sâu và làm mini lab độc lập. |
 
 ## 2. Kế hoạch học tập theo ngày
 
-Thứ 2-4 là theory sprint. Thứ 5-7 mới mapping vào project.
+| Ngày | Loại buổi | Trọng tâm |
+|---|---|---|
+| Thứ 2 | Theory Deep Dive | SQL and data modeling: table, relation, normalization, constraints, migration mindset |
+| Thứ 3 | Theory Deep Dive | Database performance and consistency: index, query plan, transaction, isolation, locking, N+1 |
+| Thứ 4 | Theory Deep Dive | Security and production primitives: auth/authz, password hashing, token, cache, queue, logging, monitoring, deployment |
+| Thứ 5 | Mini Lab | Database lab: schema nhỏ, constraints, indexes, EXPLAIN, transaction rollback và lock behavior |
+| Thứ 6-7 | Mini Lab | Security/production lab: password hashing, JWT mock, rate limit idea, queue/cache/logging simulation |
 
-| Ngày | Loại buổi | Trọng tâm | Output bắt buộc |
-|---|---|---|---|
-| Thứ 2 | Theory sprint | SQL fundamentals: table, data type, primary/foreign key, not null, unique, check constraint | Schema notes, constraint examples, normalization exercise |
-| Thứ 3 | Theory sprint | Relation modeling, normalization vs denormalization, ERD, showtime seat snapshot reasoning | ERD draft, explanation why snapshot is needed |
-| Thứ 4 | Theory sprint | TypeORM entity/repository, migrations, seeds, query builder, indexes, EXPLAIN | TypeORM notes, migration checklist, index tradeoff answers |
-| Thứ 5 | Project mapping | Map DB theory vào movie/cinema/screen/seat/showtime schema | Final ERD, migration plan, seed plan, API-to-table mapping |
-| Thứ 6-7 | Project sprint | Implement migrations/entities/seeds/showtime_seats and query review | PR, migration/seed logs, `GET /showtimes/:id/seats` evidence |
+## 3. Output bắt buộc
 
----
+- SQL/DB notes
+- Schema and constraint mini lab
+- Transaction/lock lab
+- Security mini lab
+- Production primitives lab notes
 
-## 3. API scope tuần 3
+## 4. Interview drill
 
-```text
-POST /admin/movies
-PATCH /admin/movies/:id
-PATCH /admin/movies/:id/trailer
-POST /admin/cinemas
-POST /admin/screens
-POST /admin/screens/:id/seats
-POST /admin/showtimes
-GET /showtimes/:id/seats
-```
+- Vì sao DB constraint quan trọng hơn app validation trong critical data?
+- Transaction bảo vệ invariant nào?
+- Cache/queue/logging giải quyết vấn đề gì?
 
----
 
-## 4. Acceptance criteria
+## Required Reading By Day
 
-- [ ] Có migration, không dùng `synchronize: true`.
-- [ ] Có ERD và giải thích relation.
-- [ ] Có constraints cơ bản: unique, not null, foreign key.
-- [ ] Tạo showtime sinh snapshot `showtime_seats`.
-- [ ] Query public vẫn chạy sau khi chuyển từ mock sang DB.
-- [ ] Có seed idempotent.
-- [ ] Có evidence migration/seed/query.
-
----
-
-## 5. Interview drill
-
-- Vì sao `showtime_seats` cần snapshot thay vì chỉ join `seats`?
-- Khi nào nên thêm index? Index có nhược điểm gì?
-- Migration production khác gì sửa entity rồi chạy sync?
-- Nên đặt constraint ở app layer hay database layer?
+| Ngày | Cơ bản/Trung bình | Nâng cao |
+|---|---|---|
+| Mon | [PostgreSQL Docs - Data Definition](https://www.postgresql.org/docs/current/ddl.html) | [PostgreSQL Docs - Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html) |
+| Tue | [PostgreSQL Docs - Indexes](https://www.postgresql.org/docs/current/indexes.html) | [PostgreSQL Docs - Using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) |
+| Wed | [OWASP - Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html) | [OWASP - Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) |
+| Thu | [PostgreSQL Docs - Transactions Tutorial](https://www.postgresql.org/docs/current/tutorial-transactions.html) | [PostgreSQL Docs - Transaction Isolation](https://www.postgresql.org/docs/current/transaction-iso.html) |
+| Fri-Sat | [OpenTelemetry - Observability Primer](https://opentelemetry.io/docs/concepts/observability-primer/) | [Google SRE Book - Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/) |

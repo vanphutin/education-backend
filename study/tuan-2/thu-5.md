@@ -1,52 +1,42 @@
-# Ticket: API validation, error contract, request id, pagination
+# Mini Lab Ticket: TypeScript/OOP lab: viết domain mini models, validation rules và error handling không dùng framework
 
 - **Tuần**: 2
 - **Ngày**: Thứ 5
-- **Issue**: [#9](https://github.com/vanphutin/education-backend/issues/9)
-- **Backlog Items**: BL-004, BL-005, BL-045, BL-046
+- **Issue**: #9
+- **Giai đoạn**: Core Theory + Mini Labs
 
-## 1. Business Scenario
-- **Actor**: Guest / Customer / Staff / Admin
-- **User story**: Chi tiết trong tài liệu backlog tương ứng (BL-004, BL-005, BL-045, BL-046).
-- **Why it matters**: Giải quyết nhu cầu nghiệp vụ thực tế của hệ thống đặt vé.
+## Required Reading
 
-## 2. System Analysis
-- **Input**: ...
-- **Output**: ...
-- **State involved**: ...
-- **Edge cases**: ...
-- **Failure cases**: ...
-- **Security/data consistency risk**: ...
+- **Cơ bản/Trung bình:** [TypeScript Handbook - Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
+- **Nâng cao:** [TypeScript Handbook - Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
 
-## 3. Design Before Code
-- **API contract**: ...
-- **DB impact**: ...
-- **Module/service boundary**: ...
-- **Validation/error behavior**: ...
-- **Logging/audit/integration logs**: ...
-- **Transaction/permission concern**: ...
 
-## 4. Implementation Checklist
-- [ ] Triển khai và kiểm thử backlog BL-004
-- [ ] Triển khai và kiểm thử backlog BL-005
-- [ ] Triển khai và kiểm thử backlog BL-045
-- [ ] Triển khai và kiểm thử backlog BL-046
-- [ ] Viết unit tests và integration tests liên quan.
+## 1. Lab Goal
+- Mini lab này kiểm chứng kiến thức đã học trong Thứ 2-4.
+- Không code dự án Movie Ticket Booking.
 
-## 5. Verification
-- **Unit test**: ...
-- **E2E/manual curl**: ...
-- **Swagger**: ...
-- **Migration/seed**: ...
-- **Build/lint**: ...
+## 2. Concepts Covered
+| Concept từ Thứ 2-4 | Lab sẽ kiểm chứng bằng gì | Kết quả mong đợi |
+|---|---|---|
+| ... | ... | ... |
 
-## 6. Evidence
-- **Issue**: [#9](https://github.com/vanphutin/education-backend/issues/9)
-- **PR**: ...
-- **Logs/screenshots**: ...
-- **Docs/ADR**: ...
+## 3. Lab Steps
+1. ...
+2. ...
+3. ...
 
-## 7. Interview Drill
-- **Question**: Giải thích thiết kế kỹ thuật, luồng đi của dữ liệu và tradeoff khi giải quyết ticket này.
-- **My answer**:
+## 4. Evidence
+- Command/curl/log:
+- Code snippet:
+- Screenshot nếu cần:
+- Kết quả:
+
+## 5. Reflection
+- Concept nào đã rõ hơn sau lab?
+- Nếu áp dụng vào project từ tuần 4, cần cẩn thận điều gì?
+
+## 6. Interview Drill
+- Question: Controller, service, repository khác trách nhiệm thế nào?
+- My answer:
   - ...
+

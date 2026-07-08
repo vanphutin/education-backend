@@ -1,60 +1,55 @@
-# Ticket: Booking/ticket/check-in design and test plan
+# Project Delivery Ticket: Map DB into project APIs and admin workflows
 
 - **Tuần**: 5
 - **Ngày**: Thứ 5
-- **Issue**: [#24](https://github.com/vanphutin/education-backend/issues/24)
-- **Backlog Items**: BL-019, BL-020, BL-021, BL-022, BL-023, BL-024, BL-025, BL-026, BL-032, BL-047, BL-048, BL-049
+- **Issue**: #24
+- **Giai đoạn**: Project Delivery
+
+## Required Reading
+
+- **Cơ bản/Trung bình:** [TypeORM Docs - Select Query Builder](https://typeorm.io/select-query-builder)
+- **Nâng cao:** [PostgreSQL Docs - Indexes and ORDER BY](https://www.postgresql.org/docs/current/indexes-ordering.html)
+
 
 ## 1. Business Scenario
-- **Actor**: Guest / Customer / Staff / Admin
-- **User story**: Chi tiết trong tài liệu backlog tương ứng (BL-019, BL-020, BL-021, BL-022, BL-023, BL-024, BL-025, BL-026, BL-032, BL-047, BL-048, BL-049).
-- **Why it matters**: Giải quyết nhu cầu nghiệp vụ thực tế của hệ thống đặt vé.
+- Actor:
+- User story:
+- Why it matters:
 
 ## 2. System Analysis
-- **Input**: ...
-- **Output**: ...
-- **State involved**: ...
-- **Edge cases**: ...
-- **Failure cases**: ...
-- **Security/data consistency risk**: ...
+- Input:
+- Output:
+- State involved:
+- Edge cases:
+- Failure cases:
+- Security/data consistency/performance risk:
 
 ## 3. Design Before Code
-- **API contract**: ...
-- **DB impact**: ...
-- **Module/service boundary**: ...
-- **Validation/error behavior**: ...
-- **Logging/audit/integration logs**: ...
-- **Transaction/permission concern**: ...
+- API contract:
+- DB impact:
+- Module/service boundary:
+- Validation/error behavior:
+- Logging/audit/integration logs:
+- Transaction/permission concern:
 
 ## 4. Implementation Checklist
-- [ ] Triển khai và kiểm thử backlog BL-019
-- [ ] Triển khai và kiểm thử backlog BL-020
-- [ ] Triển khai và kiểm thử backlog BL-021
-- [ ] Triển khai và kiểm thử backlog BL-022
-- [ ] Triển khai và kiểm thử backlog BL-023
-- [ ] Triển khai và kiểm thử backlog BL-024
-- [ ] Triển khai và kiểm thử backlog BL-025
-- [ ] Triển khai và kiểm thử backlog BL-026
-- [ ] Triển khai và kiểm thử backlog BL-032
-- [ ] Triển khai và kiểm thử backlog BL-047
-- [ ] Triển khai và kiểm thử backlog BL-048
-- [ ] Triển khai và kiểm thử backlog BL-049
-- [ ] Viết unit tests và integration tests liên quan.
+- [ ] ...
 
 ## 5. Verification
-- **Unit test**: ...
-- **E2E/manual curl**: ...
-- **Swagger**: ...
-- **Migration/seed**: ...
-- **Build/lint**: ...
+- Unit test:
+- E2E/manual curl:
+- Swagger/API docs:
+- Migration/seed:
+- Build/lint:
 
 ## 6. Evidence
-- **Issue**: [#24](https://github.com/vanphutin/education-backend/issues/24)
-- **PR**: ...
-- **Logs/screenshots**: ...
-- **Docs/ADR**: ...
+- Issue:
+- PR/commit:
+- Logs/screenshots:
+- Docs/ADR:
 
 ## 7. Interview Drill
-- **Question**: Giải thích thiết kế kỹ thuật, luồng đi của dữ liệu và tradeoff khi giải quyết ticket này.
-- **My answer**:
+- Question: Index khi nào làm chậm write?
+- My answer:
   - ...
+

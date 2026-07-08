@@ -1,38 +1,37 @@
-# Theory Sprint: Booking/payment/ticket state machine
+# Core Study Ticket: Schema refinement: movie/cinema/screen/seat/showtime relations and constraints
 
 - **Tuần**: 5
 - **Ngày**: Thứ 2
-- **Issue**: [#21](https://github.com/vanphutin/education-backend/issues/21)
+- **Issue**: #21
+- **Giai đoạn**: Project Delivery
+
+## Required Reading
+
+- **Cơ bản/Trung bình:** [TypeORM Docs - Entities](https://typeorm.io/entities)
+- **Nâng cao:** [PostgreSQL Docs - Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html)
+
 
 ## 1. Learning Objectives
-- Hiểu rõ lý thuyết cốt lõi về Booking/payment/ticket state machine.
-- Nắm vững các khái niệm cơ bản liên quan.
+- Hiểu sâu: Schema refinement: movie/cinema/screen/seat/showtime relations and constraints.
+- Giải thích được concept này giải quyết vấn đề backend nào.
+- Map được vào Movie Ticket Booking, kể cả khi tuần này chưa code project.
 
 ## 2. Core Concepts
-| Concept | Giải thích bằng lời của tôi | Dùng ở đâu trong backend |
+| Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| Khái niệm 1 | ... | ... |
-| Khái niệm 2 | ... | ... |
+| ... | ... | ... |
 
-## 3. Common Mistakes
-- Sai lầm 1: ...
-- Sai lầm 2: ...
+## 3. Lab / Design Exercise
+- Goal:
+- Steps:
+- Result/evidence:
 
-## 4. Mini Lab
-- **Goal**: Kiểm chứng thực tế về Booking/payment/ticket state machine.
-- **Code/log**:
-```typescript
-// Viết code thử nghiệm ở đây
-```
-- **Result**:
-```text
-// Ghi nhận kết quả hoặc logs
-```
+## 4. Project Bridge
+- Concept này sẽ ảnh hưởng gì đến Movie Ticket Booking?
+- Nếu bỏ qua concept này, hệ thống dễ lỗi ở đâu?
 
-## 5. Project Bridge
-- Kiến thức này sẽ được áp dụng vào dự án Movie Ticket Booking tại các phần thiết kế logic, validation và tích hợp hệ thống.
-
-## 6. Interview Drill
-- **Question**: Trình bày hiểu biết và tradeoff liên quan đến Booking/payment/ticket state machine.
-- **My answer**:
+## 5. Interview Drill
+- Question: Index khi nào làm chậm write?
+- My answer:
   - ...
+

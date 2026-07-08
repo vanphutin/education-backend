@@ -1,38 +1,38 @@
-# Theory Sprint: TypeORM entity, migration, seed, index, query builder
+# Theory Deep Dive: Security and production primitives: auth/authz, password hashing, token, cache, queue, logging, monitoring, deployment
 
 - **Tuần**: 3
 - **Ngày**: Thứ 4
-- **Issue**: [#13](https://github.com/vanphutin/education-backend/issues/13)
+- **Issue**: #13
+- **Giai đoạn**: Deep Foundation + Mini Labs
+
+## Required Reading
+
+- **Cơ bản/Trung bình:** [OWASP - Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+- **Nâng cao:** [OWASP - Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+
 
 ## 1. Learning Objectives
-- Hiểu rõ lý thuyết cốt lõi về TypeORM entity, migration, seed, index, query builder.
-- Nắm vững các khái niệm cơ bản liên quan.
+- Hiểu sâu: Security and production primitives: auth/authz, password hashing, token, cache, queue, logging, monitoring, deployment.
+- Giải thích được concept này giải quyết vấn đề backend nào.
+- Chuẩn bị kiến thức để Thứ 5-7 làm mini lab.
 
 ## 2. Core Concepts
-| Concept | Giải thích bằng lời của tôi | Dùng ở đâu trong backend |
+| Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| Khái niệm 1 | ... | ... |
-| Khái niệm 2 | ... | ... |
+| ... | ... | ... |
 
 ## 3. Common Mistakes
-- Sai lầm 1: ...
-- Sai lầm 2: ...
+- ...
 
-## 4. Mini Lab
-- **Goal**: Kiểm chứng thực tế về TypeORM entity, migration, seed, index, query builder.
-- **Code/log**:
-```typescript
-// Viết code thử nghiệm ở đây
-```
-- **Result**:
-```text
-// Ghi nhận kết quả hoặc logs
-```
+## 4. Notes
+- ...
 
-## 5. Project Bridge
-- Kiến thức này sẽ được áp dụng vào dự án Movie Ticket Booking tại các phần thiết kế logic, validation và tích hợp hệ thống.
+## 5. Mini Lab Preparation
+- Thứ 5-7 sẽ kiểm chứng concept này bằng lab nào?
+- Input/output mong đợi là gì?
 
 ## 6. Interview Drill
-- **Question**: Trình bày hiểu biết và tradeoff liên quan đến TypeORM entity, migration, seed, index, query builder.
-- **My answer**:
+- Question: Cache/queue/logging giải quyết vấn đề gì?
+- My answer:
   - ...
+

@@ -1,38 +1,37 @@
-# Theory Sprint: RBAC, guards, decorators, permission matrix
+# Core Study Ticket: NestJS implementation patterns: module/controller/service/DTO, common module
 
 - **Tuần**: 4
 - **Ngày**: Thứ 3
-- **Issue**: [#17](https://github.com/vanphutin/education-backend/issues/17)
+- **Issue**: #17
+- **Giai đoạn**: Project Delivery
+
+## Required Reading
+
+- **Cơ bản/Trung bình:** [NestJS Docs - Providers](https://docs.nestjs.com/providers)
+- **Nâng cao:** [NestJS Docs - Lifecycle Events](https://docs.nestjs.com/fundamentals/lifecycle-events)
+
 
 ## 1. Learning Objectives
-- Hiểu rõ lý thuyết cốt lõi về RBAC, guards, decorators, permission matrix.
-- Nắm vững các khái niệm cơ bản liên quan.
+- Hiểu sâu: NestJS implementation patterns: module/controller/service/DTO, common module.
+- Giải thích được concept này giải quyết vấn đề backend nào.
+- Map được vào Movie Ticket Booking, kể cả khi tuần này chưa code project.
 
 ## 2. Core Concepts
-| Concept | Giải thích bằng lời của tôi | Dùng ở đâu trong backend |
+| Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| Khái niệm 1 | ... | ... |
-| Khái niệm 2 | ... | ... |
+| ... | ... | ... |
 
-## 3. Common Mistakes
-- Sai lầm 1: ...
-- Sai lầm 2: ...
+## 3. Lab / Design Exercise
+- Goal:
+- Steps:
+- Result/evidence:
 
-## 4. Mini Lab
-- **Goal**: Kiểm chứng thực tế về RBAC, guards, decorators, permission matrix.
-- **Code/log**:
-```typescript
-// Viết code thử nghiệm ở đây
-```
-- **Result**:
-```text
-// Ghi nhận kết quả hoặc logs
-```
+## 4. Project Bridge
+- Concept này sẽ ảnh hưởng gì đến Movie Ticket Booking?
+- Nếu bỏ qua concept này, hệ thống dễ lỗi ở đâu?
 
-## 5. Project Bridge
-- Kiến thức này sẽ được áp dụng vào dự án Movie Ticket Booking tại các phần thiết kế logic, validation và tích hợp hệ thống.
-
-## 6. Interview Drill
-- **Question**: Trình bày hiểu biết và tradeoff liên quan đến RBAC, guards, decorators, permission matrix.
-- **My answer**:
+## 5. Interview Drill
+- Question: Vì sao request id quan trọng?
+- My answer:
   - ...
+
