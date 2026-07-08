@@ -1,63 +1,213 @@
-# Tổng quan lộ trình 8 tuần & Hướng dẫn học tập
+# Tổng quan lộ trình V2 - Movie Ticket Booking Backend
 
-Tài liệu này cung cấp cái nhìn tổng quan về 8 tuần học và hướng dẫn phương pháp học tập, thực hành mỗi ngày nhằm tối ưu hóa kết quả.
+Khóa này không còn đi theo kiểu "đọc docs cho biết", nhưng cũng không bỏ qua lý thuyết. Từ  trở đi, mỗi tuần có hai nhịp rõ ràng:
 
----
+```text
+Thứ 2 -> Thứ 4: Theory sprint cường độ cao
+Thứ 5 -> Thứ 7: Project mapping sprint trên Movie Ticket Booking
+```
 
-## 1. Bản đồ lộ trình 8 tuần
+Đầu tuần học hết phần kiến thức trọng tâm của tuần đó, có ghi chú, câu hỏi kiểm tra và mini lab nhỏ. Cuối tuần mới dùng kiến thức đó để phân tích, thiết kế, implement, test và tạo evidence cho dự án Movie Ticket Booking.
 
-Lộ trình được chia làm 4 giai đoạn cụ thể:
-
-| Giai đoạn | Tuần | Chủ đề | Output chính |
-|---|---:|---|---|
-| **Foundation & Concepts** | 1-2 | HTTP, REST, NestJS, Node runtime, request pipeline | Repo skeleton, movie/showtime mock, validation, logging |
-| **Backend Core** | 3-5 | PostgreSQL, TypeORM, Auth/RBAC, seat transaction, booking, test, Docker | DB thật, hold seat, booking, CI/Docker |
-| **Integrations & AI** | 6 | payOS, webhook, jobs, AI semantic search, embeddings | Payment flow, pgvector, embedding jobs |
-| **Capstone** | 7-8 | Hardening, sprint thật, docs, interview, demo | Project hoàn chỉnh để đưa CV |
+Mục tiêu không phải là "biết NestJS", mà là xây được một backend có thể giải thích trước team lead, reviewer và nhà tuyển dụng.
 
 ---
 
-## 2. Cách học mỗi ngày (Daily Routine)
+## 1. Nguyên tắc 
 
-Để học tập hiệu quả, hãy duy trì các bước sau cho mỗi buổi học:
+Một tuần học phải đi qua flow:
 
-1.  **Mở đúng tuần hiện tại:** Xem kỹ các yêu cầu, tài liệu lý thuyết và danh sách APIs/Deliverables cần làm.
-2.  **Tạo Issue:** Tạo một GitHub issue nhỏ tương ứng với phần công việc cần làm hôm nay.
-3.  **Daily Check-in:** Gửi báo cáo daily check-in cho Mentor AI theo cấu trúc quy định.
-4.  **Lập trình:** Tiến hành viết code theo checklist của ngày, thực hiện commit nhỏ kèm thông điệp rõ ràng (Conventional Commits).
-5.  **Tạo Pull Request (PR):** Đẩy code lên GitHub, mở PR và nhờ Mentor AI review code.
-6.  **Kiểm thử & Triển khai:** Đảm bảo toàn bộ test case vượt qua, build ứng dụng thành công và migrations hoạt động ổn định.
-7.  **Lưu trữ bằng chứng (Evidence):** Chụp lại log chạy thử, output của test hoặc UI của Swagger làm bằng chứng.
-8.  **Kết thúc ngày:** Ghi lại 3 dòng tóm tắt: Đã hoàn thành gì, bằng chứng ở đâu, kế hoạch ngày mai là gì.
+```text
+Theory sprint
+-> concept map
+-> mini lab / notes
+-> project mapping
+-> implementation
+-> verification/evidence
+-> interview explanation
+```
 
----
-
-## 3. Cách học cuối tuần (Weekly Routine)
-
-Vào thứ 6 và thứ 7 hàng tuần:
-
-1.  **Chạy lại dự án:** Kiểm tra lại toàn bộ dự án từ hướng dẫn trong file README xem có chạy trơn tru không.
-2.  **Chạy test suites:** Đảm bảo toàn bộ unit test/e2e test vượt qua.
-3.  **Review PR:** Rà soát lại tất cả các PR đã merge trong tuần để củng cố kiến thức.
-4.  **Mock Interview:** Thực hành phỏng vấn 1-1 với Mentor AI trong 20-30 phút xoay quanh các câu hỏi phỏng vấn của tuần đó.
-5.  **Cải tiến:** Chọn ra 1-2 điểm yếu còn tồn đọng để tập trung cải thiện trong tuần kế tiếp.
+Không tính là hoàn thành nếu chỉ đọc docs mà không có ghi chú/mini lab/câu trả lời kiểm tra. Cũng không tính là hoàn thành nếu code project chạy được nhưng không giải thích được lý thuyết phía sau.
 
 ---
 
-## 4. Phụ lục link học tập tổng hợp
+## 2. Cường độ mặc định
 
-Các tài liệu chính thức giúp tra cứu nhanh trong suốt lộ trình học:
+| Loại ngày | Cường độ | Output bắt buộc |
+|---|---:|---|
+| Thứ 2-4 | 3-5 giờ/ngày | Theory notes, concept map, mini lab, câu hỏi kiểm tra |
+| Thứ 5 | 3-5 giờ | Mapping lý thuyết vào Movie Ticket Booking, design/API/DB plan |
+| Thứ 6-7 | 5-6 giờ | Implement, test, evidence, PR review, mock interview |
+| Chủ nhật | 60-90 phút | Weekly review, backlog triage, plan tuần sau |
 
-| Nhóm công cụ | Link chính thức |
-|---|---|
-| **NestJS** | [NestJS Documentation](https://docs.nestjs.com/) |
-| **Node.js** | [Node.js Learning Guides](https://nodejs.org/en/learn) |
-| **HTTP Specification** | [MDN HTTP Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP) |
-| **PostgreSQL** | [PostgreSQL Current Docs](https://www.postgresql.org/docs/current/) |
-| **TypeORM** | [TypeORM Docs](https://typeorm.io/) |
-| **pgvector** | [pgvector GitHub Repository](https://github.com/pgvector/pgvector) |
-| **payOS** | [payOS Integration Docs](https://payos.vn/docs/) |
-| **OpenAI** | [OpenAI API Reference](https://platform.openai.com/docs/) |
-| **Jest Testing** | [Jest Getting Started](https://jestjs.io/docs/getting-started) |
-| **Docker** | [Docker Overview Docs](https://docs.docker.com/) |
-| **GitHub Actions** | [GitHub Actions Documentation](https://docs.github.com/en/actions) |
+Thứ 2-4 được phép tập trung học lý thuyết rất nặng. Nhưng mỗi buổi vẫn phải có output: ghi chú, sơ đồ, mini lab, hoặc câu trả lời interview drill.
+
+---
+
+## 3. Template thứ 2-4: Theory Sprint
+
+```md
+# Theory Sprint: <Chủ đề>
+
+## 1. Learning Objectives
+- Hôm nay phải hiểu được gì?
+- Khái niệm nào là bắt buộc?
+
+## 2. Core Concepts
+- Concept:
+- Why it matters:
+- Common mistakes:
+
+## 3. Mini Lab
+- Mục tiêu lab:
+- Code thử:
+- Kết quả:
+
+## 4. Project Bridge
+- Kiến thức này sẽ dùng ở đâu trong Movie Ticket Booking?
+
+## 5. Interview Drill
+- Question:
+- My answer:
+```
+
+---
+
+## 4. Template thứ 5-7: Project Mapping Sprint
+
+Từ thứ 5 đến thứ 7 mới chuyển sang daily delivery ticket:
+
+```md
+# Ticket: [Tên ticket]
+
+## 1. Business Scenario
+- Actor là ai?
+- Người dùng/admin/staff cần làm việc gì?
+- Tại sao hệ thống cần tính năng này?
+
+## 2. System Analysis
+- Input/output chính.
+- State liên quan.
+- Edge cases.
+- Failure cases.
+- Security hoặc data consistency risk.
+
+## 3. Design Before Code
+- API contract.
+- DB impact.
+- Service/module boundary.
+- Transaction, permission, logging, validation concern.
+
+## 4. Implementation Checklist
+- [ ] ...
+
+## 5. Verification
+- Unit test.
+- E2E/manual curl.
+- Migration/test log.
+- Swagger evidence.
+
+## 6. Evidence
+- PR:
+- Issue:
+- Logs/screenshots:
+
+## 7. Interview Drill
+- Giải thích tradeoff và lý do thiết kế.
+```
+
+---
+
+## 5. Bản đồ 8 tuần theo flow dự án
+
+| Tuần | Chủ đề  | Theory sprint thứ 2-4 | Project mapping thứ 5-7 |
+|---:|---|---|---|
+| 1 | Foundation, OOP, NestJS basics | HTTP/REST, TypeScript OOP, NestJS module/controller/provider/DI | Public catalog API, Swagger, README, ADR |
+| 2 | Production API behavior | Node runtime, async, stream/buffer, request pipeline, validation/error/logging | Filter/pagination, request id, error contract, tests |
+| 3 | Database design | SQL fundamentals, normalization, constraints, TypeORM, migration, index | ERD, migrations, seeds, showtime seat snapshot |
+| 4 | Auth/RBAC/concurrency | Auth theory, JWT, password hashing, RBAC, transaction, lock, isolation | Auth APIs, RBAC guard, seat hold transaction, race evidence |
+| 5 | Booking/testing/CI/Docker | State machine, test pyramid, mocking, CI, Docker fundamentals | Booking/ticket/check-in flow, e2e, CI, Docker Compose |
+| 6 | Integration/async/AI search | Payment/webhook, idempotency, queue/job, embeddings, pgvector | payOS, BullMQ expiry, semantic search with mock provider |
+| 7 | AI admin workflow/operations | AI boundaries, schema validation, human approval, observability, hardening | Admin AI draft/apply, failure handling, demo slice |
+| 8 | Release/interview/system design | Release engineering, regression, portfolio docs, system design storytelling | Final demo, evidence pack, mock interview |
+
+---
+
+## 6. Chuẩn issue hằng ngày
+
+Mỗi ngày nên tạo issue theo mẫu:
+
+```md
+## Problem
+Mô tả business problem.
+
+## Scope
+- In:
+- Out:
+
+## Acceptance Criteria
+- [ ] API contract rõ.
+- [ ] Validation/error cases rõ.
+- [ ] Test hoặc manual evidence có log.
+- [ ] Docs/Swagger cập nhật nếu API thay đổi.
+
+## Risks
+- Data consistency:
+- Security:
+- Integration:
+```
+
+---
+
+## 7. Chuẩn PR hằng ngày
+
+Một PR tốt không chỉ có code. PR phải trả lời được:
+
+- Tính năng này giải quyết business scenario nào?
+- API contract thay đổi ra sao?
+- DB/migration có ảnh hưởng dữ liệu cũ không?
+- Edge cases nào đã xử lý?
+- Test nào chứng minh behavior chính?
+- Evidence nằm ở đâu?
+- Có tradeoff nào cần reviewer biết không?
+
+---
+
+## 8. Chuẩn evidence
+
+Tối thiểu mỗi ngày phải có một trong các loại evidence:
+
+- Output `npm test`, `npm run test:e2e`, `npm run build`.
+- Log migration/seed.
+- Screenshot Swagger hoặc curl response.
+- Link PR/commit.
+- ADR ngắn cho quyết định kỹ thuật.
+- Diagram state machine/sequence/ERD.
+
+---
+
+## 9. Tiêu chuẩn mentor review
+
+Mentor không chấm theo số lượng docs đã đọc. Mentor chấm theo:
+
+- Lý thuyết thứ 2-4 có nắm chắc không.
+- Requirement có hiểu đúng không.
+- Thiết kế có bám domain Movie Ticket Booking không.
+- API có predictable và consistent không.
+- DB có constraint để bảo vệ dữ liệu không.
+- Transaction có bảo vệ invariant không.
+- Test có bắt được bug thật không.
+- Evidence có đủ để người khác verify không.
+- Người học có giải thích được tradeoff không.
+
+---
+
+## 10. Cách dùng docs
+
+Docs chỉ được dùng theo nguyên tắc:
+
+```text
+Gặp requirement -> cần quyết định kỹ thuật -> mở docs đúng phần -> áp dụng vào project -> ghi lại evidence.
+```
+
+Không học lan man. Nhưng trong theory sprint, phải học đủ sâu để cuối tuần mapping vào Movie Ticket Booking không bị hổng nền.

@@ -1,17 +1,13 @@
-# 📅 Tuần 2 - Node.js runtime và NestJS request pipeline
+# Tuần 2 - Production API behavior và request pipeline
 
-Thư mục này chứa nhật ký học tập và bài thực hành nhỏ hàng ngày của Tuần 2.
+Tuần này chuẩn hóa hành vi API như service production: validation, error format, request id, logging, filter/sort/pagination.
 
-## 📖 Nội dung học tập hàng ngày:
-*   [Thứ 2 - Event loop, async I/O](thu-2.md)
-*   [Thứ 3 - Stream, buffer, export file](thu-3.md)
-*   [Thứ 4 - Middleware, pipe, interceptor, filter](thu-4.md)
-*   [Thứ 5 - Validation, logging, request id](thu-5.md)
-*   [Thứ 6 - Thứ 7 - Review request pipeline](thu-6-7.md)
+Roadmap chi tiết: [chuong-trinh-dao-tao/lo-trinh/tuan-2.md](../../chuong-trinh-dao-tao/lo-trinh/tuan-2.md)
 
----
+## Daily tickets
 
-## 🔗 Liên kết tài liệu hữu ích:
-*   [Chi tiết lộ trình Tuần 2](../../chuong-trinh-dao-tao/lo-trinh/tuan-2.md)
-*   [Thiết kế APIs](../../chuong-trinh-dao-tao/thiet-ke/api-spec.md)
-*   [Thiết kế Database](../../chuong-trinh-dao-tao/thiet-ke/database.md)
+- [Thứ 2 - Standardize API error and validation contract](thu-2.md)
+- [Thứ 3 - Add production-grade list behavior for movies](thu-3.md)
+- [Thứ 4 - Add request id and structured logging](thu-4.md)
+- [Thứ 5 - Make showtime search usable for real customer flow](thu-5.md)
+- [Thứ 6-7 - Review pipeline and write tests/evidence](thu-6-7.md)

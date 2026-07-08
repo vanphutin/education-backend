@@ -1,17 +1,13 @@
-# 📅 Tuần 4 - Auth, RBAC và seat holding transaction
+# Tuần 4 - Auth, RBAC và seat hold concurrency
 
-Thư mục này chứa nhật ký học tập và bài thực hành nhỏ hàng ngày của Tuần 4.
+Tuần này tập trung vào invariant quan trọng: một ghế không thể bị giữ bởi hai customer cùng lúc.
 
-## 📖 Nội dung học tập hàng ngày:
-*   [Thứ 2 - Auth flow, JWT, password hashing](thu-2.md)
-*   [Thứ 3 - RBAC, guard, decorator](thu-3.md)
-*   [Thứ 4 - Transaction, row lock, isolation](thu-4.md)
-*   [Thứ 5 - TypeORM transaction implementation](thu-5.md)
-*   [Thứ 6 - Thứ 7 - Test guard và seat hold edge cases](thu-6-7.md)
+Roadmap chi tiết: [chuong-trinh-dao-tao/lo-trinh/tuan-4.md](../../chuong-trinh-dao-tao/lo-trinh/tuan-4.md)
 
----
+## Daily tickets
 
-## 🔗 Liên kết tài liệu hữu ích:
-*   [Chi tiết lộ trình Tuần 4](../../chuong-trinh-dao-tao/lo-trinh/tuan-4.md)
-*   [Thiết kế APIs](../../chuong-trinh-dao-tao/thiet-ke/api-spec.md)
-*   [Thiết kế Database](../../chuong-trinh-dao-tao/thiet-ke/database.md)
+- [Thứ 2 - Implement customer identity and auth flow](thu-2.md)
+- [Thứ 3 - Enforce role-based access for admin/staff/customer](thu-3.md)
+- [Thứ 4 - Design seat hold state machine](thu-4.md)
+- [Thứ 5 - Implement transactional seat hold](thu-5.md)
+- [Thứ 6-7 - Test security and race edge cases](thu-6-7.md)

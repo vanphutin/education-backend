@@ -1,45 +1,37 @@
-# Tuần 3 - PostgreSQL, TypeORM và schema rạp/phim/suất chiếu
+# Tuần 3 - Database design, migrations và showtime seat snapshot
+
+Tuần 3 chuyển từ mock data sang database thật. Trọng tâm không phải chỉ biết TypeORM, mà là thiết kế schema bảo vệ dữ liệu và phục vụ flow đặt vé.
 
 ---
 
-## 1. Nội dung tổng quan
+## 1. Mục tiêu tuần
 
 | Hạng mục | Nội dung |
 |---|---|
-| **Mục tiêu** | Thiết kế schema thật cho movie/cinema/screen/seat/showtime/showtime_seat. |
-| **Lý thuyết** | Table/entity, relation, normalization, constraint, index, migration, TypeORM entity/repository/query builder. |
-| **Thực hành (Lab)** | Tạo migrations/entities/seeds. Khi tạo showtime, snapshot seat layout thành `showtime_seats`. |
-| **Sản phẩm (Deliverable)** | PR `feat/movie-cinema-showtime-schema`; ERD; seed data; docs DB. |
-| **Câu hỏi phỏng vấn (Interview drill)** | Vì sao cần `showtime_seats` thay vì chỉ dùng `seats`? Index có nhược điểm gì? |
+| Business goal | Admin có thể quản lý phim/rạp/phòng/ghế/suất chiếu; guest xem seat map của suất chiếu thật. |
+| Engineering goal | Tạo migrations/entities/seeds, relations, constraints, indexes, query APIs. |
+| System thinking | Biết vì sao cần snapshot `showtime_seats`, constraint nào bảo vệ dữ liệu, index nào phục vụ query. |
+| Deliverables | ERD, migrations, seed data, CRUD admin cơ bản, showtime seat snapshot, query review. |
+| Interview focus | Normalization, constraints, index, migration, snapshot data, TypeORM tradeoffs. |
 
 ---
 
 ## 2. Kế hoạch học tập theo ngày
 
-| Buổi | Trọng tâm | Tài liệu học tập |
-|---|---|---|
-| **Thứ 2** | PostgreSQL table, data type, constraint | [PostgreSQL data types](https://www.postgresql.org/docs/current/datatype.html), [PostgreSQL table basics](https://www.postgresql.org/docs/current/ddl-basics.html), [PostgreSQL constraints](https://www.postgresql.org/docs/current/ddl-constraints.html) |
-| **Thứ 3** | TypeORM entity và relation | [TypeORM entities](https://typeorm.io/entities), [TypeORM relations](https://typeorm.io/relations), [NestJS database](https://docs.nestjs.com/techniques/database) |
-| **Thứ 4** | Migration, seed, schema evolution | [TypeORM migrations](https://typeorm.io/migrations), [TypeORM DataSource](https://typeorm.io/data-source), [TypeORM DataSource options](https://typeorm.io/data-source-options) |
-| **Thứ 5** | Repository, query builder, pagination | [TypeORM repository API](https://typeorm.io/repository-api), [TypeORM find options](https://typeorm.io/find-options), [TypeORM query builder](https://typeorm.io/select-query-builder) |
-| **Thứ 6-7** | Index và query review | [PostgreSQL indexes](https://www.postgresql.org/docs/current/indexes.html), [PostgreSQL EXPLAIN](https://www.postgresql.org/docs/current/sql-explain.html) |
+Thứ 2-4 là theory sprint. Thứ 5-7 mới mapping vào project.
+
+| Ngày | Loại buổi | Trọng tâm | Output bắt buộc |
+|---|---|---|---|
+| Thứ 2 | Theory sprint | SQL fundamentals: table, data type, primary/foreign key, not null, unique, check constraint | Schema notes, constraint examples, normalization exercise |
+| Thứ 3 | Theory sprint | Relation modeling, normalization vs denormalization, ERD, showtime seat snapshot reasoning | ERD draft, explanation why snapshot is needed |
+| Thứ 4 | Theory sprint | TypeORM entity/repository, migrations, seeds, query builder, indexes, EXPLAIN | TypeORM notes, migration checklist, index tradeoff answers |
+| Thứ 5 | Project mapping | Map DB theory vào movie/cinema/screen/seat/showtime schema | Final ERD, migration plan, seed plan, API-to-table mapping |
+| Thứ 6-7 | Project sprint | Implement migrations/entities/seeds/showtime_seats and query review | PR, migration/seed logs, `GET /showtimes/:id/seats` evidence |
 
 ---
 
-## 3. Các Entities & APIs tuần 3
+## 3. API scope tuần 3
 
-### Entities:
-```text
-movies
-movie_trailers
-cinemas
-screens
-seats
-showtimes
-showtime_seats
-```
-
-### APIs:
 ```text
 POST /admin/movies
 PATCH /admin/movies/:id
@@ -50,3 +42,24 @@ POST /admin/screens/:id/seats
 POST /admin/showtimes
 GET /showtimes/:id/seats
 ```
+
+---
+
+## 4. Acceptance criteria
+
+- [ ] Có migration, không dùng `synchronize: true`.
+- [ ] Có ERD và giải thích relation.
+- [ ] Có constraints cơ bản: unique, not null, foreign key.
+- [ ] Tạo showtime sinh snapshot `showtime_seats`.
+- [ ] Query public vẫn chạy sau khi chuyển từ mock sang DB.
+- [ ] Có seed idempotent.
+- [ ] Có evidence migration/seed/query.
+
+---
+
+## 5. Interview drill
+
+- Vì sao `showtime_seats` cần snapshot thay vì chỉ join `seats`?
+- Khi nào nên thêm index? Index có nhược điểm gì?
+- Migration production khác gì sửa entity rồi chạy sync?
+- Nên đặt constraint ở app layer hay database layer?

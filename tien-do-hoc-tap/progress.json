@@ -13,60 +13,67 @@
   "weeks": [
     {
       "week_number": 1,
-      "title": "Backend foundation và Movie API skeleton",
+      "title": "Foundation, OOP, NestJS basics and public catalog API",
       "status": "IN_PROGRESS",
       "score": null,
       "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "HTTP, REST, status code, headers",
+          "topic": "Theory Sprint: HTTP, REST, status code, headers",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Tuesday",
-          "topic": "TypeScript và NestJS first app",
+          "topic": "Theory Sprint: TypeScript OOP before NestJS",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Wednesday",
-          "topic": "Module, controller, provider, DI",
+          "topic": "Theory Sprint: NestJS module, controller, provider, DI",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Thursday",
-          "topic": "Config, lint/format, Swagger basic",
+          "topic": "Project Mapping: Movie public catalog API contract and module boundary",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Git flow, PR, README, convention",
+          "topic": "Project Sprint: Implement public catalog API, Swagger, README, evidence",
           "status": "TODO",
           "updated_at": null
         }
       ],
       "deliverables": [
         {
-          "id": "w1_d1",
+          "id": "w1_pr",
           "name": "PR chore/setup-movie-ticket-api",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w1_d2",
-          "name": "README chạy local",
+          "id": "w1_oop_lab",
+          "name": "OOP mini lab Movie/Cinema/Showtime",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w1_d3",
-          "name": "Swagger basic & ADR folder structure",
+          "id": "w1_api_contract",
+          "name": "Public catalog APIs + Swagger evidence",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w1_docs",
+          "name": "README local setup + ADR project scope",
           "status": "PENDING",
           "link": "",
           "evidence": ""
@@ -75,60 +82,67 @@
     },
     {
       "week_number": 2,
-      "title": "Node.js runtime và NestJS request pipeline",
+      "title": "Node runtime, request pipeline and production API behavior",
       "status": "NOT_STARTED",
       "score": null,
       "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "Event loop, async I/O",
+          "topic": "Theory Sprint: Node event loop, async IO, error propagation",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Tuesday",
-          "topic": "Stream, buffer, export file",
+          "topic": "Theory Sprint: Stream, buffer, backpressure",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Wednesday",
-          "topic": "Middleware, pipe, interceptor, filter",
+          "topic": "Theory Sprint: NestJS middleware, pipe, interceptor, filter",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Thursday",
-          "topic": "Validation, logging, request id",
+          "topic": "Project Mapping: API validation, error contract, request id, pagination",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Review request pipeline",
+          "topic": "Project Sprint: Implement pipeline, filters, logs, tests, evidence",
           "status": "TODO",
           "updated_at": null
         }
       ],
       "deliverables": [
         {
-          "id": "w2_d1",
+          "id": "w2_pr",
           "name": "PR feat/common-request-pipeline",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w2_d2",
-          "name": "Docs request pipeline",
+          "id": "w2_api_behavior",
+          "name": "API behavior docs: validation, error, pagination",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w2_d3",
-          "name": "Unit test cho error/validation",
+          "id": "w2_logging",
+          "name": "Request id/logging evidence",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w2_tests",
+          "name": "Validation/error tests or curl evidence",
           "status": "PENDING",
           "link": "",
           "evidence": ""
@@ -137,60 +151,67 @@
     },
     {
       "week_number": 3,
-      "title": "PostgreSQL, TypeORM và schema rạp/phim/suất chiếu",
+      "title": "Database theory, schema design and showtime seat snapshot",
       "status": "NOT_STARTED",
       "score": null,
       "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "PostgreSQL table, data type, constraint",
+          "topic": "Theory Sprint: SQL tables, constraints, keys, normalization",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Tuesday",
-          "topic": "TypeORM entity và relation",
+          "topic": "Theory Sprint: Relations, ERD, snapshot vs live seat layout",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Wednesday",
-          "topic": "Migration, seed, schema evolution",
+          "topic": "Theory Sprint: TypeORM entity, migration, seed, index, query builder",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Thursday",
-          "topic": "Repository, query builder, pagination",
+          "topic": "Project Mapping: Movie/cinema/screen/seat/showtime schema design",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Index và query review",
+          "topic": "Project Sprint: Implement migrations, seeds, showtime_seats, query evidence",
           "status": "TODO",
           "updated_at": null
         }
       ],
       "deliverables": [
         {
-          "id": "w3_d1",
+          "id": "w3_pr",
           "name": "PR feat/movie-cinema-showtime-schema",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w3_d2",
-          "name": "ERD & seed data",
+          "id": "w3_erd",
+          "name": "ERD + snapshot seat ADR",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w3_d3",
-          "name": "Docs DB",
+          "id": "w3_migrations",
+          "name": "Migration/seed run evidence",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w3_query_review",
+          "name": "Index/query review evidence",
           "status": "PENDING",
           "link": "",
           "evidence": ""
@@ -199,60 +220,67 @@
     },
     {
       "week_number": 4,
-      "title": "Auth, RBAC và seat holding transaction",
+      "title": "Auth theory, RBAC and seat hold concurrency",
       "status": "NOT_STARTED",
       "score": null,
       "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "Auth flow, JWT, password hashing",
+          "topic": "Theory Sprint: Auth, password hashing, JWT, refresh/logout",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Tuesday",
-          "topic": "RBAC, guard, decorator",
+          "topic": "Theory Sprint: RBAC, guards, decorators, permission matrix",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Wednesday",
-          "topic": "Transaction, row lock, isolation",
+          "topic": "Theory Sprint: Transaction, isolation, row lock, race condition",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Thursday",
-          "topic": "TypeORM transaction implementation",
+          "topic": "Project Mapping: Actors, protected APIs, seat hold state and transaction design",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Test guard và seat hold edge cases",
+          "topic": "Project Sprint: Implement auth, RBAC, transactional seat hold, race evidence",
           "status": "TODO",
           "updated_at": null
         }
       ],
       "deliverables": [
         {
-          "id": "w4_d1",
+          "id": "w4_pr",
           "name": "PR feat/auth-rbac-seat-hold",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w4_d2",
-          "name": "RBAC matrix & unit test guard",
+          "id": "w4_rbac",
+          "name": "RBAC matrix + guard tests",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w4_d3",
-          "name": "Test hold ghế đã bị giữ",
+          "id": "w4_state",
+          "name": "Seat hold state machine/ADR",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w4_race",
+          "name": "Double-hold race-condition evidence",
           "status": "PENDING",
           "link": "",
           "evidence": ""
@@ -261,60 +289,67 @@
     },
     {
       "week_number": 5,
-      "title": "Booking, ticket, testing, CI và Docker",
+      "title": "Booking state machine, testing, CI and Docker",
       "status": "NOT_STARTED",
       "score": null,
       "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "Unit test, mocking boundary",
+          "topic": "Theory Sprint: Booking/payment/ticket state machine",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Tuesday",
-          "topic": "E2E test với Supertest",
+          "topic": "Theory Sprint: Test pyramid, unit/e2e, mocking boundaries, Supertest",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Wednesday",
-          "topic": "GitHub Actions CI",
+          "topic": "Theory Sprint: CI, Docker, Compose, env and reproducible setup",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Thursday",
-          "topic": "Dockerfile, Compose, env",
+          "topic": "Project Mapping: Booking/ticket/check-in design and test plan",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Swagger, README, evidence",
+          "topic": "Project Sprint: Implement booking, ticket, e2e, CI, Docker evidence",
           "status": "TODO",
           "updated_at": null
         }
       ],
       "deliverables": [
         {
-          "id": "w5_d1",
+          "id": "w5_pr",
           "name": "PR feat/booking-ticket-testing-ci-docker",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w5_d2",
-          "name": "E2E happy path tests",
+          "id": "w5_state",
+          "name": "Booking/ticket state machine docs",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w5_d3",
-          "name": "README setup & Swagger docs",
+          "id": "w5_e2e",
+          "name": "E2E booking -> ticket -> check-in evidence",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w5_ci_docker",
+          "name": "CI + Docker Compose evidence",
           "status": "PENDING",
           "link": "",
           "evidence": ""
@@ -323,60 +358,67 @@
     },
     {
       "week_number": 6,
-      "title": "payOS, background jobs, AI semantic search và embeddings",
+      "title": "Payment/webhook, async jobs and AI search theory to implementation",
       "status": "NOT_STARTED",
       "score": null,
       "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "payOS payment link và SDK",
+          "topic": "Theory Sprint: Payment provider, payOS link, webhook, idempotency",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Tuesday",
-          "topic": "Webhook, idempotency, payment safety",
+          "topic": "Theory Sprint: Redis, BullMQ, retry, timeout, job idempotency",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Wednesday",
-          "topic": "BullMQ, Redis, background job",
+          "topic": "Theory Sprint: Embeddings, vector similarity, pgvector, mock provider",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Thursday",
-          "topic": "Embeddings và pgvector",
+          "topic": "Project Mapping: payOS, expiry jobs, semantic search boundary and schema",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Semantic search API và mock provider test",
+          "topic": "Project Sprint: Implement payOS, webhook replay safety, jobs, semantic search",
           "status": "TODO",
           "updated_at": null
         }
       ],
       "deliverables": [
         {
-          "id": "w6_d1",
+          "id": "w6_pr",
           "name": "PR feat/payos-jobs-ai-semantic-search",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w6_d2",
-          "name": "Docs payOS flow & docs AI search",
+          "id": "w6_payos",
+          "name": "payOS flow + webhook replay evidence",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w6_d3",
-          "name": "Tests mock provider",
+          "id": "w6_jobs",
+          "name": "BullMQ expiry job evidence",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w6_ai",
+          "name": "Semantic search + mock provider tests",
           "status": "PENDING",
           "link": "",
           "evidence": ""
@@ -385,60 +427,67 @@
     },
     {
       "week_number": 7,
-      "title": "Capstone sprint 1: hoàn thiện AI + payment + admin workflow",
+      "title": "AI admin workflow, operations and hardening",
       "status": "NOT_STARTED",
       "score": null,
       "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "Sprint planning, issue breakdown",
+          "topic": "Theory Sprint: Backlog triage, scope cut, PR slicing, reviewability",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Tuesday",
-          "topic": "API/DB proposal và PR nhỏ",
+          "topic": "Theory Sprint: AI schema validation, human approval, prompt/output boundary",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Wednesday",
-          "topic": "Admin AI content draft workflow",
+          "topic": "Theory Sprint: Observability, integration logs, failure simulation",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Thursday",
-          "topic": "Payment/AI hardening",
+          "topic": "Project Mapping: Admin AI workflow and hardening gaps",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Review, demo, evidence",
+          "topic": "Project Sprint: Implement admin AI draft/apply, failure handling, demo slice",
           "status": "TODO",
           "updated_at": null
         }
       ],
       "deliverables": [
         {
-          "id": "w7_d1",
-          "name": "3-5 PR nhỏ & API docs",
+          "id": "w7_prs",
+          "name": "3-5 small PRs with reviewable scope",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w7_d2",
-          "name": "E2E booking + payment mock evidence",
+          "id": "w7_admin_ai",
+          "name": "Admin AI draft/apply workflow evidence",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w7_d3",
-          "name": "AI search evidence & payOS demo",
+          "id": "w7_hardening",
+          "name": "Payment/AI failure simulation logs",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w7_demo",
+          "name": "End-to-end demo script and evidence",
           "status": "PENDING",
           "link": "",
           "evidence": ""
@@ -447,60 +496,67 @@
     },
     {
       "week_number": 8,
-      "title": "Capstone sprint 2: hardening, docs, demo và phỏng vấn",
+      "title": "Release theory, final demo and interview readiness",
       "status": "NOT_STARTED",
       "score": null,
       "mentor_feedback": "",
       "days": [
         {
           "day": "Monday",
-          "topic": "Backlog triage và scope cut",
+          "topic": "Theory Sprint: Release engineering, regression, scope cut, known limitations",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Tuesday",
-          "topic": "Regression test và race-condition evidence",
+          "topic": "Theory Sprint: System design storytelling and project pitch",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Wednesday",
-          "topic": "Docs payOS, AI, embedding rebuild",
+          "topic": "Theory Sprint: Deep dive interview prep: transaction, webhook, AI, testing",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Thursday",
-          "topic": "Docker demo, release note, README portfolio",
+          "topic": "Project Mapping: Final docs/evidence gaps and release plan",
           "status": "TODO",
           "updated_at": null
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Review, demo, final demo",
+          "topic": "Project Sprint: Final regression, Docker demo, release notes, mock interview",
           "status": "TODO",
           "updated_at": null
         }
       ],
       "deliverables": [
         {
-          "id": "w8_d1",
-          "name": "Final README, Swagger & ERD",
+          "id": "w8_readme",
+          "name": "Final README portfolio + Swagger + ERD",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w8_d2",
-          "name": "Docker & payOS notes evidence",
+          "id": "w8_tests",
+          "name": "Regression/race/webhook replay test output",
           "status": "PENDING",
           "link": "",
           "evidence": ""
         },
         {
-          "id": "w8_d3",
-          "name": "AI semantic search demo & interview notes",
+          "id": "w8_release",
+          "name": "Docker demo + release notes",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w8_interview",
+          "name": "Final demo script + interview notes",
           "status": "PENDING",
           "link": "",
           "evidence": ""
@@ -513,8 +569,8 @@
   "_meta": {
     "schema_version": 1,
     "created_at": "2026-07-08T03:58:30.406Z",
-    "version": 2,
-    "updated_at": "2026-07-08T04:08:19.418Z",
+    "version": 6,
+    "updated_at": "2026-07-08T07:31:31.719Z",
     "updated_by": "codex-mentor"
   },
   "audit_log": [
@@ -527,12 +583,52 @@
       "base_version": 1,
       "new_version": 2,
       "summary": "1 JSON patch operation(s)"
+    },
+    {
+      "id": "0e6189a9-1798-400e-9324-58fdcd50a2af",
+      "timestamp": "2026-07-08T07:11:31.073Z",
+      "actor": "codex-mentor",
+      "action": "mentor_patch",
+      "reason": "Add OOP-first bridge before NestJS in week 1 training plan",
+      "base_version": 2,
+      "new_version": 3,
+      "summary": "3 JSON patch operation(s)"
+    },
+    {
+      "id": "ff5fe301-ef0b-457d-944c-b57e57ed5eb8",
+      "timestamp": "2026-07-08T07:21:52.192Z",
+      "actor": "codex-mentor",
+      "action": "mentor_patch",
+      "reason": "Upgrade tracker DB to curriculum V2 delivery-based daily tickets",
+      "base_version": 3,
+      "new_version": 4,
+      "summary": "3 JSON patch operation(s)"
+    },
+    {
+      "id": "3dfbf7da-2175-4183-a45b-a87ff3eaa2f8",
+      "timestamp": "2026-07-08T07:24:45.322Z",
+      "actor": "codex-mentor",
+      "action": "mentor_patch",
+      "reason": "Fix tracker DB V2 strings after shell encoding issue",
+      "base_version": 4,
+      "new_version": 5,
+      "summary": "3 JSON patch operation(s)"
+    },
+    {
+      "id": "f1284053-9598-4c67-9a5f-ce6c5da5b011",
+      "timestamp": "2026-07-08T07:31:31.719Z",
+      "actor": "codex-mentor",
+      "action": "mentor_patch",
+      "reason": "Adjust tracker to  theory sprint Mon-Wed and project mapping Thu-Sat rhythm",
+      "base_version": 5,
+      "new_version": 6,
+      "summary": "3 JSON patch operation(s)"
     }
   ],
   "program": {
-    "name": "Backend NestJS 8-week training",
+    "name": "Backend NestJS  - Theory-first Movie Ticket Booking training",
     "synced_at": "2026-07-08T04:08:19.4014115Z",
-    "notes": "Timer is synced from this start date. Week 1 starts on 2026-07-13.",
+    "notes": " rhythm: Monday-Wednesday are intensive theory sprints; Thursday-Saturday map theory into Movie Ticket Booking implementation, tests, and evidence.",
     "training_start_date": "2026-07-13",
     "duration_weeks": 8,
     "timezone": "Asia/Saigon",

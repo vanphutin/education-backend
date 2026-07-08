@@ -1,6 +1,18 @@
-# 🎓 Education Backend - NestJS 8-Week Training Program
+# Education Backend - NestJS V2 Movie Ticket Booking Program
 
-Dự án này là không gian làm việc và ghi chép tiến độ tự học Backend NestJS thực chiến trong 8 tuần thông qua dự án **Movie Ticket Booking Backend API**.
+Dự án này là không gian làm việc và ghi chép tiến độ đào tạo Backend NestJS trong 8 tuần thông qua dự án **Movie Ticket Booking Backend API**.
+
+V2 chuyển trọng tâm từ "học để biết" sang "deliver như backend engineer trong team sản phẩm":
+
+```text
+business scenario
+-> system analysis
+-> API/DB/service design
+-> implementation
+-> verification
+-> evidence
+-> interview explanation
+```
 
 ---
 

@@ -1,22 +1,39 @@
-# 📚 Nhật ký học tập & Mini Labs
+# Nhật ký học tập & Daily Delivery Tickets
 
-Thư mục này là nơi ghi chép lý thuyết học tập hàng ngày và thực hiện các bài thực hành nhỏ (mini labs) trong suốt lộ trình đào tạo 8 tuần.
-
-## 🗺️ Mục lục các tuần học:
-*   [Tuần 1 - Backend foundation và Movie API skeleton](tuan-1/README.md)
-*   [Tuần 2 - Node.js runtime và NestJS request pipeline](tuan-2/README.md)
-*   [Tuần 3 - PostgreSQL, TypeORM và schema rạp/phim/suất chiếu](tuan-3/README.md)
-*   [Tuần 4 - Auth, RBAC và seat holding transaction](tuan-4/README.md)
-*   [Tuần 5 - Booking, ticket, testing, CI và Docker](tuan-5/README.md)
-*   [Tuần 6 - payOS, background jobs, AI semantic search và embeddings](tuan-6/README.md)
-*   [Tuần 7 - Capstone sprint 1: hoàn thiện AI + payment + admin workflow](tuan-7/README.md)
-*   [Tuần 8 - Capstone sprint 2: hardening, docs, demo và phỏng vấn](tuan-8/README.md)
+Thư mục này dùng để ghi lại quá trình làm việc hằng ngày theo chuẩn V2. Mỗi file ngày không còn là nơi ghi lý thuyết rời rạc, mà là một **daily delivery ticket** bám sát dự án Movie Ticket Booking Backend.
 
 ---
 
-## 📝 Quy trình học tập mỗi ngày:
-1.  **Chuẩn bị**: Mở tài liệu của ngày tương ứng (ví dụ: `study/tuan-1/thu-2.md`).
-2.  **Đọc & Nghiên cứu**: Tìm hiểu lý thuyết cốt lõi qua các liên kết tài liệu đính kèm.
-3.  **Ghi chép (Theory)**: Tóm tắt lại các kiến thức quan trọng vào phần **1. Lý thuyết**.
-4.  **Thực hành (Mini Lab)**: Thử nghiệm viết code nhỏ để kiểm chứng lý thuyết ở phần **2. Lab mini**.
-5.  **Trả lời câu hỏi (Interview Drill)**: Giải quyết các câu hỏi phỏng vấn hàng ngày.
+## Mục lục các tuần
+
+- [Tuần 1 - Product foundation, OOP và public catalog API](tuan-1/README.md)
+- [Tuần 2 - Production API behavior và request pipeline](tuan-2/README.md)
+- [Tuần 3 - Database design, migrations và showtime seat snapshot](tuan-3/README.md)
+- [Tuần 4 - Auth, RBAC và seat hold concurrency](tuan-4/README.md)
+- [Tuần 5 - Booking state machine, ticket, testing, CI và Docker](tuan-5/README.md)
+- [Tuần 6 - payOS, webhook idempotency, jobs và semantic search](tuan-6/README.md)
+- [Tuần 7 - AI product workflow và admin operations](tuan-7/README.md)
+- [Tuần 8 - Hardening, release, demo và interview](tuan-8/README.md)
+
+---
+
+## Quy trình mỗi ngày
+
+1. Mở roadmap tuần tương ứng trong `chuong-trinh-dao-tao/lo-trinh/`.
+2. Tạo issue hoặc ghi task theo daily ticket.
+3. Phân tích business scenario, edge cases và failure cases trước khi code.
+4. Thiết kế API/DB/module boundary.
+5. Implement theo checklist nhỏ.
+6. Verify bằng test/curl/Swagger/log.
+7. Ghi evidence vào file ngày và PR.
+8. Trả lời interview drill của ngày.
+
+---
+
+## Template chuẩn
+
+Dùng template này cho mọi ngày:
+
+[Daily Ticket Template V2](../chuong-trinh-dao-tao/huong-dan/daily-ticket-template.md)
+
+Một ngày chưa có evidence thì chưa Done.

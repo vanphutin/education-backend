@@ -1,17 +1,13 @@
-# 📅 Tuần 5 - Booking, ticket, testing, CI và Docker
+# Tuần 5 - Booking state machine, ticket, testing, CI và Docker
 
-Thư mục này chứa nhật ký học tập và bài thực hành nhỏ hàng ngày của Tuần 5.
+Tuần này nối seat hold thành flow booking/ticket end-to-end, có test, CI và môi trường Docker.
 
-## 📖 Nội dung học tập hàng ngày:
-*   [Thứ 2 - Unit test, mocking boundary](thu-2.md)
-*   [Thứ 3 - E2E test với Supertest](thu-3.md)
-*   [Thứ 4 - GitHub Actions CI](thu-4.md)
-*   [Thứ 5 - Dockerfile, Compose, env](thu-5.md)
-*   [Thứ 6 - Thứ 7 - Swagger, README, evidence](thu-6-7.md)
+Roadmap chi tiết: [chuong-trinh-dao-tao/lo-trinh/tuan-5.md](../../chuong-trinh-dao-tao/lo-trinh/tuan-5.md)
 
----
+## Daily tickets
 
-## 🔗 Liên kết tài liệu hữu ích:
-*   [Chi tiết lộ trình Tuần 5](../../chuong-trinh-dao-tao/lo-trinh/tuan-5.md)
-*   [Thiết kế APIs](../../chuong-trinh-dao-tao/thiet-ke/api-spec.md)
-*   [Thiết kế Database](../../chuong-trinh-dao-tao/thiet-ke/database.md)
+- [Thứ 2 - Define booking and ticket state machine](thu-2.md)
+- [Thứ 3 - Implement create booking from active seat hold](thu-3.md)
+- [Thứ 4 - Implement ticket generation and staff check-in](thu-4.md)
+- [Thứ 5 - Make project runnable in CI and Docker](thu-5.md)
+- [Thứ 6-7 - Swagger, README, regression and cleanup](thu-6-7.md)

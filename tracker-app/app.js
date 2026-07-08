@@ -524,14 +524,14 @@ function loadDailyDrill() {
   
   // Simple question generation based on week number
   const questions = {
-    1: "REST API là gì? Phân biệt 401 Unauthorized và 403 Forbidden? Khi nào dùng Query Params vs Path Params?",
-    2: "Node.js Event Loop hoạt động như thế nào? Sự khác nhau giữa process.nextTick() và setImmediate()?",
-    3: "Vì sao chúng ta lại lưu 'showtime_seats' dưới dạng snapshot thay vì chỉ dùng liên kết đến bảng 'seats'? Lợi ích của database index là gì?",
-    4: "Làm thế nào để tránh race condition khi hai user cùng đặt một ghế? Phân biệt SELECT FOR UPDATE và SELECT thông thường?",
-    5: "Unit test khác với E2E test như thế nào? Tại sao chúng ta cần Mocking boundaries khi chạy test trong CI?",
-    6: "Idempotency trong webhook thanh toán là gì? Bạn xử lý như thế nào nếu webhook payOS gửi trùng lặp?",
-    7: "Bạn thiết kế ranh giới (boundary) giữa AI recommendation/search và core booking/payment như thế nào để đảm bảo hệ thống an toàn?",
-    8: "Hãy trình bày ngắn gọn kiến trúc hệ thống đặt vé xem phim của bạn trong vòng 3 phút như đang phỏng vấn với nhà tuyển dụng."
+    1: "Hãy giải thích cách bạn map domain Movie/Cinema/Showtime thành OOP model, NestJS module/controller/service và public API contract. Tradeoff lớn nhất là gì?",
+    2: "Nếu client gọi GET /movies với query sai hoặc quá lớn, API production nên phản hồi thế nào? Hãy giải thích validation, error contract, request id và logging.",
+    3: "Vì sao hệ thống cần snapshot showtime_seats khi tạo suất chiếu? Hãy giải thích constraint, migration, seed và index phục vụ query suất chiếu.",
+    4: "Hai customer cùng giữ ghế A1 cùng lúc thì chuyện gì xảy ra? Hãy mô tả invariant, transaction, row lock, expired hold và test chứng minh chỉ một request thắng.",
+    5: "Hãy mô tả state machine booking -> payment -> ticket -> check-in. Unit test và E2E test nào là bắt buộc để chứng minh flow này an toàn?",
+    6: "Webhook payOS gửi trùng hoặc gửi sai amount thì backend xử lý thế nào? Hãy giải thích provider abstraction, signature verification, idempotency và integration logs.",
+    7: "Admin AI content draft nên được thiết kế ra sao để AI không tự làm hỏng dữ liệu production? Hãy giải thích schema validation, human approval và fallback.",
+    8: "Hãy pitch project Movie Ticket Booking Backend trong 3 phút, sau đó deep dive vào transaction giữ ghế, webhook idempotency, semantic search và evidence test."
   };
   
   const question = questions[currentWeek.week_number] || "Hãy mô tả các thách thức kỹ thuật lớn nhất mà bạn đã giải quyết trong tuần này.";

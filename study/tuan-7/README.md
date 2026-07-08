@@ -1,17 +1,13 @@
-# 📅 Tuần 7 - Capstone sprint 1: hoàn thiện AI + payment + admin workflow
+# Tuần 7 - AI product workflow và admin operations
 
-Thư mục này chứa nhật ký học tập và bài thực hành nhỏ hàng ngày của Tuần 7.
+Tuần này làm như sprint thật: chia PR nhỏ, harden hệ thống và xây admin AI workflow có human approval.
 
-## 📖 Nội dung học tập hàng ngày:
-*   [Thứ 2 - Sprint planning, issue breakdown](thu-2.md)
-*   [Thứ 3 - API/DB proposal và PR nhỏ](thu-3.md)
-*   [Thứ 4 - Admin AI content draft workflow](thu-4.md)
-*   [Thứ 5 - Payment/AI hardening](thu-5.md)
-*   [Thứ 6 - Thứ 7 - Review, demo, evidence](thu-6-7.md)
+Roadmap chi tiết: [chuong-trinh-dao-tao/lo-trinh/tuan-7.md](../../chuong-trinh-dao-tao/lo-trinh/tuan-7.md)
 
----
+## Daily tickets
 
-## 🔗 Liên kết tài liệu hữu ích:
-*   [Chi tiết lộ trình Tuần 7](../../chuong-trinh-dao-tao/lo-trinh/tuan-7.md)
-*   [Thiết kế APIs](../../chuong-trinh-dao-tao/thiet-ke/api-spec.md)
-*   [Thiết kế Database](../../chuong-trinh-dao-tao/thiet-ke/database.md)
+- [Thứ 2 - Sprint planning from current project gaps](thu-2.md)
+- [Thứ 3 - Harden API/DB contracts before adding AI admin](thu-3.md)
+- [Thứ 4 - Implement admin AI content draft workflow](thu-4.md)
+- [Thứ 5 - Harden payment and AI failure paths](thu-5.md)
+- [Thứ 6-7 - Demo slice and mentor review](thu-6-7.md)

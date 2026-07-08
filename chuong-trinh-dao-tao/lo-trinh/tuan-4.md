@@ -1,34 +1,37 @@
-# Tuần 4 - Auth, RBAC và seat holding transaction
+# Tuần 4 - Auth, RBAC và seat hold concurrency
+
+Tuần 4 là tuần bảo vệ invariant quan trọng nhất: một ghế trong một suất chiếu không thể bị giữ bởi hai khách cùng lúc.
 
 ---
 
-## 1. Nội dung tổng quan
+## 1. Mục tiêu tuần
 
 | Hạng mục | Nội dung |
 |---|---|
-| **Mục tiêu** | Implement auth/RBAC và luồng giữ ghế an toàn bằng transaction. |
-| **Lý thuyết** | Password hashing, JWT, refresh token, guard/decorator, RBAC, transaction, row lock, isolation. |
-| **Thực hành (Lab)** | Register/login/refresh/logout. Roles Admin/Staff/Customer. Implement `POST /showtimes/:id/seat-holds` với transaction. |
-| **Sản phẩm (Deliverable)** | PR `feat/auth-rbac-seat-hold`; RBAC matrix; unit test guard; test hold ghế đã bị giữ. |
-| **Câu hỏi phỏng vấn (Interview drill)** | Làm sao chống hai user giữ cùng một ghế? Vì sao cần transaction? |
+| Business goal | Customer đăng nhập và giữ ghế an toàn; Admin/Staff/Customer có quyền khác nhau. |
+| Engineering goal | JWT auth, RBAC, guard/decorator, seat hold transaction, row lock, audit log. |
+| System thinking | Phân tích state, race condition, isolation, lock, expired hold và security boundary. |
+| Deliverables | Auth flow, RBAC matrix, seat hold API, double-hold test/evidence, audit log. |
+| Interview focus | JWT, password hashing, RBAC, transaction, row lock, race condition. |
 
 ---
 
 ## 2. Kế hoạch học tập theo ngày
 
-| Buổi | Trọng tâm | Tài liệu học tập |
-|---|---|---|
-| **Thứ 2** | Auth flow, JWT, password hashing | [NestJS authentication](https://docs.nestjs.com/security/authentication), [Passport JWT](https://www.passportjs.org/packages/passport-jwt/), [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html) |
-| **Thứ 3** | RBAC, guard, decorator | [NestJS authorization](https://docs.nestjs.com/security/authorization), [NestJS guards](https://docs.nestjs.com/guards), [NestJS custom decorators](https://docs.nestjs.com/custom-decorators) |
-| **Thứ 4** | Transaction, row lock, isolation | [PostgreSQL transactions](https://www.postgresql.org/docs/current/tutorial-transactions.html), [PostgreSQL isolation](https://www.postgresql.org/docs/current/transaction-iso.html), [PostgreSQL explicit locking](https://www.postgresql.org/docs/current/explicit-locking.html) |
-| **Thứ 5** | TypeORM transaction implementation | [TypeORM transactions](https://typeorm.io/transactions), [TypeORM EntityManager](https://typeorm.io/working-with-entity-manager) |
-| **Thứ 6-7** | Test guard và seat hold edge cases | [NestJS testing](https://docs.nestjs.com/fundamentals/testing), [Jest mock functions](https://jestjs.io/docs/mock-functions) |
+Thứ 2-4 là theory sprint. Thứ 5-7 mới mapping vào project.
+
+| Ngày | Loại buổi | Trọng tâm | Output bắt buộc |
+|---|---|---|---|
+| Thứ 2 | Theory sprint | Auth fundamentals: password hashing, JWT, refresh token, session/logout, OWASP auth risks | Auth flow notes, token lifecycle diagram |
+| Thứ 3 | Theory sprint | Authorization: RBAC, guards, decorators, permission matrix, least privilege | RBAC matrix draft, guard/decorator notes |
+| Thứ 4 | Theory sprint | Transactions, isolation, row locks, race condition, state machines for seat hold | Seat hold invariant, lock strategy notes, race scenario explanation |
+| Thứ 5 | Project mapping | Map auth/RBAC/transaction vào Movie Booking: actors, protected APIs, seat hold state | Final RBAC matrix, seat hold state diagram, transaction design |
+| Thứ 6-7 | Project sprint | Implement auth, RBAC guards, transactional seat hold, race/security tests | PR `feat/auth-rbac-seat-hold`, auth curl, race evidence |
 
 ---
 
-## 3. Các API & Transaction gợi ý
+## 3. API scope tuần 4
 
-### APIs:
 ```text
 POST /auth/register
 POST /auth/login
@@ -40,7 +43,20 @@ POST /showtimes/:id/seat-holds
 DELETE /seat-holds/:id
 ```
 
-### Hướng dẫn Transaction giữ ghế:
+---
+
+## 4. Seat hold invariant
+
+```text
+For a showtime seat:
+- AVAILABLE -> HELD when a valid customer holds it.
+- HELD -> AVAILABLE when hold expires/cancels.
+- HELD -> SOLD when booking/payment is confirmed.
+- SOLD cannot go back to HELD.
+```
+
+Transaction sketch:
+
 ```text
 BEGIN
 SELECT showtime_seats ... FOR UPDATE
@@ -50,3 +66,24 @@ update showtime_seats = HELD
 insert audit_log
 COMMIT
 ```
+
+---
+
+## 5. Acceptance criteria
+
+- [ ] Password được hash.
+- [ ] Admin APIs có guard.
+- [ ] RBAC matrix có trong docs.
+- [ ] Seat hold chạy trong transaction.
+- [ ] Có xử lý hold hết hạn.
+- [ ] Có test/evidence chống double hold.
+- [ ] Có audit log cho hành động quan trọng.
+
+---
+
+## 6. Interview drill
+
+- Race condition trong giữ ghế xảy ra thế nào?
+- `SELECT ... FOR UPDATE` khác SELECT thường ra sao?
+- Nếu webhook payment đến sau khi hold hết hạn thì xử lý thế nào?
+- RBAC khác permission-based access control ra sao?

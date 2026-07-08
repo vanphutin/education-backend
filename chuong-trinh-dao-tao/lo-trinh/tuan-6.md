@@ -1,36 +1,37 @@
-# Tuần 6 - payOS, background jobs, AI semantic search và embeddings
+# Tuần 6 - payOS, webhook idempotency, jobs và semantic search
+
+Tuần 6 đưa hệ thống ra khỏi vùng "core CRUD": tích hợp external payment, xử lý webhook, job nền và AI search nhưng vẫn bảo vệ core booking.
 
 ---
 
-## 1. Nội dung tổng quan
+## 1. Mục tiêu tuần
 
 | Hạng mục | Nội dung |
 |---|---|
-| **Mục tiêu** | Tích hợp external system thật: payOS payment, webhook, background job expire hold, AI semantic search bằng pgvector. |
-| **Lý thuyết** | Payment link, webhook, signature verification, idempotency, queue/job, retry/timeout, embeddings, vector similarity, pgvector. |
-| **Thực hành (Lab payment)** | Tạo payOS payment link, lưu payment metadata, webhook verify, idempotent confirm booking. |
-| **Thực hành (Lab jobs)** | BullMQ expire seat hold, expire pending booking, integration logs. |
-| **Thực hành (Lab AI)** | Tạo `movie_embedding_documents`, mock embedding provider, pgvector migration, semantic search API. |
-| **Sản phẩm (Deliverable)** | PR `feat/payos-jobs-ai-semantic-search`; docs payOS flow; docs AI search; tests mock provider. |
-| **Câu hỏi phỏng vấn (Interview drill)** | Webhook idempotency là gì? Embedding search khác keyword search thế nào? |
+| Business goal | Customer thanh toán bằng payOS; hệ thống tự expire hold/booking; guest tìm phim bằng ngôn ngữ tự nhiên. |
+| Engineering goal | Payment provider abstraction, webhook verification, idempotency, BullMQ jobs, pgvector semantic search. |
+| System thinking | Integration boundary, retry/timeout, provider failure, idempotency key, async consistency. |
+| Deliverables | payOS flow docs, webhook tests, BullMQ jobs, integration logs, semantic search mock provider. |
+| Interview focus | Webhook safety, idempotency, background jobs, embeddings, pgvector, fallback. |
 
 ---
 
 ## 2. Kế hoạch học tập theo ngày
 
-| Buổi | Trọng tâm | Tài liệu học tập |
-|---|---|---|
-| **Thứ 2** | payOS payment link và SDK | [payOS bắt đầu](https://payos.vn/docs/), [payOS API](https://payos.vn/docs/api/), [payOS NodeJS SDK](https://payos.vn/docs/sdks/back-end/node/) |
-| **Thứ 3** | Webhook, idempotency, payment safety | [payOS API](https://payos.vn/docs/api/), [payOS môi trường test](https://payos.vn/docs/moi-truong-test/), [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x00-header/) |
-| **Thứ 4** | BullMQ, Redis, background job | [NestJS queues](https://docs.nestjs.com/techniques/queues), [BullMQ guide](https://docs.bullmq.io/), [Redis docs](https://redis.io/docs/latest/) |
-| **Thứ 5** | Embeddings và pgvector | [OpenAI embeddings guide](https://platform.openai.com/docs/guides/embeddings), [pgvector](https://github.com/pgvector/pgvector), [PostgreSQL indexes](https://www.postgresql.org/docs/current/indexes.html) |
-| **Thứ 6-7** | Semantic search API và mock provider test | [OpenAI API docs](https://platform.openai.com/docs/), [TypeORM query builder](https://typeorm.io/select-query-builder), [Jest mock functions](https://jestjs.io/docs/mock-functions) |
+Thứ 2-4 là theory sprint. Thứ 5-7 mới mapping vào project.
+
+| Ngày | Loại buổi | Trọng tâm | Output bắt buộc |
+|---|---|---|---|
+| Thứ 2 | Theory sprint | Payment integration theory: provider abstraction, payment link, webhook, signature, idempotency | Payment flow diagram, idempotency notes, failure cases |
+| Thứ 3 | Theory sprint | Async systems: Redis, BullMQ, retry, timeout, job idempotency, integration logs | Queue/job notes, retry risk analysis |
+| Thứ 4 | Theory sprint | AI search theory: embeddings, vector similarity, pgvector, content hash, mock provider | Semantic vs keyword notes, embedding document design |
+| Thứ 5 | Project mapping | Map payment/jobs/AI vào Movie Booking without breaking core booking | payOS design, job design, AI boundary, migration plan |
+| Thứ 6-7 | Project sprint | Implement payOS, webhook replay safety, BullMQ expiry, semantic movie search | PR, webhook replay evidence, job logs, AI search tests |
 
 ---
 
-## 3. Các API & Migrations tuần 6
+## 3. API scope tuần 6
 
-### APIs:
 ```text
 POST /bookings/:id/payments/payos
 POST /webhooks/payos
@@ -42,13 +43,27 @@ POST /ai/recommendations/feedback
 POST /admin/movies/:id/embeddings/rebuild
 POST /admin/ai/embeddings/rebuild
 GET /admin/ai/logs
+GET /admin/integration-logs
 ```
 
-### Migrations:
-```text
-CREATE EXTENSION IF NOT EXISTS vector;
-movie_embedding_documents
-ai_request_logs
-ai_recommendation_feedback
-integration_logs
-```
+---
+
+## 4. Acceptance criteria
+
+- [ ] Payment provider có abstraction để mock/test.
+- [ ] Webhook verify signature.
+- [ ] Webhook idempotent, replay không tạo ticket trùng.
+- [ ] Amount/orderCode/paymentLinkId được đối soát.
+- [ ] Job expire hold/booking chạy được.
+- [ ] AI provider có mock trong test.
+- [ ] Semantic search không được can thiệp booking/payment core.
+- [ ] Có integration logs cho payOS/AI.
+
+---
+
+## 5. Interview drill
+
+- Webhook idempotency là gì?
+- Vì sao không tin `returnUrl` làm nguồn xác nhận thanh toán?
+- Job retry có thể gây bug gì nếu handler không idempotent?
+- Embedding search khác keyword search thế nào?
