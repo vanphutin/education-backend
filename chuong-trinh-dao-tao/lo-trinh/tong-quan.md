@@ -38,7 +38,7 @@ Không tính là hoàn thành nếu chỉ đọc docs mà không có ghi chú/mi
 | Thứ 2-4 | 3-5 giờ/ngày | Theory notes, concept map, mini lab, câu hỏi kiểm tra |
 | Thứ 5 | 3-5 giờ | Mapping lý thuyết vào Movie Ticket Booking, design/API/DB plan |
 | Thứ 6-7 | 5-6 giờ | Implement, test, evidence, PR review, mock interview |
-| Chủ nhật | 60-90 phút | Weekly review, backlog triage, plan tuần sau |
+| Chủ nhật | 60-90 phút (Optional) | Weekly review, backlog triage, plan tuần sau (Không tính vào progress chính 40 tasks) |
 
 Thứ 2-4 được phép tập trung học lý thuyết rất nặng. Nhưng mỗi buổi vẫn phải có output: ghi chú, sơ đồ, mini lab, hoặc câu trả lời interview drill.
 

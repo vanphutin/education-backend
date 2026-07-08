@@ -1,0 +1,46 @@
+# Traceability Matrix
+
+Tài liệu này dùng để theo dõi mối liên hệ giữa các tuần học, daily tickets, backlog items, issues trên GitHub, Pull Requests và Evidence thực tế.
+
+| Week | Day | Topic | Backlog | Issue | PR | Evidence |
+| :---: | :---: | :--- | :--- | :--- | :--- | :--- |
+| 1 | Mon | HTTP, REST, status code, headers | - | [#1](https://github.com/vanphutin/education-backend/issues/1) | `#y` (PENDING) | [study/tuan-1/thu-2.md](../study/tuan-1/thu-2.md) |
+| 1 | Tue | TypeScript và OOP trọng tâm trước NestJS | - | [#2](https://github.com/vanphutin/education-backend/issues/2) | `#y` (PENDING) | [study/tuan-1/thu-3.md](../study/tuan-1/thu-3.md) |
+| 1 | Wed | NestJS module, controller, provider, DI | - | [#3](https://github.com/vanphutin/education-backend/issues/3) | `#y` (PENDING) | [study/tuan-1/thu-4.md](../study/tuan-1/thu-4.md) |
+| 1 | Thu | Movie public catalog API contract and module boundary | BL-001, BL-002, BL-003, BL-050 | [#4](https://github.com/vanphutin/education-backend/issues/4) | `#y` (PENDING) | [study/tuan-1/thu-5.md](../study/tuan-1/thu-5.md) |
+| 1 | Fri-Sat | Implement public catalog API, Swagger, README, evidence | BL-001, BL-002, BL-003, BL-050 | [#5](https://github.com/vanphutin/education-backend/issues/5) | `#y` (PENDING) | [study/tuan-1/thu-6-7.md](../study/tuan-1/thu-6-7.md) |
+| 2 | Mon | Node event loop, async IO, error propagation | - | [#6](https://github.com/vanphutin/education-backend/issues/6) | `#y` (PENDING) | [study/tuan-2/thu-2.md](../study/tuan-2/thu-2.md) |
+| 2 | Tue | Stream, buffer, backpressure | - | [#7](https://github.com/vanphutin/education-backend/issues/7) | `#y` (PENDING) | [study/tuan-2/thu-3.md](../study/tuan-2/thu-3.md) |
+| 2 | Wed | NestJS request pipeline: middleware, pipe, interceptor, filter | - | [#8](https://github.com/vanphutin/education-backend/issues/8) | `#y` (PENDING) | [study/tuan-2/thu-4.md](../study/tuan-2/thu-4.md) |
+| 2 | Thu | API validation, error contract, request id, pagination | BL-004, BL-005, BL-045, BL-046 | [#9](https://github.com/vanphutin/education-backend/issues/9) | `#y` (PENDING) | [study/tuan-2/thu-5.md](../study/tuan-2/thu-5.md) |
+| 2 | Fri-Sat | Implement pipeline, filters, logs, tests, evidence | BL-004, BL-005, BL-045, BL-046 | [#10](https://github.com/vanphutin/education-backend/issues/10) | `#y` (PENDING) | [study/tuan-2/thu-6-7.md](../study/tuan-2/thu-6-7.md) |
+| 3 | Mon | SQL tables, constraints, keys, normalization | - | [#11](https://github.com/vanphutin/education-backend/issues/11) | `#y` (PENDING) | [study/tuan-3/thu-2.md](../study/tuan-3/thu-2.md) |
+| 3 | Tue | Relations, ERD, snapshot vs live seat layout | - | [#12](https://github.com/vanphutin/education-backend/issues/12) | `#y` (PENDING) | [study/tuan-3/thu-3.md](../study/tuan-3/thu-3.md) |
+| 3 | Wed | TypeORM entity, migration, seed, index, query builder | - | [#13](https://github.com/vanphutin/education-backend/issues/13) | `#y` (PENDING) | [study/tuan-3/thu-4.md](../study/tuan-3/thu-4.md) |
+| 3 | Thu | Movie/cinema/screen/seat/showtime schema design | BL-006, BL-007, BL-008, BL-009, BL-010, BL-011, BL-051, BL-052 | [#14](https://github.com/vanphutin/education-backend/issues/14) | `#y` (PENDING) | [study/tuan-3/thu-5.md](../study/tuan-3/thu-5.md) |
+| 3 | Fri-Sat | Implement migrations, seeds, showtime_seats, query evidence | BL-006, BL-007, BL-008, BL-009, BL-010, BL-011, BL-051, BL-052 | [#15](https://github.com/vanphutin/education-backend/issues/15) | `#y` (PENDING) | [study/tuan-3/thu-6-7.md](../study/tuan-3/thu-6-7.md) |
+| 4 | Mon | Auth, password hashing, JWT, refresh/logout | - | [#16](https://github.com/vanphutin/education-backend/issues/16) | `#y` (PENDING) | [study/tuan-4/thu-2.md](../study/tuan-4/thu-2.md) |
+| 4 | Tue | RBAC, guards, decorators, permission matrix | - | [#17](https://github.com/vanphutin/education-backend/issues/17) | `#y` (PENDING) | [study/tuan-4/thu-3.md](../study/tuan-4/thu-3.md) |
+| 4 | Wed | Transaction, isolation, row lock, race condition | - | [#18](https://github.com/vanphutin/education-backend/issues/18) | `#y` (PENDING) | [study/tuan-4/thu-4.md](../study/tuan-4/thu-4.md) |
+| 4 | Thu | Actors, protected APIs, seat hold state and transaction design | BL-012, BL-013, BL-014, BL-015, BL-016, BL-017, BL-018 | [#19](https://github.com/vanphutin/education-backend/issues/19) | `#y` (PENDING) | [study/tuan-4/thu-5.md](../study/tuan-4/thu-5.md) |
+| 4 | Fri-Sat | Implement auth, RBAC, transactional seat hold, race evidence | BL-012, BL-013, BL-014, BL-015, BL-016, BL-017, BL-018 | [#20](https://github.com/vanphutin/education-backend/issues/20) | `#y` (PENDING) | [study/tuan-4/thu-6-7.md](../study/tuan-4/thu-6-7.md) |
+| 5 | Mon | Booking/payment/ticket state machine | - | [#21](https://github.com/vanphutin/education-backend/issues/21) | `#y` (PENDING) | [study/tuan-5/thu-2.md](../study/tuan-5/thu-2.md) |
+| 5 | Tue | Test pyramid, unit/e2e, mocking boundaries, Supertest | - | [#22](https://github.com/vanphutin/education-backend/issues/22) | `#y` (PENDING) | [study/tuan-5/thu-3.md](../study/tuan-5/thu-3.md) |
+| 5 | Wed | CI, Docker, Compose, env and reproducible setup | - | [#23](https://github.com/vanphutin/education-backend/issues/23) | `#y` (PENDING) | [study/tuan-5/thu-4.md](../study/tuan-5/thu-4.md) |
+| 5 | Thu | Booking/ticket/check-in design and test plan | BL-019, BL-020, BL-021, BL-022, BL-023, BL-024, BL-025, BL-026, BL-032, BL-047, BL-048, BL-049 | [#24](https://github.com/vanphutin/education-backend/issues/24) | `#y` (PENDING) | [study/tuan-5/thu-5.md](../study/tuan-5/thu-5.md) |
+| 5 | Fri-Sat | Implement booking, ticket, e2e, CI, Docker evidence | BL-019, BL-020, BL-021, BL-022, BL-023, BL-024, BL-025, BL-026, BL-032, BL-047, BL-048, BL-049 | [#25](https://github.com/vanphutin/education-backend/issues/25) | `#y` (PENDING) | [study/tuan-5/thu-6-7.md](../study/tuan-5/thu-6-7.md) |
+| 6 | Mon | Payment provider, payOS link, webhook, signature, idempotency | - | [#26](https://github.com/vanphutin/education-backend/issues/26) | `#y` (PENDING) | [study/tuan-6/thu-2.md](../study/tuan-6/thu-2.md) |
+| 6 | Tue | Redis, BullMQ, retry, timeout, job idempotency | - | [#27](https://github.com/vanphutin/education-backend/issues/27) | `#y` (PENDING) | [study/tuan-6/thu-3.md](../study/tuan-6/thu-3.md) |
+| 6 | Wed | Embeddings, vector similarity, pgvector, mock provider | - | [#28](https://github.com/vanphutin/education-backend/issues/28) | `#y` (PENDING) | [study/tuan-6/thu-4.md](../study/tuan-6/thu-4.md) |
+| 6 | Thu | payOS, expiry jobs, semantic search boundary and schema | BL-027, BL-028, BL-029, BL-030, BL-031, BL-033, BL-034, BL-035, BL-036 | [#29](https://github.com/vanphutin/education-backend/issues/29) | `#y` (PENDING) | [study/tuan-6/thu-5.md](../study/tuan-6/thu-5.md) |
+| 6 | Fri-Sat | Implement payOS, webhook replay safety, jobs, semantic search | BL-027, BL-028, BL-029, BL-030, BL-031, BL-033, BL-034, BL-035, BL-036 | [#30](https://github.com/vanphutin/education-backend/issues/30) | `#y` (PENDING) | [study/tuan-6/thu-6-7.md](../study/tuan-6/thu-6-7.md) |
+| 7 | Mon | Backlog triage, scope cut, PR slicing, reviewability | - | [#31](https://github.com/vanphutin/education-backend/issues/31) | `#y` (PENDING) | [study/tuan-7/thu-2.md](../study/tuan-7/thu-2.md) |
+| 7 | Tue | AI schema validation, human approval, prompt/output boundary | - | [#32](https://github.com/vanphutin/education-backend/issues/32) | `#y` (PENDING) | [study/tuan-7/thu-3.md](../study/tuan-7/thu-3.md) |
+| 7 | Wed | Observability, integration logs, failure simulation | - | [#33](https://github.com/vanphutin/education-backend/issues/33) | `#y` (PENDING) | [study/tuan-7/thu-4.md](../study/tuan-7/thu-4.md) |
+| 7 | Thu | Admin AI workflow and hardening gaps | BL-037, BL-038, BL-039, BL-040, BL-041, BL-042, BL-043, BL-044 | [#34](https://github.com/vanphutin/education-backend/issues/34) | `#y` (PENDING) | [study/tuan-7/thu-5.md](../study/tuan-7/thu-5.md) |
+| 7 | Fri-Sat | Implement admin AI draft/apply, failure handling, demo slice | BL-037, BL-038, BL-039, BL-040, BL-041, BL-042, BL-043, BL-044 | [#35](https://github.com/vanphutin/education-backend/issues/35) | `#y` (PENDING) | [study/tuan-7/thu-6-7.md](../study/tuan-7/thu-6-7.md) |
+| 8 | Mon | Release engineering, regression, scope cut, known limitations | - | [#36](https://github.com/vanphutin/education-backend/issues/36) | `#y` (PENDING) | [study/tuan-8/thu-2.md](../study/tuan-8/thu-2.md) |
+| 8 | Tue | System design storytelling and project pitch | - | [#37](https://github.com/vanphutin/education-backend/issues/37) | `#y` (PENDING) | [study/tuan-8/thu-3.md](../study/tuan-8/thu-3.md) |
+| 8 | Wed | Deep dive interview prep: transaction, webhook, AI, testing | - | [#38](https://github.com/vanphutin/education-backend/issues/38) | `#y` (PENDING) | [study/tuan-8/thu-4.md](../study/tuan-8/thu-4.md) |
+| 8 | Thu | Final docs/evidence gaps and release plan | BL-053, BL-054, BL-055 | [#39](https://github.com/vanphutin/education-backend/issues/39) | `#y` (PENDING) | [study/tuan-8/thu-5.md](../study/tuan-8/thu-5.md) |
+| 8 | Fri-Sat | Final regression, Docker demo, release notes, mock interview | BL-053, BL-054, BL-055 | [#40](https://github.com/vanphutin/education-backend/issues/40) | `#y` (PENDING) | [study/tuan-8/thu-6-7.md](../study/tuan-8/thu-6-7.md) |

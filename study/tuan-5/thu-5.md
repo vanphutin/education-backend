@@ -1,30 +1,60 @@
-# 🗓️ Thứ 5 - Dockerfile, Compose, env
+# Ticket: Booking/ticket/check-in design and test plan
 
-## 1. Lý thuyết cốt lõi (Theory Notes)
-*   **Khái niệm chính:**
-    *   ...
-*   **Kiến thức đúc rút & Quy chế hoạt động:**
-    *   ...
-*   **Ghi chú mở rộng (nếu có):**
-    *   ...
+- **Tuần**: 5
+- **Ngày**: Thứ 5
+- **Issue**: [#24](https://github.com/vanphutin/education-backend/issues/24)
+- **Backlog Items**: BL-019, BL-020, BL-021, BL-022, BL-023, BL-024, BL-025, BL-026, BL-032, BL-047, BL-048, BL-049
 
----
+## 1. Business Scenario
+- **Actor**: Guest / Customer / Staff / Admin
+- **User story**: Chi tiết trong tài liệu backlog tương ứng (BL-019, BL-020, BL-021, BL-022, BL-023, BL-024, BL-025, BL-026, BL-032, BL-047, BL-048, BL-049).
+- **Why it matters**: Giải quyết nhu cầu nghiệp vụ thực tế của hệ thống đặt vé.
 
-## 2. Lab mini (Thực hành nhỏ)
-*   **Mục tiêu bài thực hành:**
-    *   Thử nghiệm, kiểm chứng thực tế về: *Dockerfile, Compose, env*
-*   **Mã nguồn mẫu / Cấu hình thử nghiệm:**
-    ```typescript
-    // Viết code mẫu hoặc cấu hình của bạn ở đây
-    ```
-*   **Kết quả chạy thử / Logs / Kiểm thử:**
-    ```text
-    // Dán log output hoặc kết quả kiểm thử vào đây
-    ```
+## 2. System Analysis
+- **Input**: ...
+- **Output**: ...
+- **State involved**: ...
+- **Edge cases**: ...
+- **Failure cases**: ...
+- **Security/data consistency risk**: ...
 
----
+## 3. Design Before Code
+- **API contract**: ...
+- **DB impact**: ...
+- **Module/service boundary**: ...
+- **Validation/error behavior**: ...
+- **Logging/audit/integration logs**: ...
+- **Transaction/permission concern**: ...
 
-## 3. Câu hỏi phỏng vấn liên quan (Interview Drill)
-*   *Câu hỏi:* Hãy tự giải thích hoặc trả lời ngắn gọn các câu hỏi liên quan đến chủ đề hôm nay.
-*   *Câu trả lời của bạn:*
-    *   ...
+## 4. Implementation Checklist
+- [ ] Triển khai và kiểm thử backlog BL-019
+- [ ] Triển khai và kiểm thử backlog BL-020
+- [ ] Triển khai và kiểm thử backlog BL-021
+- [ ] Triển khai và kiểm thử backlog BL-022
+- [ ] Triển khai và kiểm thử backlog BL-023
+- [ ] Triển khai và kiểm thử backlog BL-024
+- [ ] Triển khai và kiểm thử backlog BL-025
+- [ ] Triển khai và kiểm thử backlog BL-026
+- [ ] Triển khai và kiểm thử backlog BL-032
+- [ ] Triển khai và kiểm thử backlog BL-047
+- [ ] Triển khai và kiểm thử backlog BL-048
+- [ ] Triển khai và kiểm thử backlog BL-049
+- [ ] Viết unit tests và integration tests liên quan.
+
+## 5. Verification
+- **Unit test**: ...
+- **E2E/manual curl**: ...
+- **Swagger**: ...
+- **Migration/seed**: ...
+- **Build/lint**: ...
+
+## 6. Evidence
+- **Issue**: [#24](https://github.com/vanphutin/education-backend/issues/24)
+- **PR**: ...
+- **Logs/screenshots**: ...
+- **Docs/ADR**: ...
+
+## 7. Interview Drill
+- **Question**: Giải thích thiết kế kỹ thuật, luồng đi của dữ liệu và tradeoff khi giải quyết ticket này.
+- **My answer**:
+  - ...

@@ -37,3 +37,5 @@ Dùng template này cho mọi ngày:
 [Daily Ticket Template V2](../chuong-trinh-dao-tao/huong-dan/daily-ticket-template.md)
 
 Một ngày chưa có evidence thì chưa Done.
+
+> *Lưu ý: Chủ nhật là ngày Weekly Review & Backlog Triage (Optional) - không tính vào 40 tasks chính của chương trình.*

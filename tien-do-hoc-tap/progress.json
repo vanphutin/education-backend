@@ -22,31 +22,51 @@
           "day": "Monday",
           "topic": "Theory Sprint: HTTP, REST, status code, headers",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/1"
         },
         {
           "day": "Tuesday",
           "topic": "Theory Sprint: TypeScript OOP before NestJS",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/2"
         },
         {
           "day": "Wednesday",
           "topic": "Theory Sprint: NestJS module, controller, provider, DI",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/3"
         },
         {
           "day": "Thursday",
           "topic": "Project Mapping: Movie public catalog API contract and module boundary",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-001",
+            "BL-002",
+            "BL-003",
+            "BL-050"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/4"
         },
         {
           "day": "Friday-Saturday",
           "topic": "Project Sprint: Implement public catalog API, Swagger, README, evidence",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-001",
+            "BL-002",
+            "BL-003",
+            "BL-050"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/5"
         }
       ],
       "deliverables": [
@@ -54,29 +74,29 @@
           "id": "w1_pr",
           "name": "PR chore/setup-movie-ticket-api",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/pull/<PR_NUMBER>",
+          "evidence": "Link to the merged Pull Request on GitHub"
         },
         {
           "id": "w1_oop_lab",
           "name": "OOP mini lab Movie/Cinema/Showtime",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/2",
+          "evidence": "study/tuan-1/thu-3.md#mini-lab (Verify in Issue #2)"
         },
         {
           "id": "w1_api_contract",
           "name": "Public catalog APIs + Swagger evidence",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/4",
+          "evidence": "study/tuan-1/thu-5.md (Verify in Issue #4)"
         },
         {
           "id": "w1_docs",
           "name": "README local setup + ADR project scope",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/5",
+          "evidence": "study/tuan-1/thu-6-7.md (Verify in Issue #5)"
         }
       ]
     },
@@ -91,31 +111,51 @@
           "day": "Monday",
           "topic": "Theory Sprint: Node event loop, async IO, error propagation",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/6"
         },
         {
           "day": "Tuesday",
           "topic": "Theory Sprint: Stream, buffer, backpressure",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/7"
         },
         {
           "day": "Wednesday",
           "topic": "Theory Sprint: NestJS middleware, pipe, interceptor, filter",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/8"
         },
         {
           "day": "Thursday",
           "topic": "Project Mapping: API validation, error contract, request id, pagination",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-004",
+            "BL-005",
+            "BL-045",
+            "BL-046"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/9"
         },
         {
           "day": "Friday-Saturday",
           "topic": "Project Sprint: Implement pipeline, filters, logs, tests, evidence",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-004",
+            "BL-005",
+            "BL-045",
+            "BL-046"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/10"
         }
       ],
       "deliverables": [
@@ -123,29 +163,29 @@
           "id": "w2_pr",
           "name": "PR feat/common-request-pipeline",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/pull/<PR_NUMBER>",
+          "evidence": "Link to the merged Pull Request on GitHub"
         },
         {
           "id": "w2_api_behavior",
           "name": "API behavior docs: validation, error, pagination",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/10",
+          "evidence": "study/tuan-2/thu-6-7.md (Verify in Issue #10)"
         },
         {
           "id": "w2_logging",
           "name": "Request id/logging evidence",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/10",
+          "evidence": "study/tuan-2/thu-6-7.md (Verify in Issue #10)"
         },
         {
           "id": "w2_tests",
           "name": "Validation/error tests or curl evidence",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/10",
+          "evidence": "study/tuan-2/thu-6-7.md (Verify in Issue #10)"
         }
       ]
     },
@@ -160,31 +200,59 @@
           "day": "Monday",
           "topic": "Theory Sprint: SQL tables, constraints, keys, normalization",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/11"
         },
         {
           "day": "Tuesday",
           "topic": "Theory Sprint: Relations, ERD, snapshot vs live seat layout",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/12"
         },
         {
           "day": "Wednesday",
           "topic": "Theory Sprint: TypeORM entity, migration, seed, index, query builder",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/13"
         },
         {
           "day": "Thursday",
           "topic": "Project Mapping: Movie/cinema/screen/seat/showtime schema design",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-006",
+            "BL-007",
+            "BL-008",
+            "BL-009",
+            "BL-010",
+            "BL-011",
+            "BL-051",
+            "BL-052"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/14"
         },
         {
           "day": "Friday-Saturday",
           "topic": "Project Sprint: Implement migrations, seeds, showtime_seats, query evidence",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-006",
+            "BL-007",
+            "BL-008",
+            "BL-009",
+            "BL-010",
+            "BL-011",
+            "BL-051",
+            "BL-052"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/15"
         }
       ],
       "deliverables": [
@@ -192,29 +260,29 @@
           "id": "w3_pr",
           "name": "PR feat/movie-cinema-showtime-schema",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/pull/<PR_NUMBER>",
+          "evidence": "Link to the merged Pull Request on GitHub"
         },
         {
           "id": "w3_erd",
           "name": "ERD + snapshot seat ADR",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/15",
+          "evidence": "study/tuan-3/thu-6-7.md (Verify in Issue #15)"
         },
         {
           "id": "w3_migrations",
           "name": "Migration/seed run evidence",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/15",
+          "evidence": "study/tuan-3/thu-6-7.md (Verify in Issue #15)"
         },
         {
           "id": "w3_query_review",
           "name": "Index/query review evidence",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/15",
+          "evidence": "study/tuan-3/thu-6-7.md (Verify in Issue #15)"
         }
       ]
     },
@@ -229,31 +297,57 @@
           "day": "Monday",
           "topic": "Theory Sprint: Auth, password hashing, JWT, refresh/logout",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/16"
         },
         {
           "day": "Tuesday",
           "topic": "Theory Sprint: RBAC, guards, decorators, permission matrix",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/17"
         },
         {
           "day": "Wednesday",
           "topic": "Theory Sprint: Transaction, isolation, row lock, race condition",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/18"
         },
         {
           "day": "Thursday",
           "topic": "Project Mapping: Actors, protected APIs, seat hold state and transaction design",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-012",
+            "BL-013",
+            "BL-014",
+            "BL-015",
+            "BL-016",
+            "BL-017",
+            "BL-018"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/19"
         },
         {
           "day": "Friday-Saturday",
           "topic": "Project Sprint: Implement auth, RBAC, transactional seat hold, race evidence",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-012",
+            "BL-013",
+            "BL-014",
+            "BL-015",
+            "BL-016",
+            "BL-017",
+            "BL-018"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/20"
         }
       ],
       "deliverables": [
@@ -261,29 +355,29 @@
           "id": "w4_pr",
           "name": "PR feat/auth-rbac-seat-hold",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/pull/<PR_NUMBER>",
+          "evidence": "Link to the merged Pull Request on GitHub"
         },
         {
           "id": "w4_rbac",
           "name": "RBAC matrix + guard tests",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/20",
+          "evidence": "study/tuan-4/thu-6-7.md (Verify in Issue #20)"
         },
         {
           "id": "w4_state",
           "name": "Seat hold state machine/ADR",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/19",
+          "evidence": "study/tuan-4/thu-5.md (Verify in Issue #19)"
         },
         {
           "id": "w4_race",
           "name": "Double-hold race-condition evidence",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/20",
+          "evidence": "study/tuan-4/thu-6-7.md (Verify in Issue #20)"
         }
       ]
     },
@@ -298,31 +392,67 @@
           "day": "Monday",
           "topic": "Theory Sprint: Booking/payment/ticket state machine",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/21"
         },
         {
           "day": "Tuesday",
           "topic": "Theory Sprint: Test pyramid, unit/e2e, mocking boundaries, Supertest",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/22"
         },
         {
           "day": "Wednesday",
           "topic": "Theory Sprint: CI, Docker, Compose, env and reproducible setup",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/23"
         },
         {
           "day": "Thursday",
           "topic": "Project Mapping: Booking/ticket/check-in design and test plan",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-019",
+            "BL-020",
+            "BL-021",
+            "BL-022",
+            "BL-023",
+            "BL-024",
+            "BL-025",
+            "BL-026",
+            "BL-032",
+            "BL-047",
+            "BL-048",
+            "BL-049"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/24"
         },
         {
           "day": "Friday-Saturday",
           "topic": "Project Sprint: Implement booking, ticket, e2e, CI, Docker evidence",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-019",
+            "BL-020",
+            "BL-021",
+            "BL-022",
+            "BL-023",
+            "BL-024",
+            "BL-025",
+            "BL-026",
+            "BL-032",
+            "BL-047",
+            "BL-048",
+            "BL-049"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/25"
         }
       ],
       "deliverables": [
@@ -330,29 +460,29 @@
           "id": "w5_pr",
           "name": "PR feat/booking-ticket-testing-ci-docker",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/pull/<PR_NUMBER>",
+          "evidence": "Link to the merged Pull Request on GitHub"
         },
         {
           "id": "w5_state",
           "name": "Booking/ticket state machine docs",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/24",
+          "evidence": "study/tuan-5/thu-5.md (Verify in Issue #24)"
         },
         {
           "id": "w5_e2e",
           "name": "E2E booking -> ticket -> check-in evidence",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/25",
+          "evidence": "study/tuan-5/thu-6-7.md (Verify in Issue #25)"
         },
         {
           "id": "w5_ci_docker",
           "name": "CI + Docker Compose evidence",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/25",
+          "evidence": "study/tuan-5/thu-6-7.md (Verify in Issue #25)"
         }
       ]
     },
@@ -367,31 +497,61 @@
           "day": "Monday",
           "topic": "Theory Sprint: Payment provider, payOS link, webhook, idempotency",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/26"
         },
         {
           "day": "Tuesday",
           "topic": "Theory Sprint: Redis, BullMQ, retry, timeout, job idempotency",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/27"
         },
         {
           "day": "Wednesday",
           "topic": "Theory Sprint: Embeddings, vector similarity, pgvector, mock provider",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/28"
         },
         {
           "day": "Thursday",
           "topic": "Project Mapping: payOS, expiry jobs, semantic search boundary and schema",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-027",
+            "BL-028",
+            "BL-029",
+            "BL-030",
+            "BL-031",
+            "BL-033",
+            "BL-034",
+            "BL-035",
+            "BL-036"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/29"
         },
         {
           "day": "Friday-Saturday",
           "topic": "Project Sprint: Implement payOS, webhook replay safety, jobs, semantic search",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-027",
+            "BL-028",
+            "BL-029",
+            "BL-030",
+            "BL-031",
+            "BL-033",
+            "BL-034",
+            "BL-035",
+            "BL-036"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/30"
         }
       ],
       "deliverables": [
@@ -399,29 +559,29 @@
           "id": "w6_pr",
           "name": "PR feat/payos-jobs-ai-semantic-search",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/pull/<PR_NUMBER>",
+          "evidence": "Link to the merged Pull Request on GitHub"
         },
         {
           "id": "w6_payos",
           "name": "payOS flow + webhook replay evidence",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/30",
+          "evidence": "study/tuan-6/thu-6-7.md (Verify in Issue #30)"
         },
         {
           "id": "w6_jobs",
           "name": "BullMQ expiry job evidence",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/30",
+          "evidence": "study/tuan-6/thu-6-7.md (Verify in Issue #30)"
         },
         {
           "id": "w6_ai",
           "name": "Semantic search + mock provider tests",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/30",
+          "evidence": "study/tuan-6/thu-6-7.md (Verify in Issue #30)"
         }
       ]
     },
@@ -436,31 +596,59 @@
           "day": "Monday",
           "topic": "Theory Sprint: Backlog triage, scope cut, PR slicing, reviewability",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/31"
         },
         {
           "day": "Tuesday",
           "topic": "Theory Sprint: AI schema validation, human approval, prompt/output boundary",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/32"
         },
         {
           "day": "Wednesday",
           "topic": "Theory Sprint: Observability, integration logs, failure simulation",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/33"
         },
         {
           "day": "Thursday",
           "topic": "Project Mapping: Admin AI workflow and hardening gaps",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-037",
+            "BL-038",
+            "BL-039",
+            "BL-040",
+            "BL-041",
+            "BL-042",
+            "BL-043",
+            "BL-044"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/34"
         },
         {
           "day": "Friday-Saturday",
           "topic": "Project Sprint: Implement admin AI draft/apply, failure handling, demo slice",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-037",
+            "BL-038",
+            "BL-039",
+            "BL-040",
+            "BL-041",
+            "BL-042",
+            "BL-043",
+            "BL-044"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/35"
         }
       ],
       "deliverables": [
@@ -468,29 +656,29 @@
           "id": "w7_prs",
           "name": "3-5 small PRs with reviewable scope",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/pull/<PR_NUMBER>",
+          "evidence": "Link to the merged Pull Request on GitHub"
         },
         {
           "id": "w7_admin_ai",
           "name": "Admin AI draft/apply workflow evidence",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/35",
+          "evidence": "study/tuan-7/thu-6-7.md (Verify in Issue #35)"
         },
         {
           "id": "w7_hardening",
           "name": "Payment/AI failure simulation logs",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/35",
+          "evidence": "study/tuan-7/thu-6-7.md (Verify in Issue #35)"
         },
         {
           "id": "w7_demo",
           "name": "End-to-end demo script and evidence",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/35",
+          "evidence": "study/tuan-7/thu-6-7.md (Verify in Issue #35)"
         }
       ]
     },
@@ -505,31 +693,49 @@
           "day": "Monday",
           "topic": "Theory Sprint: Release engineering, regression, scope cut, known limitations",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/36"
         },
         {
           "day": "Tuesday",
           "topic": "Theory Sprint: System design storytelling and project pitch",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/37"
         },
         {
           "day": "Wednesday",
           "topic": "Theory Sprint: Deep dive interview prep: transaction, webhook, AI, testing",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/38"
         },
         {
           "day": "Thursday",
           "topic": "Project Mapping: Final docs/evidence gaps and release plan",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-053",
+            "BL-054",
+            "BL-055"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/39"
         },
         {
           "day": "Friday-Saturday",
           "topic": "Project Sprint: Final regression, Docker demo, release notes, mock interview",
           "status": "TODO",
-          "updated_at": null
+          "updated_at": null,
+          "backlog_items": [
+            "BL-053",
+            "BL-054",
+            "BL-055"
+          ],
+          "issue_url": "https://github.com/vanphutin/education-backend/issues/40"
         }
       ],
       "deliverables": [
@@ -537,29 +743,29 @@
           "id": "w8_readme",
           "name": "Final README portfolio + Swagger + ERD",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/40",
+          "evidence": "study/tuan-8/thu-6-7.md (Verify in Issue #40)"
         },
         {
           "id": "w8_tests",
           "name": "Regression/race/webhook replay test output",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/40",
+          "evidence": "study/tuan-8/thu-6-7.md (Verify in Issue #40)"
         },
         {
           "id": "w8_release",
           "name": "Docker demo + release notes",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/40",
+          "evidence": "study/tuan-8/thu-6-7.md (Verify in Issue #40)"
         },
         {
           "id": "w8_interview",
           "name": "Final demo script + interview notes",
           "status": "PENDING",
-          "link": "",
-          "evidence": ""
+          "link": "https://github.com/vanphutin/education-backend/issues/40",
+          "evidence": "study/tuan-8/thu-6-7.md (Verify in Issue #40)"
         }
       ]
     }
@@ -628,7 +834,7 @@
   "program": {
     "name": "Backend NestJS  - Theory-first Movie Ticket Booking training",
     "synced_at": "2026-07-08T04:08:19.4014115Z",
-    "notes": " rhythm: Monday-Wednesday are intensive theory sprints; Thursday-Saturday map theory into Movie Ticket Booking implementation, tests, and evidence.",
+    "notes": " rhythm: Monday-Wednesday are intensive theory sprints; Thursday-Saturday map theory into Movie Ticket Booking implementation, tests, and evidence. Sunday review is optional and does not count towards the progress tracking (total_tasks = 40).",
     "training_start_date": "2026-07-13",
     "duration_weeks": 8,
     "timezone": "Asia/Saigon",
