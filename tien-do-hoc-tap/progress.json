@@ -1,0 +1,541 @@
+{
+  "student": {
+    "name": "Learner",
+    "target": "Backend NestJS Intern/Fresher/Junior"
+  },
+  "overall_progress": {
+    "completed_weeks": 0,
+    "total_weeks": 8,
+    "completed_tasks": 0,
+    "total_tasks": 40,
+    "average_score": 0
+  },
+  "weeks": [
+    {
+      "week_number": 1,
+      "title": "Backend foundation và Movie API skeleton",
+      "status": "IN_PROGRESS",
+      "score": null,
+      "mentor_feedback": "",
+      "days": [
+        {
+          "day": "Monday",
+          "topic": "HTTP, REST, status code, headers",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Tuesday",
+          "topic": "TypeScript và NestJS first app",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Wednesday",
+          "topic": "Module, controller, provider, DI",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Thursday",
+          "topic": "Config, lint/format, Swagger basic",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Friday-Saturday",
+          "topic": "Git flow, PR, README, convention",
+          "status": "TODO",
+          "updated_at": null
+        }
+      ],
+      "deliverables": [
+        {
+          "id": "w1_d1",
+          "name": "PR chore/setup-movie-ticket-api",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w1_d2",
+          "name": "README chạy local",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w1_d3",
+          "name": "Swagger basic & ADR folder structure",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "week_number": 2,
+      "title": "Node.js runtime và NestJS request pipeline",
+      "status": "NOT_STARTED",
+      "score": null,
+      "mentor_feedback": "",
+      "days": [
+        {
+          "day": "Monday",
+          "topic": "Event loop, async I/O",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Tuesday",
+          "topic": "Stream, buffer, export file",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Wednesday",
+          "topic": "Middleware, pipe, interceptor, filter",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Thursday",
+          "topic": "Validation, logging, request id",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Friday-Saturday",
+          "topic": "Review request pipeline",
+          "status": "TODO",
+          "updated_at": null
+        }
+      ],
+      "deliverables": [
+        {
+          "id": "w2_d1",
+          "name": "PR feat/common-request-pipeline",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w2_d2",
+          "name": "Docs request pipeline",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w2_d3",
+          "name": "Unit test cho error/validation",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "week_number": 3,
+      "title": "PostgreSQL, TypeORM và schema rạp/phim/suất chiếu",
+      "status": "NOT_STARTED",
+      "score": null,
+      "mentor_feedback": "",
+      "days": [
+        {
+          "day": "Monday",
+          "topic": "PostgreSQL table, data type, constraint",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Tuesday",
+          "topic": "TypeORM entity và relation",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Wednesday",
+          "topic": "Migration, seed, schema evolution",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Thursday",
+          "topic": "Repository, query builder, pagination",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Friday-Saturday",
+          "topic": "Index và query review",
+          "status": "TODO",
+          "updated_at": null
+        }
+      ],
+      "deliverables": [
+        {
+          "id": "w3_d1",
+          "name": "PR feat/movie-cinema-showtime-schema",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w3_d2",
+          "name": "ERD & seed data",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w3_d3",
+          "name": "Docs DB",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "week_number": 4,
+      "title": "Auth, RBAC và seat holding transaction",
+      "status": "NOT_STARTED",
+      "score": null,
+      "mentor_feedback": "",
+      "days": [
+        {
+          "day": "Monday",
+          "topic": "Auth flow, JWT, password hashing",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Tuesday",
+          "topic": "RBAC, guard, decorator",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Wednesday",
+          "topic": "Transaction, row lock, isolation",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Thursday",
+          "topic": "TypeORM transaction implementation",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Friday-Saturday",
+          "topic": "Test guard và seat hold edge cases",
+          "status": "TODO",
+          "updated_at": null
+        }
+      ],
+      "deliverables": [
+        {
+          "id": "w4_d1",
+          "name": "PR feat/auth-rbac-seat-hold",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w4_d2",
+          "name": "RBAC matrix & unit test guard",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w4_d3",
+          "name": "Test hold ghế đã bị giữ",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "week_number": 5,
+      "title": "Booking, ticket, testing, CI và Docker",
+      "status": "NOT_STARTED",
+      "score": null,
+      "mentor_feedback": "",
+      "days": [
+        {
+          "day": "Monday",
+          "topic": "Unit test, mocking boundary",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Tuesday",
+          "topic": "E2E test với Supertest",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Wednesday",
+          "topic": "GitHub Actions CI",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Thursday",
+          "topic": "Dockerfile, Compose, env",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Friday-Saturday",
+          "topic": "Swagger, README, evidence",
+          "status": "TODO",
+          "updated_at": null
+        }
+      ],
+      "deliverables": [
+        {
+          "id": "w5_d1",
+          "name": "PR feat/booking-ticket-testing-ci-docker",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w5_d2",
+          "name": "E2E happy path tests",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w5_d3",
+          "name": "README setup & Swagger docs",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "week_number": 6,
+      "title": "payOS, background jobs, AI semantic search và embeddings",
+      "status": "NOT_STARTED",
+      "score": null,
+      "mentor_feedback": "",
+      "days": [
+        {
+          "day": "Monday",
+          "topic": "payOS payment link và SDK",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Tuesday",
+          "topic": "Webhook, idempotency, payment safety",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Wednesday",
+          "topic": "BullMQ, Redis, background job",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Thursday",
+          "topic": "Embeddings và pgvector",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Friday-Saturday",
+          "topic": "Semantic search API và mock provider test",
+          "status": "TODO",
+          "updated_at": null
+        }
+      ],
+      "deliverables": [
+        {
+          "id": "w6_d1",
+          "name": "PR feat/payos-jobs-ai-semantic-search",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w6_d2",
+          "name": "Docs payOS flow & docs AI search",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w6_d3",
+          "name": "Tests mock provider",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "week_number": 7,
+      "title": "Capstone sprint 1: hoàn thiện AI + payment + admin workflow",
+      "status": "NOT_STARTED",
+      "score": null,
+      "mentor_feedback": "",
+      "days": [
+        {
+          "day": "Monday",
+          "topic": "Sprint planning, issue breakdown",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Tuesday",
+          "topic": "API/DB proposal và PR nhỏ",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Wednesday",
+          "topic": "Admin AI content draft workflow",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Thursday",
+          "topic": "Payment/AI hardening",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Friday-Saturday",
+          "topic": "Review, demo, evidence",
+          "status": "TODO",
+          "updated_at": null
+        }
+      ],
+      "deliverables": [
+        {
+          "id": "w7_d1",
+          "name": "3-5 PR nhỏ & API docs",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w7_d2",
+          "name": "E2E booking + payment mock evidence",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w7_d3",
+          "name": "AI search evidence & payOS demo",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "week_number": 8,
+      "title": "Capstone sprint 2: hardening, docs, demo và phỏng vấn",
+      "status": "NOT_STARTED",
+      "score": null,
+      "mentor_feedback": "",
+      "days": [
+        {
+          "day": "Monday",
+          "topic": "Backlog triage và scope cut",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Tuesday",
+          "topic": "Regression test và race-condition evidence",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Wednesday",
+          "topic": "Docs payOS, AI, embedding rebuild",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Thursday",
+          "topic": "Docker demo, release note, README portfolio",
+          "status": "TODO",
+          "updated_at": null
+        },
+        {
+          "day": "Friday-Saturday",
+          "topic": "Review, demo, final demo",
+          "status": "TODO",
+          "updated_at": null
+        }
+      ],
+      "deliverables": [
+        {
+          "id": "w8_d1",
+          "name": "Final README, Swagger & ERD",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w8_d2",
+          "name": "Docker & payOS notes evidence",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        },
+        {
+          "id": "w8_d3",
+          "name": "AI semantic search demo & interview notes",
+          "status": "PENDING",
+          "link": "",
+          "evidence": ""
+        }
+      ]
+    }
+  ],
+  "daily_checkins": [],
+  "mock_interviews": [],
+  "_meta": {
+    "schema_version": 1,
+    "created_at": "2026-07-08T03:58:30.406Z",
+    "version": 2,
+    "updated_at": "2026-07-08T04:08:19.418Z",
+    "updated_by": "codex-mentor"
+  },
+  "audit_log": [
+    {
+      "id": "980c7d5f-539f-43ee-b17f-057e7510f74d",
+      "timestamp": "2026-07-08T04:08:19.418Z",
+      "actor": "codex-mentor",
+      "action": "mentor_patch",
+      "reason": "Sync training timer start date to 2026-07-13 Asia/Saigon",
+      "base_version": 1,
+      "new_version": 2,
+      "summary": "1 JSON patch operation(s)"
+    }
+  ],
+  "program": {
+    "name": "Backend NestJS 8-week training",
+    "synced_at": "2026-07-08T04:08:19.4014115Z",
+    "notes": "Timer is synced from this start date. Week 1 starts on 2026-07-13.",
+    "training_start_date": "2026-07-13",
+    "duration_weeks": 8,
+    "timezone": "Asia/Saigon",
+    "synced_by": "codex-mentor"
+  }
+}
