@@ -1,6 +1,7 @@
 # Dependencies
 node_modules/
-
+tracker-app/
+tracker-app-legacy/
 # Local env files
 .env
 .env.local

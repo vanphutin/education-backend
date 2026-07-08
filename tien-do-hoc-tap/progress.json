@@ -6,7 +6,7 @@
   "overall_progress": {
     "completed_weeks": 0,
     "total_weeks": 8,
-    "completed_tasks": 0,
+    "completed_tasks": 3,
     "total_tasks": 40,
     "average_score": 0
   },
@@ -16,7 +16,7 @@
       "title": "Foundation, OOP, NestJS basics and public catalog API",
       "status": "IN_PROGRESS",
       "score": 2,
-      "mentor_feedback": "Tuần này, người học chưa hoàn thành các mục tiêu đề ra. Các ngày từ Thứ 2 đến Thứ 4 chỉ có nội dung lý thuyết cơ bản nhưng chưa đi sâu vào việc áp dụng vào dự án. Các phần **Core Concepts**, **Common Mistakes**, **Mini Lab**, **Project Bridge**, và **Interview Drill** trong các ngày này đều thiếu nội dung cụ thể hoặc chỉ có dấu ba chấm, cho thấy người học chưa thực sự tham gia vào quá trình học tập. Đối với Thứ 5 đến Thứ 7, người học được yêu cầu triển khai và kiểm thử các backlog nhưng lại không có bằng chứng cụ thể về việc thực hiện, cũng như không có code, logs, hoặc kết quả kiểm thử. Điều này cho thấy người học chưa thực sự hiểu và áp dụng kiến thức vào dự án. Người học cần phải nghiêm túc hơn trong việc học tập và áp dụng kiến thức vào dự án để đạt được mục tiêu đề ra.",
+      "mentor_feedback": "Tuần này, người học chưa hoàn thành các mục tiêu đề ra. Các ngày từ Thứ 2 đến Thứ 4 đều thiếu nội dung cụ thể trong phần lý thuyết và mini lab. Các phần thiết kế và triển khai trong Thứ 5 và Thứ 6-7 cũng chưa được thực hiện đầy đủ. Người học cần tập trung hơn vào việc hoàn thành các deliverables và cung cấp evidence cụ thể cho từng phần của dự án.",
       "days": [
         {
           "day": "Monday",
@@ -775,8 +775,8 @@
   "_meta": {
     "schema_version": 1,
     "created_at": "2026-07-08T03:58:30.406Z",
-    "version": 9,
-    "updated_at": "2026-07-08T09:11:21.896Z",
+    "version": 61,
+    "updated_at": "2026-07-08T10:02:02.749Z",
     "updated_by": "mentor-ai"
   },
   "audit_log": [
@@ -858,6 +858,526 @@
       "reason": "AI Mentor Review for Week 1",
       "base_version": 8,
       "new_version": 9,
+      "summary": "16 JSON patch operation(s)"
+    },
+    {
+      "id": "ea8dcee3-c5ca-451f-a68d-f8f48d666889",
+      "timestamp": "2026-07-08T09:41:22.220Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to DONE",
+      "base_version": 9,
+      "new_version": 10,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "f998dbf1-3197-40b9-a4cb-fc5f307d93b5",
+      "timestamp": "2026-07-08T09:41:22.821Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to TODO",
+      "base_version": 10,
+      "new_version": 11,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "3a949e44-05ed-4f30-88ea-fd25850e589d",
+      "timestamp": "2026-07-08T09:41:23.277Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to DONE",
+      "base_version": 11,
+      "new_version": 12,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "ff9fe728-4aff-4ef3-b47e-298469808c4b",
+      "timestamp": "2026-07-08T09:41:24.772Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to TODO",
+      "base_version": 12,
+      "new_version": 13,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "cff6b0dc-5178-4639-b9d0-9c0ba0508702",
+      "timestamp": "2026-07-08T09:41:25.154Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to DONE",
+      "base_version": 13,
+      "new_version": 14,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "f6df0d6c-6edb-49dc-a69e-c506c3d1174c",
+      "timestamp": "2026-07-08T09:41:25.551Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to TODO",
+      "base_version": 14,
+      "new_version": 15,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "9ff28cb2-be93-40cd-ae8d-f20449812a91",
+      "timestamp": "2026-07-08T09:57:19.763Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to DONE",
+      "base_version": 15,
+      "new_version": 16,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "321df245-725e-495e-89c4-834f5dc3c16e",
+      "timestamp": "2026-07-08T09:57:21.870Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Tuesday status to DONE",
+      "base_version": 16,
+      "new_version": 17,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "5a30cecf-a804-4c6e-8c8a-79f23aa5197a",
+      "timestamp": "2026-07-08T09:57:23.182Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Wednesday status to DONE",
+      "base_version": 17,
+      "new_version": 18,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "c7f2db03-cb6b-480e-9608-8c36b79867ba",
+      "timestamp": "2026-07-08T09:57:24.529Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Wednesday status to TODO",
+      "base_version": 18,
+      "new_version": 19,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "927adcc6-1357-46f1-8840-a9ccc016a045",
+      "timestamp": "2026-07-08T09:57:31.173Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Tuesday status to TODO",
+      "base_version": 19,
+      "new_version": 20,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "c34bf8d0-a1b0-4e4c-a318-ce6970f2c422",
+      "timestamp": "2026-07-08T09:57:31.845Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to TODO",
+      "base_version": 20,
+      "new_version": 21,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "2336d7b4-b127-4538-9117-f48512c6939f",
+      "timestamp": "2026-07-08T09:59:31.190Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to DONE",
+      "base_version": 21,
+      "new_version": 22,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "79f39d4a-8d34-4354-bf9e-1ed8050b1fc5",
+      "timestamp": "2026-07-08T09:59:32.856Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Tuesday status to DONE",
+      "base_version": 22,
+      "new_version": 23,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "44e45c4a-984e-4bdf-b147-bc51d3d32f53",
+      "timestamp": "2026-07-08T09:59:33.947Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Wednesday status to DONE",
+      "base_version": 23,
+      "new_version": 24,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "5832d1bd-ad6b-4e2f-84e9-d70a511ab9b8",
+      "timestamp": "2026-07-08T09:59:34.395Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Wednesday status to TODO",
+      "base_version": 24,
+      "new_version": 25,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "20c49c27-330a-42e1-a197-9409c5e2c327",
+      "timestamp": "2026-07-08T09:59:35.122Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Tuesday status to TODO",
+      "base_version": 25,
+      "new_version": 26,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "1f37a9da-65d2-4cce-8abf-f3c8106fc904",
+      "timestamp": "2026-07-08T09:59:35.831Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to TODO",
+      "base_version": 26,
+      "new_version": 27,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "efbf9e7b-c939-46c4-9269-e70426e6f92a",
+      "timestamp": "2026-07-08T09:59:44.923Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Thursday status to DONE",
+      "base_version": 27,
+      "new_version": 28,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "89896119-aa1d-433d-aba9-6cefbc06d387",
+      "timestamp": "2026-07-08T09:59:45.407Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Thursday status to TODO",
+      "base_version": 28,
+      "new_version": 29,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "7c4b7c6f-ce5f-4c34-8915-41079f463f3a",
+      "timestamp": "2026-07-08T10:00:10.009Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Tuesday status to DONE",
+      "base_version": 29,
+      "new_version": 30,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "eb256e4f-e15f-475d-8d02-63b72cf8cb06",
+      "timestamp": "2026-07-08T10:00:10.526Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Tuesday status to TODO",
+      "base_version": 30,
+      "new_version": 31,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "a3c6323c-100e-44c7-b537-a9d6884004a0",
+      "timestamp": "2026-07-08T10:00:10.976Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Tuesday status to DONE",
+      "base_version": 31,
+      "new_version": 32,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "1d80beca-58e2-474d-b7c9-15434da0e132",
+      "timestamp": "2026-07-08T10:00:12.249Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Tuesday status to TODO",
+      "base_version": 32,
+      "new_version": 33,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "3e96ca40-97e7-4170-8dcf-dda93fa17be0",
+      "timestamp": "2026-07-08T10:00:12.802Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Tuesday status to DONE",
+      "base_version": 33,
+      "new_version": 34,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "be16535b-e4c3-4e46-9d20-4c0e84ef5daf",
+      "timestamp": "2026-07-08T10:00:14.015Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Tuesday status to TODO",
+      "base_version": 34,
+      "new_version": 35,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "1fed4beb-d974-45f0-a60b-6d4ac637055f",
+      "timestamp": "2026-07-08T10:00:22.084Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to DONE",
+      "base_version": 35,
+      "new_version": 36,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "1e439a9e-4df6-45ed-afee-81012101363c",
+      "timestamp": "2026-07-08T10:00:22.493Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to TODO",
+      "base_version": 36,
+      "new_version": 37,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "41dfad44-2de1-4ec2-8cd1-a6a19febbd22",
+      "timestamp": "2026-07-08T10:00:25.796Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to DONE",
+      "base_version": 37,
+      "new_version": 38,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "d9e50691-eb75-410d-912b-4e09e2ce0e47",
+      "timestamp": "2026-07-08T10:00:26.200Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to TODO",
+      "base_version": 38,
+      "new_version": 39,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "964c7f80-9a0d-4ad6-8961-8f3748991063",
+      "timestamp": "2026-07-08T10:01:21.196Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to DONE",
+      "base_version": 39,
+      "new_version": 40,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "4a0c1601-6ac4-4ade-84a3-554d45a07fb6",
+      "timestamp": "2026-07-08T10:01:23.293Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Tuesday status to DONE",
+      "base_version": 40,
+      "new_version": 41,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "a3ea03af-cb7a-4fc2-9627-50275c166bc1",
+      "timestamp": "2026-07-08T10:01:24.068Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Wednesday status to DONE",
+      "base_version": 41,
+      "new_version": 42,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "097f520b-d219-4f37-ad91-1e635474dc93",
+      "timestamp": "2026-07-08T10:01:24.738Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Thursday status to DONE",
+      "base_version": 42,
+      "new_version": 43,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "b6bc1580-b31f-413d-a9d2-60c8dd4c368e",
+      "timestamp": "2026-07-08T10:01:25.524Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Friday-Saturday status to DONE",
+      "base_version": 43,
+      "new_version": 44,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "400f4ee3-12b9-4a6a-bfbd-74f0ad4ccf36",
+      "timestamp": "2026-07-08T10:01:26.387Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Friday-Saturday status to TODO",
+      "base_version": 44,
+      "new_version": 45,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "c957e08e-d97c-41d9-8c55-b974f8b1793b",
+      "timestamp": "2026-07-08T10:01:26.994Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Thursday status to TODO",
+      "base_version": 45,
+      "new_version": 46,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "194635f9-70cc-4525-a164-78474100d4b0",
+      "timestamp": "2026-07-08T10:01:27.711Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Wednesday status to TODO",
+      "base_version": 46,
+      "new_version": 47,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "d1a5e485-abbc-4907-a3c5-4d6cc6f76e54",
+      "timestamp": "2026-07-08T10:01:28.309Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Tuesday status to TODO",
+      "base_version": 47,
+      "new_version": 48,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "3f92db72-baba-44e7-aa66-e6afeb356a77",
+      "timestamp": "2026-07-08T10:01:29.010Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to TODO",
+      "base_version": 48,
+      "new_version": 49,
+      "summary": "2 JSON patch operation(s)"
+    },
+    {
+      "id": "50a7bf53-18aa-4955-b547-d37737f5efd5",
+      "timestamp": "2026-07-08T10:01:32.499Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to DONE",
+      "base_version": 49,
+      "new_version": 50,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "5a55696f-5adb-469c-a6eb-64b46d47a407",
+      "timestamp": "2026-07-08T10:01:33.309Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to TODO",
+      "base_version": 50,
+      "new_version": 51,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "14fca229-609e-40bf-b863-e1591b8e282d",
+      "timestamp": "2026-07-08T10:01:33.629Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to DONE",
+      "base_version": 51,
+      "new_version": 52,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "88c58f1b-7a65-42a2-9d23-a56d74bda8eb",
+      "timestamp": "2026-07-08T10:01:34.244Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Tuesday status to DONE",
+      "base_version": 52,
+      "new_version": 53,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "f7437705-dccf-4c43-965a-f875a38a0804",
+      "timestamp": "2026-07-08T10:01:35.775Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Wednesday status to DONE",
+      "base_version": 53,
+      "new_version": 54,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "7f6d453f-ab54-468f-b1ee-416abf0f2fc6",
+      "timestamp": "2026-07-08T10:01:36.837Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Thursday status to DONE",
+      "base_version": 54,
+      "new_version": 55,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "106b209c-431e-411f-abed-1c98da48dc3f",
+      "timestamp": "2026-07-08T10:01:37.709Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Friday-Saturday status to DONE",
+      "base_version": 55,
+      "new_version": 56,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "711b15b4-1954-4a20-aa65-59a64406d2ac",
+      "timestamp": "2026-07-08T10:01:45.983Z",
+      "actor": "mentor-ai",
+      "action": "mentor_patch",
+      "reason": "AI Mentor Review for Week 1",
+      "base_version": 56,
+      "new_version": 57,
+      "summary": "16 JSON patch operation(s)"
+    },
+    {
+      "id": "5fc049ab-fd93-40d8-ac2c-ba487526dafa",
+      "timestamp": "2026-07-08T10:01:59.110Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Monday status to DONE",
+      "base_version": 57,
+      "new_version": 58,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "f0910ada-e914-4a74-9ed6-0135a12945f1",
+      "timestamp": "2026-07-08T10:01:59.671Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Tuesday status to DONE",
+      "base_version": 58,
+      "new_version": 59,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "e3e17bba-37dd-42d5-b560-e6ea4ede92be",
+      "timestamp": "2026-07-08T10:02:00.299Z",
+      "actor": "web-ui",
+      "action": "toggle_day_status",
+      "reason": "Toggle Day Wednesday status to DONE",
+      "base_version": 59,
+      "new_version": 60,
+      "summary": "5 JSON patch operation(s)"
+    },
+    {
+      "id": "f3219d2f-618d-4215-967d-46ad19294589",
+      "timestamp": "2026-07-08T10:02:02.749Z",
+      "actor": "mentor-ai",
+      "action": "mentor_patch",
+      "reason": "AI Mentor Review for Week 1",
+      "base_version": 60,
+      "new_version": 61,
       "summary": "16 JSON patch operation(s)"
     }
   ],
