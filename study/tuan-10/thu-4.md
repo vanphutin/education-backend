@@ -2,13 +2,14 @@
 
 - **Tuần**: 10
 - **Ngày**: Thứ 4
-- **Issue**: #48
+- **Issue**: [#48](https://github.com/vanphutin/education-backend/issues/48)
 - **Giai đoạn**: Capstone
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [OWASP API Security Top 10 2023](https://owasp.org/API-Security/editions/2023/en/0x00-header/)
 - **Nâng cao:** [Google SRE Book - Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/)
+- **Thực hành (Lab):** [ByteByteGo - System Design Lab](https://bytebytego.com/)
 
 
 ## 1. Learning Objectives

@@ -2,13 +2,14 @@
 
 - **Tuần**: 7
 - **Ngày**: Thứ 2
-- **Issue**: #31
+- **Issue**: [#31](https://github.com/vanphutin/education-backend/issues/31)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [Martin Fowler - State Machine](https://martinfowler.com/bliki/StateMachine.html)
 - **Nâng cao:** [PostgreSQL Docs - Transaction Isolation](https://www.postgresql.org/docs/current/transaction-iso.html)
+- **Thực hành (Lab):** [Boot.dev - Learn RabbitMQ Lab](https://www.boot.dev/courses/learn-rabbitmq)
 
 
 ## 1. Learning Objectives

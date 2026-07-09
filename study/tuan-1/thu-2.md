@@ -2,13 +2,14 @@
 
 - **Tuần**: 1
 - **Ngày**: Thứ 2
-- **Issue**: #1
+- **Issue**: [#1](https://github.com/vanphutin/education-backend/issues/1)
 - **Giai đoạn**: Core Theory + Mini Labs
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [MDN - Overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview)
 - **Nâng cao:** [RFC 9110 - HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110)
+- **Thực hành (Lab):** [Boot.dev - Build a Web Server Lab](https://www.boot.dev/courses/learn-http-clients-typescript)
 
 ## 1. Learning Objectives
 

@@ -2,13 +2,14 @@
 
 - **Tuần**: 6
 - **Ngày**: Thứ 3
-- **Issue**: #27
+- **Issue**: [#27](https://github.com/vanphutin/education-backend/issues/27)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [OWASP - Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
 - **Nâng cao:** [NIST SP 800-63B - Digital Identity Guidelines](https://pages.nist.gov/800-63-3/sp800-63b.html)
+- **Thực hành (Lab):** [Full Stack Open - Token Authentication Lab](https://fullstackopen.com/en/part4/token_authentication)
 
 
 ## 1. Learning Objectives

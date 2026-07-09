@@ -2,13 +2,14 @@
 
 - **Tuần**: 4
 - **Ngày**: Thứ 3
-- **Issue**: #17
+- **Issue**: [#17](https://github.com/vanphutin/education-backend/issues/17)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [NestJS Docs - Providers](https://docs.nestjs.com/providers)
 - **Nâng cao:** [NestJS Docs - Lifecycle Events](https://docs.nestjs.com/fundamentals/lifecycle-events)
+- **Thực hành (Lab):** [AWS Workshop - Building APIs](https://catalog.workshops.aws/building-apis/en-US)
 
 
 ## 1. Learning Objectives

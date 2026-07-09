@@ -2,13 +2,14 @@
 
 - **Tuần**: 6
 - **Ngày**: Thứ 2
-- **Issue**: #26
+- **Issue**: [#26](https://github.com/vanphutin/education-backend/issues/26)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [OWASP - Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
 - **Nâng cao:** [RFC 7519 - JSON Web Token (JWT)](https://www.rfc-editor.org/rfc/rfc7519)
+- **Thực hành (Lab):** [Boot.dev - Learn Redis Lab](https://www.boot.dev/courses/learn-redis)
 
 
 ## 1. Learning Objectives

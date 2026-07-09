@@ -2,13 +2,14 @@
 
 - **Tuần**: 7
 - **Ngày**: Thứ 4
-- **Issue**: #33
+- **Issue**: [#33](https://github.com/vanphutin/education-backend/issues/33)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [Stripe Docs - Idempotent Requests](https://docs.stripe.com/api/idempotent_requests)
 - **Nâng cao:** [RFC 9110 Section 9.2.2 - Idempotent Methods](https://www.rfc-editor.org/rfc/rfc9110#section-9.2.2)
+- **Thực hành (Lab):** [The Odin Project - Background Jobs Lab](https://www.theodinproject.com/lessons/nodejs-background-jobs)
 
 
 ## 1. Learning Objectives

@@ -2,13 +2,14 @@
 
 - **Tuần**: 6
 - **Ngày**: Thứ 4
-- **Issue**: #28
+- **Issue**: [#28](https://github.com/vanphutin/education-backend/issues/28)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [OWASP - REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html)
 - **Nâng cao:** [OWASP API Security Top 10 2023](https://owasp.org/API-Security/editions/2023/en/0x00-header/)
+- **Thực hành (Lab):** [AWS Workshop - ElastiCache Redis](https://catalog.workshops.aws/elasticache-redis/en-US)
 
 
 ## 1. Learning Objectives

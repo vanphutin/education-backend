@@ -2,13 +2,14 @@
 
 - **Tuần**: 8
 - **Ngày**: Thứ 3
-- **Issue**: #37
+- **Issue**: [#37](https://github.com/vanphutin/education-backend/issues/37)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [BullMQ Docs - Introduction](https://docs.bullmq.io/guide/introduction)
 - **Nâng cao:** [BullMQ Docs - Retrying Failing Jobs](https://docs.bullmq.io/guide/retrying-failing-jobs)
+- **Thực hành (Lab):** [Full Stack Open - CI/CD Lab](https://fullstackopen.com/en/part11)
 
 
 ## 1. Learning Objectives

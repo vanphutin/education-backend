@@ -2,13 +2,14 @@
 
 - **Tuần**: 2
 - **Ngày**: Thứ 2
-- **Issue**: #6
+- **Issue**: [#6](https://github.com/vanphutin/education-backend/issues/6)
 - **Giai đoạn**: Core Theory + Mini Labs
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [TypeScript Handbook - The Basics](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)
 - **Nâng cao:** [TypeScript Handbook - Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)
+- **Thực hành (Lab):** [Boot.dev - Learn TypeScript Lab](https://www.boot.dev/courses/learn-typescript)
 
 
 ## 1. Learning Objectives

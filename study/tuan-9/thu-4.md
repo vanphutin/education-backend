@@ -2,13 +2,14 @@
 
 - **Tuần**: 9
 - **Ngày**: Thứ 4
-- **Issue**: #43
+- **Issue**: [#43](https://github.com/vanphutin/education-backend/issues/43)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [Docker Docs - Docker Overview](https://docs.docker.com/get-started/docker-overview/)
 - **Nâng cao:** [The Twelve-Factor App - Config](https://12factor.net/config)
+- **Thực hành (Lab):** [Sentry - Node.js Error Tracking Lab](https://docs.sentry.io/platforms/node/)
 
 
 ## 1. Learning Objectives

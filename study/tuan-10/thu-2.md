@@ -2,13 +2,14 @@
 
 - **Tuần**: 10
 - **Ngày**: Thứ 2
-- **Issue**: #46
+- **Issue**: [#46](https://github.com/vanphutin/education-backend/issues/46)
 - **Giai đoạn**: Capstone
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)
 - **Nâng cao:** [Google SRE Book - Table of Contents](https://sre.google/sre-book/table-of-contents/)
+- **Thực hành (Lab):** [K6 - Load Testing Lab](https://grafana.com/docs/k6/latest/)
 
 
 ## 1. Learning Objectives

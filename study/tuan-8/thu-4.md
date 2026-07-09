@@ -2,13 +2,14 @@
 
 - **Tuần**: 8
 - **Ngày**: Thứ 4
-- **Issue**: #38
+- **Issue**: [#38](https://github.com/vanphutin/education-backend/issues/38)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [Stripe Docs - Webhooks](https://docs.stripe.com/webhooks)
 - **Nâng cao:** [OpenAI Docs - Embeddings](https://platform.openai.com/docs/guides/embeddings)
+- **Thực hành (Lab):** [AWS Workshop - EC2 Web Server Lab](https://catalog.workshops.aws/ec2-web-server)
 
 
 ## 1. Learning Objectives

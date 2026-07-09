@@ -2,13 +2,14 @@
 
 - **Tuần**: 2
 - **Ngày**: Thứ 3
-- **Issue**: #7
+- **Issue**: [#7](https://github.com/vanphutin/education-backend/issues/7)
 - **Giai đoạn**: Core Theory + Mini Labs
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [TypeScript Handbook - Classes](https://www.typescriptlang.org/docs/handbook/2/classes.html)
 - **Nâng cao:** [Martin Fowler - Value Object](https://martinfowler.com/bliki/ValueObject.html)
+- **Thực hành (Lab):** [Boot.dev - Learn Object-Oriented Programming Lab](https://www.boot.dev/courses/learn-object-oriented-programming)
 
 
 ## 1. Learning Objectives

@@ -2,13 +2,14 @@
 
 - **Tuần**: 1
 - **Ngày**: Thứ 3
-- **Issue**: #2
+- **Issue**: [#2](https://github.com/vanphutin/education-backend/issues/2)
 - **Giai đoạn**: Core Theory + Mini Labs
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [Cloudflare Learning - What is DNS?](https://www.cloudflare.com/learning/dns/what-is-dns/)
 - **Nâng cao:** [High Performance Browser Networking - Building Blocks of TCP](https://hpbn.co/building-blocks-of-tcp/)
+- **Thực hành (Lab):** [Boot.dev - Build a Web Server Lab](https://www.boot.dev/courses/learn-http-clients-typescript)
 
 
 ## 1. Learning Objectives

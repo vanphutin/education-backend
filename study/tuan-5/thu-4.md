@@ -2,13 +2,14 @@
 
 - **Tuần**: 5
 - **Ngày**: Thứ 4
-- **Issue**: #23
+- **Issue**: [#23](https://github.com/vanphutin/education-backend/issues/23)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [PostgreSQL Docs - Indexes](https://www.postgresql.org/docs/current/indexes.html)
 - **Nâng cao:** [PostgreSQL Docs - Using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html)
+- **Thực hành (Lab):** [AWS Workshop - Database Migrations Lab](https://catalog.workshops.aws/database-migrations)
 
 
 ## 1. Learning Objectives

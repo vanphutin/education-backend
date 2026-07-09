@@ -2,7 +2,7 @@
 
 - **Tuần**: 10
 - **Ngày**: Thứ 6-7
-- **Issue**: #50
+- **Issue**: [#50](https://github.com/vanphutin/education-backend/issues/50)
 - **Giai đoạn**: Capstone
 
 ## Required Reading

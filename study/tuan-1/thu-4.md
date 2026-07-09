@@ -2,13 +2,14 @@
 
 - **Tuần**: 1
 - **Ngày**: Thứ 4
-- **Issue**: #3
+- **Issue**: [#3](https://github.com/vanphutin/education-backend/issues/3)
 - **Giai đoạn**: Core Theory + Mini Labs
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [MDN - HTTP Messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages)
 - **Nâng cao:** [High Performance Browser Networking - Transport Layer Security (TLS)](https://hpbn.co/transport-layer-security-tls/)
+- **Thực hành (Lab):** [Full Stack Open - REST API Node Lab](https://fullstackopen.com/en/part3/node_js_and_express)
 
 
 ## 1. Learning Objectives

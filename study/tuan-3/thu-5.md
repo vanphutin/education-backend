@@ -2,7 +2,7 @@
 
 - **Tuần**: 3
 - **Ngày**: Thứ 5
-- **Issue**: #14
+- **Issue**: [#14](https://github.com/vanphutin/education-backend/issues/14)
 - **Giai đoạn**: Deep Foundation + Mini Labs
 
 ## Required Reading
@@ -12,37 +12,33 @@
 
 
 ## 1. Lab Goal
-- Mini lab này kiểm chứng kiến thức đã học trong Thứ 2-4.
-.
+Thực hành trực tiếp trên Database PostgreSQL (bỏ qua Code). Hiểu về relations, constraints, indexes, EXPLAIN và cách Transaction/Lock hoạt động.
 
-## 2. Concepts Covered
-| Concept từ Thứ 2-4 | Lab sẽ kiểm chứng bằng gì | Kết quả mong đợi |
-|---|---|---|
-| schema nhỏ | Implement code liên quan đến schema nhỏ | Vận dụng được schema nhỏ |
-| constraints | Implement code liên quan đến constraints | Vận dụng được constraints |
-| indexes | Implement code liên quan đến indexes | Vận dụng được indexes |
-| EXPLAIN | Implement code liên quan đến EXPLAIN | Vận dụng được EXPLAIN |
-| transaction rollback và lock behavior | Implement code liên quan đến transaction rollback và lock behavior | Vận dụng được transaction rollback và lock behavior |
+## 2. Lab Requirements (Đề bài)
+Dùng DBeaver hoặc pgAdmin kết nối tới PostgreSQL (chạy Docker hoặc local).
+1. **Schema & Constraints:**
+   - Tạo bảng `users` (id, email, balance). Set `email` là UNIQUE.
+   - Tạo bảng `orders` (id, user_id, amount). Set Foreign Key `user_id` reference tới `users(id)`.
+2. **Indexes & Query Plan:**
+   - Chạy lệnh `EXPLAIN ANALYZE SELECT * FROM orders WHERE user_id = 1;` khi CHƯA có index trên `user_id`. Ghi lại Execution Time và Seq Scan.
+   - Thêm `CREATE INDEX idx_orders_user_id ON orders(user_id);`.
+   - Chạy lại `EXPLAIN ANALYZE` và quan sát Index Scan.
+3. **Transaction & Locks:**
+   - Mở **2 cửa sổ query (2 session riêng biệt)**.
+   - Session 1: `BEGIN; SELECT balance FROM users WHERE id = 1 FOR UPDATE;` (Chưa COMMIT).
+   - Session 2: Chạy câu lệnh `UPDATE users SET balance = balance - 10 WHERE id = 1;`. Quan sát Session 2 bị treo (lock waiting).
+   - Quay lại Session 1 chạy `COMMIT;`. Quan sát Session 2 hoàn thành ngay lập tức.
 
-## 3. Lab Steps
-1. Implement và test tính năng schema nhỏ.
-2. Implement và test tính năng constraints.
-3. Implement và test tính năng indexes.
-4. Implement và test tính năng EXPLAIN.
-5. Implement và test tính năng transaction rollback và lock behavior.
+## 3. Evidence
+- Script DDL tạo bảng.
+- Kết quả text của 2 lần chạy EXPLAIN ANALYZE (trước/sau index).
+- Chụp màn hình / mô tả lại hiện tượng lock ở câu 3.
 
-## 4. Evidence
-- Command/curl/log:
-- Code snippet:
-- Screenshot nếu cần:
-- Kết quả:
+## 4. Reflection
+- Thiếu Index ở Foreign Key gây ra hậu quả gì khi dữ liệu lớn?
+- Lệnh `FOR UPDATE` hữu ích trong bài toán thực tế nào (VD: Đặt vé, trừ tiền)?
 
-## 5. Reflection
-- Concept nào đã rõ hơn sau lab?
-- Nếu áp dụng vào project từ tuần 4, cần cẩn thận điều gì?
-
-## 6. Interview Drill
-- Question: Vì sao DB constraint quan trọng hơn app validation trong critical data?
+## 5. Interview Drill
+- Question: N+1 Query là gì và làm sao để phát hiện nó?
 - My answer:
   - ...
-

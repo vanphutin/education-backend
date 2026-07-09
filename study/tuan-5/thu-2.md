@@ -2,13 +2,14 @@
 
 - **Tuần**: 5
 - **Ngày**: Thứ 2
-- **Issue**: #21
+- **Issue**: [#21](https://github.com/vanphutin/education-backend/issues/21)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [TypeORM Docs - Entities](https://typeorm.io/entities)
 - **Nâng cao:** [PostgreSQL Docs - Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html)
+- **Thực hành (Lab):** [Boot.dev - Advanced SQL Lab](https://www.boot.dev/courses/learn-advanced-sql)
 
 
 ## 1. Learning Objectives

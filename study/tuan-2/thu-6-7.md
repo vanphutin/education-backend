@@ -2,7 +2,7 @@
 
 - **Tuần**: 2
 - **Ngày**: Thứ 6-7
-- **Issue**: #10
+- **Issue**: [#10](https://github.com/vanphutin/education-backend/issues/10)
 - **Giai đoạn**: Core Theory + Mini Labs
 
 ## Required Reading
@@ -12,31 +12,32 @@
 
 
 ## 1. Lab Goal
-- Mini lab này kiểm chứng kiến thức đã học trong Thứ 2-4.
-.
+Làm quen với Mental Model (mô hình tư duy) của NestJS. Hiểu cách framework này map từ một HTTP request vào OOP class thông qua Dependency Injection.
 
-## 2. Concepts Covered
-| Concept từ Thứ 2-4 | Lab sẽ kiểm chứng bằng gì | Kết quả mong đợi |
-|---|---|---|
-| module/controller/service/provider mini app | Implement code liên quan đến module/controller/service/provider mini app | Vận dụng được module/controller/service/provider mini app |
-| chỉ để hiểu framework như công cụ | Implement code liên quan đến chỉ để hiểu framework như công cụ | Vận dụng được chỉ để hiểu framework như công cụ |
+## 2. Lab Requirements (Đề bài)
+1. **Khởi tạo:**
+   - Dùng `npx @nestjs/cli new nest-lab` (chọn npm).
+2. **Modules & Controllers:**
+   - Tạo một `UsersModule`, `UsersController`, `UsersService`.
+   - Khai báo 1 endpoint GET `/users` trả về mảng `[{ id: 1, name: 'Alice' }]` hardcode trong Service.
+3. **Dependency Injection:**
+   - Bơm `UsersService` vào `UsersController` thông qua constructor.
+   - Thử bỏ dòng `providers: [UsersService]` trong `UsersModule` và chạy lại server. Quan sát lỗi `Nest can't resolve dependencies of the UsersController`.
+4. **Mô phỏng Failure Handling:**
+   - Tạo 1 endpoint GET `/users/error`.
+   - Ném ra `new HttpException('Lỗi kết nối DB', 500)`.
+   - Xem cách NestJS tự động chuyển Error object thành JSON response cho client.
 
-## 3. Lab Steps
-1. Implement và test tính năng module/controller/service/provider mini app.
-2. Implement và test tính năng chỉ để hiểu framework như công cụ.
+## 3. Evidence
+- Chụp code controller và module.
+- Chụp màn hình lỗi khi quên inject provider.
+- Chụp JSON response khi bắt HttpException.
 
-## 4. Evidence
-- Command/curl/log:
-- Code snippet:
-- Screenshot nếu cần:
-- Kết quả:
+## 4. Reflection
+- NestJS đóng vai trò gì trong kiến trúc ứng dụng của bạn? (Gợi ý: Nó chỉ là lớp giao tiếp Transport Layer).
+- Dependency Injection giải quyết bài toán gì so với việc `const service = new UsersService()` bên trong Controller?
 
-## 5. Reflection
-- Concept nào đã rõ hơn sau lab?
-- Nếu áp dụng vào project từ tuần 4, cần cẩn thận điều gì?
-
-## 6. Interview Drill
-- Question: DI giúp test và thay implementation ra sao?
+## 5. Interview Drill
+- Question: Inversion of Control (IoC) là gì và NestJS triển khai nó như thế nào?
 - My answer:
   - ...
-

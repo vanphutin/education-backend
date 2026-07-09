@@ -2,13 +2,14 @@
 
 - **Tuần**: 8
 - **Ngày**: Thứ 2
-- **Issue**: #36
+- **Issue**: [#36](https://github.com/vanphutin/education-backend/issues/36)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [Redis Docs - Client-side Caching](https://redis.io/docs/latest/develop/reference/client-side-caching/)
 - **Nâng cao:** [Redis Docs - Distributed Locks with Redis](https://redis.io/docs/latest/develop/use/patterns/distributed-locks/)
+- **Thực hành (Lab):** [Boot.dev - Learn Docker Lab](https://www.boot.dev/courses/learn-docker)
 
 
 ## 1. Learning Objectives

@@ -2,13 +2,14 @@
 
 - **Tuần**: 10
 - **Ngày**: Thứ 3
-- **Issue**: #47
+- **Issue**: [#47](https://github.com/vanphutin/education-backend/issues/47)
 - **Giai đoạn**: Capstone
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [Grafana k6 Docs - Get Started](https://grafana.com/docs/k6/latest/get-started/)
 - **Nâng cao:** [Grafana k6 Docs - Load Test Types](https://grafana.com/docs/k6/latest/using-k6/test-types/)
+- **Thực hành (Lab):** [Node.js - Profiling Lab](https://nodejs.org/en/docs/guides/simple-profiling/)
 
 
 ## 1. Learning Objectives

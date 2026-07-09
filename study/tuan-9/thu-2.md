@@ -2,13 +2,14 @@
 
 - **Tuần**: 9
 - **Ngày**: Thứ 2
-- **Issue**: #41
+- **Issue**: [#41](https://github.com/vanphutin/education-backend/issues/41)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [OpenTelemetry - Observability Primer](https://opentelemetry.io/docs/concepts/observability-primer/)
 - **Nâng cao:** [OpenTelemetry - Logs](https://opentelemetry.io/docs/concepts/signals/logs/)
+- **Thực hành (Lab):** [Boot.dev - Learn Observability Lab](https://www.boot.dev/courses/learn-observability)
 
 
 ## 1. Learning Objectives

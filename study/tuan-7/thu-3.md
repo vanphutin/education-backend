@@ -2,13 +2,14 @@
 
 - **Tuần**: 7
 - **Ngày**: Thứ 3
-- **Issue**: #32
+- **Issue**: [#32](https://github.com/vanphutin/education-backend/issues/32)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [PostgreSQL Docs - Explicit Locking](https://www.postgresql.org/docs/current/explicit-locking.html)
 - **Nâng cao:** [PostgreSQL Docs - MVCC](https://www.postgresql.org/docs/current/mvcc.html)
+- **Thực hành (Lab):** [AWS Workshop - SQS/SNS Messaging Lab](https://catalog.workshops.aws/messaging/en-US)
 
 
 ## 1. Learning Objectives

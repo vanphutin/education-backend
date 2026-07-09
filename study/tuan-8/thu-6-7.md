@@ -2,7 +2,7 @@
 
 - **Tuần**: 8
 - **Ngày**: Thứ 6-7
-- **Issue**: #40
+- **Issue**: [#40](https://github.com/vanphutin/education-backend/issues/40)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading

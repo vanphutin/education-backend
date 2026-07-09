@@ -2,13 +2,14 @@
 
 - **Tuần**: 4
 - **Ngày**: Thứ 4
-- **Issue**: #18
+- **Issue**: [#18](https://github.com/vanphutin/education-backend/issues/18)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [NestJS Docs - Validation](https://docs.nestjs.com/techniques/validation)
 - **Nâng cao:** [NestJS Docs - Exception Filters](https://docs.nestjs.com/exception-filters)
+- **Thực hành (Lab):** [Full Stack Open - Express Middleware Lab](https://fullstackopen.com/en/part3/node_js_and_express)
 
 
 ## 1. Learning Objectives

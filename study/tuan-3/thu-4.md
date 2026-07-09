@@ -2,13 +2,14 @@
 
 - **Tuần**: 3
 - **Ngày**: Thứ 4
-- **Issue**: #13
+- **Issue**: [#13](https://github.com/vanphutin/education-backend/issues/13)
 - **Giai đoạn**: Deep Foundation + Mini Labs
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [OWASP - Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
 - **Nâng cao:** [OWASP - Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+- **Thực hành (Lab):** [The Odin Project - NodeJS Authentication Lab](https://www.theodinproject.com/lessons/nodejs-authentication)
 
 ## 1. Learning Objectives
 

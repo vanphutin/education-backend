@@ -2,13 +2,14 @@
 
 - **Tuần**: 3
 - **Ngày**: Thứ 3
-- **Issue**: #12
+- **Issue**: [#12](https://github.com/vanphutin/education-backend/issues/12)
 - **Giai đoạn**: Deep Foundation + Mini Labs
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [PostgreSQL Docs - Indexes](https://www.postgresql.org/docs/current/indexes.html)
 - **Nâng cao:** [PostgreSQL Docs - Using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html)
+- **Thực hành (Lab):** [AWS Workshop - Amazon RDS Performance](https://catalog.workshops.aws/rds-postgresql-performance/en-US)
 
 
 ## 1. Learning Objectives

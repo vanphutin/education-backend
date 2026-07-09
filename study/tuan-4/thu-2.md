@@ -2,13 +2,14 @@
 
 - **Tuần**: 4
 - **Ngày**: Thứ 2
-- **Issue**: #16
+- **Issue**: [#16](https://github.com/vanphutin/education-backend/issues/16)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [NestJS Docs - First Steps](https://docs.nestjs.com/first-steps)
 - **Nâng cao:** [NestJS Docs - Modules](https://docs.nestjs.com/modules)
+- **Thực hành (Lab):** [Boot.dev - Learn Web Servers Lab](https://www.boot.dev/courses/learn-web-servers)
 
 
 ## 1. Learning Objectives

@@ -2,13 +2,14 @@
 
 - **Tuần**: 2
 - **Ngày**: Thứ 4
-- **Issue**: #8
+- **Issue**: [#8](https://github.com/vanphutin/education-backend/issues/8)
 - **Giai đoạn**: Core Theory + Mini Labs
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [NestJS Docs - Custom Providers](https://docs.nestjs.com/fundamentals/custom-providers)
 - **Nâng cao:** [NestJS Docs - Dynamic Modules](https://docs.nestjs.com/fundamentals/dynamic-modules)
+- **Thực hành (Lab):** [Full Stack Open - Testing Node.js Lab](https://fullstackopen.com/en/part4/testing_the_backend)
 
 
 ## 1. Learning Objectives

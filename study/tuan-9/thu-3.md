@@ -2,13 +2,14 @@
 
 - **Tuần**: 9
 - **Ngày**: Thứ 3
-- **Issue**: #42
+- **Issue**: [#42](https://github.com/vanphutin/education-backend/issues/42)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [Microsoft Azure Architecture - Retry Pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry)
 - **Nâng cao:** [Microsoft Azure Architecture - Circuit Breaker Pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker)
+- **Thực hành (Lab):** [AWS Workshop - Amazon Managed Grafana Lab](https://catalog.workshops.aws/grafana/en-US)
 
 
 ## 1. Learning Objectives

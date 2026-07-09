@@ -2,13 +2,14 @@
 
 - **Tuần**: 5
 - **Ngày**: Thứ 3
-- **Issue**: #22
+- **Issue**: [#22](https://github.com/vanphutin/education-backend/issues/22)
 - **Giai đoạn**: Project Delivery
 
 ## Required Reading
 
 - **Cơ bản/Trung bình:** [TypeORM Docs - Migrations](https://typeorm.io/migrations)
 - **Nâng cao:** [Martin Fowler - Evolutionary Database Design](https://martinfowler.com/articles/evodb.html)
+- **Thực hành (Lab):** [The Odin Project - Using PostgreSQL Lab](https://www.theodinproject.com/lessons/nodejs-using-postgresql)
 
 
 ## 1. Learning Objectives
