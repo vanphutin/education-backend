@@ -19,7 +19,9 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| password hashing | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến password hashing |
+| token lifecycle | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến token lifecycle |
+| session/logout strategy | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến session/logout strategy |
 
 ## 3. Lab / Design Exercise
 - Goal:

@@ -19,7 +19,9 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| clean DB | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến clean DB |
+| idempotent seed | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến idempotent seed |
+| production safety | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến production safety |
 
 ## 3. Lab / Design Exercise
 - Goal:

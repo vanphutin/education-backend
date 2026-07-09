@@ -19,7 +19,11 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| BullMQ | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến BullMQ |
+| retry | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến retry |
+| timeout | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến timeout |
+| delayed jobs | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến delayed jobs |
+| idempotent handlers | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến idempotent handlers |
 
 ## 3. Lab / Design Exercise
 - Goal:

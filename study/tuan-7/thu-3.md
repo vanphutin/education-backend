@@ -19,7 +19,11 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| race condition | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến race condition |
+| row lock | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến row lock |
+| isolation | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến isolation |
+| deadlock | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến deadlock |
+| retry | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến retry |
 
 ## 3. Lab / Design Exercise
 - Goal:

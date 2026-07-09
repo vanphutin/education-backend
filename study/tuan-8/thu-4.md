@@ -19,7 +19,11 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| payment webhook | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến payment webhook |
+| provider abstraction | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến provider abstraction |
+| embeddings | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến embeddings |
+| pgvector | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến pgvector |
+| mock provider | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến mock provider |
 
 ## 3. Lab / Design Exercise
 - Goal:

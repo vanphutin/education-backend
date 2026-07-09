@@ -19,13 +19,42 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| method | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến method |
+| status code | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến status code |
+| headers | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến headers |
+| body | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến body |
+| cookie | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến cookie |
+| cache | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến cache |
+| CORS | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến CORS |
+| REST constraints | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến REST constraints |
 
 ## 3. Common Mistakes
-- ...
+- Hiểu sai hoặc lạm dụng method
+- Thiếu error handling cho method
+- Hiểu sai hoặc lạm dụng status code
+- Thiếu error handling cho status code
+- Hiểu sai hoặc lạm dụng headers
+- Thiếu error handling cho headers
+- Hiểu sai hoặc lạm dụng body
+- Thiếu error handling cho body
+- Hiểu sai hoặc lạm dụng cookie
+- Thiếu error handling cho cookie
+- Hiểu sai hoặc lạm dụng cache
+- Thiếu error handling cho cache
+- Hiểu sai hoặc lạm dụng CORS
+- Thiếu error handling cho CORS
+- Hiểu sai hoặc lạm dụng REST constraints
+- Thiếu error handling cho REST constraints
 
 ## 4. Notes
-- ...
+- Tìm hiểu thêm best practices về method
+- Tìm hiểu thêm best practices về status code
+- Tìm hiểu thêm best practices về headers
+- Tìm hiểu thêm best practices về body
+- Tìm hiểu thêm best practices về cookie
+- Tìm hiểu thêm best practices về cache
+- Tìm hiểu thêm best practices về CORS
+- Tìm hiểu thêm best practices về REST constraints
 
 ## 5. Mini Lab Preparation
 - Thứ 5-7 sẽ kiểm chứng concept này bằng lab nào?

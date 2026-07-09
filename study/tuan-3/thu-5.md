@@ -13,17 +13,23 @@
 
 ## 1. Lab Goal
 - Mini lab này kiểm chứng kiến thức đã học trong Thứ 2-4.
-- Không code dự án Movie Ticket Booking.
+.
 
 ## 2. Concepts Covered
 | Concept từ Thứ 2-4 | Lab sẽ kiểm chứng bằng gì | Kết quả mong đợi |
 |---|---|---|
-| ... | ... | ... |
+| schema nhỏ | Implement code liên quan đến schema nhỏ | Vận dụng được schema nhỏ |
+| constraints | Implement code liên quan đến constraints | Vận dụng được constraints |
+| indexes | Implement code liên quan đến indexes | Vận dụng được indexes |
+| EXPLAIN | Implement code liên quan đến EXPLAIN | Vận dụng được EXPLAIN |
+| transaction rollback và lock behavior | Implement code liên quan đến transaction rollback và lock behavior | Vận dụng được transaction rollback và lock behavior |
 
 ## 3. Lab Steps
-1. ...
-2. ...
-3. ...
+1. Implement và test tính năng schema nhỏ.
+2. Implement và test tính năng constraints.
+3. Implement và test tính năng indexes.
+4. Implement và test tính năng EXPLAIN.
+5. Implement và test tính năng transaction rollback và lock behavior.
 
 ## 4. Evidence
 - Command/curl/log:

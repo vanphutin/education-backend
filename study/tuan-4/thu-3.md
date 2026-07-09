@@ -19,7 +19,8 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| module/controller/service/DTO | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến module/controller/service/DTO |
+| common module | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến common module |
 
 ## 3. Lab / Design Exercise
 - Goal:

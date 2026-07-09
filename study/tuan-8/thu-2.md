@@ -19,7 +19,11 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| TTL | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến TTL |
+| invalidation | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến invalidation |
+| cache-aside | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến cache-aside |
+| stale data | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến stale data |
+| when not to cache | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến when not to cache |
 
 ## 3. Lab / Design Exercise
 - Goal:

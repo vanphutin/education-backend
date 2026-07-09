@@ -21,12 +21,18 @@
 - Steps:
 - Result/evidence:
 
-## 5. Future Project Note
+## 5. External Practice
+- Lab/resource:
+- Task:
+- Evidence:
+- What I learned:
+
+## 6. Future Project Note
 - Sau tuần 4, kiến thức này có thể dùng ở đâu trong project thật?
 - Nếu hiểu sai, bug production nào dễ xảy ra?
 - Không code/scaffold project trong tuần 1-3.
 
-## 6. Interview Drill
+## 7. Interview Drill
 - Question:
 - My answer:
 ```
@@ -73,7 +79,13 @@
 - Logs/screenshots:
 - Docs/ADR:
 
-## 7. Interview Drill
+## 7. External Practice
+- Lab/resource:
+- Task:
+- Evidence:
+- What I learned:
+
+## 8. Interview Drill
 - Question:
 - My answer:
 ```

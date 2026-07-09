@@ -19,7 +19,9 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| API contract | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến API contract |
+| request lifecycle | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến request lifecycle |
+| validation and error principles | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến validation and error principles |
 
 ## 3. Lab / Design Exercise
 - Goal:

@@ -19,13 +19,34 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| index | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến index |
+| query plan | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến query plan |
+| transaction | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến transaction |
+| isolation | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến isolation |
+| locking | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến locking |
+| N+1 | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến N+1 |
 
 ## 3. Common Mistakes
-- ...
+- Hiểu sai hoặc lạm dụng index
+- Thiếu error handling cho index
+- Hiểu sai hoặc lạm dụng query plan
+- Thiếu error handling cho query plan
+- Hiểu sai hoặc lạm dụng transaction
+- Thiếu error handling cho transaction
+- Hiểu sai hoặc lạm dụng isolation
+- Thiếu error handling cho isolation
+- Hiểu sai hoặc lạm dụng locking
+- Thiếu error handling cho locking
+- Hiểu sai hoặc lạm dụng N+1
+- Thiếu error handling cho N+1
 
 ## 4. Notes
-- ...
+- Tìm hiểu thêm best practices về index
+- Tìm hiểu thêm best practices về query plan
+- Tìm hiểu thêm best practices về transaction
+- Tìm hiểu thêm best practices về isolation
+- Tìm hiểu thêm best practices về locking
+- Tìm hiểu thêm best practices về N+1
 
 ## 5. Mini Lab Preparation
 - Thứ 5-7 sẽ kiểm chứng concept này bằng lab nào?

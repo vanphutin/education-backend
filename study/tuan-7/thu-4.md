@@ -19,7 +19,10 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| duplicate request | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến duplicate request |
+| client retry | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến client retry |
+| webhook replay | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến webhook replay |
+| unique key strategy | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến unique key strategy |
 
 ## 3. Lab / Design Exercise
 - Goal:

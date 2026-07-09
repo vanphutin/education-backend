@@ -19,13 +19,30 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| table | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến table |
+| relation | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến relation |
+| normalization | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến normalization |
+| constraints | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến constraints |
+| migration mindset | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến migration mindset |
 
 ## 3. Common Mistakes
-- ...
+- Hiểu sai hoặc lạm dụng table
+- Thiếu error handling cho table
+- Hiểu sai hoặc lạm dụng relation
+- Thiếu error handling cho relation
+- Hiểu sai hoặc lạm dụng normalization
+- Thiếu error handling cho normalization
+- Hiểu sai hoặc lạm dụng constraints
+- Thiếu error handling cho constraints
+- Hiểu sai hoặc lạm dụng migration mindset
+- Thiếu error handling cho migration mindset
 
 ## 4. Notes
-- ...
+- Tìm hiểu thêm best practices về table
+- Tìm hiểu thêm best practices về relation
+- Tìm hiểu thêm best practices về normalization
+- Tìm hiểu thêm best practices về constraints
+- Tìm hiểu thêm best practices về migration mindset
 
 ## 5. Mini Lab Preparation
 - Thứ 5-7 sẽ kiểm chứng concept này bằng lab nào?

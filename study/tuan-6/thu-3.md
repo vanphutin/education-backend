@@ -19,7 +19,10 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| RBAC | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến RBAC |
+| permission matrix | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến permission matrix |
+| least privilege | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến least privilege |
+| guard/decorator | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến guard/decorator |
 
 ## 3. Lab / Design Exercise
 - Goal:

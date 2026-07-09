@@ -19,7 +19,11 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| structured logs | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến structured logs |
+| request id | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến request id |
+| user id | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến user id |
+| latency | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến latency |
+| metrics/tracing mindset | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến metrics/tracing mindset |
 
 ## 3. Lab / Design Exercise
 - Goal:

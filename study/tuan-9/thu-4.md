@@ -19,7 +19,12 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| Docker | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến Docker |
+| env config | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến env config |
+| secrets | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến secrets |
+| migrations | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến migrations |
+| health/readiness | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến health/readiness |
+| rollback | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến rollback |
 
 ## 3. Lab / Design Exercise
 - Goal:

@@ -19,7 +19,7 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| movie/cinema/screen/seat/showtime relations and constraints | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến movie/cinema/screen/seat/showtime relations and constraints |
 
 ## 3. Lab / Design Exercise
 - Goal:

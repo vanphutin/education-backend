@@ -19,7 +19,14 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| HTTP | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến HTTP |
+| DB | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến DB |
+| transaction | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến transaction |
+| auth | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến auth |
+| cache | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến cache |
+| queue | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến queue |
+| deploy | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến deploy |
+| system design | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến system design |
 
 ## 3. Lab / Design Exercise
 - Goal:

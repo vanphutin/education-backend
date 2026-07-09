@@ -13,17 +13,21 @@
 
 ## 1. Lab Goal
 - Mini lab này kiểm chứng kiến thức đã học trong Thứ 2-4.
-- Không code dự án Movie Ticket Booking.
+
 
 ## 2. Concepts Covered
 | Concept từ Thứ 2-4 | Lab sẽ kiểm chứng bằng gì | Kết quả mong đợi |
 |---|---|---|
-| ... | ... | ... |
+| password hashing | Implement code liên quan đến password hashing | Vận dụng được password hashing |
+| JWT mock | Implement code liên quan đến JWT mock | Vận dụng được JWT mock |
+| rate limit idea | Implement code liên quan đến rate limit idea | Vận dụng được rate limit idea |
+| queue/cache/logging simulation | Implement code liên quan đến queue/cache/logging simulation | Vận dụng được queue/cache/logging simulation |
 
 ## 3. Lab Steps
-1. ...
-2. ...
-3. ...
+1. Implement và test tính năng password hashing.
+2. Implement và test tính năng JWT mock.
+3. Implement và test tính năng rate limit idea.
+4. Implement và test tính năng queue/cache/logging simulation.
 
 ## 4. Evidence
 - Command/curl/log:

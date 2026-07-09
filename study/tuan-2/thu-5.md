@@ -18,12 +18,12 @@
 ## 2. Concepts Covered
 | Concept từ Thứ 2-4 | Lab sẽ kiểm chứng bằng gì | Kết quả mong đợi |
 |---|---|---|
-| ... | ... | ... |
+| viết domain mini models | Implement code liên quan đến viết domain mini models | Vận dụng được viết domain mini models |
+| validation rules và error handling không dùng framework | Implement code liên quan đến validation rules và error handling không dùng framework | Vận dụng được validation rules và error handling không dùng framework |
 
 ## 3. Lab Steps
-1. ...
-2. ...
-3. ...
+1. Implement và test tính năng viết domain mini models.
+2. Implement và test tính năng validation rules và error handling không dùng framework.
 
 ## 4. Evidence
 - Command/curl/log:

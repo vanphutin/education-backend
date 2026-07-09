@@ -28,6 +28,10 @@ Mục tiêu không phải trở thành Senior sau 10 tuần. Mục tiêu là có
 * [Tuần 9 - Observability, monitoring mindset, resilience và deployment](lo-trinh/tuan-9.md)
 * [Tuần 10 - System design capstone, final evidence và mock interview](lo-trinh/tuan-10.md)
 
+## Nhịp học và lab ngoài
+
+* [Nhịp học, Definition of Done mỗi ngày và nguồn lab ngoài](huong-dan/nhip-hoc-va-lab-ngoai.md)
+
 ## Nguyên tắc bắt buộc
 
 - Tuần 1-3 không code, scaffold hoặc deliver Movie Ticket Booking; chỉ học sâu và làm mini labs.

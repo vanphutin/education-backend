@@ -13,17 +13,17 @@
 
 ## 1. Lab Goal
 - Mini lab này kiểm chứng kiến thức đã học trong Thứ 2-4.
-- Không code dự án Movie Ticket Booking.
+.
 
 ## 2. Concepts Covered
 | Concept từ Thứ 2-4 | Lab sẽ kiểm chứng bằng gì | Kết quả mong đợi |
 |---|---|---|
-| ... | ... | ... |
+| module/controller/service/provider mini app | Implement code liên quan đến module/controller/service/provider mini app | Vận dụng được module/controller/service/provider mini app |
+| chỉ để hiểu framework như công cụ | Implement code liên quan đến chỉ để hiểu framework như công cụ | Vận dụng được chỉ để hiểu framework như công cụ |
 
 ## 3. Lab Steps
-1. ...
-2. ...
-3. ...
+1. Implement và test tính năng module/controller/service/provider mini app.
+2. Implement và test tính năng chỉ để hiểu framework như công cụ.
 
 ## 4. Evidence
 - Command/curl/log:

@@ -19,7 +19,10 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| EXPLAIN | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến EXPLAIN |
+| composite index | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến composite index |
+| N+1 | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến N+1 |
+| query builder tradeoff | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến query builder tradeoff |
 
 ## 3. Lab / Design Exercise
 - Goal:

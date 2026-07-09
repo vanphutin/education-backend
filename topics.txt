@@ -1,0 +1,15 @@
+Tuần 1 Thứ 2: Backend mindset: framework là công cụ, backend là protocol + data + failure handling
+Tuần 1 Thứ 3: Internet fundamentals: DNS, TCP/IP, TLS, latency, timeout, request lifecycle
+Tuần 1 Thứ 4: HTTP/API fundamentals: method, status code, headers, body, cookie, cache, CORS, REST constraints
+Tuần 1 Thứ 5: HTTP lab: dùng curl/Postman mô phỏng request lifecycle, headers, status code, timeout và CORS
+Tuần 1 Thứ 6-7: API design lab: thiết kế API contract nhỏ, idempotency, pagination, filtering và error response
+Tuần 2 Thứ 2: TypeScript foundation: type, interface, class, generic, error typing, runtime vs compile time
+Tuần 2 Thứ 3: OOP for backend: encapsulation, composition over inheritance, polymorphism, value object mindset
+Tuần 2 Thứ 4: Dependency Injection and modular design: why DI exists, dependency direction, testability
+Tuần 2 Thứ 5: TypeScript/OOP lab: viết domain mini models, validation rules và error handling không dùng framework
+Tuần 2 Thứ 6-7: NestJS mental model lab: module/controller/service/provider mini app, chỉ để hiểu framework như công cụ
+Tuần 3 Thứ 2: SQL and data modeling: table, relation, normalization, constraints, migration mindset
+Tuần 3 Thứ 3: Database performance and consistency: index, query plan, transaction, isolation, locking, N+1
+Tuần 3 Thứ 4: Security and production primitives: auth/authz, password hashing, token, cache, queue, logging, monitoring, deployment
+Tuần 3 Thứ 5: Database lab: schema nhỏ, constraints, indexes, EXPLAIN, transaction rollback và lock behavior
+Tuần 3 Thứ 6-7: Security/production lab: password hashing, JWT mock, rate limit idea, queue/cache/logging simulation

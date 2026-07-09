@@ -19,7 +19,9 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| query review | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến query review |
+| basic load test | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến basic load test |
+| bottleneck analysis | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến bottleneck analysis |
 
 ## 3. Lab / Design Exercise
 - Goal:

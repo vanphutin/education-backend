@@ -19,7 +19,11 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| validation | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến validation |
+| secrets | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến secrets |
+| CORS | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến CORS |
+| rate limit | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến rate limit |
+| sensitive logging | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến sensitive logging |
 
 ## 3. Lab / Design Exercise
 - Goal:

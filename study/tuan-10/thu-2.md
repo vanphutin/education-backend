@@ -19,7 +19,12 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| requirement | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến requirement |
+| API | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến API |
+| DB | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến DB |
+| state | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến state |
+| scale | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến scale |
+| failure modes | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến failure modes |
 
 ## 3. Lab / Design Exercise
 - Goal:

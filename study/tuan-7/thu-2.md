@@ -19,7 +19,11 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| seat hold | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến seat hold |
+| booking | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến booking |
+| payment | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến payment |
+| ticket | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến ticket |
+| check-in transitions | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến check-in transitions |
 
 ## 3. Lab / Design Exercise
 - Goal:

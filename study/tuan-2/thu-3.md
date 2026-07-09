@@ -19,13 +19,26 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| encapsulation | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến encapsulation |
+| composition over inheritance | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến composition over inheritance |
+| polymorphism | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến polymorphism |
+| value object mindset | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến value object mindset |
 
 ## 3. Common Mistakes
-- ...
+- Hiểu sai hoặc lạm dụng encapsulation
+- Thiếu error handling cho encapsulation
+- Hiểu sai hoặc lạm dụng composition over inheritance
+- Thiếu error handling cho composition over inheritance
+- Hiểu sai hoặc lạm dụng polymorphism
+- Thiếu error handling cho polymorphism
+- Hiểu sai hoặc lạm dụng value object mindset
+- Thiếu error handling cho value object mindset
 
 ## 4. Notes
-- ...
+- Tìm hiểu thêm best practices về encapsulation
+- Tìm hiểu thêm best practices về composition over inheritance
+- Tìm hiểu thêm best practices về polymorphism
+- Tìm hiểu thêm best practices về value object mindset
 
 ## 5. Mini Lab Preparation
 - Thứ 5-7 sẽ kiểm chứng concept này bằng lab nào?

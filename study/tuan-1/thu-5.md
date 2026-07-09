@@ -13,17 +13,21 @@
 
 ## 1. Lab Goal
 - Mini lab này kiểm chứng kiến thức đã học trong Thứ 2-4.
-- Không code dự án Movie Ticket Booking.
+.
 
 ## 2. Concepts Covered
 | Concept từ Thứ 2-4 | Lab sẽ kiểm chứng bằng gì | Kết quả mong đợi |
 |---|---|---|
-| ... | ... | ... |
+| dùng curl/Postman mô phỏng request lifecycle | Implement code liên quan đến dùng curl/Postman mô phỏng request lifecycle | Vận dụng được dùng curl/Postman mô phỏng request lifecycle |
+| headers | Implement code liên quan đến headers | Vận dụng được headers |
+| status code | Implement code liên quan đến status code | Vận dụng được status code |
+| timeout và CORS | Implement code liên quan đến timeout và CORS | Vận dụng được timeout và CORS |
 
 ## 3. Lab Steps
-1. ...
-2. ...
-3. ...
+1. Implement và test tính năng dùng curl/Postman mô phỏng request lifecycle.
+2. Implement và test tính năng headers.
+3. Implement và test tính năng status code.
+4. Implement và test tính năng timeout và CORS.
 
 ## 4. Evidence
 - Command/curl/log:

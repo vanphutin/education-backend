@@ -19,7 +19,10 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| validation | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến validation |
+| exception filter | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến exception filter |
+| interceptor | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến interceptor |
+| logging | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến logging |
 
 ## 3. Lab / Design Exercise
 - Goal:

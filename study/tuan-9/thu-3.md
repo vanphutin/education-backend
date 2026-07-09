@@ -19,7 +19,11 @@
 ## 2. Core Concepts
 | Concept | Giải thích bằng lời của tôi | Backend problem nó giải quyết |
 |---|---|---|
-| ... | ... | ... |
+| timeout | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến timeout |
+| retry policy | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến retry policy |
+| rate limit | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến rate limit |
+| graceful shutdown | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến graceful shutdown |
+| failure simulation | (Viết tóm tắt tại đây) | Giải quyết vấn đề liên quan đến failure simulation |
 
 ## 3. Lab / Design Exercise
 - Goal:
