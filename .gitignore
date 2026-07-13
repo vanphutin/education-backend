@@ -2,6 +2,7 @@
 node_modules/
 tracker-app/
 tracker-app-legacy/
+tien-do-hoc-tap/
 # Local env files
 .env
 .env.local
