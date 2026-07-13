@@ -20,6 +20,26 @@ describe('AppController (e2e)', () => {
     return request(app.getHttpServer())
       .get('/')
       .expect(200)
-      .expect('Hello World!');
+      .expect(({ body }) => {
+        expect(body.status).toBe('ok');
+        expect(new Date(body.checkedAt).toISOString()).toBe(body.checkedAt);
+      });
+  });
+
+  it('/users (GET) returns transport DTOs', () => {
+    return request(app.getHttpServer()).get('/users').expect(200).expect([
+      { id: 1, displayName: 'Alice' },
+      { id: 2, displayName: 'Bob' },
+    ]);
+  });
+
+  it('/users/:id maps typed not-found to a safe 404 contract', async () => {
+    const response = await request(app.getHttpServer()).get('/users/999').expect(404);
+    expect(response.body).toEqual({ error: { code: 'USER_NOT_FOUND', message: 'User not found' } });
+    expect(JSON.stringify(response.body)).not.toContain('stack');
+  });
+
+  afterEach(async () => {
+    await app.close();
   });
 });

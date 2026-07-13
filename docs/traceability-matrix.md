@@ -22,35 +22,49 @@ Traceability for the 10-week high-intensity roadmap. Weeks 1-3 do not start the 
 | 4 | Project Delivery | Mon | Project Delivery: Review foundation: API contract, request lifecycle, validation and error principles | #16 | PENDING | [study/tuan-4/thu-2.md](../study/tuan-4/thu-2.md) |
 | 4 | Project Delivery | Tue | Project Delivery: NestJS implementation patterns: module/controller/service/DTO, common module | #17 | PENDING | [study/tuan-4/thu-3.md](../study/tuan-4/thu-3.md) |
 | 4 | Project Delivery | Wed | Project Delivery: Request pipeline implementation plan: validation, exception filter, interceptor, logging | #18 | PENDING | [study/tuan-4/thu-4.md](../study/tuan-4/thu-4.md) |
-| 4 | Project Delivery | Thu | Project Delivery: Map public catalog into project: movies, cinemas, showtimes, seats API contract | #19 | PENDING | [study/tuan-4/thu-5.md](../study/tuan-4/thu-5.md) |
-| 4 | Project Delivery | Fri-Sat | Project Delivery: Implement API skeleton, public catalog, Swagger, validation/error/logging evidence | #20 | PENDING | [study/tuan-4/thu-6-7.md](../study/tuan-4/thu-6-7.md) |
+| 4 | Project Delivery | Thu | Project Delivery: Map public catalog through Gateway → Catalog Service | #19 | PENDING | [study/tuan-4/thu-5.md](../study/tuan-4/thu-5.md) |
+| 4 | Project Delivery | Fri-Sat | Project Delivery: Implement Gateway + Catalog Service public vertical slice | #20 | PENDING | [study/tuan-4/thu-6-7.md](../study/tuan-4/thu-6-7.md) |
 | 5 | Project Delivery | Mon | Project Delivery: Schema refinement: movie/cinema/screen/seat/showtime relations and constraints | #21 | PENDING | [study/tuan-5/thu-2.md](../study/tuan-5/thu-2.md) |
 | 5 | Project Delivery | Tue | Project Delivery: Migration and seed strategy: clean DB, idempotent seed, production safety | #22 | PENDING | [study/tuan-5/thu-3.md](../study/tuan-5/thu-3.md) |
 | 5 | Project Delivery | Wed | Project Delivery: Index/query review: EXPLAIN, composite index, N+1, query builder tradeoff | #23 | PENDING | [study/tuan-5/thu-4.md](../study/tuan-5/thu-4.md) |
-| 5 | Project Delivery | Thu | Project Delivery: Map DB into project APIs and admin workflows | #24 | PENDING | [study/tuan-5/thu-5.md](../study/tuan-5/thu-5.md) |
-| 5 | Project Delivery | Fri-Sat | Project Delivery: Implement migrations/entities/seeds, public queries and query-plan evidence | #25 | PENDING | [study/tuan-5/thu-6-7.md](../study/tuan-5/thu-6-7.md) |
+| 5 | Project Delivery | Thu | Project Delivery: Map Catalog DB into Gateway APIs and showtime event contract | #24 | PENDING | [study/tuan-5/thu-5.md](../study/tuan-5/thu-5.md) |
+| 5 | Project Delivery | Fri-Sat | Project Delivery: Implement Catalog migrations, queries, outbox and query-plan evidence | #25 | PENDING | [study/tuan-5/thu-6-7.md](../study/tuan-5/thu-6-7.md) |
 | 6 | Project Delivery | Mon | Project Delivery: Auth deep dive: password hashing, token lifecycle, session/logout strategy | #26 | PENDING | [study/tuan-6/thu-2.md](../study/tuan-6/thu-2.md) |
 | 6 | Project Delivery | Tue | Project Delivery: Authorization design: RBAC, permission matrix, least privilege, guard/decorator | #27 | PENDING | [study/tuan-6/thu-3.md](../study/tuan-6/thu-3.md) |
 | 6 | Project Delivery | Wed | Project Delivery: Security hardening: validation, secrets, CORS, rate limit, sensitive logging | #28 | PENDING | [study/tuan-6/thu-4.md](../study/tuan-6/thu-4.md) |
-| 6 | Project Delivery | Thu | Project Delivery: Map auth/RBAC into Movie Ticket Booking actors and protected APIs | #29 | PENDING | [study/tuan-6/thu-5.md](../study/tuan-6/thu-5.md) |
-| 6 | Project Delivery | Fri-Sat | Project Delivery: Implement auth, RBAC, protected APIs and security evidence | #30 | PENDING | [study/tuan-6/thu-6-7.md](../study/tuan-6/thu-6-7.md) |
+| 6 | Project Delivery | Thu | Project Delivery: Map Identity → Gateway → service auth/RBAC boundaries | #29 | PENDING | [study/tuan-6/thu-5.md](../study/tuan-6/thu-5.md) |
+| 6 | Project Delivery | Fri-Sat | Project Delivery: Implement Identity Service, Gateway auth context and protected APIs | #30 | PENDING | [study/tuan-6/thu-6-7.md](../study/tuan-6/thu-6-7.md) |
 | 7 | Project Delivery | Mon | Project Delivery: State machine: seat hold, booking, payment, ticket, check-in transitions | #31 | PENDING | [study/tuan-7/thu-2.md](../study/tuan-7/thu-2.md) |
 | 7 | Project Delivery | Tue | Project Delivery: Concurrency deep dive: race condition, row lock, isolation, deadlock, retry | #32 | PENDING | [study/tuan-7/thu-3.md](../study/tuan-7/thu-3.md) |
 | 7 | Project Delivery | Wed | Project Delivery: Idempotency: duplicate request, client retry, webhook replay, unique key strategy | #33 | PENDING | [study/tuan-7/thu-4.md](../study/tuan-7/thu-4.md) |
-| 7 | Project Delivery | Thu | Project Delivery: Map critical flow into DB/API/service transaction boundary | #34 | PENDING | [study/tuan-7/thu-5.md](../study/tuan-7/thu-5.md) |
-| 7 | Project Delivery | Fri-Sat | Project Delivery: Implement seat hold, booking, ticket, check-in and race/idempotency evidence | #35 | PENDING | [study/tuan-7/thu-6-7.md](../study/tuan-7/thu-6-7.md) |
+| 7 | Project Delivery | Thu | Project Delivery: Map Catalog event → Booking DB/API/local transaction boundary | #34 | PENDING | [study/tuan-7/thu-5.md](../study/tuan-7/thu-5.md) |
+| 7 | Project Delivery | Fri-Sat | Project Delivery: Implement Booking Service, seat hold/ticket and race/idempotency evidence | #35 | PENDING | [study/tuan-7/thu-6-7.md](../study/tuan-7/thu-6-7.md) |
 | 8 | Project Delivery | Mon | Project Delivery: Cache deep dive: TTL, invalidation, cache-aside, stale data, when not to cache | #36 | PENDING | [study/tuan-8/thu-2.md](../study/tuan-8/thu-2.md) |
 | 8 | Project Delivery | Tue | Project Delivery: Queue/job deep dive: BullMQ, retry, timeout, delayed jobs, idempotent handlers | #37 | PENDING | [study/tuan-8/thu-3.md](../study/tuan-8/thu-3.md) |
 | 8 | Project Delivery | Wed | Project Delivery: Integration/AI: payment webhook, provider abstraction, embeddings, pgvector, mock provider | #38 | PENDING | [study/tuan-8/thu-4.md](../study/tuan-8/thu-4.md) |
-| 8 | Project Delivery | Thu | Project Delivery: Map cache/jobs/payment/semantic search into Movie Ticket Booking safely | #39 | PENDING | [study/tuan-8/thu-5.md](../study/tuan-8/thu-5.md) |
-| 8 | Project Delivery | Fri-Sat | Project Delivery: Implement expiry jobs, webhook replay safety, cache/search slice and integration logs | #40 | PENDING | [study/tuan-8/thu-6-7.md](../study/tuan-8/thu-6-7.md) |
+| 8 | Project Delivery | Thu | Project Delivery: Map service events, worker/payment/cache/search boundaries safely | #39 | PENDING | [study/tuan-8/thu-5.md](../study/tuan-8/thu-5.md) |
+| 8 | Project Delivery | Fri-Sat | Project Delivery: Implement outbox relay, expiry/webhook safety, service-local cache and optional search | #40 | PENDING | [study/tuan-8/thu-6-7.md](../study/tuan-8/thu-6-7.md) |
 | 9 | Project Delivery | Mon | Project Delivery: Observability: structured logs, request id, user id, latency, metrics/tracing mindset | #41 | PENDING | [study/tuan-9/thu-2.md](../study/tuan-9/thu-2.md) |
 | 9 | Project Delivery | Tue | Project Delivery: Resilience: timeout, retry policy, rate limit, graceful shutdown, failure simulation | #42 | PENDING | [study/tuan-9/thu-3.md](../study/tuan-9/thu-3.md) |
 | 9 | Project Delivery | Wed | Project Delivery: Deployment: Docker, env config, secrets, migrations, health/readiness, rollback | #43 | PENDING | [study/tuan-9/thu-4.md](../study/tuan-9/thu-4.md) |
-| 9 | Project Delivery | Thu | Project Delivery: Map operational concerns into Movie Ticket Booking release | #44 | PENDING | [study/tuan-9/thu-5.md](../study/tuan-9/thu-5.md) |
-| 9 | Project Delivery | Fri-Sat | Project Delivery: Implement hardening, health checks, deploy docs, smoke tests and runbook | #45 | PENDING | [study/tuan-9/thu-6-7.md](../study/tuan-9/thu-6-7.md) |
+| 9 | Project Delivery | Thu | Project Delivery: Map operational concerns into Gateway/Identity/Catalog/Booking/Worker release | #44 | PENDING | [study/tuan-9/thu-5.md](../study/tuan-9/thu-5.md) |
+| 9 | Project Delivery | Fri-Sat | Project Delivery: Implement service hardening, health/trace smoke tests and runbooks | #45 | PENDING | [study/tuan-9/thu-6-7.md](../study/tuan-9/thu-6-7.md) |
 | 10 | Capstone | Mon | Capstone: System design review: requirement, API, DB, state, scale, failure modes | #46 | PENDING | [study/tuan-10/thu-2.md](../study/tuan-10/thu-2.md) |
 | 10 | Capstone | Tue | Capstone: Performance/load sanity: query review, basic load test, bottleneck analysis | #47 | PENDING | [study/tuan-10/thu-3.md](../study/tuan-10/thu-3.md) |
 | 10 | Capstone | Wed | Capstone: Interview deep dive: HTTP, DB, transaction, auth, cache, queue, deploy, system design | #48 | PENDING | [study/tuan-10/thu-4.md](../study/tuan-10/thu-4.md) |
-| 10 | Capstone | Thu | Capstone: Final evidence gap closure, release note and demo route | #49 | PENDING | [study/tuan-10/thu-5.md](../study/tuan-10/thu-5.md) |
-| 10 | Capstone | Fri-Sat | Capstone: Final regression, demo, mock interview and mentor review | #50 | PENDING | [study/tuan-10/thu-6-7.md](../study/tuan-10/thu-6-7.md) |
+| 10 | Capstone | Thu | Capstone: Final service topology/evidence closure, release note and demo route | #49 | PENDING | [study/tuan-10/thu-5.md](../study/tuan-10/thu-5.md) |
+| 10 | Capstone | Fri-Sat | Capstone: Cross-service regression, failure drill, demo and mock interview | #50 | PENDING | [study/tuan-10/thu-6-7.md](../study/tuan-10/thu-6-7.md) |
+
+## Job-ready executable gates
+
+| Week | Playbook | Executable precursor | Project evidence required |
+|---:|---|---|---|
+| 4 | [Daily workspace](../study/tuan-4/README.md) | [Gateway–Catalog lab](../labs/tuan-4/gateway-catalog/README.md) | Cross-process e2e, 503/504, request ID, OpenAPI |
+| 5 | [PostgreSQL ownership](../study/tuan-5/job-ready-playbook.md) | `project-delivery` week-5 tests | PostgreSQL migration/integration, EXPLAIN/N+1 |
+| 6 | [Identity/security](../study/tuan-6/job-ready-playbook.md) | `project-delivery` week-6 tests | Rotation/replay, RBAC/IDOR deny tests |
+| 7 | [Booking consistency](../study/tuan-7/job-ready-playbook.md) | `project-delivery` week-7 tests | Database concurrency, exactly-one-winner, idempotency |
+| 8 | [Reliable async](../study/tuan-8/job-ready-playbook.md) | `project-delivery` week-8 tests | Outbox crash recovery, inbox/DLQ/webhook replay |
+| 9 | [Operability](../study/tuan-9/job-ready-playbook.md) | `project-delivery` week-9 tests | CI, correlated signals, shutdown/failure smoke |
+| 10 | [Capstone/hiring](../study/tuan-10/job-ready-playbook.md) | `project-delivery` week-10 tests | k6 budget, regression, demo, portfolio/mock interview |
+
+Shared executable harness: [`labs/project-delivery`](../labs/project-delivery/README.md). Precursor tests chỉ chứng minh mental model; project evidence vẫn bắt buộc.

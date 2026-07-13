@@ -45,7 +45,7 @@ Nhịp chính: tuần 1-3 chưa bắt đầu dự án thật; Thứ 2-4 học ch
 
 **Mode:** Thứ 2-4 học chuyên sâu. Thứ 5-7 làm mini labs từ kiến thức Thứ 2-4. Chưa bắt đầu dự án thật.
 
-**Focus:** SQL modeling, constraints, indexes, transaction, auth/authz, cache/queue/logging/security/deploy overview.
+**Focus:** SQL modeling, constraints, transaction, auth/authz, queue/outbox, observability và microservice boundary/data ownership foundation.
 
 **Outputs**
 - [ ] SQL/DB notes
@@ -53,33 +53,35 @@ Nhịp chính: tuần 1-3 chưa bắt đầu dự án thật; Thứ 2-4 học ch
 - [ ] Transaction/lock lab
 - [ ] Security mini lab
 - [ ] Production primitives lab notes
+- [ ] Service ownership/context map trước tuần 4
 
 ---
 
-## Tuần 4: Project kickoff: API skeleton, public catalog và request pipeline
+## Tuần 4: Microservice kickoff: Gateway, Catalog Service và request pipeline
 
 **Phase:** Project Delivery
 
 **Mode:** Học mới buổi đầu tuần, áp dụng ngay vào project cuối tuần.
 
-**Focus:** NestJS project setup, public APIs, validation, error contract, pagination, request id, Swagger.
+**Focus:** Monorepo/Compose, API Gateway, Catalog Service, service ownership, public APIs, validation, error/timeout contract, request/trace ID, Swagger.
 
 **Outputs**
-- [ ] Running NestJS app
-- [ ] Public catalog API
+- [ ] Running Gateway + Catalog Service
+- [ ] Public catalog API through Gateway
+- [ ] Service ownership/Compose diagram
 - [ ] Swagger
 - [ ] Error contract
 - [ ] curl/log evidence
 
 ---
 
-## Tuần 5: PostgreSQL implementation, migrations, indexes và query review
+## Tuần 5: Catalog database ownership, migrations, indexes và event publication
 
 **Phase:** Project Delivery
 
 **Mode:** DB theory nâng cao + implement schema thật.
 
-**Focus:** Entities, migrations, seed, ERD, constraints, index strategy, EXPLAIN, N+1 prevention.
+**Focus:** `catalog_db` entities/migrations/seed, constraints/index/EXPLAIN, Catalog outbox and showtime event contract.
 
 **Outputs**
 - [ ] ERD
@@ -87,16 +89,17 @@ Nhịp chính: tuần 1-3 chưa bắt đầu dự án thật; Thứ 2-4 học ch
 - [ ] Seed data
 - [ ] Index notes
 - [ ] EXPLAIN evidence
+- [ ] Catalog outbox/event evidence
 
 ---
 
-## Tuần 6: Authentication, authorization, RBAC và security hardening
+## Tuần 6: Identity Service, Gateway auth context, RBAC và security hardening
 
 **Phase:** Project Delivery
 
 **Mode:** Security theory + implement auth boundary.
 
-**Focus:** Register/login, password hashing, JWT/refresh token, RBAC, guards, decorators, security baseline.
+**Focus:** Identity ownership, password/JWT/refresh lifecycle, RBAC, Gateway actor context, downstream authorization and service trust.
 
 **Outputs**
 - [ ] Auth flow
@@ -104,16 +107,17 @@ Nhịp chính: tuần 1-3 chưa bắt đầu dự án thật; Thứ 2-4 học ch
 - [ ] Security checklist
 - [ ] Deny tests
 - [ ] curl evidence
+- [ ] Gateway-to-service auth contract
 
 ---
 
-## Tuần 7: Critical consistency: seat hold, booking, ticket và idempotency
+## Tuần 7: Booking Service critical consistency: seat hold, ticket và idempotency
 
 **Phase:** Project Delivery
 
 **Mode:** Transaction/concurrency theory + implement critical flow.
 
-**Focus:** State machine, transaction boundary, SELECT FOR UPDATE, unique constraints, idempotency, race tests.
+**Focus:** Booking-owned seat snapshot, local transaction/lock/constraints, Catalog event consumer, idempotency and race tests.
 
 **Outputs**
 - [ ] State diagrams
@@ -121,33 +125,35 @@ Nhịp chính: tuần 1-3 chưa bắt đầu dự án thật; Thứ 2-4 học ch
 - [ ] Race test/logs
 - [ ] E2E flow
 - [ ] Audit logs
+- [ ] Catalog-event → Booking snapshot evidence
 
 ---
 
-## Tuần 8: Cache, queue, payment/webhook integration và semantic search
+## Tuần 8: Outbox/worker, payment/webhook, cache và semantic search optional
 
 **Phase:** Project Delivery
 
 **Mode:** Async/integration theory + implement selected production features.
 
-**Focus:** Redis cache, BullMQ jobs, retry/timeout, payment provider abstraction, webhook idempotency, semantic search.
+**Focus:** Outbox relay/inbox, worker retry/DLQ, payment provider/webhook, service-local cache; Catalog semantic search only if core is stable.
 
 **Outputs**
 - [ ] Cache strategy
 - [ ] Job design
 - [ ] Webhook replay evidence
-- [ ] Semantic search docs
+- [ ] Optional semantic search docs
+- [ ] Outbox/inbox/DLQ evidence
 - [ ] Integration logs
 
 ---
 
-## Tuần 9: Observability, monitoring mindset, resilience và deployment
+## Tuần 9: Microservice observability, resilience và deployment
 
 **Phase:** Project Delivery
 
 **Mode:** Operations theory + harden/deploy project.
 
-**Focus:** Structured logging, correlation id, health/readiness, timeout/retry, rate limit, Docker/CI, deploy guide, runbook.
+**Focus:** Cross-service logs/traces/event IDs, per-service health/readiness, timeout/retry owner, Compose/CI, deployment order and runbook.
 
 **Outputs**
 - [ ] Log schema
@@ -155,16 +161,17 @@ Nhịp chính: tuần 1-3 chưa bắt đầu dự án thật; Thứ 2-4 học ch
 - [ ] Rate limit/timeout policy
 - [ ] Deploy guide
 - [ ] Runbook evidence
+- [ ] Cross-service trace/smoke evidence
 
 ---
 
-## Tuần 10: System design capstone, final evidence và mock interview
+## Tuần 10: Distributed system capstone, final evidence và mock interview
 
 **Phase:** Capstone
 
 **Mode:** Final synthesis at maximum intensity.
 
-**Focus:** System design doc, final README, ERD/state diagrams, test/evidence pack, load sanity, release notes, mock interview.
+**Focus:** Service context/data ownership/API-event contracts, distributed failure/load evidence, release compatibility and mock interview.
 
 **Outputs**
 - [ ] System design doc
@@ -172,3 +179,4 @@ Nhịp chính: tuần 1-3 chưa bắt đầu dự án thật; Thứ 2-4 học ch
 - [ ] Evidence pack
 - [ ] Release notes
 - [ ] Mock interview answers
+- [ ] Service topology and trade-off defense

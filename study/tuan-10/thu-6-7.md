@@ -1,4 +1,4 @@
-# Project Delivery Ticket: Final regression, demo, mock interview and mentor review
+# Project Delivery Ticket: Cross-service regression, failure drill, demo and mock interview
 
 - **Tuần**: 10
 - **Ngày**: Thứ 6-7
@@ -10,6 +10,11 @@
 - **Cơ bản/Trung bình:** [AWS Well-Architected Reliability Pillar](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html)
 - **Nâng cao:** [Google SRE Book - Postmortem Culture](https://sre.google/sre-book/postmortem-culture/)
 
+## Microservice Scope
+
+- Regression includes Gateway routing, Identity auth, Catalog read/event, Booking local consistency, Worker replay and a failure drill for one unavailable dependency.
+- Defend why the system has these boundaries, why it does not share a database and which service is deliberately not split further yet.
+- Evidence includes service context, ownership matrix, event envelope/example, trace/log path and runbook result.
 
 ## 1. Business Scenario
 - Actor:
@@ -52,4 +57,3 @@
 - Question: Nếu scale 10x thì nghẽn ở đâu?
 - My answer:
   - ...
-

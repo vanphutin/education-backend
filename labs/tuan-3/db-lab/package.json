@@ -1,0 +1,16 @@
+{
+  "name": "week-3-postgresql-typescript-lab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lab": "tsx src/run-lab.ts"
+  },
+  "dependencies": { "pg": "^8.16.0" },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.15.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

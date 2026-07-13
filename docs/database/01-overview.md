@@ -4,13 +4,12 @@
 
 ## 1.1. Database Purpose
 
-PostgreSQL phục vụ làm **single source of truth** cho toàn bộ dữ liệu nghiệp vụ của hệ thống đặt vé xem phim:
+Không có PostgreSQL **single source of truth toàn hệ thống**. Mỗi service có database/schema/credential riêng; PostgreSQL là source of truth **trong boundary của service đó**:
 
-- **Transactional data:** Booking, payment, ticket — yêu cầu ACID đầy đủ.
-- **Inventory data:** Showtime seats — yêu cầu consistency tuyệt đối (không bán trùng ghế).
-- **Catalog data:** Movies, cinemas, screens — read-heavy, cần index tốt.
-- **Audit data:** Audit logs, integration logs — append-only, query by time range.
-- **AI data:** Vector embeddings — yêu cầu pgvector extension cho similarity search.
+- **`booking_db`:** Booking, payment, ticket, showtime-seat snapshot — ACID/local consistency chống bán trùng ghế.
+- **`catalog_db`:** Movies, cinemas, screens, showtimes, catalog audit và embedding documents — read-heavy, cần index tốt.
+- **`identity_db`:** Users, roles, refresh sessions/credentials.
+- **Outbox/inbox:** thuộc database của producer/consumer; event đồng bộ giữa service theo at-least-once semantics.
 
 ---
 
@@ -19,10 +18,10 @@ PostgreSQL phục vụ làm **single source of truth** cho toàn bộ dữ liệ
 | Thuộc tính | Giá trị |
 |---|---|
 | Engine | PostgreSQL 16+ |
-| Extension bắt buộc | `pgvector` (cho semantic search), `uuid-ossp` hoặc `gen_random_uuid()` |
+| Extension | `pgvector` chỉ bắt buộc cho `catalog_db` nếu semantic search stretch được triển khai; UUID dùng `gen_random_uuid()` |
 | Character set | UTF-8 |
 | Timezone | UTC (tất cả timestamp lưu UTC, application convert khi cần) |
-| Connection pool | Qua TypeORM/Prisma built-in pool (max 10-20 connections cho dev) |
+| Connection pool | Mỗi service có pool budget riêng; tổng pool không vượt khả năng Postgres/Compose dev |
 
 ---
 
@@ -30,16 +29,16 @@ PostgreSQL phục vụ làm **single source of truth** cho toàn bộ dữ liệ
 
 | Flow | Tables chính | Transaction required |
 |------|-------------|:---:|
-| Guest duyệt phim/rạp/suất chiếu | movies, cinemas, screens, showtimes, showtime_seats | Không |
-| Customer đăng ký/đăng nhập | users, roles, refresh_tokens | Có (register) |
-| Customer giữ ghế | showtime_seats, seat_holds | **Có (critical)** |
-| Customer tạo booking | bookings, booking_seats, seat_holds | **Có (critical)** |
-| Payment confirmation (webhook) | payments, bookings, showtime_seats, tickets | **Có (critical)** |
+| Guest duyệt phim/rạp/suất chiếu | Catalog Service → `catalog_db` | Không |
+| Customer đăng ký/đăng nhập | Identity Service → `identity_db` | Có (register) |
+| Customer giữ ghế | Booking Service → `booking_db` showtime-seat snapshot, seat_holds | **Có (critical)** |
+| Customer tạo booking | Booking Service → `booking_db` | **Có (critical)** |
+| Payment confirmation (webhook) | Booking Service local transaction + outbox | **Có (critical)** |
 | Staff check-in vé | tickets | Có |
-| Admin CRUD phim/rạp/suất chiếu | movies, cinemas, screens, seats, showtimes, showtime_seats | Có (showtime creation) |
-| AI semantic search | movie_embedding_documents, movies, showtimes | Không |
-| Admin AI content workflow | movie_ai_content_drafts, movies, ai_request_logs | Có (apply) |
-| Background job expire | seat_holds, showtime_seats, bookings, payments | **Có (critical)** |
+| Admin CRUD phim/rạp/suất chiếu | Catalog Service → `catalog_db`; publish event after commit | Có (showtime publish) |
+| AI semantic search | Catalog Service → `catalog_db` | Không |
+| Admin AI content workflow | Catalog Service → `catalog_db` | Có (apply) |
+| Background expiry/payment job | Worker invokes Booking local transaction/event consumer | **Có (critical)** |
 
 ---
 
@@ -54,9 +53,13 @@ Application code có thể có bug. Database constraints **không bao giờ** ch
 - Check constraint chống invalid status transitions.
 - NOT NULL chống missing required data.
 
+Constraint chỉ bảo vệ data trong owner database. Nó không thay thế event contract, inbox/idempotency hoặc authorization boundary giữa service.
+
 ### P2: Migration-first
 
 Mọi thay đổi schema phải thông qua migration file. `synchronize: true` chỉ dùng cho prototyping giai đoạn rất đầu.
+
+Mỗi migration có owner service; không tạo migration “toàn hệ thống”. Thay đổi event/schema phải additive-first và có compatibility plan khi producer/consumer deploy lệch phiên bản.
 
 ### P3: Explicit over implicit
 

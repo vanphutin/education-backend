@@ -17,16 +17,16 @@ Khóa này cố tình đi ngược thói quen "mở framework lên rồi code CR
 
 | Tuần | Giai đoạn | Chủ đề | Trọng tâm |
 |---:|---|---|---|
-| 1 | Core Theory + Mini Labs | Backend mindset, Internet, HTTP và API fundamentals | Backend mindset, client-server, DNS/TCP/TLS, HTTP, REST, status code, headers, cookies, CORS, API contract. |
-| 2 | Core Theory + Mini Labs | TypeScript/OOP, NestJS mental model và backend code organization | TypeScript type system, OOP, composition, dependency injection, module boundary, controller/service/repository responsibility. |
-| 3 | Deep Foundation + Mini Labs | Database, security, transaction và production thinking foundation | SQL modeling, constraints, indexes, transaction, auth/authz, cache/queue/logging/security/deploy overview. |
-| 4 | Project Delivery | Project kickoff: API skeleton, public catalog và request pipeline | NestJS project setup, public APIs, validation, error contract, pagination, request id, Swagger. |
-| 5 | Project Delivery | PostgreSQL implementation, migrations, indexes và query review | Entities, migrations, seed, ERD, constraints, index strategy, EXPLAIN, N+1 prevention. |
-| 6 | Project Delivery | Authentication, authorization, RBAC và security hardening | Register/login, password hashing, JWT/refresh token, RBAC, guards, decorators, security baseline. |
-| 7 | Project Delivery | Critical consistency: seat hold, booking, ticket và idempotency | State machine, transaction boundary, SELECT FOR UPDATE, unique constraints, idempotency, race tests. |
-| 8 | Project Delivery | Cache, queue, payment/webhook integration và semantic search | Redis cache, BullMQ jobs, retry/timeout, payment provider abstraction, webhook idempotency, semantic search. |
-| 9 | Project Delivery | Observability, monitoring mindset, resilience và deployment | Structured logging, correlation id, health/readiness, timeout/retry, rate limit, Docker/CI, deploy guide, runbook. |
-| 10 | Capstone | System design capstone, final evidence và mock interview | System design doc, final README, ERD/state diagrams, test/evidence pack, load sanity, release notes, mock interview. |
+| 1 | Core Theory + Mini Labs | Backend mindset, Internet, HTTP và API fundamentals | System/boundary/failure thinking, problem decomposition, client-server, request lifecycle, DNS/TCP/TLS, HTTP semantics và contract-first API. |
+| 2 | Core Theory + Mini Labs | TypeScript/OOP, NestJS mental model và backend code organization | Contract/invariant/state, TypeScript runtime boundary, domain modeling, cohesion/coupling, dependency direction, architecture/pattern reasoning và testing. |
+| 3 | Deep Foundation + Mini Labs | Database, security, transaction và production thinking foundation | Data/invariant modeling, constraints/indexes, transaction/concurrency, threat model, delivery/idempotency, observability và deploy mental model. |
+| 4 | Project Delivery | Gateway, Catalog Service và request pipeline | Monorepo/Compose, service boundary, API Gateway, public catalog contract, validation, request/trace ID, Swagger. |
+| 5 | Project Delivery | Catalog database ownership, migrations, indexes và event publication | Catalog DB only, migrations/seed, ERD, constraints, index strategy, EXPLAIN, outbox `showtime.published`. |
+| 6 | Project Delivery | Identity Service, Gateway auth context và security hardening | Password/token lifecycle, RBAC, service trust, gateway-to-service actor context, security baseline. |
+| 7 | Project Delivery | Booking Service: seat hold, booking, ticket và idempotency | Booking-owned seat snapshot, local transaction, row lock/constraints, idempotency, race tests. |
+| 8 | Project Delivery | Outbox/worker, payment/webhook, cache và semantic search optional | Relay, retries/DLQ, provider adapter, webhook idempotency; Catalog AI/search as optional stretch. |
+| 9 | Project Delivery | Service observability, resilience và deployment | Cross-service logs/traces, health/readiness per service, timeout/retry, Compose/CI, deploy guide, runbook. |
+| 10 | Capstone | Distributed system capstone, final evidence và mock interview | Service boundary/design doc, contract/event evidence, failure/load sanity, release notes, mock interview. |
 
 ## Rule mỗi ngày
 
@@ -35,3 +35,16 @@ Khóa này cố tình đi ngược thói quen "mở framework lên rồi code CR
 - Làm lab nhỏ để kiểm chứng.
 - Tuần 1-3 chỉ ghi "sau này áp dụng vào project ở đâu", không bắt đầu dự án thật.
 - Với 7 tuần cuối, từ tuần 4 đến tuần 10, phải có evidence chạy được hoặc giải thích được.
+
+## Cổng năng lực trước tuần 4
+
+Trước khi bắt đầu project thật, người học phải dùng một bài toán mini độc lập để chứng minh rằng mình có thể:
+
+- phân rã actor, outcome, input/output, assumption, invariant và failure case;
+- vẽ sequence, state, ERD và module/dependency diagram ở mức đơn giản;
+- viết API/error contract và giải thích idempotency, validation, pagination decision;
+- tách pure business rule khỏi I/O/framework và lập unit/integration test matrix;
+- chọn constraint/transaction/concurrency strategy từ invariant cần bảo vệ;
+- so sánh hai phương án và nói rõ trade-off cùng điều kiện khiến quyết định thay đổi.
+
+Checklist và mẫu trả lời chi tiết nằm tại [Tư duy code và mô hình hóa hệ thống](../huong-dan/tu-duy-code-va-mo-hinh.md).

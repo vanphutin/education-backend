@@ -1,4 +1,4 @@
-# Tuần 9 - Observability, monitoring mindset, resilience và deployment
+# Tuần 9 - Microservice observability, resilience và deployment
 
 **Giai đoạn:** Project Delivery  
 **Chế độ học:** Operations theory + harden/deploy project.
@@ -8,33 +8,35 @@
 
 | Hạng mục | Nội dung |
 |---|---|
-| Goal | Project không chỉ chạy local; có cách quan sát, debug, deploy và rollback. |
-| Focus | Structured logging, correlation id, health/readiness, timeout/retry, rate limit, Docker/CI, deploy guide, runbook. |
-| Project rule | Production hardening. |
+| Goal | Mỗi service/worker chạy, quan sát, fail và deploy độc lập được; operator lần theo được một flow xuyên Gateway, service và event. |
+| Focus | Cross-service logs/traces, correlation id, health/readiness per service, timeout/retry/circuit policy, Docker/CI, deployment order, runbook. |
+| Project rule | Không deploy như một process monolith; migration/config/readiness/rollback phải nêu owner và dependency. |
 
 ## 2. Kế hoạch học tập theo ngày
 
 | Ngày | Trọng tâm |
 |---|---|
-| Thứ 2 | Observability: structured logs, request id, user id, latency, metrics/tracing mindset |
-| Thứ 3 | Resilience: timeout, retry policy, rate limit, graceful shutdown, failure simulation |
-| Thứ 4 | Deployment: Docker, env config, secrets, migrations, health/readiness, rollback |
-| Thứ 5 | Map operational concerns into Movie Ticket Booking release |
-| Thứ 6-7 | Implement hardening, health checks, deploy docs, smoke tests and runbook |
+| Thứ 2 | Cross-service observability: request/trace/event ID, service map, logs/metrics/traces and cardinality discipline |
+| Thứ 3 | Resilience: service timeout/retry policy, gateway rate limit, graceful shutdown, dependency/event failure simulation |
+| Thứ 4 | Deployment: Compose, per-service config/secrets/migrations, health/readiness, rollout/rollback compatibility |
+| Thứ 5 | Map operational concerns into Gateway/Identity/Catalog/Booking/Worker release topology |
+| Thứ 6-7 | Implement hardening, health checks, traceable smoke tests, CI matrix and service runbooks |
 
 ## 3. Output bắt buộc
+- Hoàn thành [Job-ready operability playbook](../../study/tuan-9/job-ready-playbook.md) và tests tuần 9 trong [`labs/project-delivery`](../../labs/project-delivery/README.md).
 
-- Log schema
-- Health checks
-- Rate limit/timeout policy
-- Deploy guide
-- Runbook evidence
+- Shared correlation/log schema plus service-specific metrics/traces
+- Health/readiness per Gateway, Identity, Catalog, Booking and Worker
+- Timeout/retry/rate-limit policy with owner/retry budget
+- Compose/CI/deployment order/migration compatibility guide
+- Failure-injection smoke tests and runbook evidence
+- CI clean-checkout, correlated signals, graceful shutdown và rollback compatibility evidence.
 
 ## 4. Interview drill
 
-- Log gì để debug mà không lộ dữ liệu?
-- Retry khi nào nguy hiểm?
-- Readiness khác liveness thế nào?
+- Trace cần đi qua HTTP và event boundary như thế nào?
+- Một service down thì Gateway/worker/consumer degrade hoặc retry ra sao?
+- Readiness của worker khác readiness của HTTP service thế nào?
 
 
 ## Required Reading By Day

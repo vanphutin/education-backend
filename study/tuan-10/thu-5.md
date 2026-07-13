@@ -1,4 +1,4 @@
-# Project Delivery Ticket: Final evidence gap closure, release note and demo route
+# Project Delivery Ticket: Final service topology/evidence closure, release note and demo route
 
 - **Tuần**: 10
 - **Ngày**: Thứ 5
@@ -10,6 +10,11 @@
 - **Cơ bản/Trung bình:** [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 - **Nâng cao:** [GitHub Docs - About Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
 
+## Microservice Scope
+
+- Close gaps for service ownership, HTTP/event contracts, data ownership, replay/idempotency, observability and deployment compatibility.
+- Demo route must identify which service owns each state change and show at least one correlated request/event path.
+- Release note lists service/config/schema/event contract changes and rollback/roll-forward constraints.
 
 ## 1. Business Scenario
 - Actor:
@@ -52,4 +57,3 @@
 - Question: Trình bày project trong 3 phút
 - My answer:
   - ...
-

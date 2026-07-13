@@ -425,7 +425,7 @@
     },
     {
       "week_number": 4,
-      "title": "Project kickoff: API skeleton, public catalog và request pipeline",
+      "title": "Microservice kickoff: Gateway, Catalog Service và request pipeline",
       "phase": "Project Delivery",
       "status": "NOT_STARTED",
       "score": null,
@@ -433,7 +433,7 @@
       "days": [
         {
           "day": "Monday",
-          "topic": "Project Delivery: Review foundation: API contract, request lifecycle, validation and error principles",
+          "topic": "Project Delivery: Microservice context: Gateway vs service responsibility, external/internal contract, request/trace propagation",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -451,7 +451,7 @@
         },
         {
           "day": "Tuesday",
-          "topic": "Project Delivery: NestJS implementation patterns: module/controller/service/DTO, common module",
+          "topic": "Project Delivery: Monorepo/Compose and Catalog Service skeleton: composition root, config, service-local module boundary",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -469,7 +469,7 @@
         },
         {
           "day": "Wednesday",
-          "topic": "Project Delivery: Request pipeline implementation plan: validation, exception filter, interceptor, logging",
+          "topic": "Project Delivery: Gateway and request pipeline: validation/error mapping, timeout, correlation, no business logic at edge",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -487,7 +487,7 @@
         },
         {
           "day": "Thursday",
-          "topic": "Project Delivery: Map public catalog into project: movies, cinemas, showtimes, seats API contract",
+          "topic": "Project Delivery: Map public catalog to Gateway → Catalog: movies, cinemas, showtimes; define ownership and read contract",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -513,7 +513,7 @@
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Project Delivery: Implement API skeleton, public catalog, Swagger, validation/error/logging evidence",
+          "topic": "Project Delivery: Implement Gateway + Catalog vertical slice, Swagger at edge, local health/readiness, curl/log/trace evidence",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -578,7 +578,7 @@
     },
     {
       "week_number": 5,
-      "title": "PostgreSQL implementation, migrations, indexes và query review",
+      "title": "Catalog Service database ownership, migrations, indexes và event publication",
       "phase": "Project Delivery",
       "status": "NOT_STARTED",
       "score": null,
@@ -586,7 +586,7 @@
       "days": [
         {
           "day": "Monday",
-          "topic": "Project Delivery: Schema refinement: movie/cinema/screen/seat/showtime relations and constraints",
+          "topic": "Project Delivery: Catalog ownership: movie/cinema/screen/showtime model, data classification, publishable showtime boundary",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -604,7 +604,7 @@
         },
         {
           "day": "Tuesday",
-          "topic": "Project Delivery: Migration and seed strategy: clean DB, idempotent seed, production safety",
+          "topic": "Project Delivery: Catalog migration/seed strategy and outbox schema: clean DB, idempotent seed, additive evolution",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -622,7 +622,7 @@
         },
         {
           "day": "Wednesday",
-          "topic": "Project Delivery: Index/query review: EXPLAIN, composite index, N+1, query builder tradeoff",
+          "topic": "Project Delivery: Catalog index/query review: EXPLAIN, composite index, N+1, query builder and service-local read model",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -640,7 +640,7 @@
         },
         {
           "day": "Thursday",
-          "topic": "Project Delivery: Map DB into project APIs and admin workflows",
+          "topic": "Project Delivery: Map Catalog DB into Gateway APIs and catalog.showtime.published/cancelled event contract",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -671,7 +671,7 @@
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Project Delivery: Implement migrations/entities/seeds, public queries and query-plan evidence",
+          "topic": "Project Delivery: Implement catalog migrations/entities/seeds, public queries, outbox publisher stub and query-plan evidence",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -741,7 +741,7 @@
     },
     {
       "week_number": 6,
-      "title": "Authentication, authorization, RBAC và security hardening",
+      "title": "Identity Service, Gateway auth context, RBAC và security hardening",
       "phase": "Project Delivery",
       "status": "NOT_STARTED",
       "score": null,
@@ -749,7 +749,7 @@
       "days": [
         {
           "day": "Monday",
-          "topic": "Project Delivery: Auth deep dive: password hashing, token lifecycle, session/logout strategy",
+          "topic": "Project Delivery: Identity Service ownership: password hashing, token lifecycle, refresh/logout strategy",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -767,7 +767,7 @@
         },
         {
           "day": "Tuesday",
-          "topic": "Project Delivery: Authorization design: RBAC, permission matrix, least privilege, guard/decorator",
+          "topic": "Project Delivery: Gateway auth context and authorization: RBAC, actor propagation, least privilege, guard/decorator",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -785,7 +785,7 @@
         },
         {
           "day": "Wednesday",
-          "topic": "Project Delivery: Security hardening: validation, secrets, CORS, rate limit, sensitive logging",
+          "topic": "Project Delivery: Security hardening: service trust, validation, secrets, CORS, rate limit, sensitive logging",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -803,7 +803,7 @@
         },
         {
           "day": "Thursday",
-          "topic": "Project Delivery: Map auth/RBAC into Movie Ticket Booking actors and protected APIs",
+          "topic": "Project Delivery: Map Identity, Gateway and downstream authorization into Movie Ticket Booking actors and protected APIs",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -831,7 +831,7 @@
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Project Delivery: Implement auth, RBAC, protected APIs and security evidence",
+          "topic": "Project Delivery: Implement Identity Service, Gateway auth context, RBAC and security evidence",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -898,7 +898,7 @@
     },
     {
       "week_number": 7,
-      "title": "Critical consistency: seat hold, booking, ticket và idempotency",
+      "title": "Booking Service: critical consistency, seat hold, ticket và idempotency",
       "phase": "Project Delivery",
       "status": "NOT_STARTED",
       "score": null,
@@ -906,7 +906,7 @@
       "days": [
         {
           "day": "Monday",
-          "topic": "Project Delivery: State machine: seat hold, booking, payment, ticket, check-in transitions",
+          "topic": "Project Delivery: Booking-owned seat snapshot and state machine: hold, booking, payment, ticket, check-in transitions",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -924,7 +924,7 @@
         },
         {
           "day": "Tuesday",
-          "topic": "Project Delivery: Concurrency deep dive: race condition, row lock, isolation, deadlock, retry",
+          "topic": "Project Delivery: Booking local consistency: race condition, row lock, isolation, deadlock, retry; no cross-service transaction",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -960,7 +960,7 @@
         },
         {
           "day": "Thursday",
-          "topic": "Project Delivery: Map critical flow into DB/API/service transaction boundary",
+          "topic": "Project Delivery: Map critical flow into Booking DB/API transaction boundary and Catalog event consumer",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -987,7 +987,7 @@
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Project Delivery: Implement seat hold, booking, ticket, check-in and race/idempotency evidence",
+          "topic": "Project Delivery: Implement Booking Service seat hold, booking, ticket, idempotent Catalog-event consumer and race evidence",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -1053,7 +1053,7 @@
     },
     {
       "week_number": 8,
-      "title": "Cache, queue, payment/webhook integration và semantic search",
+      "title": "Outbox/worker, payment/webhook integration, cache và semantic search optional",
       "phase": "Project Delivery",
       "status": "NOT_STARTED",
       "score": null,
@@ -1061,7 +1061,7 @@
       "days": [
         {
           "day": "Monday",
-          "topic": "Project Delivery: Cache deep dive: TTL, invalidation, cache-aside, stale data, when not to cache",
+          "topic": "Project Delivery: Outbox/worker foundation: relay, at-least-once delivery, retry, timeout, DLQ and idempotent handlers",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -1079,7 +1079,7 @@
         },
         {
           "day": "Tuesday",
-          "topic": "Project Delivery: Queue/job deep dive: BullMQ, retry, timeout, delayed jobs, idempotent handlers",
+          "topic": "Project Delivery: Cache and queue operations: TTL, invalidation, BullMQ jobs, delayed expiry and stale data",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -1097,7 +1097,7 @@
         },
         {
           "day": "Wednesday",
-          "topic": "Project Delivery: Integration/AI: payment webhook, provider abstraction, embeddings, pgvector, mock provider",
+          "topic": "Project Delivery: Payment/webhook integration: provider abstraction, webhook replay safety; Catalog semantic search is optional",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -1115,7 +1115,7 @@
         },
         {
           "day": "Thursday",
-          "topic": "Project Delivery: Map cache/jobs/payment/semantic search into Movie Ticket Booking safely",
+          "topic": "Project Delivery: Map worker, payment, cache and optional Catalog search into service ownership and event contracts",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -1137,7 +1137,7 @@
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Project Delivery: Implement expiry jobs, webhook replay safety, cache/search slice and integration logs",
+          "topic": "Project Delivery: Implement outbox relay/worker, expiry jobs, webhook replay safety, cache and integration logs",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [
@@ -1198,7 +1198,7 @@
     },
     {
       "week_number": 9,
-      "title": "Observability, monitoring mindset, resilience và deployment",
+      "title": "Microservice observability, resilience và deployment",
       "phase": "Project Delivery",
       "status": "NOT_STARTED",
       "score": null,
@@ -1206,7 +1206,7 @@
       "days": [
         {
           "day": "Monday",
-          "topic": "Project Delivery: Observability: structured logs, request id, user id, latency, metrics/tracing mindset",
+          "topic": "Project Delivery: Cross-service observability: structured logs, correlation ID, trace context, latency, metrics/tracing",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -1224,7 +1224,7 @@
         },
         {
           "day": "Tuesday",
-          "topic": "Project Delivery: Resilience: timeout, retry policy, rate limit, graceful shutdown, failure simulation",
+          "topic": "Project Delivery: Service resilience: timeout, retry policy, rate limit, graceful shutdown and failure simulation",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -1242,7 +1242,7 @@
         },
         {
           "day": "Wednesday",
-          "topic": "Project Delivery: Deployment: Docker, env config, secrets, migrations, health/readiness, rollback",
+          "topic": "Project Delivery: Per-service deployment: Docker/Compose, env config, secrets, migrations, health/readiness, rollback",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -1260,7 +1260,7 @@
         },
         {
           "day": "Thursday",
-          "topic": "Project Delivery: Map operational concerns into Movie Ticket Booking release",
+          "topic": "Project Delivery: Map operational ownership, dependency and release order into Movie Ticket Booking",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -1278,7 +1278,7 @@
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Project Delivery: Implement hardening, health checks, deploy docs, smoke tests and runbook",
+          "topic": "Project Delivery: Implement service hardening, health checks, deploy docs, smoke tests and cross-service runbook",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -1335,7 +1335,7 @@
     },
     {
       "week_number": 10,
-      "title": "System design capstone, final evidence và mock interview",
+      "title": "Distributed system capstone, final evidence và mock interview",
       "phase": "Capstone",
       "status": "NOT_STARTED",
       "score": null,
@@ -1343,7 +1343,7 @@
       "days": [
         {
           "day": "Monday",
-          "topic": "Capstone: System design review: requirement, API, DB, state, scale, failure modes",
+          "topic": "Capstone: Distributed system design review: service boundary, API/event contracts, DB ownership, state, scale, failure modes",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -1361,7 +1361,7 @@
         },
         {
           "day": "Tuesday",
-          "topic": "Capstone: Performance/load sanity: query review, basic load test, bottleneck analysis",
+          "topic": "Capstone: Performance/load sanity across Gateway/services: query review, basic load test, bottleneck analysis",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -1379,7 +1379,7 @@
         },
         {
           "day": "Wednesday",
-          "topic": "Capstone: Interview deep dive: HTTP, DB, transaction, auth, cache, queue, deploy, system design",
+          "topic": "Capstone: Interview deep dive: microservice boundary, event delivery, HTTP, DB, transaction, auth, cache, queue, deploy",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -1397,7 +1397,7 @@
         },
         {
           "day": "Thursday",
-          "topic": "Capstone: Final evidence gap closure, release note and demo route",
+          "topic": "Capstone: Final evidence gap closure: service ownership, contract/event proof, release note and demo route",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],
@@ -1415,7 +1415,7 @@
         },
         {
           "day": "Friday-Saturday",
-          "topic": "Capstone: Final regression, demo, mock interview and mentor review",
+          "topic": "Capstone: Distributed final regression, demo, mock interview and mentor review",
           "status": "TODO",
           "updated_at": null,
           "backlog_items": [],

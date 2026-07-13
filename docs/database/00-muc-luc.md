@@ -1,10 +1,10 @@
-# DATABASE DOCUMENT — Movie Ticket Booking Backend API
+# DATABASE DOCUMENT — Movie Ticket Booking Microservices
 
 > **Phiên bản:** 1.0  
 > **Ngày tạo:** 2026-07-08  
 > **Vai trò soạn:** Senior Backend Engineer kiêm Database Architect  
 > **Đối tượng đọc:** Backend Developer, Mentor, Reviewer  
-> **Engine:** PostgreSQL 16+ với pgvector extension  
+> **Engine:** PostgreSQL 16+; `catalog_db` dùng pgvector nếu triển khai semantic search stretch
 
 ---
 
@@ -29,7 +29,9 @@
 
 ## Tổng quan nhanh
 
-- **~25 bảng** (18 core + 7 AI/stretch)
+> **Boundary update:** Các file entity/transaction bên dưới là logical-domain reference. Physical implementation phải chia theo `identity_db`, `catalog_db` và `booking_db` theo [kiến trúc microservice](../../chuong-trinh-dao-tao/thiet-ke/microservice-architecture.md). Không tạo một single/shared database, cross-service foreign key hoặc transaction xuyên service.
+
+- **~25 logical entity** phân bổ theo service owner (Identity, Catalog, Booking; AI thuộc Catalog stretch)
 - **6 state machines** với valid/invalid transitions và test cases bắt buộc
 - **5 critical transactions** có SQL examples và locking strategy
 - **~35 indexes** với query justification

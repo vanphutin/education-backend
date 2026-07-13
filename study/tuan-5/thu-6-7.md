@@ -1,4 +1,4 @@
-# Project Delivery Ticket: Implement migrations/entities/seeds, public queries and query-plan evidence
+# Project Delivery Ticket: Implement Catalog migrations, queries, outbox and query-plan evidence
 
 - **Tuần**: 5
 - **Ngày**: Thứ 6-7
@@ -10,6 +10,11 @@
 - **Cơ bản/Trung bình:** [TypeORM Docs - Relations](https://typeorm.io/relations)
 - **Nâng cao:** [PostgreSQL Docs - Performance Tips](https://www.postgresql.org/docs/current/performance-tips.html)
 
+## Microservice Scope
+
+- Catalog service runs its own migration/seed command against `catalog_db`; prove a clean environment can start without Booking/Identity database access.
+- Add an outbox record atomically when a publishable showtime changes. A relay may be stubbed this week, but event schema and retry/idempotency assumptions must be documented.
+- Verify public query routes through Gateway and keep query-plan evidence service-local.
 
 ## 1. Business Scenario
 - Actor:
@@ -52,4 +57,3 @@
 - Question: Migration production cần tránh gì?
 - My answer:
   - ...
-

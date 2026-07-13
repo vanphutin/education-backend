@@ -1,4 +1,4 @@
-# Tuần 5 - PostgreSQL implementation, migrations, indexes và query review
+# Tuần 5 - Catalog Service database ownership, migrations, indexes và event publication
 
 **Giai đoạn:** Project Delivery  
 **Chế độ học:** DB theory nâng cao + implement schema thật.
@@ -8,33 +8,34 @@
 
 | Hạng mục | Nội dung |
 |---|---|
-| Goal | Chuyển từ mock sang PostgreSQL thật và có evidence cho schema/query. |
-| Focus | Entities, migrations, seed, ERD, constraints, index strategy, EXPLAIN, N+1 prevention. |
-| Project rule | Catalog/showtime DB implementation. |
+| Goal | Catalog Service sở hữu database của mình, chạy migration/seed độc lập và publish lifecycle event cho Booking tương lai. |
+| Focus | Catalog ERD, migrations, seed, constraints, index strategy, EXPLAIN, N+1 prevention, outbox event. |
+| Project rule | Chỉ Catalog Service truy cập `catalog_db`; chưa tạo shared schema cho Booking. |
 
 ## 2. Kế hoạch học tập theo ngày
 
 | Ngày | Trọng tâm |
 |---|---|
-| Thứ 2 | Schema refinement: movie/cinema/screen/seat/showtime relations and constraints |
-| Thứ 3 | Migration and seed strategy: clean DB, idempotent seed, production safety |
-| Thứ 4 | Index/query review: EXPLAIN, composite index, N+1, query builder tradeoff |
-| Thứ 5 | Map DB into project APIs and admin workflows |
-| Thứ 6-7 | Implement migrations/entities/seeds, public queries and query-plan evidence |
+| Thứ 2 | Catalog ownership: movie/cinema/screen/showtime model, data classification, publishable showtime boundary |
+| Thứ 3 | Catalog migration/seed strategy and outbox schema: clean DB, idempotent seed, additive evolution |
+| Thứ 4 | Catalog index/query review: EXPLAIN, composite index, N+1, query builder and service-local read model |
+| Thứ 5 | Map Catalog DB into Gateway APIs and `catalog.showtime.published/cancelled` event contract |
+| Thứ 6-7 | Implement catalog migrations/entities/seeds, public queries, outbox publisher stub and query-plan evidence |
 
 ## 3. Output bắt buộc
+- Hoàn thành [Job-ready PostgreSQL playbook](../../study/tuan-5/job-ready-playbook.md) và tests tuần 5 trong [`labs/project-delivery`](../../labs/project-delivery/README.md).
 
-- ERD
-- Migrations
-- Seed data
-- Index notes
-- EXPLAIN evidence
+- Catalog ERD/data dictionary and explicit ownership record
+- Catalog-only migrations/seed data/index notes/EXPLAIN evidence
+- PostgreSQL integration tests, migration N-1 compatibility và N+1/query-count evidence.
+- Versioned showtime event schema + outbox/inbox design note
+- Proof that no other service database is imported or joined
 
 ## 4. Interview drill
 
-- Index khi nào làm chậm write?
-- Migration production cần tránh gì?
-- N+1 xuất hiện thế nào trong ORM?
+- Vì sao một migration Catalog không được tự đổi Booking schema?
+- Outbox giải quyết gap nào giữa catalog commit và event publication?
+- Consumer có thể nhận event trùng/out-of-order thì contract cần gì?
 
 
 ## Required Reading By Day

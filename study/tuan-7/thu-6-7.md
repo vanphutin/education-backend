@@ -1,4 +1,4 @@
-# Project Delivery Ticket: Implement seat hold, booking, ticket, check-in and race/idempotency evidence
+# Project Delivery Ticket: Implement Booking Service, seat hold/ticket and race/idempotency evidence
 
 - **Tuần**: 7
 - **Ngày**: Thứ 6-7
@@ -10,6 +10,11 @@
 - **Cơ bản/Trung bình:** [NestJS Docs - Testing](https://docs.nestjs.com/fundamentals/testing)
 - **Nâng cao:** [Stripe Engineering Blog - Designing Robust API Idempotency](https://stripe.com/blog/idempotency)
 
+## Microservice Scope
+
+- Booking Service owns seat snapshots, holds, bookings, payment records and tickets in `booking_db`.
+- Include an idempotent Catalog event consumer/inbox, a local transaction for hold/booking transition, and an outbox for downstream work.
+- Race evidence must show two concurrent commands against Booking only; no cross-service lock or shared table is accepted as the consistency mechanism.
 
 ## 1. Business Scenario
 - Actor:
@@ -52,4 +57,3 @@
 - Question: SELECT FOR UPDATE bảo vệ gì?
 - My answer:
   - ...
-

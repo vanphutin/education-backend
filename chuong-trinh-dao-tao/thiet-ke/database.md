@@ -1,34 +1,56 @@
-# Cấu trúc Database & State Machines
+# Data Ownership, Database Boundaries & State Machines
 
-Tài liệu này đặc tả thiết kế các bảng (Entities) trong cơ sở dữ liệu PostgreSQL và các trạng thái chuyển đổi (State Machines) của nghiệp vụ đặt vé.
+Tài liệu này đặc tả data ownership của các service, database PostgreSQL riêng và state machine nghiệp vụ. **Không có shared database, cross-service foreign key hoặc ORM relation xuyên boundary.**
 
 ---
 
-## 1. Danh sách Entities
+## 1. Database ownership
 
-### Core Entities (Nghiệp vụ cốt lõi)
+| Service | Database owner | Source of truth | Consumer/read model được phép |
+|---|---|---|---|
+| Identity Service | `identity_db` | users, roles, refresh_tokens | actor/role claim tối thiểu qua token/internal contract |
+| Catalog Service | `catalog_db` | movies, trailers, cinemas, screens, seat layout, showtimes, embedding docs | Booking snapshot từ event; không truy cập bảng trực tiếp |
+| Booking Service | `booking_db` | showtime seat snapshot, holds, bookings, booking seats, payments, tickets, check-in, idempotency/inbox/outbox | Gateway/API query; event-derived projections |
+| Worker | Không là owner business DB | relay/outbox/job state/DLQ theo owner service hoặc hạ tầng queue | Không trở thành source of truth booking/catalog |
+
+## 2. Danh sách Entities theo owner
+
+### Identity Service — `identity_db`
 
 | Entity | Trách nhiệm |
 |---|---|
 | `users` | Thông tin tài khoản Customer/Admin/Staff |
 | `roles` | Phân quyền: Role và permission tương ứng |
 | `refresh_tokens` | Quản lý refresh token (hash, trạng thái thu hồi, ngày hết hạn) |
+
+### Catalog Service — `catalog_db`
+
+| Entity | Trách nhiệm |
+|---|---|
 | `movies` | Thông tin chi tiết phim (Tiêu đề, tóm tắt, đạo diễn, diễn viên,...) |
 | `movie_trailers` | Đường dẫn trailer URL và metadata (không tạo video AI) |
 | `cinemas` | Thông tin hệ thống rạp |
 | `screens` | Thông tin các phòng chiếu trực thuộc rạp |
 | `seats` | Danh sách ghế cố định thuộc một phòng chiếu |
 | `showtimes` | Suất chiếu phim (Movie, screen, start/end time, pricing) |
-| `showtime_seats` | Trạng thái của từng ghế cho mỗi suất chiếu cụ thể (Available, Held, Sold) |
-| `seat_holds` | Lệnh tạm giữ ghế của user (chứa thời gian giữ ghế và timeout) |
-| `bookings` | Hóa đơn đặt vé xem phim của khách hàng |
-| `booking_seats` | Danh sách ghế được mua trong một booking |
-| `payments` | Giao dịch thanh toán nội bộ kết nối với metadata từ payOS |
-| `tickets` | Vé xem phim được tạo sau khi booking CONFIRMED (dùng để check-in) |
-| `audit_logs` | Ghi vết hành động của người dùng (Ai làm gì, vào lúc nào) |
-| `integration_logs` | Ghi vết log tích hợp bên thứ ba (payOS request-response, AI API) |
 
-### AI Entities (Phục vụ chức năng AI thông minh)
+### Booking Service — `booking_db`
+
+| Entity | Trách nhiệm |
+|---|---|
+| `showtime_seat_snapshots` | Snapshot showtime/seat layout từ Catalog event; trạng thái Available/Held/Sold thuộc Booking |
+| `seat_holds` | Lệnh tạm giữ ghế và expiry |
+| `bookings` | Hóa đơn đặt vé và snapshot dữ liệu catalog cần thiết |
+| `booking_seats` | Ghế trong booking |
+| `payments` | Giao dịch payment theo Booking contract/provider reference |
+| `tickets` | Vé/check-in sau booking CONFIRMED |
+| `idempotency_records` | Outcome của command retryable |
+| `inbox_events` | Dedup/event outcome cho Catalog/webhook replay |
+| `outbox_events` | Event phải publish sau local transaction |
+| `audit_logs` | Audit thuộc Booking actor/action/state change |
+| `integration_logs` | Provider/webhook logs đã redact |
+
+### Catalog Service AI entities — `catalog_db`
 
 | Entity | Trách nhiệm |
 |---|---|
@@ -44,9 +66,9 @@ Tài liệu này đặc tả thiết kế các bảng (Entities) trong cơ sở 
 
 ---
 
-## 2. State Machines (Vòng đời trạng thái)
+## 3. State Machines (Vòng đời trạng thái)
 
-### Trạng thái ghế suất chiếu (`Showtime Seat Status`)
+### Trạng thái ghế snapshot thuộc Booking (`Showtime Seat Status`)
 ```text
 AVAILABLE -> HELD -> SOLD
 AVAILABLE -> BLOCKED
@@ -81,3 +103,7 @@ PENDING -> READY
 PENDING -> FAILED
 READY -> PENDING (khi nội dung thông tin phim thay đổi, cần rebuild embedding)
 ```
+
+## 4. Đồng bộ giữa boundary
+
+Catalog ghi `catalog.showtime.published.v1`/`cancelled.v1` vào outbox cùng transaction local. Booking consume idempotently để tạo/cập nhật snapshot ghế. Transaction giữ ghế, booking, payment record và ticket chỉ nằm trong `booking_db`; không yêu cầu distributed transaction với Catalog hoặc Identity.

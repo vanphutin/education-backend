@@ -1,4 +1,4 @@
-# Project Delivery Ticket: Map critical flow into DB/API/service transaction boundary
+# Project Delivery Ticket: Map Catalog event → Booking DB/API/local transaction boundary
 
 - **Tuần**: 7
 - **Ngày**: Thứ 5
@@ -10,6 +10,11 @@
 - **Cơ bản/Trung bình:** [TypeORM Docs - Transactions](https://typeorm.io/transactions)
 - **Nâng cao:** [Martin Fowler - Unit of Work](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
+## Microservice Scope
+
+- Booking consumes Catalog showtime events idempotently and creates a booking-owned snapshot before accepting hold commands.
+- Hold/booking/payment record/ticket invariants are protected in one `booking_db` transaction. Do not query `catalog_db`, join across services or add a distributed transaction.
+- Specify stale/missing snapshot behavior, event replay strategy, outbox record and external API error/retry semantics.
 
 ## 1. Business Scenario
 - Actor:
@@ -52,4 +57,3 @@
 - Question: Invariant quan trọng nhất của seat hold là gì?
 - My answer:
   - ...
-

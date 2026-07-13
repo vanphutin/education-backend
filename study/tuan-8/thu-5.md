@@ -1,4 +1,4 @@
-# Project Delivery Ticket: Map cache/jobs/payment/semantic search into Movie Ticket Booking safely
+# Project Delivery Ticket: Map service events, worker/payment/cache/search boundaries safely
 
 - **Tuần**: 8
 - **Ngày**: Thứ 5
@@ -10,6 +10,11 @@
 - **Cơ bản/Trung bình:** [Redis Docs - Caching Tutorial](https://redis.io/docs/latest/develop/use/caching/)
 - **Nâng cao:** [PostgreSQL pgvector README](https://github.com/pgvector/pgvector)
 
+## Microservice Scope
+
+- Map every cache to its service-local source of truth; do not make Redis the owner of Booking seat state.
+- Map Booking outbox → worker/payment provider and Catalog outbox → embedding worker separately. Each has a versioned event, retry/idempotency/DLQ policy and correlation fields.
+- Semantic search belongs to Catalog and remains optional until hold expiry, payment webhook and duplicate delivery evidence pass.
 
 ## 1. Business Scenario
 - Actor:
@@ -52,4 +57,3 @@
 - Question: Cache invalidation khó ở đâu?
 - My answer:
   - ...
-

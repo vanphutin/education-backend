@@ -1,0 +1,5 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { SeatInventory } from './week-7.js';
+test('week 7 allows exactly one seat owner', () => { const seat = new SeatInventory(); const results = ['a', 'b', 'c'].map(actor => seat.hold(actor, `key-${actor}`)); assert.equal(results.filter(x => x === 'HELD').length, 1); assert.equal(seat.owner(), 'a'); });
+test('week 7 replays same outcome and rejects key reuse with another actor', () => { const seat = new SeatInventory(); assert.equal(seat.hold('a', 'same'), 'HELD'); assert.equal(seat.hold('a', 'same'), 'HELD'); assert.throws(() => seat.hold('b', 'same'), /CONFLICT/); });

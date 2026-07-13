@@ -1,0 +1,10 @@
+{
+  "name": "backend-job-ready-project-delivery-labs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/week-5.test.js dist/week-6.test.js dist/week-7.test.js dist/week-8.test.js dist/week-9.test.js dist/week-10.test.js"
+  },
+  "devDependencies": { "@types/node": "^24.0.0", "typescript": "^6.0.0" }
+}

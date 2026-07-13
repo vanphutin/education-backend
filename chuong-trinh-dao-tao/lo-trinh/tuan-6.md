@@ -1,4 +1,4 @@
-# Tuần 6 - Authentication, authorization, RBAC và security hardening
+# Tuần 6 - Identity Service, Gateway auth context, RBAC và security hardening
 
 **Giai đoạn:** Project Delivery  
 **Chế độ học:** Security theory + implement auth boundary.
@@ -8,33 +8,34 @@
 
 | Hạng mục | Nội dung |
 |---|---|
-| Goal | Actors có quyền rõ ràng; API admin/staff/customer được bảo vệ. |
-| Focus | Register/login, password hashing, JWT/refresh token, RBAC, guards, decorators, security baseline. |
-| Project rule | Auth/RBAC implementation. |
+| Goal | Identity Service sở hữu credential/token lifecycle; Gateway và downstream service nhận actor context đáng tin cậy, kiểm đúng authorization boundary. |
+| Focus | Identity Service, password hashing, JWT/refresh token, RBAC, service trust, actor propagation, guards, security baseline. |
+| Project rule | Không copy user/password table vào Catalog/Booking; downstream chỉ giữ claim/context tối thiểu cần thiết. |
 
 ## 2. Kế hoạch học tập theo ngày
 
 | Ngày | Trọng tâm |
 |---|---|
-| Thứ 2 | Auth deep dive: password hashing, token lifecycle, session/logout strategy |
-| Thứ 3 | Authorization design: RBAC, permission matrix, least privilege, guard/decorator |
-| Thứ 4 | Security hardening: validation, secrets, CORS, rate limit, sensitive logging |
-| Thứ 5 | Map auth/RBAC into Movie Ticket Booking actors and protected APIs |
-| Thứ 6-7 | Implement auth, RBAC, protected APIs and security evidence |
+| Thứ 2 | Identity ownership: password hash, token lifecycle, session/logout, JWKS or verification contract |
+| Thứ 3 | Authorization across boundary: RBAC, permission matrix, actor/tenant context, Gateway vs service enforcement |
+| Thứ 4 | Security hardening: secrets, CORS, rate limit, internal trust, sensitive logging, least privilege network/config |
+| Thứ 5 | Map Identity → Gateway → Catalog/Booking authorization assumptions and deny scenarios |
+| Thứ 6-7 | Implement Identity Service, Gateway auth middleware/guard, protected service APIs and security evidence |
 
 ## 3. Output bắt buộc
+- Hoàn thành [Job-ready Identity playbook](../../study/tuan-6/job-ready-playbook.md) và tests tuần 6 trong [`labs/project-delivery`](../../labs/project-delivery/README.md).
 
-- Auth flow
-- RBAC matrix
-- Security checklist
-- Deny tests
-- curl evidence
+- Auth/refresh flow with Identity as sole credential owner
+- RBAC/object-authorization matrix including Gateway and downstream checks
+- Internal actor-context/service-trust decision and security checklist
+- Deny tests at Gateway and service boundary; curl/log evidence without token leakage
+- Refresh rotation/reuse revocation, ownership/IDOR negative tests và permission matrix.
 
 ## 4. Interview drill
 
-- Authentication khác authorization thế nào?
-- Refresh token rotation giải quyết gì?
-- Vì sao không log token/password?
+- Gateway verify token rồi service có còn cần authorization không? Vì sao?
+- Token claim nào có thể stale và service xử lý freshness thế nào?
+- Vì sao không được share Identity database cho tiện lookup user?
 
 
 ## Required Reading By Day

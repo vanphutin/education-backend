@@ -1,4 +1,4 @@
-# Project Delivery Ticket: Map DB into project APIs and admin workflows
+# Project Delivery Ticket: Map Catalog DB into Gateway APIs and showtime event contract
 
 - **Tuần**: 5
 - **Ngày**: Thứ 5
@@ -10,6 +10,12 @@
 - **Cơ bản/Trung bình:** [TypeORM Docs - Select Query Builder](https://typeorm.io/select-query-builder)
 - **Nâng cao:** [PostgreSQL Docs - Indexes and ORDER BY](https://www.postgresql.org/docs/current/indexes-ordering.html)
 
+## Microservice Scope
+
+- All migrations and entities in this ticket belong only to `catalog-service` / `catalog_db`.
+- Admin writes to Catalog; Gateway never executes Catalog SQL and Booking never reads the tables directly.
+- Define `catalog.showtime.published.v1` and `catalog.showtime.cancelled.v1`: event ID, version, payload minimum, producer transaction/outbox and consumer expectation.
+- Record what Booking must snapshot later, without creating cross-service FK or distributed transaction.
 
 ## 1. Business Scenario
 - Actor:
@@ -52,4 +58,3 @@
 - Question: Index khi nào làm chậm write?
 - My answer:
   - ...
-

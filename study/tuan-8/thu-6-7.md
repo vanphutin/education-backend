@@ -1,4 +1,4 @@
-# Project Delivery Ticket: Implement expiry jobs, webhook replay safety, cache/search slice and integration logs
+# Project Delivery Ticket: Implement outbox relay, expiry/webhook safety, service-local cache and optional search
 
 - **Tuần**: 8
 - **Ngày**: Thứ 6-7
@@ -10,6 +10,11 @@
 - **Cơ bản/Trung bình:** [BullMQ Docs - Delayed Jobs](https://docs.bullmq.io/guide/jobs/delayed)
 - **Nâng cao:** [BullMQ Docs - Parent-Child Relations (Flows)](https://docs.bullmq.io/guide/flows)
 
+## Microservice Scope
+
+- Relay Booking outbox and process delayed hold expiry/payment jobs with at-least-once semantics, inbox/dedup and bounded retry/DLQ.
+- Payment webhook reaches a dedicated worker/adapter boundary, then performs an idempotent Booking-local transition; it never writes Catalog/Identity databases.
+- Cache only Catalog read models or explicitly safe derived data. Add semantic search only as a Catalog-owned stretch slice.
 
 ## 1. Business Scenario
 - Actor:
@@ -52,4 +57,3 @@
 - Question: Job retry gây bug gì?
 - My answer:
   - ...
-

@@ -78,11 +78,17 @@ Các tính năng sau đây **phải có** trong phiên bản MVP. Không đượ
 - Request ID tracking xuyên suốt request lifecycle.
 
 ### Infrastructure
-- Docker Compose cho full stack (app + PostgreSQL + Redis).
+- Docker Compose cho Gateway, Identity Service, Catalog Service, Booking Service, Worker, PostgreSQL tách theo service và Redis/queue.
 - GitHub Actions CI: lint → test → build.
 - Swagger/OpenAPI documentation cho toàn bộ API.
 - Database migrations (không dùng synchronize: true).
 - Seed data cho demo.
+
+### Microservice Architecture
+- API Gateway là điểm vào public; Gateway không sở hữu business database hoặc booking rule.
+- Identity, Catalog và Booking có database/schema/credential riêng; không shared DB, cross-service FK, join trực tiếp hoặc ORM entity xuyên service.
+- Catalog publish showtime events; Booking consume idempotently để tạo snapshot ghế của mình.
+- Booking dùng transaction local + outbox cho seat hold/booking/ticket; worker xử lý payment, expiry và notification theo at-least-once semantics.
 
 ---
 
@@ -100,7 +106,7 @@ Các tính năng sau đây **hoàn toàn không nằm trong phạm vi** dự án
 | Multi-language / i18n | API responses chỉ tiếng Anh/Việt cố định |
 | Real-time WebSocket seat map | Polling seat map đủ cho MVP |
 | Coupon / promotion / discount | Pricing logic đơn giản cho MVP |
-| Microservices architecture | Monolith NestJS phù hợp cho learning |
+| Nhiều service phụ ngoài Gateway/Identity/Catalog/Booking/Worker | Giữ tối đa 4 service nghiệp vụ + worker để tránh distributed monolith và quá tải vận hành |
 | Kubernetes / cloud deployment | Docker Compose local đủ cho portfolio |
 | Rate limiting nâng cao / WAF | Basic rate limiting nếu có, không cần WAF |
 | Admin UI / dashboard | Chỉ có API, dùng Swagger/curl để demo |

@@ -1,8 +1,8 @@
-# PRODUCT BACKLOG DOCUMENT - Movie Ticket Booking Backend API
+# PRODUCT BACKLOG DOCUMENT - Movie Ticket Booking Microservices
 
 > **Phiên bản:** 2.0  
 > **Đối tượng đọc:** Backend Fresher/Junior developer, Mentor, Reviewer  
-> **Stack:** NestJS · TypeScript · PostgreSQL · TypeORM · Redis · BullMQ · Docker · GitHub Actions · payOS-style integration · pgvector
+> **Stack:** NestJS microservices · TypeScript · PostgreSQL per service · Redis/BullMQ · Docker Compose · GitHub Actions · payOS-style integration · pgvector (Catalog stretch)
 
 ## Mục lục
 
@@ -27,4 +27,4 @@
 
 - Roadmap 10 tuần cường độ cao với tuần 1-3 theory + mini labs, tuần 4-10 project delivery.
 - Trọng tâm mới: học backend foundation trước framework, sau đó dùng NestJS như công cụ triển khai.
-- Movie Ticket Booking vẫn là project xuyên suốt để tránh học lý thuyết rời rạc.
+- Movie Ticket Booking vẫn là project xuyên suốt để tránh học lý thuyết rời rạc; implementation dùng Gateway, Identity, Catalog, Booking và Worker theo ownership rõ ràng.

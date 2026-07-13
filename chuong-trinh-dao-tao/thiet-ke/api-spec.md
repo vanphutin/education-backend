@@ -1,6 +1,19 @@
 # Đặc tả các API Endpoints (API Specification)
 
-Tài liệu này tổng hợp toàn bộ các endpoint APIs sẽ được hiện thực trong suốt dự án Movie Ticket Booking Backend.
+Tài liệu này tổng hợp external API qua **API Gateway** và service owner sẽ hiện thực contract trong Movie Ticket Booking Microservices. Client không gọi trực tiếp database hay internal service endpoint.
+
+---
+
+## 0. API Gateway và service ownership
+
+| External route family | Owner xử lý | Gateway làm | Không được làm |
+|---|---|---|---|
+| `/auth/*`, `/me` | Identity Service | Route, edge rate-limit, request/trace ID, auth error mapping | Lưu credential/session hoặc query Identity DB |
+| `/movies`, `/cinemas`, `/showtimes` | Catalog Service | Route public read; propagate correlation | Tạo booking/hold hoặc query Catalog DB |
+| `/showtimes/:id/seats`, `/seat-holds`, `/bookings`, `/payments`, `/tickets`, `/staff/*` | Booking Service / payment worker contract | Route command/query; authenticate actor | Giữ DB transaction/seat rule tại Gateway |
+| `/ai/*` | Catalog Service capability (stretch) | Route only sau khi Catalog core ổn định | Để AI tạo hold/booking/payment |
+
+Gateway public contract ổn định; internal HTTP/event contract versioned riêng. Gateway truyền `requestId`/`traceId` và actor context đã xác minh, nhưng mỗi service vẫn tự bảo vệ authorization và input boundary theo trust model đã ghi.
 
 ---
 
@@ -98,23 +111,24 @@ Tích hợp cổng thanh toán payOS:
 ### Luồng xác nhận thanh toán (Payment Confirmation Flow)
 
 ```text
-Customer tạo payment link
--> backend tạo payment PENDING
--> payOS trả checkoutUrl
+Customer -> Gateway -> Booking Service tạo payment record PENDING + outbox payment.requested
+-> Payment Worker gọi payOS, lưu provider reference bằng Booking contract
+-> payOS trả checkoutUrl qua Gateway/client
 -> customer thanh toán
--> payOS gọi webhook
--> backend verify signature
--> backend kiểm tra amount/orderCode/paymentLinkId
--> transaction:
+-> payOS gọi webhook vào worker/adapter boundary
+-> worker verify signature, amount/orderCode/paymentLinkId
+-> Booking Service chạy transaction local:
    payment = PAID
    booking = CONFIRMED
-   showtime_seats = SOLD
-   create tickets
-   audit log
+   booking-owned showtime_seats = SOLD
+   create tickets + booking outbox event
+-> ticket/notification worker consume event idempotently
 ```
 
 > [!IMPORTANT]
 > `returnUrl` chỉ dùng để UI hiển thị kết quả. Backend không được tin `returnUrl` là nguồn xác nhận cuối cùng. Phải xác nhận thông qua webhook verify.
+
+> Booking Service không join Catalog database khi xác nhận payment. Catalog information cần cho ticket/receipt phải là snapshot hoặc read model có source/event contract rõ.
 
 ---
 

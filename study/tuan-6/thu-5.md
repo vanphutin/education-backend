@@ -1,4 +1,4 @@
-# Project Delivery Ticket: Map auth/RBAC into Movie Ticket Booking actors and protected APIs
+# Project Delivery Ticket: Map Identity → Gateway → service auth/RBAC boundaries
 
 - **Tuần**: 6
 - **Ngày**: Thứ 5
@@ -10,6 +10,11 @@
 - **Cơ bản/Trung bình:** [NestJS Docs - Authentication](https://docs.nestjs.com/security/authentication)
 - **Nâng cao:** [NestJS Docs - Authorization](https://docs.nestjs.com/security/authorization)
 
+## Microservice Scope
+
+- Identity Service is the credential/session owner. Gateway authenticates external calls and forwards only trusted actor context/claims according to a documented contract.
+- Catalog/Booking must still enforce authorization for their own resource/action; a Gateway route guard is not object-level authorization for every service.
+- Do not share Identity tables/database. Document token verification, claim freshness, key/secret rotation and downstream failure behavior.
 
 ## 1. Business Scenario
 - Actor:
@@ -52,4 +57,3 @@
 - Question: Authentication khác authorization thế nào?
 - My answer:
   - ...
-

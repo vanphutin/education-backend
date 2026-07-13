@@ -1,6 +1,6 @@
 # Thiết kế AI & Semantic Search (pgvector)
 
-Tài liệu này đặc tả thiết kế kỹ thuật của chức năng Tìm kiếm ngữ nghĩa (Semantic Search) sử dụng công nghệ Vector Embeddings kết hợp PostgreSQL và tiện ích mở rộng `pgvector`.
+Tài liệu này đặc tả capability Semantic Search thuộc **Catalog Service**, sử dụng PostgreSQL/`pgvector` của Catalog. Đây là stretch feature: chỉ triển khai sau khi Gateway, Catalog, Identity, Booking và worker core có evidence ổn định.
 
 ---
 
@@ -19,9 +19,9 @@ Semantic search giúp khách hàng tìm phim bằng ý định/ngôn ngữ tự 
 
 ### Luồng 1: Tạo và đồng bộ Vector Embeddings
 ```text
-Admin tạo/cập nhật movie
--> tạo movie_embedding_documents status PENDING
--> enqueue job generate-movie-embedding vào BullMQ
+Admin -> Gateway -> Catalog Service tạo/cập nhật movie
+-> Catalog local transaction tạo `movie_embedding_documents` PENDING + outbox event
+-> worker/relay consume event và enqueue generate-movie-embedding
 -> job gọi embedding provider (OpenAI / Mock)
 -> nhận vector -> lưu vector + cập nhật status READY
 -> semantic search chỉ sử dụng các document READY
@@ -29,7 +29,7 @@ Admin tạo/cập nhật movie
 
 ### Luồng 2: Tìm kiếm ngữ nghĩa
 ```text
-POST /ai/movie-search
+Client -> Gateway -> Catalog Service `POST /ai/movie-search`
 -> validate request
 -> optional: AI parse message/intent thành filters (City, Date, Genre,...)
 -> tạo query embedding cho message đầu vào
@@ -42,7 +42,7 @@ POST /ai/movie-search
 
 ---
 
-## 3. Cấu trúc thư mục Module AI
+## 3. Cấu trúc Catalog Service AI capability
 
 ```text
 ai/

@@ -1,4 +1,4 @@
-# Tuần 7 - Critical consistency: seat hold, booking, ticket và idempotency
+# Tuần 7 - Booking Service: critical consistency, seat hold, ticket và idempotency
 
 **Giai đoạn:** Project Delivery  
 **Chế độ học:** Transaction/concurrency theory + implement critical flow.
@@ -8,33 +8,35 @@
 
 | Hạng mục | Nội dung |
 |---|---|
-| Goal | Không double-booking, không duplicate ticket, không check-in trùng. |
-| Focus | State machine, transaction boundary, SELECT FOR UPDATE, unique constraints, idempotency, race tests. |
-| Project rule | Core booking flow. |
+| Goal | Booking Service tự bảo vệ được invariant ghế/hold/booking/ticket trong database riêng, không cần transaction xuyên Catalog/Identity. |
+| Focus | Booking-owned showtime seat snapshot, state machine, local transaction, row lock, constraints, idempotency, race tests, event consumer. |
+| Project rule | Booking không query/join `catalog_db`; nó consume Catalog event idempotently và dùng snapshot tối thiểu. |
 
 ## 2. Kế hoạch học tập theo ngày
 
 | Ngày | Trọng tâm |
 |---|---|
-| Thứ 2 | State machine: seat hold, booking, payment, ticket, check-in transitions |
-| Thứ 3 | Concurrency deep dive: race condition, row lock, isolation, deadlock, retry |
-| Thứ 4 | Idempotency: duplicate request, client retry, webhook replay, unique key strategy |
-| Thứ 5 | Map critical flow into DB/API/service transaction boundary |
-| Thứ 6-7 | Implement seat hold, booking, ticket, check-in and race/idempotency evidence |
+| Thứ 2 | Booking ownership and state machine: showtime event → seat snapshot → hold/booking/payment/ticket/check-in |
+| Thứ 3 | Booking-local concurrency: race condition, row lock, isolation, deadlock, retry and snapshot freshness |
+| Thứ 4 | Idempotency: duplicate command, client retry, event/webhook replay, inbox/outbox and unique key strategy |
+| Thứ 5 | Map critical flow into Booking DB/API/local transaction; define Catalog event dependency and no-distributed-transaction rule |
+| Thứ 6-7 | Implement Booking Service, event consumer, seat hold/booking/ticket/check-in and race/idempotency evidence |
 
 ## 3. Output bắt buộc
+- Hoàn thành [Job-ready Booking consistency playbook](../../study/tuan-7/job-ready-playbook.md) và tests tuần 7 trong [`labs/project-delivery`](../../labs/project-delivery/README.md).
 
-- State diagrams
-- Transaction design
-- Race test/logs
-- E2E flow
-- Audit logs
+- Booking state diagrams and Catalog-to-Booking snapshot contract
+- Booking-local transaction/inbox/outbox design
+- Race test/logs and duplicate Catalog event evidence
+- PostgreSQL concurrent test có exactly-one-winner và idempotency payload-conflict evidence.
+- Gateway → Booking E2E flow without cross-DB access
+- Audit/integration logs with event/request correlation
 
 ## 4. Interview drill
 
-- Invariant quan trọng nhất của seat hold là gì?
-- SELECT FOR UPDATE bảo vệ gì?
-- Client retry sau timeout xử lý thế nào?
+- Seat invariant thuộc service/database nào và vì sao?
+- Catalog event đến trùng/chậm thì Booking snapshot bảo vệ command thế nào?
+- Vì sao không dùng distributed transaction để confirm booking với payment/catalog?
 
 
 ## Required Reading By Day

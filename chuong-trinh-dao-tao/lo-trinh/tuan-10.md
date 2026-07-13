@@ -1,4 +1,4 @@
-# Tuần 10 - System design capstone, final evidence và mock interview
+# Tuần 10 - Distributed system capstone, final evidence và mock interview
 
 **Giai đoạn:** Capstone  
 **Chế độ học:** Final synthesis at maximum intensity.
@@ -8,33 +8,35 @@
 
 | Hạng mục | Nội dung |
 |---|---|
-| Goal | Có thể demo project và giải thích thiết kế như một backend engineer có nền tảng chắc. |
-| Focus | System design doc, final README, ERD/state diagrams, test/evidence pack, load sanity, release notes, mock interview. |
-| Project rule | Final capstone. |
+| Goal | Demo được system theo service ownership và bảo vệ được các trade-off distributed systems bằng evidence. |
+| Focus | Service context/API-event contract, database ownership, failure modes, test/evidence pack, load sanity, release notes, mock interview. |
+| Project rule | Final capstone phải giải thích vì sao microservice boundary hiện tại đủ nhỏ, nơi nào cố ý chưa tách và điều kiện tách tiếp. |
 
 ## 2. Kế hoạch học tập theo ngày
 
 | Ngày | Trọng tâm |
 |---|---|
-| Thứ 2 | System design review: requirement, API, DB, state, scale, failure modes |
-| Thứ 3 | Performance/load sanity: query review, basic load test, bottleneck analysis |
-| Thứ 4 | Interview deep dive: HTTP, DB, transaction, auth, cache, queue, deploy, system design |
-| Thứ 5 | Final evidence gap closure, release note and demo route |
-| Thứ 6-7 | Final regression, demo, mock interview and mentor review |
+| Thứ 2 | Distributed system design review: service ownership, API/event, DB, state, consistency and failure modes |
+| Thứ 3 | Performance/load sanity: Gateway/service/DB/queue bottleneck, backpressure and bottleneck analysis |
+| Thứ 4 | Interview deep dive: HTTP, DB, transaction, auth, events, outbox, cache, deploy, microservice trade-offs |
+| Thứ 5 | Final evidence gap closure, service topology/release note and demo route |
+| Thứ 6-7 | Cross-service regression, demo, failure drill, mock interview and mentor review |
 
 ## 3. Output bắt buộc
+- Hoàn thành [Job-ready capstone playbook](../../study/tuan-10/job-ready-playbook.md) và release-gate tests trong [`labs/project-delivery`](../../labs/project-delivery/README.md).
 
-- System design doc
-- Final README
-- Evidence pack
-- Release notes
-- Mock interview answers
+- Service context/container diagram and ownership matrix
+- Final README with local topology/run instructions and dependency map
+- HTTP/event contract, duplicate/failure/load evidence pack
+- Public demo, p95/error-rate budget, hiring case studies, CV bullets và mock-interview scorecard.
+- Release notes/migration compatibility/runbooks
+- Mock interview answers defending microservice trade-offs
 
 ## 4. Interview drill
 
-- Trình bày project trong 3 phút
-- Nếu scale 10x thì nghẽn ở đâu?
-- Nếu production thật, cải thiện gì đầu tiên?
+- Vì sao đây là microservice boundary hợp lý thay vì distributed monolith?
+- Nếu scale 10x, Gateway/service/DB/queue nghẽn khác nhau thế nào?
+- Nếu production thật, service nào nên tách thêm hoặc gộp lại và dựa trên evidence nào?
 
 
 ## Required Reading By Day

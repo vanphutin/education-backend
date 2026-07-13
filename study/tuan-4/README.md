@@ -1,17 +1,29 @@
-# Tuần 4 - Project kickoff: API skeleton, public catalog và request pipeline
+# Tuần 4 — Microservice kickoff: Gateway + Catalog
 
-**Giai đoạn:** Project Delivery  
-**Nhịp học:** Học mới buổi đầu tuần, áp dụng ngay vào project cuối tuần.
+Tuần 4 chuyển từ foundation sang delivery. Mục tiêu không phải “tạo hai NestJS app”, mà là chứng minh hai deployable có ownership, contract, failure behavior và evidence rõ.
 
-NestJS project setup, public APIs, validation, error contract, pagination, request id, Swagger.
+## Daily Workspace
 
-Roadmap chi tiết: [chuong-trinh-dao-tao/lo-trinh/tuan-4.md](../../chuong-trinh-dao-tao/lo-trinh/tuan-4.md)
+- [Thứ 2 — Microservice boundary và ownership](thu-2.md)
+- [Thứ 3 — Composition root, config và deployable structure](thu-3.md)
+- [Thứ 4 — Request pipeline, deadline và error mapping](thu-4.md)
+- [Thứ 5 — Contract & ownership workshop](thu-5.md)
+- [Thứ 6–7 — Gateway + Catalog delivery lab](thu-6-7.md)
+- [Executable TypeScript lab](../../labs/tuan-4/gateway-catalog/README.md)
 
-## Daily tickets
+## Learning Flow
 
-- [Thứ 2 - Review foundation: API contract, request lifecycle, validation and error principles](thu-2.md) (Issue #16)
-- [Thứ 3 - NestJS implementation patterns: module/controller/service/DTO, common module](thu-3.md) (Issue #17)
-- [Thứ 4 - Request pipeline implementation plan: validation, exception filter, interceptor, logging](thu-4.md) (Issue #18)
-- [Thứ 5 - Map public catalog into project: movies, cinemas, showtimes, seats API contract](thu-5.md) (Issue #19)
-- [Thứ 6-7 - Implement API skeleton, public catalog, Swagger, validation/error/logging evidence](thu-6-7.md) (Issue #20)
+```text
+ownership → deployable boundary → request/failure pipeline
+→ contract review → implementation → tests/evidence → interview explanation
+```
+
+## Weekly Gate
+
+- Gateway và Catalog chạy độc lập.
+- Không shared database hoặc cross-service repository.
+- Public/internal contract và stable error envelope.
+- Request ID, deadline, health/readiness.
+- Unit + integration + cross-service e2e + failure smoke tests.
+- Docker clean setup, OpenAPI, ADR và reproducible evidence.
 

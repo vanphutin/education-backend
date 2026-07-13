@@ -1,4 +1,4 @@
-# Project Delivery Ticket: Map operational concerns into Movie Ticket Booking release
+# Project Delivery Ticket: Map operational concerns into Gateway/Identity/Catalog/Booking/Worker release
 
 - **Tuần**: 9
 - **Ngày**: Thứ 5
@@ -10,6 +10,11 @@
 - **Cơ bản/Trung bình:** [Kubernetes Docs - Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 - **Nâng cao:** [Google SRE Book - Handling Overload](https://sre.google/sre-book/handling-overload/)
 
+## Microservice Scope
+
+- Write one topology diagram with every process, database, queue/provider dependency and ownership.
+- Define propagation of request/trace/event IDs, timeout/retry owner, health/readiness semantics and failure behavior for every hop.
+- Record deployment/migration order and compatibility windows; rollback must not assume cross-service schema rollback is safe.
 
 ## 1. Business Scenario
 - Actor:
@@ -52,4 +57,3 @@
 - Question: Log gì để debug mà không lộ dữ liệu?
 - My answer:
   - ...
-

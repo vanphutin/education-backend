@@ -1,4 +1,4 @@
-# Tuần 8 - Cache, queue, payment/webhook integration và semantic search
+# Tuần 8 - Outbox/worker, payment/webhook integration, cache và semantic search optional
 
 **Giai đoạn:** Project Delivery  
 **Chế độ học:** Async/integration theory + implement selected production features.
@@ -8,33 +8,35 @@
 
 | Hạng mục | Nội dung |
 |---|---|
-| Goal | Hệ thống xử lý async/integration an toàn, không làm hỏng core booking khi provider lỗi. |
-| Focus | Redis cache, BullMQ jobs, retry/timeout, payment provider abstraction, webhook idempotency, semantic search. |
-| Project rule | Async/integration layer. |
+| Goal | Service integration chịu được duplicate/lost/late delivery và provider failure; core Booking/Catalog không gọi external provider trong transaction. |
+| Focus | Outbox relay, worker, Redis cache, BullMQ jobs, retry/timeout/DLQ, payment provider abstraction, webhook idempotency; semantic search là Catalog stretch. |
+| Project rule | Event contract versioned; worker xử lý at-least-once; AI/search chỉ làm sau khi core flows và observability ổn. |
 
 ## 2. Kế hoạch học tập theo ngày
 
 | Ngày | Trọng tâm |
 |---|---|
-| Thứ 2 | Cache deep dive: TTL, invalidation, cache-aside, stale data, when not to cache |
-| Thứ 3 | Queue/job deep dive: BullMQ, retry, timeout, delayed jobs, idempotent handlers |
-| Thứ 4 | Integration/AI: payment webhook, provider abstraction, embeddings, pgvector, mock provider |
-| Thứ 5 | Map cache/jobs/payment/semantic search into Movie Ticket Booking safely |
-| Thứ 6-7 | Implement expiry jobs, webhook replay safety, cache/search slice and integration logs |
+| Thứ 2 | Service-local cache: Catalog read cache, TTL/invalidation, stale data, when not to cache Booking state |
+| Thứ 3 | Outbox relay/worker: retry, timeout, delayed hold expiry, idempotent handler, inbox/DLQ and replay |
+| Thứ 4 | Integration: payment worker/webhook, provider abstraction; Catalog embeddings/pgvector as optional stretch |
+| Thứ 5 | Map event ownership: booking payment/hold events, catalog AI events, cache boundary and failure matrix |
+| Thứ 6-7 | Implement outbox relay/worker, expiry, webhook replay safety, service-local cache and optional search slice/logs |
 
 ## 3. Output bắt buộc
+- Hoàn thành [Job-ready async integration playbook](../../study/tuan-8/job-ready-playbook.md) và tests tuần 8 trong [`labs/project-delivery`](../../labs/project-delivery/README.md).
 
-- Cache strategy
-- Job design
-- Webhook replay evidence
-- Semantic search docs
-- Integration logs
+- Cache strategy per service and explicit source-of-truth decision
+- Versioned event/outbox/inbox/job/DLQ design
+- Payment webhook replay and provider-failure evidence
+- Outbox crash recovery, inbox deduplication, bounded retry/DLQ và cache-down evidence.
+- Semantic search docs only if Catalog core/reliability exits are met
+- Correlated integration logs across service → worker → provider
 
 ## 4. Interview drill
 
-- Cache invalidation khó ở đâu?
-- Job retry gây bug gì?
-- Vì sao webhook phải idempotent?
+- Vì sao queue delivery không thể giả định exactly-once?
+- Outbox và inbox giải quyết hai failure window khác nhau nào?
+- Booking state nào không nên cache như source of truth?
 
 
 ## Required Reading By Day

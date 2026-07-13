@@ -1,4 +1,4 @@
-# Project Delivery Ticket: Implement hardening, health checks, deploy docs, smoke tests and runbook
+# Project Delivery Ticket: Implement service hardening, health/trace smoke tests and runbooks
 
 - **Tuần**: 9
 - **Ngày**: Thứ 6-7
@@ -10,6 +10,11 @@
 - **Cơ bản/Trung bình:** [Docker Docs - Compose](https://docs.docker.com/compose/)
 - **Nâng cao:** [GitHub Actions Docs](https://docs.github.com/en/actions)
 
+## Microservice Scope
+
+- Compose/CI starts Gateway, Identity, Catalog, Booking, Worker and their isolated dependencies/configuration.
+- Add health/readiness per process, traceable smoke test across Gateway → service and one event/worker path, plus a service-down/degraded case.
+- Produce a runbook per failure domain: gateway upstream unavailable, database unavailable, event backlog/DLQ, provider webhook failure, secret/config failure.
 
 ## 1. Business Scenario
 - Actor:
@@ -52,4 +57,3 @@
 - Question: Retry khi nào nguy hiểm?
 - My answer:
   - ...
-
